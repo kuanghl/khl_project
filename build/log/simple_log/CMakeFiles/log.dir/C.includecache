@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kuanghongliang/Documents/vscode_projects/khl_project/log/simple_log/log.c
+log.h
+/home/kuanghongliang/Documents/vscode_projects/khl_project/log/simple_log/log.h
+
+/home/kuanghongliang/Documents/vscode_projects/khl_project/log/simple_log/log.h
+stdio.h
+-
+stdarg.h
+-
+stdbool.h
+-
+time.h
+-
+

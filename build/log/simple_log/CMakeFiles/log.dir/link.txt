@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,liblog.so.SOVERSION -o liblog.so.SOVERSION CMakeFiles/log.dir/log.c.o 

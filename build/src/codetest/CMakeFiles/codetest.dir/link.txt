@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/codetest.dir/__/__/log/simple_log/log.c.o -o codetest  ../../3rd/libuv/libuv_a.a -lpthread -ldl -lrt 
