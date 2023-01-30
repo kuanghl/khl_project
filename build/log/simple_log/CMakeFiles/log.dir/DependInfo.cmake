@@ -10,10 +10,10 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "daemon"
+  "daemon_en=1"
   "log_EXPORTS"
-  "loglevel"
-  "mps"
+  "mps_en=0"
+  "r_loglevel=6"
   )
 
 # The include file search paths:

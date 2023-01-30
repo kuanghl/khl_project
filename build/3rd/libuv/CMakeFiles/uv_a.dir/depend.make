@@ -9,7 +9,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/include/uv/tree.h
@@ -20,7 +19,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/src/queue.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/fs-poll.c.o: ../3rd/libuv/src/win/handle-inl.h
@@ -36,7 +34,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/idna.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/idna.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/idna.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/idna.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/idna.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/idna.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/idna.c.o: ../3rd/libuv/include/uv/tree.h
@@ -54,7 +51,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/inet.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/inet.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/inet.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/inet.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/inet.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/inet.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/inet.c.o: ../3rd/libuv/include/uv/tree.h
@@ -74,7 +70,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/include/uv/tree.h
@@ -85,7 +80,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/src/random.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o: ../3rd/libuv/src/win/internal.h
@@ -100,7 +94,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/include/uv/tree.h
@@ -110,6 +103,9 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/src/strscpy.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o: ../3rd/libuv/src/strscpy.h
 
+3rd/libuv/CMakeFiles/uv_a.dir/src/strtok.c.o: ../3rd/libuv/src/strtok.c
+3rd/libuv/CMakeFiles/uv_a.dir/src/strtok.c.o: ../3rd/libuv/src/strtok.h
+
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/aix.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/bsd.h
@@ -118,7 +114,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/tree.h
@@ -129,7 +124,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/src/threadpool.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/src/uv-common.h
 
@@ -141,7 +135,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/timer.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/timer.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/timer.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/timer.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/timer.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/timer.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/timer.c.o: ../3rd/libuv/include/uv/tree.h
@@ -162,7 +155,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/include/uv/tree.h
@@ -173,9 +165,7 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/src/unix/async.c
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/src/unix/atomic-ops.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv.h
@@ -186,7 +176,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv/tree.h
@@ -195,10 +184,10 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/include/uv/win.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/src/queue.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/src/strscpy.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/src/strtok.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/src/unix/core.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/core.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/include/uv.h
@@ -209,7 +198,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/include/uv/tree.h
@@ -221,7 +209,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/src/unix/dl.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/dl.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/include/uv.h
@@ -232,7 +219,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/include/uv/tree.h
@@ -244,7 +230,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/src/unix/fs.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/fs.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/include/uv.h
@@ -255,7 +240,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/include/uv/tree.h
@@ -268,7 +252,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/src/unix/getaddrinfo.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/include/uv.h
@@ -279,7 +262,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/include/uv/tree.h
@@ -291,58 +273,28 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/src/unix/getnameinfo.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/aix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/android-ifaddrs.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/bsd.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/darwin.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/errno.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/linux.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/os390.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/sunos.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/threadpool.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/tree.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/unix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/version.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/include/uv/win.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/src/queue.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/src/strscpy.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/src/uv-common.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/src/unix/linux-core.c
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
-
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/aix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/bsd.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/darwin.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/errno.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/linux.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/os390.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/sunos.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/threadpool.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/tree.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/unix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/version.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/include/uv/win.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/src/queue.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/src/strscpy.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/src/uv-common.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/src/unix/linux-inotify.c
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
-
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-syscalls.c.o: ../3rd/libuv/src/unix/linux-syscalls.c
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-syscalls.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/aix.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/bsd.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/darwin.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/errno.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/linux.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/os390.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/posix.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/sunos.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/threadpool.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/tree.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/unix.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/version.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/include/uv/win.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/src/queue.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/src/strscpy.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/src/uv-common.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/src/unix/internal.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/src/unix/linux.c
+3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv/aix.h
@@ -352,7 +304,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/include/uv/tree.h
@@ -363,7 +314,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/src/unix/loop-watcher.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
@@ -375,7 +325,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/include/uv/tree.h
@@ -387,7 +336,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/src/unix/loop.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/loop.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 
@@ -399,7 +347,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/include/uv/tree.h
@@ -410,7 +357,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/pipe.c.o: ../3rd/libuv/src/unix/pipe.c
 
@@ -422,7 +368,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/include/uv/tree.h
@@ -433,7 +378,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/poll.c.o: ../3rd/libuv/src/unix/poll.c
 
@@ -445,7 +389,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/include/uv/tree.h
@@ -456,7 +399,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/process.c.o: ../3rd/libuv/src/unix/process.c
 
@@ -468,7 +410,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/include/uv/tree.h
@@ -479,7 +420,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/procfs-exepath.c.o: ../3rd/libuv/src/unix/procfs-exepath.c
 
@@ -491,7 +431,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/include/uv/tree.h
@@ -502,7 +441,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/proctitle.c.o: ../3rd/libuv/src/unix/proctitle.c
 
@@ -514,7 +452,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/include/uv/tree.h
@@ -525,7 +462,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-devurandom.c.o: ../3rd/libuv/src/unix/random-devurandom.c
 
@@ -537,7 +473,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/include/uv/tree.h
@@ -548,7 +483,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-getrandom.c.o: ../3rd/libuv/src/unix/random-getrandom.c
 
@@ -560,7 +494,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/include/uv/tree.h
@@ -571,7 +504,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/random-sysctl-linux.c.o: ../3rd/libuv/src/unix/random-sysctl-linux.c
 
@@ -583,7 +515,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/include/uv/tree.h
@@ -594,7 +525,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/signal.c.o: ../3rd/libuv/src/unix/signal.c
 
@@ -606,7 +536,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/include/uv/tree.h
@@ -617,7 +546,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/stream.c.o: ../3rd/libuv/src/unix/stream.c
 
@@ -629,7 +557,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/include/uv/tree.h
@@ -640,7 +567,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tcp.c.o: ../3rd/libuv/src/unix/tcp.c
 
@@ -652,7 +578,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/include/uv/tree.h
@@ -663,7 +588,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/thread.c.o: ../3rd/libuv/src/unix/thread.c
 
@@ -675,7 +599,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/include/uv/tree.h
@@ -685,11 +608,8 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/queue.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/uv-common.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/unix/atomic-ops.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/unix/spinlock.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/tty.c.o: ../3rd/libuv/src/unix/tty.c
 
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/include/uv.h
@@ -700,7 +620,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/include/uv/tree.h
@@ -711,7 +630,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/src/strscpy.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/src/uv-common.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/src/unix/internal.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/src/unix/linux-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/src/unix/os390-syscalls.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/udp.c.o: ../3rd/libuv/src/unix/udp.c
 
@@ -723,7 +641,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-common.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-common.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-common.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/uv-common.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-common.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-common.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-common.c.o: ../3rd/libuv/include/uv/tree.h
@@ -743,7 +660,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-data-getter-setters.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-data-getter-setters.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-data-getter-setters.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/uv-data-getter-setters.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-data-getter-setters.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-data-getter-setters.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/uv-data-getter-setters.c.o: ../3rd/libuv/include/uv/tree.h
@@ -760,7 +676,6 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/version.c.o: ../3rd/libuv/include/uv/linux.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/version.c.o: ../3rd/libuv/include/uv/os390.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/version.c.o: ../3rd/libuv/include/uv/posix.h
-3rd/libuv/CMakeFiles/uv_a.dir/src/version.c.o: ../3rd/libuv/include/uv/stdint-msvc2008.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/version.c.o: ../3rd/libuv/include/uv/sunos.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/version.c.o: ../3rd/libuv/include/uv/threadpool.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/version.c.o: ../3rd/libuv/include/uv/tree.h

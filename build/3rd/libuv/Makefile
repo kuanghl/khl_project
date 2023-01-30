@@ -775,6 +775,36 @@ src/strscpy.c.s:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/strscpy.c.s
 .PHONY : src/strscpy.c.s
 
+src/strtok.o: src/strtok.c.o
+
+.PHONY : src/strtok.o
+
+# target to build an object file
+src/strtok.c.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/strtok.c.o
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/strtok.c.o
+.PHONY : src/strtok.c.o
+
+src/strtok.i: src/strtok.c.i
+
+.PHONY : src/strtok.i
+
+# target to preprocess a source file
+src/strtok.c.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/strtok.c.i
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/strtok.c.i
+.PHONY : src/strtok.c.i
+
+src/strtok.s: src/strtok.c.s
+
+.PHONY : src/strtok.s
+
+# target to generate assembly for a file
+src/strtok.c.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/strtok.c.s
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/strtok.c.s
+.PHONY : src/strtok.c.s
+
 src/threadpool.o: src/threadpool.c.o
 
 .PHONY : src/threadpool.o
@@ -1015,95 +1045,35 @@ src/unix/getnameinfo.c.s:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/getnameinfo.c.s
 .PHONY : src/unix/getnameinfo.c.s
 
-src/unix/linux-core.o: src/unix/linux-core.c.o
+src/unix/linux.o: src/unix/linux.c.o
 
-.PHONY : src/unix/linux-core.o
-
-# target to build an object file
-src/unix/linux-core.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.o
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-core.c.o
-.PHONY : src/unix/linux-core.c.o
-
-src/unix/linux-core.i: src/unix/linux-core.c.i
-
-.PHONY : src/unix/linux-core.i
-
-# target to preprocess a source file
-src/unix/linux-core.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.i
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-core.c.i
-.PHONY : src/unix/linux-core.c.i
-
-src/unix/linux-core.s: src/unix/linux-core.c.s
-
-.PHONY : src/unix/linux-core.s
-
-# target to generate assembly for a file
-src/unix/linux-core.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-core.c.s
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-core.c.s
-.PHONY : src/unix/linux-core.c.s
-
-src/unix/linux-inotify.o: src/unix/linux-inotify.c.o
-
-.PHONY : src/unix/linux-inotify.o
+.PHONY : src/unix/linux.o
 
 # target to build an object file
-src/unix/linux-inotify.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-inotify.c.o
-.PHONY : src/unix/linux-inotify.c.o
+src/unix/linux.c.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.o
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux.c.o
+.PHONY : src/unix/linux.c.o
 
-src/unix/linux-inotify.i: src/unix/linux-inotify.c.i
+src/unix/linux.i: src/unix/linux.c.i
 
-.PHONY : src/unix/linux-inotify.i
-
-# target to preprocess a source file
-src/unix/linux-inotify.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.i
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-inotify.c.i
-.PHONY : src/unix/linux-inotify.c.i
-
-src/unix/linux-inotify.s: src/unix/linux-inotify.c.s
-
-.PHONY : src/unix/linux-inotify.s
-
-# target to generate assembly for a file
-src/unix/linux-inotify.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.s
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-inotify.c.s
-.PHONY : src/unix/linux-inotify.c.s
-
-src/unix/linux-syscalls.o: src/unix/linux-syscalls.c.o
-
-.PHONY : src/unix/linux-syscalls.o
-
-# target to build an object file
-src/unix/linux-syscalls.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-syscalls.c.o
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o
-.PHONY : src/unix/linux-syscalls.c.o
-
-src/unix/linux-syscalls.i: src/unix/linux-syscalls.c.i
-
-.PHONY : src/unix/linux-syscalls.i
+.PHONY : src/unix/linux.i
 
 # target to preprocess a source file
-src/unix/linux-syscalls.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-syscalls.c.i
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.i
-.PHONY : src/unix/linux-syscalls.c.i
+src/unix/linux.c.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.i
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux.c.i
+.PHONY : src/unix/linux.c.i
 
-src/unix/linux-syscalls.s: src/unix/linux-syscalls.c.s
+src/unix/linux.s: src/unix/linux.c.s
 
-.PHONY : src/unix/linux-syscalls.s
+.PHONY : src/unix/linux.s
 
 # target to generate assembly for a file
-src/unix/linux-syscalls.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux-syscalls.c.s
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.s
-.PHONY : src/unix/linux-syscalls.c.s
+src/unix/linux.c.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/unix/linux.c.s
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/unix/linux.c.s
+.PHONY : src/unix/linux.c.s
 
 src/unix/loop-watcher.o: src/unix/loop-watcher.c.o
 
@@ -1732,6 +1702,9 @@ help:
 	@echo "... src/strscpy.o"
 	@echo "... src/strscpy.i"
 	@echo "... src/strscpy.s"
+	@echo "... src/strtok.o"
+	@echo "... src/strtok.i"
+	@echo "... src/strtok.s"
 	@echo "... src/threadpool.o"
 	@echo "... src/threadpool.i"
 	@echo "... src/threadpool.s"
@@ -1756,15 +1729,9 @@ help:
 	@echo "... src/unix/getnameinfo.o"
 	@echo "... src/unix/getnameinfo.i"
 	@echo "... src/unix/getnameinfo.s"
-	@echo "... src/unix/linux-core.o"
-	@echo "... src/unix/linux-core.i"
-	@echo "... src/unix/linux-core.s"
-	@echo "... src/unix/linux-inotify.o"
-	@echo "... src/unix/linux-inotify.i"
-	@echo "... src/unix/linux-inotify.s"
-	@echo "... src/unix/linux-syscalls.o"
-	@echo "... src/unix/linux-syscalls.i"
-	@echo "... src/unix/linux-syscalls.s"
+	@echo "... src/unix/linux.o"
+	@echo "... src/unix/linux.i"
+	@echo "... src/unix/linux.s"
 	@echo "... src/unix/loop-watcher.o"
 	@echo "... src/unix/loop-watcher.i"
 	@echo "... src/unix/loop-watcher.s"

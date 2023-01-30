@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/uv_a.dir/src/inet.c.o"
   "CMakeFiles/uv_a.dir/src/random.c.o"
   "CMakeFiles/uv_a.dir/src/strscpy.c.o"
+  "CMakeFiles/uv_a.dir/src/strtok.c.o"
   "CMakeFiles/uv_a.dir/src/threadpool.c.o"
   "CMakeFiles/uv_a.dir/src/timer.c.o"
   "CMakeFiles/uv_a.dir/src/unix/async.c.o"
@@ -12,9 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/uv_a.dir/src/unix/fs.c.o"
   "CMakeFiles/uv_a.dir/src/unix/getaddrinfo.c.o"
   "CMakeFiles/uv_a.dir/src/unix/getnameinfo.c.o"
-  "CMakeFiles/uv_a.dir/src/unix/linux-core.c.o"
-  "CMakeFiles/uv_a.dir/src/unix/linux-inotify.c.o"
-  "CMakeFiles/uv_a.dir/src/unix/linux-syscalls.c.o"
+  "CMakeFiles/uv_a.dir/src/unix/linux.c.o"
   "CMakeFiles/uv_a.dir/src/unix/loop-watcher.c.o"
   "CMakeFiles/uv_a.dir/src/unix/loop.c.o"
   "CMakeFiles/uv_a.dir/src/unix/pipe.c.o"
@@ -34,8 +33,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/uv_a.dir/src/uv-common.c.o"
   "CMakeFiles/uv_a.dir/src/uv-data-getter-setters.c.o"
   "CMakeFiles/uv_a.dir/src/version.c.o"
-  "libuv_a.a"
-  "libuv_a.pdb"
+  "libuv.a"
+  "libuv.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

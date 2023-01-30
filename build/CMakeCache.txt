@@ -17,6 +17,9 @@
 //Enable AddressSanitizer (ASan)
 ASAN:BOOL=OFF
 
+//Builds the googlemock subproject
+BUILD_GMOCK:BOOL=ON
+
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
 
@@ -29,9 +32,8 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//Choose the type of build.
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -204,6 +206,21 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=khl_project
 
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=1.10.0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=10
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
+
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
@@ -294,6 +311,13 @@ GITCOMMAND:FILEPATH=/usr/bin/git
 //Path to a program.
 HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 
+//Enable installation of googletest. (Projects embedding googletest
+// may want to turn this OFF.)
+INSTALL_GTEST:BOOL=ON
+
+//Build shared lib
+LIBUV_BUILD_SHARED:BOOL=ON
+
 //Command to build the project
 MAKECOMMAND:STRING=/usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 
@@ -302,6 +326,9 @@ MEMORYCHECK_COMMAND:FILEPATH=/usr/bin/valgrind
 
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
+
+//Enable MemorySanitizer (MSan)
+MSAN:BOOL=OFF
 
 //Path to a program.
 P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
@@ -321,8 +348,66 @@ SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
 //Path to a program.
 SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 
+//Enable ThreadSanitizer (TSan)
+TSAN:BOOL=OFF
+
+//Enable UndefinedBehaviorSanitizer (UBSan)
+UBSAN:BOOL=OFF
+
 //Enable the daemon: on/off
-daemon:BOOL=off
+daemon:BOOL=ON
+
+//Enable the daemon: on/off
+daemon_en:BOOL=ON
+
+//Value Computed by CMake
+gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock
+
+//Dependencies for the target
+gmock_LIB_DEPENDS:STATIC=general;gtest;
+
+//Value Computed by CMake
+gmock_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googlemock
+
+//Build all of Google Mock's own tests.
+gmock_build_tests:BOOL=OFF
+
+//Dependencies for the target
+gmock_main_LIB_DEPENDS:STATIC=general;gmock;
+
+//Value Computed by CMake
+googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest
+
+//Value Computed by CMake
+googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest
+
+//Value Computed by CMake
+gtest_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest
+
+//Value Computed by CMake
+gtest_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googletest
+
+//Build gtest's sample programs.
+gtest_build_samples:BOOL=OFF
+
+//Build all of gtest's own tests.
+gtest_build_tests:BOOL=OFF
+
+//Disable uses of pthreads in gtest.
+gtest_disable_pthreads:BOOL=OFF
+
+//Enable the gtest: on/off
+gtest_en:BOOL=off
+
+//Use shared (DLL) run-time lib even when Google Test is built
+// as static lib.
+gtest_force_shared_crt:BOOL=OFF
+
+//Build gtest with internal symbols hidden in shared libraries.
+gtest_hide_internal_symbols:BOOL=OFF
+
+//Dependencies for the target
+gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
 khl_project_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build
@@ -338,10 +423,13 @@ libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_proje
 
 //set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug,
 // 5-trace, default 3)
-loglevel:BOOL=5
+loglevel:BOOL=6
+
+//No help, variable specified on the command line.
+mps:UNINITIALIZED=off
 
 //Enable the mps: on/off
-mps:BOOL=off
+mps_en:BOOL=off
 
 //Dependencies for the target
 uv_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
@@ -360,6 +448,8 @@ BZRCOMMAND-ADVANCED:INTERNAL=1
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
+//STRINGS property for variable: CMAKE_BUILD_TYPE
+CMAKE_BUILD_TYPE-STRINGS:INTERNAL=Debug;Release;MinSizeRel;RelWithDebInfo
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/khl_project/build
 //Major version of cmake used to create the current loaded cache
@@ -500,7 +590,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -557,6 +647,8 @@ CVSCOMMAND-ADVANCED:INTERNAL=1
 CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.5()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GITCOMMAND
@@ -617,4 +709,23 @@ UV_LINT_W4:INTERNAL=
 UV_LINT_WALL:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Path to a program.
+_Python_EXECUTABLE:INTERNAL=/usr/bin/python3.8
+//Python Properties
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;5;64;;cpython-38-x86_64-linux-gnu;/usr/lib/python3.8;/usr/lib/python3.8;/usr/lib/python3.8/site-packages;/usr/lib/python3.8/site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=28c129decd38964df5236e30f1913f21
+generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest/generated
+//ADVANCED property for variable: gmock_build_tests
+gmock_build_tests-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_build_samples
+gtest_build_samples-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_build_tests
+gtest_build_tests-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_disable_pthreads
+gtest_disable_pthreads-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_force_shared_crt
+gtest_force_shared_crt-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_hide_internal_symbols
+gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
+targets_export_name:INTERNAL=GTestTargets
 

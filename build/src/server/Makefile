@@ -217,6 +217,33 @@ __/__/log/simple_log/log.c.s:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/__/__/log/simple_log/log.c.s
 .PHONY : __/__/log/simple_log/log.c.s
 
+server_main.o: server_main.c.o
+
+.PHONY : server_main.o
+
+# target to build an object file
+server_main.c.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.o
+.PHONY : server_main.c.o
+
+server_main.i: server_main.c.i
+
+.PHONY : server_main.i
+
+# target to preprocess a source file
+server_main.c.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.i
+.PHONY : server_main.c.i
+
+server_main.s: server_main.c.s
+
+.PHONY : server_main.s
+
+# target to generate assembly for a file
+server_main.c.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.s
+.PHONY : server_main.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -233,6 +260,9 @@ help:
 	@echo "... __/__/log/simple_log/log.o"
 	@echo "... __/__/log/simple_log/log.i"
 	@echo "... __/__/log/simple_log/log.s"
+	@echo "... server_main.o"
+	@echo "... server_main.i"
+	@echo "... server_main.s"
 .PHONY : help
 
 

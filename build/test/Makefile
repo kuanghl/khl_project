@@ -175,21 +175,6 @@ depend:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-test/CMakeFiles/gtest.dir/rule:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/gtest.dir/rule
-.PHONY : test/CMakeFiles/gtest.dir/rule
-
-# Convenience name for target.
-gtest: test/CMakeFiles/gtest.dir/rule
-
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/gtest.dir/build.make test/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -202,7 +187,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... gtest"
 .PHONY : help
 
 

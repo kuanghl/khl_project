@@ -1,1 +1,1 @@
-/usr/bin/cc -fPIC -shared -Wl,-soname,liblog.so.SOVERSION -o liblog.so.SOVERSION CMakeFiles/log.dir/log.c.o 
+/usr/bin/cc -fPIC -D_REETRANT -g -fPIC -Wall -Wextra -pedantic -O0 -v -shared -Wl,-soname,liblog.so.SOVERSION -o liblog.so.SOVERSION CMakeFiles/log.dir/log.c.o 

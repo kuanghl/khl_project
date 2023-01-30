@@ -217,6 +217,33 @@ __/__/log/simple_log/log.c.s:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/__/__/log/simple_log/log.c.s
 .PHONY : __/__/log/simple_log/log.c.s
 
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/main.c.s
+.PHONY : main.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -233,6 +260,9 @@ help:
 	@echo "... __/__/log/simple_log/log.o"
 	@echo "... __/__/log/simple_log/log.i"
 	@echo "... __/__/log/simple_log/log.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

@@ -1,1 +1,1 @@
-/usr/bin/cc -rdynamic CMakeFiles/server.dir/__/__/log/simple_log/log.c.o -o server  ../../3rd/libuv/libuv_a.a -lpthread -ldl -lrt 
+/usr/bin/cc -D_REETRANT -g -fPIC -Wall -Wextra -pedantic -O0 -v -rdynamic CMakeFiles/server.dir/server_main.c.o CMakeFiles/server.dir/__/__/log/simple_log/log.c.o -o ../../bin/server  -lgcc_s ../../3rd/libuv/libuv.a -lpthread -ldl -lrt 
