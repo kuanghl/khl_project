@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "../../bin/codetest"
   "../../bin/codetest.pdb"
-  "CMakeFiles/codetest.dir/__/__/log/simple_log/log.c.o"
   "CMakeFiles/codetest.dir/main.c.o"
 )
 

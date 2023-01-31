@@ -49,14 +49,16 @@ set(CMAKE_TARGET_DEFINITIONS_C
   "_LARGEFILE_SOURCE"
   "_POSIX_C_SOURCE=200112"
   "daemon_en=1"
-  "mps_en=0"
-  "r_loglevel=6"
+  "logcolor_en=0"
+  "loglevel=3"
+  "mps_en=1"
   "uv_EXPORTS"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
+  "../log/simple_log"
   "../3rd/libuv/include"
   "../3rd/libuv/src"
   )

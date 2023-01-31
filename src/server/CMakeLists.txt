@@ -16,11 +16,6 @@ FILE(GLOB SERVER_SRCS "server_main.c" "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/mm/*.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/ll/*.c")
 
-# 指定头文件路径为项目根目录/log/simple_log
-# 追加SERVER_SRCS变量内容log.c
-INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/log/simple_log)
-SET(SERVER_SRCS ${SERVER_SRCS} ${PROJECT_SOURCE_DIR}/log/simple_log/log.c)
-
 # 生成可执行文件
 ADD_EXECUTABLE(${TARGET} ${SERVER_SRCS})
 

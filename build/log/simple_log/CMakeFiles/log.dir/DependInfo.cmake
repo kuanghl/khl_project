@@ -12,14 +12,14 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "daemon_en=1"
   "log_EXPORTS"
-  "mps_en=0"
-  "r_loglevel=6"
+  "logcolor_en=0"
+  "loglevel=3"
+  "mps_en=1"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
-  "../3rd/libuv/include"
   "../log/simple_log"
   )
 

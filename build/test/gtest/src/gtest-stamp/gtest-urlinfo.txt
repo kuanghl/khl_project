@@ -1,3 +1,0 @@
-repository='external project URL'
-module='/home/kuanghongliang/Documents/vscode_projects/khl_project/test/gtest/release-1.12.1.zip'
-tag=''

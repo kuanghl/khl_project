@@ -35,32 +35,48 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
 # case 0
 OPTION(mps_en "Enable the mps: on/off" on)
 IF(mps_en STREQUAL "off")
-	MESSAGE(STATUS "Config: mps=off")
+	MESSAGE(STATUS "Config: mps_en=off")
 	ADD_DEFINITIONS("-Dmps_en=0")
 ELSE()
-	MESSAGE(STATUS "Config: mps=on")
+	MESSAGE(STATUS "Config: mps_en=on")
 	ADD_DEFINITIONS("-Dmps_en=1")
 ENDIF()
 # case 1
 OPTION(daemon_en "Enable the daemon: on/off" on)
 IF(daemon_en STREQUAL "off")
-	MESSAGE(STATUS "Config: daemon=off")
+	MESSAGE(STATUS "Config: daemon_en=off")
 	ADD_DEFINITIONS("-Ddaemon_en=0")
 ELSE()
-	MESSAGE(STATUS "Config: daemon=on")
+	MESSAGE(STATUS "Config: daemon_en=on")
 	ADD_DEFINITIONS("-Ddaemon_en=1")
 ENDIF()
-# case 2
+# case 2 log
 OPTION(loglevel "set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug, 5-trace, default 3)" 3)
-IF(loglevel)
+IF(loglevel STREQUAL "OFF")
+    MESSAGE(STATUS "Config warning: loglevel isn't set.")
+ELSE()
 	MESSAGE(STATUS "Config: loglevel=${loglevel}")
-	ADD_DEFINITIONS("-Dr_loglevel=${loglevel}")
+	ADD_DEFINITIONS("-Dloglevel=${loglevel}")
+ENDIF()
+# case 3 log
+OPTION(logcolor_en "Enable the log color to use: on/off" off)
+IF(logcolor_en STREQUAL "off")
+	MESSAGE(STATUS "Config: logcolor_en=off")
+	ADD_DEFINITIONS("-Dlogcolor_en=0")
+ELSE()
+	MESSAGE(STATUS "Config: logcolor_en=on")
+	ADD_DEFINITIONS("-Dlogcolor_en=1")
 ENDIF()
 
 # 设置可执行二进制文件输出位置
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/)
 
-# 设置子目录并构建,追加变量libuv目标uv_a,指定头文件地址
+# 设置子目录并构建，追加变量LINK_LIB变量为simple_log PUBLIC动态库log,指定头文件地址暴露
+ADD_SUBDIRECTORY(log)
+SET(LINK_LIB ${LINK_LIB} log)
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/log/simple_log)
+
+# 追加LINK_LIB变量为gcc_s,设置子目录并构建,追加LINK_LIB变量为libuv PUBLIC静态库uv_a,指定头文件地址进行暴露
 SET(LINK_LIB ${LINK_LIB} gcc_s)
 ADD_SUBDIRECTORY(3rd)
 SET(LINK_LIB ${LINK_LIB} uv_a)
@@ -68,7 +84,6 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/3rd/libuv/include)
 
 # 设置子目录并构建
 ADD_SUBDIRECTORY(lib)
-ADD_SUBDIRECTORY(log)
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(test)
 ADD_SUBDIRECTORY(tools)

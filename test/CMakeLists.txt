@@ -12,7 +12,7 @@ ADD_SUBDIRECTORY(common_test)
 
 OPTION(gtest_en "Enable the gtest: on/off" on)
 IF(gtest_en STREQUAL "on")
-    MESSAGE(STATUS "Config: gtest=on")
+    MESSAGE(STATUS "Config: gtest_en=on")
     # 使能cmake外部项目
     include(ExternalProject)
 
@@ -53,7 +53,7 @@ IF(gtest_en STREQUAL "on")
     include_directories("${SOURCE_DIR}/googletest/include"
                         "${SOURCE_DIR}/googlemock/include") 
 ELSE()
-    MESSAGE(STATUS "Config: gtest=off")
+    MESSAGE(STATUS "Config: gtest_en=off")
 
     # 设置子目录并构建
     add_subdirectory(googletest)

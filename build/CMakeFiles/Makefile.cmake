@@ -87,6 +87,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "log/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "log/simple_log/CMakeFiles/CMakeDirectoryInformation.cmake"
   "3rd/CMakeFiles/CMakeDirectoryInformation.cmake"
   "3rd/libuv/DartConfiguration.tcl"
   "3rd/libuv/libuv-static.pc"
@@ -94,8 +96,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "3rd/libuv/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/mpu0/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "log/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "log/simple_log/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/client/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/codetest/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -120,6 +120,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
   "3rd/libuv/CMakeFiles/NightlyMemCheck.dir/DependInfo.cmake"
   "3rd/libuv/CMakeFiles/NightlyTest.dir/DependInfo.cmake"
   "3rd/libuv/CMakeFiles/ContinuousConfigure.dir/DependInfo.cmake"
@@ -150,7 +151,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "3rd/libuv/CMakeFiles/ContinuousTest.dir/DependInfo.cmake"
   "3rd/libuv/CMakeFiles/ContinuousSubmit.dir/DependInfo.cmake"
   "3rd/libuv/CMakeFiles/uv.dir/DependInfo.cmake"
-  "log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
   "src/codetest/CMakeFiles/codetest.dir/DependInfo.cmake"
   "src/server/CMakeFiles/server.dir/DependInfo.cmake"
   "test/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"

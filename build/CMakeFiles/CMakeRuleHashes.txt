@@ -27,11 +27,3 @@ a42f572b06833241e14327d0c36d54fd 3rd/libuv/CMakeFiles/NightlyCoverage
 16acfab03082115e7e64ee6d71f32ff4 3rd/libuv/CMakeFiles/NightlySubmit
 c41b9f87616217a1ea8dfbf3b9e26cad 3rd/libuv/CMakeFiles/NightlyTest
 fcc1b85ad2fc0326cd3e6adbbfbdd074 3rd/libuv/CMakeFiles/NightlyUpdate
-0c24069e190a4c8390d223e7411e74ca test/CMakeFiles/gtest-complete
-4d59a3cb39a02038ee1a7665222056c8 test/gtest/src/gtest-stamp/gtest-build
-67a91fc3121afd30a9ced6736663eaf3 test/gtest/src/gtest-stamp/gtest-configure
-f03818bec31277034175f6a74e3541cf test/gtest/src/gtest-stamp/gtest-download
-3c6b490b75e96ff4775e1f9ed9897369 test/gtest/src/gtest-stamp/gtest-install
-73440ac16451e015f0e0e246b537712f test/gtest/src/gtest-stamp/gtest-mkdir
-66760e16324c2f533d0d55408afaa386 test/gtest/src/gtest-stamp/gtest-patch
-03cae3c63d06797b9740667a8f7c1fd8 test/gtest/src/gtest-stamp/gtest-update

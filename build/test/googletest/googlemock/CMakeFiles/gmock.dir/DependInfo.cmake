@@ -11,13 +11,15 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "daemon_en=1"
-  "mps_en=0"
-  "r_loglevel=6"
+  "logcolor_en=0"
+  "loglevel=3"
+  "mps_en=1"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
+  "../log/simple_log"
   "../3rd/libuv/include"
   "../test/googletest/googlemock/include"
   "../test/googletest/googlemock"

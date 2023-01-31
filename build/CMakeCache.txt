@@ -355,9 +355,6 @@ TSAN:BOOL=OFF
 UBSAN:BOOL=OFF
 
 //Enable the daemon: on/off
-daemon:BOOL=ON
-
-//Enable the daemon: on/off
 daemon_en:BOOL=ON
 
 //Value Computed by CMake
@@ -397,7 +394,7 @@ gtest_build_tests:BOOL=OFF
 gtest_disable_pthreads:BOOL=OFF
 
 //Enable the gtest: on/off
-gtest_en:BOOL=off
+gtest_en:BOOL=ON
 
 //Use shared (DLL) run-time lib even when Google Test is built
 // as static lib.
@@ -421,15 +418,18 @@ libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_proje
 //Value Computed by CMake
 libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv
 
+//No help, variable specified on the command line.
+logcolor:UNINITIALIZED=off
+
+//Enable the log color to use: on/off
+logcolor_en:BOOL=off
+
 //set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug,
 // 5-trace, default 3)
-loglevel:BOOL=6
-
-//No help, variable specified on the command line.
-mps:UNINITIALIZED=off
+loglevel:BOOL=3
 
 //Enable the mps: on/off
-mps_en:BOOL=off
+mps_en:BOOL=ON
 
 //Dependencies for the target
 uv_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;

@@ -1,3 +1,6 @@
+/usr/local/include/log.h
+/usr/local/lib/liblog.so.SOVERSION
+/usr/local/lib/liblog.so
 /usr/local/include/uv/unix.h
 /usr/local/include/uv/darwin.h
 /usr/local/include/uv/win.h
@@ -22,9 +25,6 @@
 /usr/local/lib/libuv.so.1.0.0
 /usr/local/lib/libuv.so.1
 /usr/local/lib/libuv.so
-/usr/local/include/log.h
-/usr/local/lib/liblog.so.SOVERSION
-/usr/local/lib/liblog.so
 /usr/local/bin/codetest
 /usr/local/bin/server
 /usr/local/include/gmock/gmock-matchers.h

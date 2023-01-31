@@ -190,33 +190,6 @@ codetest/fast:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/build
 .PHONY : codetest/fast
 
-__/__/log/simple_log/log.o: __/__/log/simple_log/log.c.o
-
-.PHONY : __/__/log/simple_log/log.o
-
-# target to build an object file
-__/__/log/simple_log/log.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/__/__/log/simple_log/log.c.o
-.PHONY : __/__/log/simple_log/log.c.o
-
-__/__/log/simple_log/log.i: __/__/log/simple_log/log.c.i
-
-.PHONY : __/__/log/simple_log/log.i
-
-# target to preprocess a source file
-__/__/log/simple_log/log.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/__/__/log/simple_log/log.c.i
-.PHONY : __/__/log/simple_log/log.c.i
-
-__/__/log/simple_log/log.s: __/__/log/simple_log/log.c.s
-
-.PHONY : __/__/log/simple_log/log.s
-
-# target to generate assembly for a file
-__/__/log/simple_log/log.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/__/__/log/simple_log/log.c.s
-.PHONY : __/__/log/simple_log/log.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -257,9 +230,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... codetest"
-	@echo "... __/__/log/simple_log/log.o"
-	@echo "... __/__/log/simple_log/log.i"
-	@echo "... __/__/log/simple_log/log.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
