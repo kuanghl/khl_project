@@ -17,6 +17,9 @@
 //Enable AddressSanitizer (ASan)
 ASAN:BOOL=OFF
 
+//path to the bison executable
+BISON_EXECUTABLE:FILEPATH=/usr/bin/bison
+
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
@@ -305,6 +308,15 @@ CVS_UPDATE_OPTIONS:STRING=-d -A -P
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//path to the flex executable
+FLEX_EXECUTABLE:FILEPATH=/usr/bin/flex
+
+//Path to the flex headers
+FLEX_INCLUDE_DIR:PATH=/usr/include
+
+//Path to the fl library
+FL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libfl.so
+
 //Path to a program.
 GITCOMMAND:FILEPATH=/usr/bin/git
 
@@ -353,6 +365,9 @@ TSAN:BOOL=OFF
 
 //Enable UndefinedBehaviorSanitizer (UBSan)
 UBSAN:BOOL=OFF
+
+//Dependencies for the target
+client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;general;boost_system;general;boost_filesystem;general;boost_thread;general;pthread;
 
 //Enable the daemon: on/off
 daemon_en:BOOL=ON
@@ -418,15 +433,12 @@ libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_proje
 //Value Computed by CMake
 libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv
 
-//No help, variable specified on the command line.
-logcolor:UNINITIALIZED=off
-
 //Enable the log color to use: on/off
-logcolor_en:BOOL=off
+logcolor_en:BOOL=OFF
 
 //set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug,
 // 5-trace, default 3)
-loglevel:BOOL=3
+loglevel:BOOL=OFF
 
 //Enable the mps: on/off
 mps_en:BOOL=ON
@@ -442,6 +454,8 @@ uv_a_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: BISON_EXECUTABLE
+BISON_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BZRCOMMAND
 BZRCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
@@ -590,7 +604,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -647,10 +661,20 @@ CVSCOMMAND-ADVANCED:INTERNAL=1
 CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding BISON
+FIND_PACKAGE_MESSAGE_DETAILS_BISON:INTERNAL=[/usr/bin/bison][v3.5.1()]
+//Details about finding FLEX
+FIND_PACKAGE_MESSAGE_DETAILS_FLEX:INTERNAL=[/usr/bin/flex][v2.6.4()]
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.5()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: FLEX_EXECUTABLE
+FLEX_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FLEX_INCLUDE_DIR
+FLEX_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FL_LIBRARY
+FL_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: HGCOMMAND

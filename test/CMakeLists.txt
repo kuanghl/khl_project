@@ -32,7 +32,7 @@ IF(gtest_en STREQUAL "on")
     ExternalProject_Get_Property(gtest SOURCE_DIR BINARY_DIR)
 
     # 构建libgtest静态库 IMPORTED外部引用库转为内部使用 GLOBAL全局可见
-    # 设置库路径及选项
+    # 设置库路径及选项,CMAKE_THREAD_LIBS_INIT=链接线程库
     add_library(libgtest IMPORTED STATIC GLOBAL)
     add_dependencies(libgtest gtest)
     set_target_properties(libgtest PROPERTIES
@@ -53,13 +53,13 @@ IF(gtest_en STREQUAL "on")
     include_directories("${SOURCE_DIR}/googletest/include"
                         "${SOURCE_DIR}/googlemock/include") 
 ELSE()
-    MESSAGE(STATUS "Config: gtest_en=off")
+    MESSAGE(STATUS "Config: gtest_en=off, we will get clone googletest to build")
 
     # 设置子目录并构建
     add_subdirectory(googletest)
     
     # 指定暴露gtest头文件
-    include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-    include_directories(${gmock_SOURCE_DIR}/include ${gmock_SOURCE_DIR})
+    include_directories(${gtest_SOURCE_DIR}/include)
+    include_directories(${gmock_SOURCE_DIR}/include)
 ENDIF()
 

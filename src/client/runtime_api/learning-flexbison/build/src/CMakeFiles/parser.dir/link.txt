@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -Wall -W -pedantic -rdynamic CMakeFiles/parser.dir/main.cc.o -o ../../parser  parse/libparse.a 

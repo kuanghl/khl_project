@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/drv_api/pipeclient.c
+
+/home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/drv_api/sockclient.c
+

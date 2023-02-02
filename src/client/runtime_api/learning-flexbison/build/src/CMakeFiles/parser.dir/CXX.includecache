@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/learning-flexbison/src/main.cc
+parse/driver.hh
+/home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/learning-flexbison/src/parse/driver.hh
+
+/home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/learning-flexbison/src/parse/driver.hh
+string
+-
+iostream
+-
+fstream
+-
+

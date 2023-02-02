@@ -579,30 +579,17 @@ uv/fast:
 .PHONY : uv/fast
 
 #=============================================================================
-# Target rules for targets named codetest
+# Target rules for targets named common_test
 
 # Build rule for target.
-codetest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codetest
-.PHONY : codetest
+common_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common_test
+.PHONY : common_test
 
 # fast build rule for target.
-codetest/fast:
-	$(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/build
-.PHONY : codetest/fast
-
-#=============================================================================
-# Target rules for targets named server
-
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/build
-.PHONY : server/fast
+common_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/common_test/CMakeFiles/common_test.dir/build.make test/common_test/CMakeFiles/common_test.dir/build
+.PHONY : common_test/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -656,6 +643,71 @@ gtest/fast:
 	$(MAKE) $(MAKESILENT) -f test/googletest/googletest/CMakeFiles/gtest.dir/build.make test/googletest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+#=============================================================================
+# Target rules for targets named client_api
+
+# Build rule for target.
+client_api: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client_api
+.PHONY : client_api
+
+# fast build rule for target.
+client_api/fast:
+	$(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/build
+.PHONY : client_api/fast
+
+#=============================================================================
+# Target rules for targets named flexbison_main
+
+# Build rule for target.
+flexbison_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 flexbison_main
+.PHONY : flexbison_main
+
+# fast build rule for target.
+flexbison_main/fast:
+	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build.make src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build
+.PHONY : flexbison_main/fast
+
+#=============================================================================
+# Target rules for targets named flexbisonlib
+
+# Build rule for target.
+flexbisonlib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 flexbisonlib
+.PHONY : flexbisonlib
+
+# fast build rule for target.
+flexbisonlib/fast:
+	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build
+.PHONY : flexbisonlib/fast
+
+#=============================================================================
+# Target rules for targets named codetest
+
+# Build rule for target.
+codetest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codetest
+.PHONY : codetest
+
+# fast build rule for target.
+codetest/fast:
+	$(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/build
+.PHONY : codetest/fast
+
+#=============================================================================
+# Target rules for targets named server
+
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/build
+.PHONY : server/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -696,7 +748,11 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... client_api"
 	@echo "... codetest"
+	@echo "... common_test"
+	@echo "... flexbison_main"
+	@echo "... flexbisonlib"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

@@ -175,6 +175,102 @@ depend:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/client/CMakeFiles/client_api.dir/rule:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client_api.dir/rule
+.PHONY : src/client/CMakeFiles/client_api.dir/rule
+
+# Convenience name for target.
+client_api: src/client/CMakeFiles/client_api.dir/rule
+
+.PHONY : client_api
+
+# fast build rule for target.
+client_api/fast:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/build
+.PHONY : client_api/fast
+
+drv_api/pipeclient.o: drv_api/pipeclient.c.o
+
+.PHONY : drv_api/pipeclient.o
+
+# target to build an object file
+drv_api/pipeclient.c.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.o
+.PHONY : drv_api/pipeclient.c.o
+
+drv_api/pipeclient.i: drv_api/pipeclient.c.i
+
+.PHONY : drv_api/pipeclient.i
+
+# target to preprocess a source file
+drv_api/pipeclient.c.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.i
+.PHONY : drv_api/pipeclient.c.i
+
+drv_api/pipeclient.s: drv_api/pipeclient.c.s
+
+.PHONY : drv_api/pipeclient.s
+
+# target to generate assembly for a file
+drv_api/pipeclient.c.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.s
+.PHONY : drv_api/pipeclient.c.s
+
+drv_api/sockclient.o: drv_api/sockclient.c.o
+
+.PHONY : drv_api/sockclient.o
+
+# target to build an object file
+drv_api/sockclient.c.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.o
+.PHONY : drv_api/sockclient.c.o
+
+drv_api/sockclient.i: drv_api/sockclient.c.i
+
+.PHONY : drv_api/sockclient.i
+
+# target to preprocess a source file
+drv_api/sockclient.c.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.i
+.PHONY : drv_api/sockclient.c.i
+
+drv_api/sockclient.s: drv_api/sockclient.c.s
+
+.PHONY : drv_api/sockclient.s
+
+# target to generate assembly for a file
+drv_api/sockclient.c.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.s
+.PHONY : drv_api/sockclient.c.s
+
+runtime_api/flexbison/main.o: runtime_api/flexbison/main.cpp.o
+
+.PHONY : runtime_api/flexbison/main.o
+
+# target to build an object file
+runtime_api/flexbison/main.cpp.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o
+.PHONY : runtime_api/flexbison/main.cpp.o
+
+runtime_api/flexbison/main.i: runtime_api/flexbison/main.cpp.i
+
+.PHONY : runtime_api/flexbison/main.i
+
+# target to preprocess a source file
+runtime_api/flexbison/main.cpp.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.i
+.PHONY : runtime_api/flexbison/main.cpp.i
+
+runtime_api/flexbison/main.s: runtime_api/flexbison/main.cpp.s
+
+.PHONY : runtime_api/flexbison/main.s
+
+# target to generate assembly for a file
+runtime_api/flexbison/main.cpp.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.s
+.PHONY : runtime_api/flexbison/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -187,6 +283,16 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... client_api"
+	@echo "... drv_api/pipeclient.o"
+	@echo "... drv_api/pipeclient.i"
+	@echo "... drv_api/pipeclient.s"
+	@echo "... drv_api/sockclient.o"
+	@echo "... drv_api/sockclient.i"
+	@echo "... drv_api/sockclient.s"
+	@echo "... runtime_api/flexbison/main.o"
+	@echo "... runtime_api/flexbison/main.i"
+	@echo "... runtime_api/flexbison/main.s"
 .PHONY : help
 
 

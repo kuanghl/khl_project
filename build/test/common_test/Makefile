@@ -175,6 +175,75 @@ depend:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+test/common_test/CMakeFiles/common_test.dir/rule:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/common_test/CMakeFiles/common_test.dir/rule
+.PHONY : test/common_test/CMakeFiles/common_test.dir/rule
+
+# Convenience name for target.
+common_test: test/common_test/CMakeFiles/common_test.dir/rule
+
+.PHONY : common_test
+
+# fast build rule for target.
+common_test/fast:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f test/common_test/CMakeFiles/common_test.dir/build.make test/common_test/CMakeFiles/common_test.dir/build
+.PHONY : common_test/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f test/common_test/CMakeFiles/common_test.dir/build.make test/common_test/CMakeFiles/common_test.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f test/common_test/CMakeFiles/common_test.dir/build.make test/common_test/CMakeFiles/common_test.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f test/common_test/CMakeFiles/common_test.dir/build.make test/common_test/CMakeFiles/common_test.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+test001_x.o: test001_x.cpp.o
+
+.PHONY : test001_x.o
+
+# target to build an object file
+test001_x.cpp.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f test/common_test/CMakeFiles/common_test.dir/build.make test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.o
+.PHONY : test001_x.cpp.o
+
+test001_x.i: test001_x.cpp.i
+
+.PHONY : test001_x.i
+
+# target to preprocess a source file
+test001_x.cpp.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f test/common_test/CMakeFiles/common_test.dir/build.make test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.i
+.PHONY : test001_x.cpp.i
+
+test001_x.s: test001_x.cpp.s
+
+.PHONY : test001_x.s
+
+# target to generate assembly for a file
+test001_x.cpp.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f test/common_test/CMakeFiles/common_test.dir/build.make test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.s
+.PHONY : test001_x.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -187,6 +256,13 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... common_test"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... test001_x.o"
+	@echo "... test001_x.i"
+	@echo "... test001_x.s"
 .PHONY : help
 
 

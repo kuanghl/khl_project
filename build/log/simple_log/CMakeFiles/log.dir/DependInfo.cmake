@@ -12,8 +12,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "daemon_en=1"
   "log_EXPORTS"
-  "logcolor_en=0"
-  "loglevel=3"
+  "logcolor_en=1"
   "mps_en=1"
   )
 

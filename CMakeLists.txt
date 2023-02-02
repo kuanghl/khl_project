@@ -25,8 +25,20 @@ SET(CMAKE_C_FLAGS_DEBUG "-D_REETRANT -g -fPIC -Wall -Wextra -pedantic -O0 -v")
 SET(CMAKE_CXX_FLAGS_RELEASE "-Wall -O2")
 SET(CMAKE_CXX_FLAGS_DEBUG "-g")
 
-# 给项目命名
-PROJECT(khl_project)
+# 给项目命名,解决CMP0048
+IF(CMAKE_VERSION VERSION_LESS 3.0)
+  PROJECT(khl_project)
+  SET(PROJECT_VERSION 0)
+ELSE()
+  CMAKE_POLICY(SET CMP0048 NEW)
+  PROJECT(khl_project)
+ENDIF()
+
+# 设置工程版本号
+SET(${PROJECT_NAME}_VERSION 0)
+SET(${PROJECT_NAME}_SOVERSION 0)
+SET(${PROJECT_NAME}_VERSION_MAJOR 0)
+SET(${PROJECT_NAME}_VERSION_MINOR 0)
 
 # 指定头文件目录
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
@@ -53,7 +65,7 @@ ENDIF()
 # case 2 log
 OPTION(loglevel "set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug, 5-trace, default 3)" 3)
 IF(loglevel STREQUAL "OFF")
-    MESSAGE(STATUS "Config warning: loglevel isn't set.")
+    MESSAGE(STATUS "Config warning: loglevel isn't set, default loglevel is 3.")
 ELSE()
 	MESSAGE(STATUS "Config: loglevel=${loglevel}")
 	ADD_DEFINITIONS("-Dloglevel=${loglevel}")
@@ -68,9 +80,6 @@ ELSE()
 	ADD_DEFINITIONS("-Dlogcolor_en=1")
 ENDIF()
 
-# 设置可执行二进制文件输出位置
-SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/)
-
 # 设置子目录并构建，追加变量LINK_LIB变量为simple_log PUBLIC动态库log,指定头文件地址暴露
 ADD_SUBDIRECTORY(log)
 SET(LINK_LIB ${LINK_LIB} log)
@@ -82,9 +91,15 @@ ADD_SUBDIRECTORY(3rd)
 SET(LINK_LIB ${LINK_LIB} uv_a)
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/3rd/libuv/include)
 
+# googletest,设置子目录并构建
+# enable_testing()
+ADD_SUBDIRECTORY(test)
+
+# 设置可执行二进制文件输出位置
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/)
+
 # 设置子目录并构建
 ADD_SUBDIRECTORY(lib)
 ADD_SUBDIRECTORY(src)
-ADD_SUBDIRECTORY(test)
 ADD_SUBDIRECTORY(tools)
 

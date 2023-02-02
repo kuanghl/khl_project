@@ -1,0 +1,2 @@
+/usr/bin/ar qc libparse.a CMakeFiles/parse.dir/scanner.cc.o CMakeFiles/parse.dir/parser.cc.o CMakeFiles/parse.dir/driver.cc.o
+/usr/bin/ranlib libparse.a
