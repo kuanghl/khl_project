@@ -76,27 +76,27 @@ include src/server/CMakeFiles/server.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/server/CMakeFiles/server.dir/flags.make
 
-src/server/CMakeFiles/server.dir/server_main.c.o: src/server/CMakeFiles/server.dir/flags.make
-src/server/CMakeFiles/server.dir/server_main.c.o: ../src/server/server_main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/server/CMakeFiles/server.dir/server_main.c.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_main.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/server_main.c
+src/server/CMakeFiles/server.dir/libuv_client.c.o: src/server/CMakeFiles/server.dir/flags.make
+src/server/CMakeFiles/server.dir/libuv_client.c.o: ../src/server/libuv_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/server/CMakeFiles/server.dir/libuv_client.c.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/libuv_client.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/libuv_client.c
 
-src/server/CMakeFiles/server.dir/server_main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_main.c.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/server_main.c > CMakeFiles/server.dir/server_main.c.i
+src/server/CMakeFiles/server.dir/libuv_client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/libuv_client.c.i"
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/libuv_client.c > CMakeFiles/server.dir/libuv_client.c.i
 
-src/server/CMakeFiles/server.dir/server_main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_main.c.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/server_main.c -o CMakeFiles/server.dir/server_main.c.s
+src/server/CMakeFiles/server.dir/libuv_client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/libuv_client.c.s"
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/libuv_client.c -o CMakeFiles/server.dir/libuv_client.c.s
 
 # Object files for target server
 server_OBJECTS = \
-"CMakeFiles/server.dir/server_main.c.o"
+"CMakeFiles/server.dir/libuv_client.c.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
-bin/server: src/server/CMakeFiles/server.dir/server_main.c.o
+bin/server: src/server/CMakeFiles/server.dir/libuv_client.c.o
 bin/server: src/server/CMakeFiles/server.dir/build.make
 bin/server: log/simple_log/liblog.so.SOVERSION
 bin/server: 3rd/libuv/libuv.a

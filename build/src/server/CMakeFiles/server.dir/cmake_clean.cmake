@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "../../bin/server"
   "../../bin/server.pdb"
-  "CMakeFiles/server.dir/server_main.c.o"
+  "CMakeFiles/server.dir/libuv_client.c.o"
 )
 
 # Per-language clean rules from dependency scanning.

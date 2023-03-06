@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/libuv_client.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server/CMakeFiles/server.dir/libuv_client.c.o"
+  "/home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/libuv_server.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server/CMakeFiles/libuv_server.dir/libuv_server.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

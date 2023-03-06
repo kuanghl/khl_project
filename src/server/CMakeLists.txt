@@ -2,7 +2,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 # 设置变量TARGET=server
-SET(TARGET server)
+SET(TARGET libuv_server)
 
 # 指定头文件路径在当前目录下的/hh /mm /ll /
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/hh)
@@ -11,7 +11,11 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/ll)
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/)
 
 # 查询当前目录下的/ /hh /mm /ll 包含的所有.c文件
-FILE(GLOB SERVER_SRCS "server_main.c" "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
+FILE(GLOB SERVER_SRCS 
+#    "libuv_client.c"
+    "libuv_server.c"  
+#    "server_main.c" 
+#    "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/hh/*.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/mm/*.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/ll/*.c")

@@ -87,6 +87,18 @@ install/strip/fast: preinstall/fast
 	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -131,18 +143,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server//CMakeFiles/progress.marks
@@ -176,46 +176,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/server/CMakeFiles/server.dir/rule:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/CMakeFiles/server.dir/rule
-.PHONY : src/server/CMakeFiles/server.dir/rule
+src/server/CMakeFiles/libuv_server.dir/rule:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/CMakeFiles/libuv_server.dir/rule
+.PHONY : src/server/CMakeFiles/libuv_server.dir/rule
 
 # Convenience name for target.
-server: src/server/CMakeFiles/server.dir/rule
+libuv_server: src/server/CMakeFiles/libuv_server.dir/rule
 
-.PHONY : server
+.PHONY : libuv_server
 
 # fast build rule for target.
-server/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/build
-.PHONY : server/fast
+libuv_server/fast:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/build
+.PHONY : libuv_server/fast
 
-server_main.o: server_main.c.o
+libuv_server.o: libuv_server.c.o
 
-.PHONY : server_main.o
+.PHONY : libuv_server.o
 
 # target to build an object file
-server_main.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.o
-.PHONY : server_main.c.o
+libuv_server.c.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/libuv_server.c.o
+.PHONY : libuv_server.c.o
 
-server_main.i: server_main.c.i
+libuv_server.i: libuv_server.c.i
 
-.PHONY : server_main.i
+.PHONY : libuv_server.i
 
 # target to preprocess a source file
-server_main.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.i
-.PHONY : server_main.c.i
+libuv_server.c.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/libuv_server.c.i
+.PHONY : libuv_server.c.i
 
-server_main.s: server_main.c.s
+libuv_server.s: libuv_server.c.s
 
-.PHONY : server_main.s
+.PHONY : libuv_server.s
 
 # target to generate assembly for a file
-server_main.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.s
-.PHONY : server_main.c.s
+libuv_server.c.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/libuv_server.c.s
+.PHONY : libuv_server.c.s
 
 # Help Target
 help:
@@ -229,10 +229,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... server"
-	@echo "... server_main.o"
-	@echo "... server_main.i"
-	@echo "... server_main.s"
+	@echo "... libuv_server"
+	@echo "... libuv_server.o"
+	@echo "... libuv_server.i"
+	@echo "... libuv_server.s"
 .PHONY : help
 
 
