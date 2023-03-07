@@ -176,46 +176,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/server/CMakeFiles/libuv_server.dir/rule:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/CMakeFiles/libuv_server.dir/rule
-.PHONY : src/server/CMakeFiles/libuv_server.dir/rule
+src/server/CMakeFiles/shm_write.dir/rule:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/CMakeFiles/shm_write.dir/rule
+.PHONY : src/server/CMakeFiles/shm_write.dir/rule
 
 # Convenience name for target.
-libuv_server: src/server/CMakeFiles/libuv_server.dir/rule
+shm_write: src/server/CMakeFiles/shm_write.dir/rule
 
-.PHONY : libuv_server
+.PHONY : shm_write
 
 # fast build rule for target.
-libuv_server/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/build
-.PHONY : libuv_server/fast
+shm_write/fast:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/shm_write.dir/build.make src/server/CMakeFiles/shm_write.dir/build
+.PHONY : shm_write/fast
 
-libuv_server.o: libuv_server.c.o
+shm_write.o: shm_write.cpp.o
 
-.PHONY : libuv_server.o
+.PHONY : shm_write.o
 
 # target to build an object file
-libuv_server.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/libuv_server.c.o
-.PHONY : libuv_server.c.o
+shm_write.cpp.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/shm_write.dir/build.make src/server/CMakeFiles/shm_write.dir/shm_write.cpp.o
+.PHONY : shm_write.cpp.o
 
-libuv_server.i: libuv_server.c.i
+shm_write.i: shm_write.cpp.i
 
-.PHONY : libuv_server.i
+.PHONY : shm_write.i
 
 # target to preprocess a source file
-libuv_server.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/libuv_server.c.i
-.PHONY : libuv_server.c.i
+shm_write.cpp.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/shm_write.dir/build.make src/server/CMakeFiles/shm_write.dir/shm_write.cpp.i
+.PHONY : shm_write.cpp.i
 
-libuv_server.s: libuv_server.c.s
+shm_write.s: shm_write.cpp.s
 
-.PHONY : libuv_server.s
+.PHONY : shm_write.s
 
 # target to generate assembly for a file
-libuv_server.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/libuv_server.c.s
-.PHONY : libuv_server.c.s
+shm_write.cpp.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/shm_write.dir/build.make src/server/CMakeFiles/shm_write.dir/shm_write.cpp.s
+.PHONY : shm_write.cpp.s
 
 # Help Target
 help:
@@ -229,10 +229,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... libuv_server"
-	@echo "... libuv_server.o"
-	@echo "... libuv_server.i"
-	@echo "... libuv_server.s"
+	@echo "... shm_write"
+	@echo "... shm_write.o"
+	@echo "... shm_write.i"
+	@echo "... shm_write.s"
 .PHONY : help
 
 

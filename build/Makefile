@@ -696,17 +696,17 @@ codetest/fast:
 .PHONY : codetest/fast
 
 #=============================================================================
-# Target rules for targets named libuv_server
+# Target rules for targets named shm_write
 
 # Build rule for target.
-libuv_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_server
-.PHONY : libuv_server
+shm_write: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_write
+.PHONY : shm_write
 
 # fast build rule for target.
-libuv_server/fast:
-	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/libuv_server.dir/build.make src/server/CMakeFiles/libuv_server.dir/build
-.PHONY : libuv_server/fast
+shm_write/fast:
+	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/shm_write.dir/build.make src/server/CMakeFiles/shm_write.dir/build
+.PHONY : shm_write/fast
 
 # Help Target
 help:
@@ -757,8 +757,8 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... libuv_server"
 	@echo "... log"
+	@echo "... shm_write"
 	@echo "... uv"
 	@echo "... uv_a"
 .PHONY : help
