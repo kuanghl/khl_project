@@ -805,6 +805,36 @@ src/strtok.c.s:
 	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/strtok.c.s
 .PHONY : src/strtok.c.s
 
+src/thread-common.o: src/thread-common.c.o
+
+.PHONY : src/thread-common.o
+
+# target to build an object file
+src/thread-common.c.o:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/thread-common.c.o
+.PHONY : src/thread-common.c.o
+
+src/thread-common.i: src/thread-common.c.i
+
+.PHONY : src/thread-common.i
+
+# target to preprocess a source file
+src/thread-common.c.i:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.i
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/thread-common.c.i
+.PHONY : src/thread-common.c.i
+
+src/thread-common.s: src/thread-common.c.s
+
+.PHONY : src/thread-common.s
+
+# target to generate assembly for a file
+src/thread-common.c.s:
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.s
+	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/src/thread-common.c.s
+.PHONY : src/thread-common.c.s
+
 src/threadpool.o: src/threadpool.c.o
 
 .PHONY : src/threadpool.o
@@ -1705,6 +1735,9 @@ help:
 	@echo "... src/strtok.o"
 	@echo "... src/strtok.i"
 	@echo "... src/strtok.s"
+	@echo "... src/thread-common.o"
+	@echo "... src/thread-common.i"
+	@echo "... src/thread-common.s"
 	@echo "... src/threadpool.o"
 	@echo "... src/threadpool.i"
 	@echo "... src/threadpool.s"

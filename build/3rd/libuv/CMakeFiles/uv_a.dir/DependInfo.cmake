@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/src/random.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv/CMakeFiles/uv_a.dir/src/random.c.o"
   "/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/src/strscpy.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv/CMakeFiles/uv_a.dir/src/strscpy.c.o"
   "/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/src/strtok.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv/CMakeFiles/uv_a.dir/src/strtok.c.o"
+  "/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/src/thread-common.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o"
   "/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/src/threadpool.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o"
   "/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/src/timer.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv/CMakeFiles/uv_a.dir/src/timer.c.o"
   "/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/src/unix/async.c" "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv/CMakeFiles/uv_a.dir/src/unix/async.c.o"

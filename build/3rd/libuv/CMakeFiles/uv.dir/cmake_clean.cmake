@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/uv.dir/src/random.c.o"
   "CMakeFiles/uv.dir/src/strscpy.c.o"
   "CMakeFiles/uv.dir/src/strtok.c.o"
+  "CMakeFiles/uv.dir/src/thread-common.c.o"
   "CMakeFiles/uv.dir/src/threadpool.c.o"
   "CMakeFiles/uv.dir/src/timer.c.o"
   "CMakeFiles/uv.dir/src/unix/async.c.o"

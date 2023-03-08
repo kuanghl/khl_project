@@ -2,13 +2,13 @@
 // Created by perterwarlg on 2021/9/13.
 //
 
-#include <iostream>
+#include <stdio.h>
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
-#include <vector>
+#include <stdlib.h>
 #include <unistd.h>
-#include <cstring>
+#include <string.h>
 
 #define TEXT_SIZE 1024
 
@@ -18,8 +18,6 @@ struct ShmDataStruct {
 };
 
 #define KEY_OF_SHM 8888
-
-using namespace std;
 
 int main() {
     //获取shm_id，在不同进程中这是唯一的，获取和KEY有关
@@ -42,11 +40,11 @@ int main() {
     shm_data->readable_ = 1;
 
     while (1) {
-        cin >> buffer;
+        scanf("%s", &buffer);
         strncpy(shm_data->text_, buffer, TEXT_SIZE);
 
         if (strncmp(shm_data->text_, "end", 3) == 0) {
-            cout << "Close Write SHM" << endl;
+            printf("Close Write SHM.\n");
             break;
         }
     }

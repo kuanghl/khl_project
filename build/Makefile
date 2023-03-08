@@ -696,6 +696,45 @@ codetest/fast:
 .PHONY : codetest/fast
 
 #=============================================================================
+# Target rules for targets named server
+
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
+# Target rules for targets named libuv_server
+
+# Build rule for target.
+libuv_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_server
+.PHONY : libuv_server
+
+# fast build rule for target.
+libuv_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_server.dir/build.make fun/libuv/socket/CMakeFiles/libuv_server.dir/build
+.PHONY : libuv_server/fast
+
+#=============================================================================
+# Target rules for targets named libuv_client
+
+# Build rule for target.
+libuv_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_client
+.PHONY : libuv_client
+
+# fast build rule for target.
+libuv_client/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client.dir/build
+.PHONY : libuv_client/fast
+
+#=============================================================================
 # Target rules for targets named shm_write
 
 # Build rule for target.
@@ -705,8 +744,21 @@ shm_write: cmake_check_build_system
 
 # fast build rule for target.
 shm_write/fast:
-	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/shm_write.dir/build.make src/server/CMakeFiles/shm_write.dir/build
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_write.dir/build.make fun/primary/shm/CMakeFiles/shm_write.dir/build
 .PHONY : shm_write/fast
+
+#=============================================================================
+# Target rules for targets named shm_read
+
+# Build rule for target.
+shm_read: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_read
+.PHONY : shm_read
+
+# fast build rule for target.
+shm_read/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_read.dir/build.make fun/primary/shm/CMakeFiles/shm_read.dir/build
+.PHONY : shm_read/fast
 
 # Help Target
 help:
@@ -757,7 +809,11 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... libuv_client"
+	@echo "... libuv_server"
 	@echo "... log"
+	@echo "... server"
+	@echo "... shm_read"
 	@echo "... shm_write"
 	@echo "... uv"
 	@echo "... uv_a"

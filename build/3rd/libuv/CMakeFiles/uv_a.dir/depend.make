@@ -106,6 +106,25 @@
 3rd/libuv/CMakeFiles/uv_a.dir/src/strtok.c.o: ../3rd/libuv/src/strtok.c
 3rd/libuv/CMakeFiles/uv_a.dir/src/strtok.c.o: ../3rd/libuv/src/strtok.h
 
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/aix.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/bsd.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/darwin.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/errno.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/linux.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/os390.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/posix.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/sunos.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/threadpool.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/tree.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/unix.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/version.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/include/uv/win.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/src/queue.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/src/strscpy.h
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/src/thread-common.c
+3rd/libuv/CMakeFiles/uv_a.dir/src/thread-common.c.o: ../3rd/libuv/src/uv-common.h
+
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/aix.h
 3rd/libuv/CMakeFiles/uv_a.dir/src/threadpool.c.o: ../3rd/libuv/include/uv/bsd.h

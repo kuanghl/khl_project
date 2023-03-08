@@ -15,6 +15,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.18.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.18.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.18.0/CMakeSystem.cmake"
+  "../fun/CMakeLists.txt"
+  "../fun/libuv/CMakeLists.txt"
+  "../fun/libuv/socket/CMakeLists.txt"
+  "../fun/primary/CMakeLists.txt"
+  "../fun/primary/shm/CMakeLists.txt"
+  "../fun/primary/socket/CMakeLists.txt"
   "../lib/CMakeLists.txt"
   "../lib/mpu0/CMakeLists.txt"
   "../log/CMakeLists.txt"
@@ -124,6 +130,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/daemon/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tools/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tools/python_tools/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "fun/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "fun/libuv/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "fun/libuv/socket/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "fun/primary/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "fun/primary/socket/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "fun/primary/shm/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -168,5 +180,9 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/DependInfo.cmake"
   "src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/DependInfo.cmake"
   "src/codetest/CMakeFiles/codetest.dir/DependInfo.cmake"
-  "src/server/CMakeFiles/shm_write.dir/DependInfo.cmake"
+  "src/server/CMakeFiles/server.dir/DependInfo.cmake"
+  "fun/libuv/socket/CMakeFiles/libuv_server.dir/DependInfo.cmake"
+  "fun/libuv/socket/CMakeFiles/libuv_client.dir/DependInfo.cmake"
+  "fun/primary/shm/CMakeFiles/shm_write.dir/DependInfo.cmake"
+  "fun/primary/shm/CMakeFiles/shm_read.dir/DependInfo.cmake"
   )
