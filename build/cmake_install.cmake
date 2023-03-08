@@ -47,10 +47,10 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/log/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/lib/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/tools/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/cmake_install.cmake")
 
 endif()
 

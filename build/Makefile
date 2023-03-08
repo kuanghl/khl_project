@@ -644,6 +644,162 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named libuv_server
+
+# Build rule for target.
+libuv_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_server
+.PHONY : libuv_server
+
+# fast build rule for target.
+libuv_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_server.dir/build.make fun/libuv/socket/CMakeFiles/libuv_server.dir/build
+.PHONY : libuv_server/fast
+
+#=============================================================================
+# Target rules for targets named libuv_client
+
+# Build rule for target.
+libuv_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_client
+.PHONY : libuv_client
+
+# fast build rule for target.
+libuv_client/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client.dir/build
+.PHONY : libuv_client/fast
+
+#=============================================================================
+# Target rules for targets named tidsafe_server
+
+# Build rule for target.
+tidsafe_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidsafe_server
+.PHONY : tidsafe_server
+
+# fast build rule for target.
+tidsafe_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build
+.PHONY : tidsafe_server/fast
+
+#=============================================================================
+# Target rules for targets named multitid_server
+
+# Build rule for target.
+multitid_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multitid_server
+.PHONY : multitid_server
+
+# fast build rule for target.
+multitid_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build
+.PHONY : multitid_server/fast
+
+#=============================================================================
+# Target rules for targets named multipid_server
+
+# Build rule for target.
+multipid_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multipid_server
+.PHONY : multipid_server
+
+# fast build rule for target.
+multipid_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multipid_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multipid_server.dir/build
+.PHONY : multipid_server/fast
+
+#=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/client.dir/build.make fun/primary/socket/tcp/CMakeFiles/client.dir/build
+.PHONY : client/fast
+
+#=============================================================================
+# Target rules for targets named multicast_serv
+
+# Build rule for target.
+multicast_serv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multicast_serv
+.PHONY : multicast_serv
+
+# fast build rule for target.
+multicast_serv/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/build.make fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/build
+.PHONY : multicast_serv/fast
+
+#=============================================================================
+# Target rules for targets named multicast_cli
+
+# Build rule for target.
+multicast_cli: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multicast_cli
+.PHONY : multicast_cli
+
+# fast build rule for target.
+multicast_cli/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/build.make fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/build
+.PHONY : multicast_cli/fast
+
+#=============================================================================
+# Target rules for targets named broadcast_serv
+
+# Build rule for target.
+broadcast_serv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 broadcast_serv
+.PHONY : broadcast_serv
+
+# fast build rule for target.
+broadcast_serv/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/build.make fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/build
+.PHONY : broadcast_serv/fast
+
+#=============================================================================
+# Target rules for targets named broadcast_cli
+
+# Build rule for target.
+broadcast_cli: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 broadcast_cli
+.PHONY : broadcast_cli
+
+# fast build rule for target.
+broadcast_cli/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/build.make fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/build
+.PHONY : broadcast_cli/fast
+
+#=============================================================================
+# Target rules for targets named shm_write
+
+# Build rule for target.
+shm_write: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_write
+.PHONY : shm_write
+
+# fast build rule for target.
+shm_write/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_write.dir/build.make fun/primary/shm/CMakeFiles/shm_write.dir/build
+.PHONY : shm_write/fast
+
+#=============================================================================
+# Target rules for targets named shm_read
+
+# Build rule for target.
+shm_read: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_read
+.PHONY : shm_read
+
+# fast build rule for target.
+shm_read/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_read.dir/build.make fun/primary/shm/CMakeFiles/shm_read.dir/build
+.PHONY : shm_read/fast
+
+#=============================================================================
 # Target rules for targets named client_api
 
 # Build rule for target.
@@ -708,58 +864,6 @@ server/fast:
 	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/build
 .PHONY : server/fast
 
-#=============================================================================
-# Target rules for targets named libuv_server
-
-# Build rule for target.
-libuv_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_server
-.PHONY : libuv_server
-
-# fast build rule for target.
-libuv_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_server.dir/build.make fun/libuv/socket/CMakeFiles/libuv_server.dir/build
-.PHONY : libuv_server/fast
-
-#=============================================================================
-# Target rules for targets named libuv_client
-
-# Build rule for target.
-libuv_client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_client
-.PHONY : libuv_client
-
-# fast build rule for target.
-libuv_client/fast:
-	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client.dir/build
-.PHONY : libuv_client/fast
-
-#=============================================================================
-# Target rules for targets named shm_write
-
-# Build rule for target.
-shm_write: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_write
-.PHONY : shm_write
-
-# fast build rule for target.
-shm_write/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_write.dir/build.make fun/primary/shm/CMakeFiles/shm_write.dir/build
-.PHONY : shm_write/fast
-
-#=============================================================================
-# Target rules for targets named shm_read
-
-# Build rule for target.
-shm_read: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_read
-.PHONY : shm_read
-
-# fast build rule for target.
-shm_read/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_read.dir/build.make fun/primary/shm/CMakeFiles/shm_read.dir/build
-.PHONY : shm_read/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -800,6 +904,9 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... broadcast_cli"
+	@echo "... broadcast_serv"
+	@echo "... client"
 	@echo "... client_api"
 	@echo "... codetest"
 	@echo "... common_test"
@@ -812,9 +919,14 @@ help:
 	@echo "... libuv_client"
 	@echo "... libuv_server"
 	@echo "... log"
+	@echo "... multicast_cli"
+	@echo "... multicast_serv"
+	@echo "... multipid_server"
+	@echo "... multitid_server"
 	@echo "... server"
 	@echo "... shm_read"
 	@echo "... shm_write"
+	@echo "... tidsafe_server"
 	@echo "... uv"
 	@echo "... uv_a"
 .PHONY : help
