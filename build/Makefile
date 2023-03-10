@@ -800,6 +800,32 @@ shm_read/fast:
 .PHONY : shm_read/fast
 
 #=============================================================================
+# Target rules for targets named fifo
+
+# Build rule for target.
+fifo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fifo
+.PHONY : fifo
+
+# fast build rule for target.
+fifo/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/fifo/CMakeFiles/fifo.dir/build.make fun/primary/fifo/CMakeFiles/fifo.dir/build
+.PHONY : fifo/fast
+
+#=============================================================================
+# Target rules for targets named list
+
+# Build rule for target.
+list: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 list
+.PHONY : list
+
+# fast build rule for target.
+list/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/list/CMakeFiles/list.dir/build.make fun/primary/list/CMakeFiles/list.dir/build
+.PHONY : list/fast
+
+#=============================================================================
 # Target rules for targets named client_api
 
 # Build rule for target.
@@ -910,6 +936,7 @@ help:
 	@echo "... client_api"
 	@echo "... codetest"
 	@echo "... common_test"
+	@echo "... fifo"
 	@echo "... flexbison_main"
 	@echo "... flexbisonlib"
 	@echo "... gmock"
@@ -918,6 +945,7 @@ help:
 	@echo "... gtest_main"
 	@echo "... libuv_client"
 	@echo "... libuv_server"
+	@echo "... list"
 	@echo "... log"
 	@echo "... multicast_cli"
 	@echo "... multicast_serv"
