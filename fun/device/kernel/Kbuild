@@ -1,0 +1,2 @@
+ioctl-objs := ioctl_dev.o
+ obj-m := ioctl.o

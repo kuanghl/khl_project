@@ -644,6 +644,58 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named unload
+
+# Build rule for target.
+unload: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unload
+.PHONY : unload
+
+# fast build rule for target.
+unload/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/CMakeFiles/unload.dir/build.make fun/device/kernel/CMakeFiles/unload.dir/build
+.PHONY : unload/fast
+
+#=============================================================================
+# Target rules for targets named load
+
+# Build rule for target.
+load: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 load
+.PHONY : load
+
+# fast build rule for target.
+load/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/CMakeFiles/load.dir/build.make fun/device/kernel/CMakeFiles/load.dir/build
+.PHONY : load/fast
+
+#=============================================================================
+# Target rules for targets named driver
+
+# Build rule for target.
+driver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 driver
+.PHONY : driver
+
+# fast build rule for target.
+driver/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/CMakeFiles/driver.dir/build.make fun/device/kernel/CMakeFiles/driver.dir/build
+.PHONY : driver/fast
+
+#=============================================================================
+# Target rules for targets named ioctl
+
+# Build rule for target.
+ioctl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ioctl
+.PHONY : ioctl
+
+# fast build rule for target.
+ioctl/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/user/CMakeFiles/ioctl.dir/build.make fun/device/user/CMakeFiles/ioctl.dir/build
+.PHONY : ioctl/fast
+
+#=============================================================================
 # Target rules for targets named libuv_server
 
 # Build rule for target.
@@ -826,6 +878,19 @@ list/fast:
 .PHONY : list/fast
 
 #=============================================================================
+# Target rules for targets named rbtree
+
+# Build rule for target.
+rbtree: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rbtree
+.PHONY : rbtree
+
+# fast build rule for target.
+rbtree/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/rbtree/CMakeFiles/rbtree.dir/build.make fun/primary/rbtree/CMakeFiles/rbtree.dir/build
+.PHONY : rbtree/fast
+
+#=============================================================================
 # Target rules for targets named client_api
 
 # Build rule for target.
@@ -930,6 +995,9 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... driver"
+	@echo "... load"
+	@echo "... unload"
 	@echo "... broadcast_cli"
 	@echo "... broadcast_serv"
 	@echo "... client"
@@ -943,6 +1011,7 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... ioctl"
 	@echo "... libuv_client"
 	@echo "... libuv_server"
 	@echo "... list"
@@ -951,6 +1020,7 @@ help:
 	@echo "... multicast_serv"
 	@echo "... multipid_server"
 	@echo "... multitid_server"
+	@echo "... rbtree"
 	@echo "... server"
 	@echo "... shm_read"
 	@echo "... shm_write"

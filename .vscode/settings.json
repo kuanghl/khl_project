@@ -39,6 +39,10 @@
         "random": "cpp",
         "string": "cpp",
         "string_view": "cpp",
-        "bit": "cpp"
-    }
+        "bit": "cpp",
+        "string.h": "c",
+        "unordered_set": "c",
+        "mman.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

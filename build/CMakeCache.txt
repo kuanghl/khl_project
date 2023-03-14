@@ -327,6 +327,12 @@ HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
 
+//Path to a file.
+KERNELHEADERS_DIR:PATH=/usr/src/linux-headers-5.8.0-38-generic
+
+//The directory containing a CMake configuration file for KernelHeaders.
+KernelHeaders_DIR:PATH=KernelHeaders_DIR-NOTFOUND
+
 //Build shared lib
 LIBUV_BUILD_SHARED:BOOL=ON
 
@@ -604,7 +610,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=35
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=39
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
