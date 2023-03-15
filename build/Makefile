@@ -865,6 +865,32 @@ fifo/fast:
 .PHONY : fifo/fast
 
 #=============================================================================
+# Target rules for targets named cycled_fifo
+
+# Build rule for target.
+cycled_fifo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cycled_fifo
+.PHONY : cycled_fifo
+
+# fast build rule for target.
+cycled_fifo/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/build.make fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/build
+.PHONY : cycled_fifo/fast
+
+#=============================================================================
+# Target rules for targets named cycled_priority_fifo
+
+# Build rule for target.
+cycled_priority_fifo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cycled_priority_fifo
+.PHONY : cycled_priority_fifo
+
+# fast build rule for target.
+cycled_priority_fifo/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/build.make fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/build
+.PHONY : cycled_priority_fifo/fast
+
+#=============================================================================
 # Target rules for targets named list
 
 # Build rule for target.
@@ -1004,6 +1030,8 @@ help:
 	@echo "... client_api"
 	@echo "... codetest"
 	@echo "... common_test"
+	@echo "... cycled_fifo"
+	@echo "... cycled_priority_fifo"
 	@echo "... fifo"
 	@echo "... flexbison_main"
 	@echo "... flexbisonlib"

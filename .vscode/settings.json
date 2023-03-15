@@ -42,7 +42,13 @@
         "bit": "cpp",
         "string.h": "c",
         "unordered_set": "c",
-        "mman.h": "c"
+        "mman.h": "c",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "errno.h": "c",
+        "stdlib.h": "c",
+        "pthread.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
