@@ -917,6 +917,201 @@ rbtree/fast:
 .PHONY : rbtree/fast
 
 #=============================================================================
+# Target rules for targets named strrchr
+
+# Build rule for target.
+strrchr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 strrchr
+.PHONY : strrchr
+
+# fast build rule for target.
+strrchr/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strrchr.dir/build.make cfun/linux_c/CMakeFiles/strrchr.dir/build
+.PHONY : strrchr/fast
+
+#=============================================================================
+# Target rules for targets named struct_array
+
+# Build rule for target.
+struct_array: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 struct_array
+.PHONY : struct_array
+
+# fast build rule for target.
+struct_array/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/struct_array.dir/build.make cfun/linux_c/CMakeFiles/struct_array.dir/build
+.PHONY : struct_array/fast
+
+#=============================================================================
+# Target rules for targets named strcpy
+
+# Build rule for target.
+strcpy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 strcpy
+.PHONY : strcpy
+
+# fast build rule for target.
+strcpy/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strcpy.dir/build.make cfun/linux_c/CMakeFiles/strcpy.dir/build
+.PHONY : strcpy/fast
+
+#=============================================================================
+# Target rules for targets named extension
+
+# Build rule for target.
+extension: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extension
+.PHONY : extension
+
+# fast build rule for target.
+extension/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/extension.dir/build.make cfun/linux_c/CMakeFiles/extension.dir/build
+.PHONY : extension/fast
+
+#=============================================================================
+# Target rules for targets named strncpy
+
+# Build rule for target.
+strncpy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 strncpy
+.PHONY : strncpy
+
+# fast build rule for target.
+strncpy/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strncpy.dir/build.make cfun/linux_c/CMakeFiles/strncpy.dir/build
+.PHONY : strncpy/fast
+
+#=============================================================================
+# Target rules for targets named array
+
+# Build rule for target.
+array: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array
+.PHONY : array
+
+# fast build rule for target.
+array/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/array.dir/build.make cfun/linux_c/CMakeFiles/array.dir/build
+.PHONY : array/fast
+
+#=============================================================================
+# Target rules for targets named argc_argv
+
+# Build rule for target.
+argc_argv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 argc_argv
+.PHONY : argc_argv
+
+# fast build rule for target.
+argc_argv/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/argc_argv.dir/build.make cfun/linux_c/CMakeFiles/argc_argv.dir/build
+.PHONY : argc_argv/fast
+
+#=============================================================================
+# Target rules for targets named kill_process
+
+# Build rule for target.
+kill_process: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kill_process
+.PHONY : kill_process
+
+# fast build rule for target.
+kill_process/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/kill_process.dir/build.make cfun/signal/CMakeFiles/kill_process.dir/build
+.PHONY : kill_process/fast
+
+#=============================================================================
+# Target rules for targets named client_b
+
+# Build rule for target.
+client_b: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client_b
+.PHONY : client_b
+
+# fast build rule for target.
+client_b/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_b.dir/build.make cfun/signal/CMakeFiles/client_b.dir/build
+.PHONY : client_b/fast
+
+#=============================================================================
+# Target rules for targets named server_b
+
+# Build rule for target.
+server_b: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server_b
+.PHONY : server_b
+
+# fast build rule for target.
+server_b/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_b.dir/build.make cfun/signal/CMakeFiles/server_b.dir/build
+.PHONY : server_b/fast
+
+#=============================================================================
+# Target rules for targets named client_c
+
+# Build rule for target.
+client_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client_c
+.PHONY : client_c
+
+# fast build rule for target.
+client_c/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_c.dir/build.make cfun/signal/CMakeFiles/client_c.dir/build
+.PHONY : client_c/fast
+
+#=============================================================================
+# Target rules for targets named client_a
+
+# Build rule for target.
+client_a: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client_a
+.PHONY : client_a
+
+# fast build rule for target.
+client_a/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_a.dir/build.make cfun/signal/CMakeFiles/client_a.dir/build
+.PHONY : client_a/fast
+
+#=============================================================================
+# Target rules for targets named server_a
+
+# Build rule for target.
+server_a: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server_a
+.PHONY : server_a
+
+# fast build rule for target.
+server_a/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_a.dir/build.make cfun/signal/CMakeFiles/server_a.dir/build
+.PHONY : server_a/fast
+
+#=============================================================================
+# Target rules for targets named server_c
+
+# Build rule for target.
+server_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server_c
+.PHONY : server_c
+
+# fast build rule for target.
+server_c/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_c.dir/build.make cfun/signal/CMakeFiles/server_c.dir/build
+.PHONY : server_c/fast
+
+#=============================================================================
+# Target rules for targets named signal
+
+# Build rule for target.
+signal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signal
+.PHONY : signal
+
+# fast build rule for target.
+signal/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/signal.dir/build.make cfun/signal/CMakeFiles/signal.dir/build
+.PHONY : signal/fast
+
+#=============================================================================
 # Target rules for targets named client_api
 
 # Build rule for target.
@@ -1024,14 +1219,20 @@ help:
 	@echo "... driver"
 	@echo "... load"
 	@echo "... unload"
+	@echo "... argc_argv"
+	@echo "... array"
 	@echo "... broadcast_cli"
 	@echo "... broadcast_serv"
 	@echo "... client"
+	@echo "... client_a"
 	@echo "... client_api"
+	@echo "... client_b"
+	@echo "... client_c"
 	@echo "... codetest"
 	@echo "... common_test"
 	@echo "... cycled_fifo"
 	@echo "... cycled_priority_fifo"
+	@echo "... extension"
 	@echo "... fifo"
 	@echo "... flexbison_main"
 	@echo "... flexbisonlib"
@@ -1040,6 +1241,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... ioctl"
+	@echo "... kill_process"
 	@echo "... libuv_client"
 	@echo "... libuv_server"
 	@echo "... list"
@@ -1050,8 +1252,16 @@ help:
 	@echo "... multitid_server"
 	@echo "... rbtree"
 	@echo "... server"
+	@echo "... server_a"
+	@echo "... server_b"
+	@echo "... server_c"
 	@echo "... shm_read"
 	@echo "... shm_write"
+	@echo "... signal"
+	@echo "... strcpy"
+	@echo "... strncpy"
+	@echo "... strrchr"
+	@echo "... struct_array"
 	@echo "... tidsafe_server"
 	@echo "... uv"
 	@echo "... uv_a"

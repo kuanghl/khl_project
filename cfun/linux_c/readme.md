@@ -1,0 +1,3 @@
+- [ ] linux base functio test.
+    - c standard lib function. 
+    - c struct data
