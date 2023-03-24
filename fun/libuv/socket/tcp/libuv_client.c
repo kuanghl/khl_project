@@ -134,7 +134,29 @@ int main(void) {
     return uv_run(loop, UV_RUN_DEFAULT);
 }
 
+static void write_cb(uv_write_t* req, int status) {
+
+    if (status) {
+        log_error("uv_write error: %s\n", uv_strerror(status));
+        return ;
+    }
+}
+
 void connect_cb(uv_connect_t *connect, int status){
+    int r;
+
+    libuv_cli_t *libuv_cli = container_of(connect, libuv_cli_t, connect_req);
+
+    if (status < 0) {
+        log_error("failed to dial to server, err: %s\n", uv_strerror(status));
+        return;
+    }
+
+    r = uv_is_closing((uv_handle_t *)connect->handle);
+    r = uv_is_readable((uv_stream_t *)connect->handle);
+    r = uv_is_writable((uv_stream_t *)connect->handle);
+
+    r = uv_write(&libuv_cli->write_req, (uv_stream_t *)connect->handle, &libuv_cli->buf_to, 1, write_cb);
 
 }
 
