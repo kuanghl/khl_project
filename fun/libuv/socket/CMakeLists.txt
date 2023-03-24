@@ -1,6 +1,28 @@
 # 指定CMake编译最低要求版本
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
+# # Execute this command, to find your current Linux kernel version.
+# execute_process(
+#         COMMAND uname -r # This finds your kernel version.
+#         OUTPUT_VARIABLE KERNEL_RELEASE # Output the kernel release.
+#         OUTPUT_STRIP_TRAILING_WHITESPACE # Add a whitespace.
+#         )
+
+# # Now, we want to find the path with all the kernel modules.
+# find_path(
+#         KERNELHEADERS_DIR # Kernel headers directory.
+#         include/linux/user.h # Include this header file.
+#         PATHS /usr/src/linux-headers-${KERNEL_RELEASE} # The path of the kernel modules.
+#         )
+# message(STATUS "Kernel release: ${KERNEL_RELEASE}") # Message to show the kernel release.
+# message(STATUS "Kernel headers: ${KERNELHEADERS_DIR}") # Message to show the directory with kernel headers/modules.
+
+# # Include the kernel directories with 'CMake'.
+# include_directories(
+#         ${KERNELHEADERS_DIR}/include
+#         ${CMAKE_CURRENT_SOURCE_DIR}/
+#         )
+
 # 包含暴露当前目录下的头文件
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/)
 
