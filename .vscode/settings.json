@@ -51,7 +51,9 @@
         "pthread.h": "c",
         "types.h": "c",
         "log.h": "c",
-        "list.h": "c"
+        "list.h": "c",
+        "any": "c",
+        "charconv": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
