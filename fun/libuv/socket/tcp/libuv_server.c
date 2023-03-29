@@ -23,13 +23,14 @@ typedef struct libuv_header_s{
 }libuv_header_t;
 
 typedef struct libuv_serv_s{
+#define PORT_NUM 10086
     pthread_t tid;
     pthread_mutex_t mutex;
     pthread_cond_t cond;
 
+    uv_loop_t loop;
     struct sockaddr_in addr;
     uv_tcp_t server_sock;
-    // uv_tcp_t client_sock;
 
     uv_buf_t buf;
     uint8_t to[65536];
@@ -41,6 +42,15 @@ static void close_cb(uv_handle_t* handle) {
 }
 
 
-int ipc_accept(){
-    
+int ipc_accept(libuv_serv_t *libuv_serv){
+    int r;
+
+    r = uv_loop_init(&libuv_serv->loop);
+
+    r = uv_ip4_addr("127.0.0.1", PORT_NUM, &libuv_serv->addr);
+}
+
+int main(void){
+
+    return 0;
 }

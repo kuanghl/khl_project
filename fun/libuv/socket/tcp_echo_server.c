@@ -55,7 +55,7 @@ void on_echo_read(uv_stream_t *stream, ssize_t nread, const uv_buf_t *buf)
         }
         return;
     } 
-
+    printf("%s\n", buf->base);
     free(buf->base);
 
     char buffer[100] = "hello world";

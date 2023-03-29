@@ -748,6 +748,19 @@ libuv_client/fast:
 .PHONY : libuv_client/fast
 
 #=============================================================================
+# Target rules for targets named thread_async
+
+# Build rule for target.
+thread_async: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thread_async
+.PHONY : thread_async
+
+# fast build rule for target.
+thread_async/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/async/CMakeFiles/thread_async.dir/build.make fun/libuv/async/CMakeFiles/thread_async.dir/build
+.PHONY : thread_async/fast
+
+#=============================================================================
 # Target rules for targets named tidsafe_server
 
 # Build rule for target.
@@ -852,6 +865,19 @@ broadcast_cli/fast:
 .PHONY : broadcast_cli/fast
 
 #=============================================================================
+# Target rules for targets named shm_writer
+
+# Build rule for target.
+shm_writer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_writer
+.PHONY : shm_writer
+
+# fast build rule for target.
+shm_writer/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_writer.dir/build.make fun/primary/shm/CMakeFiles/shm_writer.dir/build
+.PHONY : shm_writer/fast
+
+#=============================================================================
 # Target rules for targets named shm_write
 
 # Build rule for target.
@@ -863,6 +889,19 @@ shm_write: cmake_check_build_system
 shm_write/fast:
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_write.dir/build.make fun/primary/shm/CMakeFiles/shm_write.dir/build
 .PHONY : shm_write/fast
+
+#=============================================================================
+# Target rules for targets named shm_reader
+
+# Build rule for target.
+shm_reader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_reader
+.PHONY : shm_reader
+
+# fast build rule for target.
+shm_reader/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_reader.dir/build.make fun/primary/shm/CMakeFiles/shm_reader.dir/build
+.PHONY : shm_reader/fast
 
 #=============================================================================
 # Target rules for targets named shm_read
@@ -941,6 +980,149 @@ rbtree: cmake_check_build_system
 rbtree/fast:
 	$(MAKE) $(MAKESILENT) -f fun/primary/rbtree/CMakeFiles/rbtree.dir/build.make fun/primary/rbtree/CMakeFiles/rbtree.dir/build
 .PHONY : rbtree/fast
+
+#=============================================================================
+# Target rules for targets named msg_que_server
+
+# Build rule for target.
+msg_que_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msg_que_server
+.PHONY : msg_que_server
+
+# fast build rule for target.
+msg_que_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build
+.PHONY : msg_que_server/fast
+
+#=============================================================================
+# Target rules for targets named msg_que_client
+
+# Build rule for target.
+msg_que_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msg_que_client
+.PHONY : msg_que_client
+
+# fast build rule for target.
+msg_que_client/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_client.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_client.dir/build
+.PHONY : msg_que_client/fast
+
+#=============================================================================
+# Target rules for targets named pipe_fifo_send
+
+# Build rule for target.
+pipe_fifo_send: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pipe_fifo_send
+.PHONY : pipe_fifo_send
+
+# fast build rule for target.
+pipe_fifo_send/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/build.make fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/build
+.PHONY : pipe_fifo_send/fast
+
+#=============================================================================
+# Target rules for targets named pipe_fifo_recv
+
+# Build rule for target.
+pipe_fifo_recv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pipe_fifo_recv
+.PHONY : pipe_fifo_recv
+
+# fast build rule for target.
+pipe_fifo_recv/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/build.make fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/build
+.PHONY : pipe_fifo_recv/fast
+
+#=============================================================================
+# Target rules for targets named pipe
+
+# Build rule for target.
+pipe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pipe
+.PHONY : pipe
+
+# fast build rule for target.
+pipe/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe.dir/build.make fun/primary/pipe/CMakeFiles/pipe.dir/build
+.PHONY : pipe/fast
+
+#=============================================================================
+# Target rules for targets named sem_producer
+
+# Build rule for target.
+sem_producer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_producer
+.PHONY : sem_producer
+
+# fast build rule for target.
+sem_producer/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_producer.dir/build.make fun/primary/sem/CMakeFiles/sem_producer.dir/build
+.PHONY : sem_producer/fast
+
+#=============================================================================
+# Target rules for targets named sem_customer
+
+# Build rule for target.
+sem_customer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_customer
+.PHONY : sem_customer
+
+# fast build rule for target.
+sem_customer/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_customer.dir/build.make fun/primary/sem/CMakeFiles/sem_customer.dir/build
+.PHONY : sem_customer/fast
+
+#=============================================================================
+# Target rules for targets named signal_server
+
+# Build rule for target.
+signal_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signal_server
+.PHONY : signal_server
+
+# fast build rule for target.
+signal_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_server.dir/build.make fun/primary/signal/CMakeFiles/signal_server.dir/build
+.PHONY : signal_server/fast
+
+#=============================================================================
+# Target rules for targets named signal_client
+
+# Build rule for target.
+signal_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signal_client
+.PHONY : signal_client
+
+# fast build rule for target.
+signal_client/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_client.dir/build.make fun/primary/signal/CMakeFiles/signal_client.dir/build
+.PHONY : signal_client/fast
+
+#=============================================================================
+# Target rules for targets named threadpool_server
+
+# Build rule for target.
+threadpool_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 threadpool_server
+.PHONY : threadpool_server
+
+# fast build rule for target.
+threadpool_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/threadpool/CMakeFiles/threadpool_server.dir/build.make fun/primary/threadpool/CMakeFiles/threadpool_server.dir/build
+.PHONY : threadpool_server/fast
+
+#=============================================================================
+# Target rules for targets named threadpool_client
+
+# Build rule for target.
+threadpool_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 threadpool_client
+.PHONY : threadpool_client
+
+# fast build rule for target.
+threadpool_client/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/threadpool/CMakeFiles/threadpool_client.dir/build.make fun/primary/threadpool/CMakeFiles/threadpool_client.dir/build
+.PHONY : threadpool_client/fast
 
 #=============================================================================
 # Target rules for targets named argc_argv
@@ -1285,25 +1467,39 @@ help:
 	@echo "... libuv_server"
 	@echo "... list"
 	@echo "... log"
+	@echo "... msg_que_client"
+	@echo "... msg_que_server"
 	@echo "... multicast_cli"
 	@echo "... multicast_serv"
 	@echo "... multipid_server"
 	@echo "... multitid_server"
+	@echo "... pipe"
+	@echo "... pipe_fifo_recv"
+	@echo "... pipe_fifo_send"
 	@echo "... rand"
 	@echo "... rbtree"
+	@echo "... sem_customer"
+	@echo "... sem_producer"
 	@echo "... server"
 	@echo "... server_a"
 	@echo "... server_b"
 	@echo "... server_c"
 	@echo "... shm_read"
+	@echo "... shm_reader"
 	@echo "... shm_write"
+	@echo "... shm_writer"
 	@echo "... signal"
+	@echo "... signal_client"
+	@echo "... signal_server"
 	@echo "... strcpy"
 	@echo "... strncpy"
 	@echo "... strrchr"
 	@echo "... struct_array"
 	@echo "... tcp_echo_client"
 	@echo "... tcp_echo_server"
+	@echo "... thread_async"
+	@echo "... threadpool_client"
+	@echo "... threadpool_server"
 	@echo "... tidsafe_server"
 	@echo "... uv"
 	@echo "... uv_a"

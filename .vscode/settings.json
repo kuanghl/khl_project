@@ -53,7 +53,8 @@
         "log.h": "c",
         "list.h": "c",
         "any": "c",
-        "charconv": "c"
+        "charconv": "c",
+        "threadpool.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
