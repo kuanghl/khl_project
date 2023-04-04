@@ -60,6 +60,7 @@ int main(int argc, char *argv[])
     sem_b.sem_flg = SEM_UNDO;
     sem_b.sem_op = -1;           //Increase 1,make sem=1
     
+
     while(1)
     {
         if(1 == (value = semctl(sem_id, 0, GETVAL)))
@@ -73,6 +74,8 @@ int main(int argc, char *argv[])
                 exit(EXIT_FAILURE);
             }
         }
+
+        //printf("Reader waiting...\n");
 
         //if enter "end", then end the process
         if(0 == (strcmp(shm_ptr ,"end")))

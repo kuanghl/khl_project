@@ -47,6 +47,7 @@ int main(int argc, char *argv[])
 
     //5. attach the shm_id to this process
     char *shm_ptr;
+    char *shm_ptr_buf = "we are very happy!";
     shm_ptr = shmat(shm_id, NULL, 0);
     if(NULL == shm_ptr)
     {
@@ -68,6 +69,12 @@ int main(int argc, char *argv[])
             printf("\tInput the snd message:  ");
             scanf("%s", shm_ptr);
 
+            //if enter "end", then end the process
+            if(0 == (strcmp(shm_ptr ,"go")))
+            {
+                memcpy(shm_ptr, shm_ptr_buf, strlen(shm_ptr_buf));
+            }
+            
             if(-1 == semop(sem_id, &sem_b, 1))
             {
                 perror("semop");

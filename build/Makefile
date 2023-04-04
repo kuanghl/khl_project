@@ -1099,30 +1099,17 @@ signal_client/fast:
 .PHONY : signal_client/fast
 
 #=============================================================================
-# Target rules for targets named threadpool_server
+# Target rules for targets named asyncthread
 
 # Build rule for target.
-threadpool_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 threadpool_server
-.PHONY : threadpool_server
+asyncthread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asyncthread
+.PHONY : asyncthread
 
 # fast build rule for target.
-threadpool_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/threadpool/CMakeFiles/threadpool_server.dir/build.make fun/primary/threadpool/CMakeFiles/threadpool_server.dir/build
-.PHONY : threadpool_server/fast
-
-#=============================================================================
-# Target rules for targets named threadpool_client
-
-# Build rule for target.
-threadpool_client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 threadpool_client
-.PHONY : threadpool_client
-
-# fast build rule for target.
-threadpool_client/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/threadpool/CMakeFiles/threadpool_client.dir/build.make fun/primary/threadpool/CMakeFiles/threadpool_client.dir/build
-.PHONY : threadpool_client/fast
+asyncthread/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/asyncthread/CMakeFiles/asyncthread.dir/build.make fun/primary/asyncthread/CMakeFiles/asyncthread.dir/build
+.PHONY : asyncthread/fast
 
 #=============================================================================
 # Target rules for targets named argc_argv
@@ -1442,6 +1429,7 @@ help:
 	@echo "... unload"
 	@echo "... argc_argv"
 	@echo "... array"
+	@echo "... asyncthread"
 	@echo "... broadcast_cli"
 	@echo "... broadcast_serv"
 	@echo "... client"
@@ -1498,8 +1486,6 @@ help:
 	@echo "... tcp_echo_client"
 	@echo "... tcp_echo_server"
 	@echo "... thread_async"
-	@echo "... threadpool_client"
-	@echo "... threadpool_server"
 	@echo "... tidsafe_server"
 	@echo "... uv"
 	@echo "... uv_a"

@@ -112,6 +112,10 @@ int main(){
         printf("SN%3d:info1 = %11d, info2 = %11d, info3 = %11d.\n", i, (info_addr+i * sizeof(struct info_s))->info1, (info_addr+i * sizeof(struct info_s))->info2, (info_addr+i * sizeof(struct info_s))->info3);
     }
 
+    size_t sizei = 6,sizej;
+    sizej = -1/sizei;
+    printf("size_t j = %ld. -1 = %ld.\n", sizej, (size_t)(-1));
+
     /*test*/
     int r;
     pti_serv_t *pti_serv = (pti_serv_t *)calloc(1, sizeof(pti_serv_t)); 
