@@ -23,7 +23,8 @@ int main(int argc, const char *argv[])
     /* 创建信号量 */
     p_sem = sem_open(SEM_NAME, O_CREAT | O_EXCL, 0666, 2);  /* 信号量初值为1 */
     printf("process 1 sem_open p_sem = %p\n", p_sem);
-    if (p_sem == SEM_FAILED) {
+    //if (p_sem == SEM_FAILED) {
+    if(p_sem < 0){
         printf("process 1 sem_open failed\n");
         return 0;
     }
