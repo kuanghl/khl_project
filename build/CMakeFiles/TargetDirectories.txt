@@ -248,12 +248,14 @@
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/pipe/CMakeFiles/pipe.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/install/strip.dir
-/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/install/local.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/install.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/list_install_components.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/rebuild_cache.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/install/local.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/sem_p.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/edit_cache.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/sem_p-c.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/sem/CMakeFiles/sem_c.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/signal/CMakeFiles/install/strip.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/signal/CMakeFiles/install/local.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/signal/CMakeFiles/edit_cache.dir

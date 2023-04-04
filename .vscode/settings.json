@@ -54,7 +54,8 @@
         "list.h": "c",
         "any": "c",
         "charconv": "c",
-        "threadpool.h": "c"
+        "threadpool.h": "c",
+        "semaphore.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

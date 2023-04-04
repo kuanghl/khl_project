@@ -1073,6 +1073,19 @@ pipe/fast:
 .PHONY : pipe/fast
 
 #=============================================================================
+# Target rules for targets named sem_p
+
+# Build rule for target.
+sem_p: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_p
+.PHONY : sem_p
+
+# fast build rule for target.
+sem_p/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_p.dir/build.make fun/primary/sem/CMakeFiles/sem_p.dir/build
+.PHONY : sem_p/fast
+
+#=============================================================================
 # Target rules for targets named sem_p-c
 
 # Build rule for target.
@@ -1084,6 +1097,19 @@ sem_p-c: cmake_check_build_system
 sem_p-c/fast:
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_p-c.dir/build.make fun/primary/sem/CMakeFiles/sem_p-c.dir/build
 .PHONY : sem_p-c/fast
+
+#=============================================================================
+# Target rules for targets named sem_c
+
+# Build rule for target.
+sem_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_c
+.PHONY : sem_c
+
+# fast build rule for target.
+sem_c/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_c.dir/build.make fun/primary/sem/CMakeFiles/sem_c.dir/build
+.PHONY : sem_c/fast
 
 #=============================================================================
 # Target rules for targets named signal_server
@@ -1483,6 +1509,8 @@ help:
 	@echo "... rbtree"
 	@echo "... sem-shm_reader"
 	@echo "... sem-shm_writer"
+	@echo "... sem_c"
+	@echo "... sem_p"
 	@echo "... sem_p-c"
 	@echo "... server"
 	@echo "... server_a"
