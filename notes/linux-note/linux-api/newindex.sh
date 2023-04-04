@@ -43,6 +43,6 @@ ls docs|sort -n|while read line
 do
     title=`echo ${line}|cut -d . -f 2`
     declare -l url=${title}
-    echo "|${num_i}|[${line%%.*}.$title](https://github.com/kuanghl/khl_project/tree/master/notes/linux-note/linux-api/${newline//' '/'%20'})|[C](https://github.com/kuanghl/khl_project/tree/master/notes/linux-note/linux-api/${newline//' '/'%20'})|" >>README.md 
+    echo "|${num_i}|[${line%%.*}](https://github.com/kuanghl/khl_project/tree/master/notes/linux-note/linux-api/${line%%.*}.$title)|[C](https://github.com/kuanghl/khl_project/tree/master/notes/linux-note/linux-api/${line%%.*}.$title)|" >>README.md 
     let num_i+=1
 done
