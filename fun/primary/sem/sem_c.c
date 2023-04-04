@@ -55,7 +55,7 @@ int main(int argc, const char *argv[])
     printf("process 1 sem_close ret = %d\n", ret);
 
     /* 删除信号量文件 */
-    //ret = sem_unlink(SEM_NAME);
+    ret = sem_unlink(SEM_NAME);
     printf("process 1 sem_unlink ret = %d\n", ret);
 
     return 0;
