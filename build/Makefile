@@ -865,56 +865,82 @@ broadcast_cli/fast:
 .PHONY : broadcast_cli/fast
 
 #=============================================================================
-# Target rules for targets named shm_writer
+# Target rules for targets named sysv_shm_writer
 
 # Build rule for target.
-shm_writer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_writer
-.PHONY : shm_writer
+sysv_shm_writer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_shm_writer
+.PHONY : sysv_shm_writer
 
 # fast build rule for target.
-shm_writer/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_writer.dir/build.make fun/primary/shm/CMakeFiles/shm_writer.dir/build
-.PHONY : shm_writer/fast
+sysv_shm_writer/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/build.make fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/build
+.PHONY : sysv_shm_writer/fast
 
 #=============================================================================
-# Target rules for targets named shm_write
+# Target rules for targets named sysv_shm_reader
 
 # Build rule for target.
-shm_write: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_write
-.PHONY : shm_write
+sysv_shm_reader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_shm_reader
+.PHONY : sysv_shm_reader
 
 # fast build rule for target.
-shm_write/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_write.dir/build.make fun/primary/shm/CMakeFiles/shm_write.dir/build
-.PHONY : shm_write/fast
+sysv_shm_reader/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/build.make fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/build
+.PHONY : sysv_shm_reader/fast
 
 #=============================================================================
-# Target rules for targets named shm_reader
+# Target rules for targets named sem-shm_writer
 
 # Build rule for target.
-shm_reader: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_reader
-.PHONY : shm_reader
+sem-shm_writer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem-shm_writer
+.PHONY : sem-shm_writer
 
 # fast build rule for target.
-shm_reader/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_reader.dir/build.make fun/primary/shm/CMakeFiles/shm_reader.dir/build
-.PHONY : shm_reader/fast
+sem-shm_writer/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sem-shm_writer.dir/build.make fun/primary/shm/CMakeFiles/sem-shm_writer.dir/build
+.PHONY : sem-shm_writer/fast
 
 #=============================================================================
-# Target rules for targets named shm_read
+# Target rules for targets named sem-shm_reader
 
 # Build rule for target.
-shm_read: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shm_read
-.PHONY : shm_read
+sem-shm_reader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem-shm_reader
+.PHONY : sem-shm_reader
 
 # fast build rule for target.
-shm_read/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/shm_read.dir/build.make fun/primary/shm/CMakeFiles/shm_read.dir/build
-.PHONY : shm_read/fast
+sem-shm_reader/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sem-shm_reader.dir/build.make fun/primary/shm/CMakeFiles/sem-shm_reader.dir/build
+.PHONY : sem-shm_reader/fast
+
+#=============================================================================
+# Target rules for targets named posix_shm_writer
+
+# Build rule for target.
+posix_shm_writer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_shm_writer
+.PHONY : posix_shm_writer
+
+# fast build rule for target.
+posix_shm_writer/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_shm_writer.dir/build.make fun/primary/shm/CMakeFiles/posix_shm_writer.dir/build
+.PHONY : posix_shm_writer/fast
+
+#=============================================================================
+# Target rules for targets named posix_shm_reader
+
+# Build rule for target.
+posix_shm_reader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_shm_reader
+.PHONY : posix_shm_reader
+
+# fast build rule for target.
+posix_shm_reader/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_shm_reader.dir/build.make fun/primary/shm/CMakeFiles/posix_shm_reader.dir/build
+.PHONY : posix_shm_reader/fast
 
 #=============================================================================
 # Target rules for targets named fifo
@@ -1047,30 +1073,17 @@ pipe/fast:
 .PHONY : pipe/fast
 
 #=============================================================================
-# Target rules for targets named sem_producer
+# Target rules for targets named sem_p-c
 
 # Build rule for target.
-sem_producer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_producer
-.PHONY : sem_producer
+sem_p-c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_p-c
+.PHONY : sem_p-c
 
 # fast build rule for target.
-sem_producer/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_producer.dir/build.make fun/primary/sem/CMakeFiles/sem_producer.dir/build
-.PHONY : sem_producer/fast
-
-#=============================================================================
-# Target rules for targets named sem_customer
-
-# Build rule for target.
-sem_customer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_customer
-.PHONY : sem_customer
-
-# fast build rule for target.
-sem_customer/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_customer.dir/build.make fun/primary/sem/CMakeFiles/sem_customer.dir/build
-.PHONY : sem_customer/fast
+sem_p-c/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_p-c.dir/build.make fun/primary/sem/CMakeFiles/sem_p-c.dir/build
+.PHONY : sem_p-c/fast
 
 #=============================================================================
 # Target rules for targets named signal_server
@@ -1464,18 +1477,17 @@ help:
 	@echo "... pipe"
 	@echo "... pipe_fifo_recv"
 	@echo "... pipe_fifo_send"
+	@echo "... posix_shm_reader"
+	@echo "... posix_shm_writer"
 	@echo "... rand"
 	@echo "... rbtree"
-	@echo "... sem_customer"
-	@echo "... sem_producer"
+	@echo "... sem-shm_reader"
+	@echo "... sem-shm_writer"
+	@echo "... sem_p-c"
 	@echo "... server"
 	@echo "... server_a"
 	@echo "... server_b"
 	@echo "... server_c"
-	@echo "... shm_read"
-	@echo "... shm_reader"
-	@echo "... shm_write"
-	@echo "... shm_writer"
 	@echo "... signal"
 	@echo "... signal_client"
 	@echo "... signal_server"
@@ -1483,6 +1495,8 @@ help:
 	@echo "... strncpy"
 	@echo "... strrchr"
 	@echo "... struct_array"
+	@echo "... sysv_shm_reader"
+	@echo "... sysv_shm_writer"
 	@echo "... tcp_echo_client"
 	@echo "... tcp_echo_server"
 	@echo "... thread_async"
