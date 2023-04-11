@@ -330,9 +330,6 @@ INSTALL_GTEST:BOOL=ON
 //Path to a file.
 KERNELHEADERS_DIR:PATH=/usr/src/linux-headers-5.8.0-38-generic
 
-//The directory containing a CMake configuration file for KernelHeaders.
-KernelHeaders_DIR:PATH=KernelHeaders_DIR-NOTFOUND
-
 //Build shared lib
 LIBUV_BUILD_SHARED:BOOL=ON
 
@@ -439,15 +436,12 @@ libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_proje
 //Value Computed by CMake
 libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv
 
-//No help, variable specified on the command line.
-log:UNINITIALIZED=5
-
 //Enable the log color to use: on/off
 logcolor_en:BOOL=OFF
 
 //set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug,
 // 5-trace, default 3)
-loglevel:BOOL=5
+loglevel:BOOL=OFF
 
 //Enable the mps: on/off
 mps_en:BOOL=ON

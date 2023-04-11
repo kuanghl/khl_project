@@ -281,6 +281,7 @@
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/cfun/linux_c/CMakeFiles/argc_argv.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/cfun/linux_c/CMakeFiles/array.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/cfun/linux_c/CMakeFiles/strncpy.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/cfun/linux_c/CMakeFiles/cdefine.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/cfun/linux_c/CMakeFiles/rand.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/cfun/linux_c/CMakeFiles/install/local.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/cfun/linux_c/CMakeFiles/strcpy.dir

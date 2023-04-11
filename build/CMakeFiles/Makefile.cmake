@@ -258,6 +258,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "cfun/linux_c/CMakeFiles/argc_argv.dir/DependInfo.cmake"
   "cfun/linux_c/CMakeFiles/array.dir/DependInfo.cmake"
   "cfun/linux_c/CMakeFiles/strncpy.dir/DependInfo.cmake"
+  "cfun/linux_c/CMakeFiles/cdefine.dir/DependInfo.cmake"
   "cfun/linux_c/CMakeFiles/rand.dir/DependInfo.cmake"
   "cfun/linux_c/CMakeFiles/strcpy.dir/DependInfo.cmake"
   "cfun/linux_c/CMakeFiles/struct_array.dir/DependInfo.cmake"

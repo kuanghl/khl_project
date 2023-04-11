@@ -1190,6 +1190,19 @@ strncpy/fast:
 .PHONY : strncpy/fast
 
 #=============================================================================
+# Target rules for targets named cdefine
+
+# Build rule for target.
+cdefine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cdefine
+.PHONY : cdefine
+
+# fast build rule for target.
+cdefine/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/cdefine.dir/build.make cfun/linux_c/CMakeFiles/cdefine.dir/build
+.PHONY : cdefine/fast
+
+#=============================================================================
 # Target rules for targets named rand
 
 # Build rule for target.
@@ -1471,6 +1484,7 @@ help:
 	@echo "... asyncthread"
 	@echo "... broadcast_cli"
 	@echo "... broadcast_serv"
+	@echo "... cdefine"
 	@echo "... client"
 	@echo "... client_a"
 	@echo "... client_api"

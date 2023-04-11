@@ -15,7 +15,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "daemon_en=1"
   "flexbisonlib_EXPORTS"
   "logcolor_en=1"
-  "loglevel=5"
   "mps_en=1"
   )
 

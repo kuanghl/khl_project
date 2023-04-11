@@ -55,7 +55,8 @@
         "any": "c",
         "charconv": "c",
         "threadpool.h": "c",
-        "semaphore.h": "c"
+        "semaphore.h": "c",
+        "unistd.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
