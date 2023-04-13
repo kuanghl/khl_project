@@ -13,7 +13,8 @@
 int main(void)
 {
         char * data;
-        int fd = shm_open("shm-file0001", O_RDWR, 0777);
+        //int fd = shm_open("shm-file0001", O_RDWR, 0777);
+        int fd = open("/tmp/rpp/pti/shm-file0001", O_RDWR, 0777);
         if(fd < 0)
         {
                 printf("error open shm object\n");
@@ -35,6 +36,9 @@ int main(void)
  
         close(fd);
         getchar();
+        remove("/tmp/rpp/pti/shm-file0001");
+        remove("/tmp/rpp/pti");
+        remove("/tmp/rpp");
  
         return 0;
 }

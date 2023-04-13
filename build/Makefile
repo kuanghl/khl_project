@@ -761,6 +761,19 @@ thread_async/fast:
 .PHONY : thread_async/fast
 
 #=============================================================================
+# Target rules for targets named signal_tid
+
+# Build rule for target.
+signal_tid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signal_tid
+.PHONY : signal_tid
+
+# fast build rule for target.
+signal_tid/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/signal_tid/CMakeFiles/signal_tid.dir/build.make fun/libuv/signal_tid/CMakeFiles/signal_tid.dir/build
+.PHONY : signal_tid/fast
+
+#=============================================================================
 # Target rules for targets named tidsafe_server
 
 # Build rule for target.
@@ -1533,6 +1546,7 @@ help:
 	@echo "... signal"
 	@echo "... signal_client"
 	@echo "... signal_server"
+	@echo "... signal_tid"
 	@echo "... strcpy"
 	@echo "... strncpy"
 	@echo "... strrchr"
