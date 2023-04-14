@@ -696,32 +696,6 @@ ioctl/fast:
 .PHONY : ioctl/fast
 
 #=============================================================================
-# Target rules for targets named tcp_echo_server
-
-# Build rule for target.
-tcp_echo_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcp_echo_server
-.PHONY : tcp_echo_server
-
-# fast build rule for target.
-tcp_echo_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/tcp_echo_server.dir/build.make fun/libuv/socket/CMakeFiles/tcp_echo_server.dir/build
-.PHONY : tcp_echo_server/fast
-
-#=============================================================================
-# Target rules for targets named tcp_echo_client
-
-# Build rule for target.
-tcp_echo_client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcp_echo_client
-.PHONY : tcp_echo_client
-
-# fast build rule for target.
-tcp_echo_client/fast:
-	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/tcp_echo_client.dir/build.make fun/libuv/socket/CMakeFiles/tcp_echo_client.dir/build
-.PHONY : tcp_echo_client/fast
-
-#=============================================================================
 # Target rules for targets named libuv_server
 
 # Build rule for target.
@@ -748,30 +722,56 @@ libuv_client/fast:
 .PHONY : libuv_client/fast
 
 #=============================================================================
-# Target rules for targets named thread_async
+# Target rules for targets named libuv_server_a
 
 # Build rule for target.
-thread_async: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thread_async
-.PHONY : thread_async
+libuv_server_a: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_server_a
+.PHONY : libuv_server_a
 
 # fast build rule for target.
-thread_async/fast:
-	$(MAKE) $(MAKESILENT) -f fun/libuv/async/CMakeFiles/thread_async.dir/build.make fun/libuv/async/CMakeFiles/thread_async.dir/build
-.PHONY : thread_async/fast
+libuv_server_a/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_server_a.dir/build.make fun/libuv/socket/CMakeFiles/libuv_server_a.dir/build
+.PHONY : libuv_server_a/fast
 
 #=============================================================================
-# Target rules for targets named signal_tid
+# Target rules for targets named libuv_client_a
 
 # Build rule for target.
-signal_tid: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signal_tid
-.PHONY : signal_tid
+libuv_client_a: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_client_a
+.PHONY : libuv_client_a
 
 # fast build rule for target.
-signal_tid/fast:
-	$(MAKE) $(MAKESILENT) -f fun/libuv/signal_tid/CMakeFiles/signal_tid.dir/build.make fun/libuv/signal_tid/CMakeFiles/signal_tid.dir/build
-.PHONY : signal_tid/fast
+libuv_client_a/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client_a.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client_a.dir/build
+.PHONY : libuv_client_a/fast
+
+#=============================================================================
+# Target rules for targets named libuv_async
+
+# Build rule for target.
+libuv_async: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_async
+.PHONY : libuv_async
+
+# fast build rule for target.
+libuv_async/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/async/CMakeFiles/libuv_async.dir/build.make fun/libuv/async/CMakeFiles/libuv_async.dir/build
+.PHONY : libuv_async/fast
+
+#=============================================================================
+# Target rules for targets named libuv_signal_tid
+
+# Build rule for target.
+libuv_signal_tid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libuv_signal_tid
+.PHONY : libuv_signal_tid
+
+# fast build rule for target.
+libuv_signal_tid/fast:
+	$(MAKE) $(MAKESILENT) -f fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/build.make fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/build
+.PHONY : libuv_signal_tid/fast
 
 #=============================================================================
 # Target rules for targets named tidsafe_server
@@ -1021,6 +1021,19 @@ rbtree/fast:
 .PHONY : rbtree/fast
 
 #=============================================================================
+# Target rules for targets named fork
+
+# Build rule for target.
+fork: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fork
+.PHONY : fork
+
+# fast build rule for target.
+fork/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/fork.dir/build.make fun/primary/pid/CMakeFiles/fork.dir/build
+.PHONY : fork/fast
+
+#=============================================================================
 # Target rules for targets named msg_que_server
 
 # Build rule for target.
@@ -1123,6 +1136,32 @@ sem_c: cmake_check_build_system
 sem_c/fast:
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_c.dir/build.make fun/primary/sem/CMakeFiles/sem_c.dir/build
 .PHONY : sem_c/fast
+
+#=============================================================================
+# Target rules for targets named sigset
+
+# Build rule for target.
+sigset: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sigset
+.PHONY : sigset
+
+# fast build rule for target.
+sigset/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/sigset.dir/build.make fun/primary/signal/CMakeFiles/sigset.dir/build
+.PHONY : sigset/fast
+
+#=============================================================================
+# Target rules for targets named signal_tid
+
+# Build rule for target.
+signal_tid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signal_tid
+.PHONY : signal_tid
+
+# fast build rule for target.
+signal_tid/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_tid.dir/build.make fun/primary/signal/CMakeFiles/signal_tid.dir/build
+.PHONY : signal_tid/fast
 
 #=============================================================================
 # Target rules for targets named signal_server
@@ -1511,14 +1550,19 @@ help:
 	@echo "... fifo"
 	@echo "... flexbison_main"
 	@echo "... flexbisonlib"
+	@echo "... fork"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... ioctl"
 	@echo "... kill_process"
+	@echo "... libuv_async"
 	@echo "... libuv_client"
+	@echo "... libuv_client_a"
 	@echo "... libuv_server"
+	@echo "... libuv_server_a"
+	@echo "... libuv_signal_tid"
 	@echo "... list"
 	@echo "... log"
 	@echo "... msg_que_client"
@@ -1547,15 +1591,13 @@ help:
 	@echo "... signal_client"
 	@echo "... signal_server"
 	@echo "... signal_tid"
+	@echo "... sigset"
 	@echo "... strcpy"
 	@echo "... strncpy"
 	@echo "... strrchr"
 	@echo "... struct_array"
 	@echo "... sysv_shm_reader"
 	@echo "... sysv_shm_writer"
-	@echo "... tcp_echo_client"
-	@echo "... tcp_echo_server"
-	@echo "... thread_async"
 	@echo "... tidsafe_server"
 	@echo "... uv"
 	@echo "... uv_a"
