@@ -1,7 +1,7 @@
 import re
 import xlsxwriter
-txt_url = r"./yolov3_profile_time.txt"
-sava_url = r'./yolov3_profile_time.xlsx'
+txt_url = r"./yolov3_profile_time_new.txt"
+sava_url = r'./yolov3_profile_time_new.xlsx'
 
 # 读取txt 并提取指定字符
 def readTXT():
