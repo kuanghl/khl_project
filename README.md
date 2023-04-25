@@ -17,6 +17,13 @@
 
 ### 2. gtest
 google test单元测试平台搭建及使用。
+```
+cd build
+# 整个测试集
+./test/common_test/common_test --gtest_filter=CommonTest*
+# 单个测试例
+./test/common_test/common_test --gtest_filter=CommonTest.Negative
+```
 
 ### 3. linux c
 linux 相关库函数及POSIX标准函数使用及积累。
@@ -29,8 +36,15 @@ linux 相关库函数及POSIX标准函数使用及积累。
 
 ### 6. 编译及使用方法
 cmake整项目编译指令流程：
+- `loglevel`整个项目的log打印级数
+- `logcolor_en`整个项目的log颜色使能
+- `gtest_en = on`使用gtest release-1.12.1.zip包,`gtest_en = off`使用clone googletest源码编译
+- `mps_en`网络模式及单机模式切换
+- `daemon`网络连接控制多用户/单用户
 ```
-cmake .. -Dloglevel=5
+mkdir build
+cd build
+cmake .. -Dloglevel=5 -Dlogcolor_en=on -Dgtest_en=off -Dmps_en=off -Ddaemon=off
 make -j16
 sudo make install
 ```

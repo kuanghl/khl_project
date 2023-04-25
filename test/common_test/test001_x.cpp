@@ -9,6 +9,7 @@ int Factorial(int n) {
     result *= i;
   }
   log_fatal("%s, factorial result = %d.\n", __func__, result);
+  log_debug("%s, n = %d.\n", __func__, n);
 
   return result;
 }

@@ -6,21 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../log/simple_log/log.h
-stdio.h
--
-stdarg.h
--
-stdbool.h
--
-time.h
--
-
-/home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/server_main.c
-stdio.h
--
-stdlib.h
--
-log.h
--
-

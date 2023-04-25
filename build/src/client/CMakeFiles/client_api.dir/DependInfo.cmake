@@ -15,6 +15,7 @@ set(CMAKE_TARGET_DEFINITIONS_C
   "client_api_EXPORTS"
   "daemon_en=1"
   "logcolor_en=1"
+  "loglevel=5"
   "mps_en=1"
   )
 
@@ -36,6 +37,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "client_api_EXPORTS"
   "daemon_en=1"
   "logcolor_en=1"
+  "loglevel=5"
   "mps_en=1"
   )
 
