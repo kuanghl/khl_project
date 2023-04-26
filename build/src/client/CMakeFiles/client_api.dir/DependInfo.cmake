@@ -14,7 +14,8 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "client_api_EXPORTS"
   "daemon_en=1"
-  "logcolor_en=1"
+  "logcolor_en=0"
+  "loglevel=5"
   "mps_en=1"
   )
 
@@ -35,7 +36,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "client_api_EXPORTS"
   "daemon_en=1"
-  "logcolor_en=1"
+  "logcolor_en=0"
+  "loglevel=5"
   "mps_en=1"
   )
 

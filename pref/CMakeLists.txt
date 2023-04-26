@@ -9,20 +9,27 @@ FIND_PACKAGE(Threads REQUIRED)
 
 # googlebenchmark编译开关
 OPTION(gbenchmark_en "Enable the gbenchmark: on/off" on)
-IF(gbenchmark_en STREQUAL "on")
-    MESSAGE(STATUS "Config: gbenchmark = on.")
-    # # 使能cmake外部项目
-    # include(ExternalProject)
+IF(gbenchmark_en STREQUAL "on") # lib: benchmark benchmark_main pthread(无编译测试例)
+    MESSAGE(STATUS "Config: gbenchmark = on, use ExternalProject(error not configure).")
 
-    # # 下载安装googletest release版本
-    # ExternalProject_Add(
-    #     googlebenchmark
-    #     #     URL https://github.com/google/benchmark/archive/benchmark-1.7.1.zip
-    #     URL ${CMAKE_CURRENT_SOURCE_DIR}/gbenchmark/benchmark-1.7.1.zip
-    #     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/gbenchmark 
-    # )
-    
-ELSE()  # lib: benchmark benchmark_main pthread /gtest_main
+ELSEIF(gbenchmark_en STREQUAL "other")
+    MESSAGE(STATUS "Config: gbenchmark = other, use FetchContent.")
+    # 使能cmake外部项目
+    include(FetchContent) 
+
+    # 下载安装googletest release版本
+    fetchcontent_declare(
+        googlebenchmark
+        #     URL https://github.com/google/benchmark/releases/tag/benchmark-1.7.1.zip
+        URL ${CMAKE_CURRENT_SOURCE_DIR}/gbenchmark/benchmark-1.7.1.zip
+        PREFIX ${CMAKE_CURRENT_BINARY_DIR}/gbenchmark 
+    )
+    fetchcontent_makeavailable(googlebenchmark)
+
+    # 指定暴露gtest头文件
+    include_directories(${benchmark_SOURCE_DIR}/include)
+
+ELSE()  # lib: benchmark benchmark_main pthread(编译测试例)
     MESSAGE(STATUS "Config: gbenchmark = off, we will get clone google benchmark to build.")
 
     # 设置子目录并构建

@@ -92,8 +92,7 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
+//Choose the type of build.
 CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
@@ -369,6 +368,33 @@ CXXFEATURECHECK_DEBUG:BOOL=OFF
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//When not empty, overrides where to find pre-populated content
+// for googlebenchmark
+FETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=
+
+//When not empty, overrides where to find pre-populated content
+// for gtest
+FETCHCONTENT_SOURCE_DIR_GTEST:PATH=
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of googlebenchmark
+FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLEBENCHMARK:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of gtest
+FETCHCONTENT_UPDATES_DISCONNECTED_GTEST:BOOL=OFF
+
 //path to the flex executable
 FLEX_EXECUTABLE:FILEPATH=/usr/bin/flex
 
@@ -452,13 +478,13 @@ daemon_en:BOOL=ON
 gbenchmark_en:BOOL=off
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock
+gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googlemock
 
 //Dependencies for the target
 gmock_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googlemock
+gmock_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-src/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
@@ -467,16 +493,16 @@ gmock_build_tests:BOOL=OFF
 gmock_main_LIB_DEPENDS:STATIC=general;gmock;
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest
+googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest
+googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-src
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest
+gtest_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googletest
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googletest
+gtest_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-src/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -488,7 +514,7 @@ gtest_build_tests:BOOL=OFF
 gtest_disable_pthreads:BOOL=OFF
 
 //Enable the gtest: on/off
-gtest_en:BOOL=ON
+gtest_en:BOOL=other
 
 //Use shared (DLL) run-time lib even when Google Test is built
 // as static lib.
@@ -513,11 +539,11 @@ libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_proje
 libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv
 
 //Enable the log color to use: on/off
-logcolor_en:BOOL=OFF
+logcolor_en:BOOL=off
 
 //set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug,
 // 5-trace, default 3)
-loglevel:BOOL=OFF
+loglevel:BOOL=5
 
 //Enable the mps: on/off
 mps_en:BOOL=ON
@@ -883,7 +909,8 @@ _Python_EXECUTABLE:INTERNAL=/usr/bin/python3.8
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;10;64;;cpython-38-x86_64-linux-gnu;/usr/lib/python3.8;/usr/lib/python3.8;/usr/lib/python3.8/site-packages;/usr/lib/python3.8/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=28c129decd38964df5236e30f1913f21
-generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest/generated
+cmake_package_name:INTERNAL=GTest
+generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples

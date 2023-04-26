@@ -12,7 +12,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "daemon_en=1"
-  "logcolor_en=1"
+  "logcolor_en=0"
+  "loglevel=5"
   "mps_en=1"
   )
 
@@ -21,18 +22,20 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "../log/simple_log"
   "../3rd/libuv/include"
-  "../test/googletest/googletest/include"
-  "../test/googletest/googletest"
-  "../test/googletest/googlemock/include"
-  "../test/googletest/googlemock"
+  "_deps/gtest-src/googletest/include"
+  "_deps/gtest-src/googletest"
+  "_deps/gtest-src/googlemock/include"
+  "_deps/gtest-src/googlemock"
+  "_deps/gtest-src/include"
+  "_deps/gtest-src"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
   "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv/CMakeFiles/uv_a.dir/DependInfo.cmake"
   )

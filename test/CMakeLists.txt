@@ -12,14 +12,14 @@ ADD_SUBDIRECTORY(common_test)
 
 OPTION(gtest_en "Enable the gtest: on/off" on)
 IF(gtest_en STREQUAL "on") # lib: libgtest libgmock
-    MESSAGE(STATUS "Config: gtest_en = on.")
+    MESSAGE(STATUS "Config: gtest_en = on, use ExternalProject.")
     # 使能cmake外部项目
     include(ExternalProject)
 
     # 下载安装googletest release版本
     ExternalProject_Add(
         gtest
-    #     URL https://github.com/google/googletest/archive/release-1.12.1.zip
+        #     URL https://github.com/google/googletest/archive/release-1.12.1.zip
         URL ${CMAKE_CURRENT_SOURCE_DIR}/gtest/release-1.12.1.zip
         PREFIX ${CMAKE_CURRENT_BINARY_DIR}/gtest
         # Disable install step
@@ -52,6 +52,25 @@ IF(gtest_en STREQUAL "on") # lib: libgtest libgmock
     # 指定暴露gtest头文件
     include_directories("${SOURCE_DIR}/googletest/include"
                         "${SOURCE_DIR}/googlemock/include") 
+
+ElSEIF(gtest_en STREQUAL "other") # lib: pthread gtest gtest_main gmock gmock_main
+    MESSAGE(STATUS "Config: gtest_en = other, use FetchContent.")
+    # 使能cmake外部项目
+    include(FetchContent) 
+
+    # 下载安装googletest release版本
+    fetchcontent_declare(
+        gtest
+        #     URL https://github.com/google/googletest/archive/release-1.12.1.zip
+        URL ${CMAKE_CURRENT_SOURCE_DIR}/gtest/release-1.12.1.zip
+        PREFIX ${CMAKE_CURRENT_BINARY_DIR}/gtest
+    )
+    fetchcontent_makeavailable(gtest)
+
+    # 指定暴露gtest头文件
+    include_directories(${gtest_SOURCE_DIR}/include)
+    include_directories(${gmock_SOURCE_DIR}/include)
+
 ELSE()  # lib: pthread gtest gtest_main gmock gmock_main
     MESSAGE(STATUS "Config: gtest_en = off, we will get clone googletest to build.")
 
