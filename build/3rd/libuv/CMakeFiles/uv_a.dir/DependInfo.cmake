@@ -50,7 +50,6 @@ set(CMAKE_TARGET_DEFINITIONS_C
   "_POSIX_C_SOURCE=200112"
   "daemon_en=1"
   "logcolor_en=1"
-  "loglevel=5"
   "mps_en=1"
   )
 

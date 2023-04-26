@@ -17,6 +17,63 @@
 //Enable AddressSanitizer (ASan)
 ASAN:BOOL=OFF
 
+//Build a 32 bit version of the library.
+BENCHMARK_BUILD_32_BITS:BOOL=OFF
+
+//Flags used by the C++ compiler during coverage builds.
+BENCHMARK_CXX_FLAGS_COVERAGE:STRING=-g
+
+//Allow the downloading and in-tree building of unmet dependencies
+BENCHMARK_DOWNLOAD_DEPENDENCIES:BOOL=OFF
+
+//Enable building and running the assembly tests
+BENCHMARK_ENABLE_ASSEMBLY_TESTS:BOOL=OFF
+
+//Build documentation with Doxygen.
+BENCHMARK_ENABLE_DOXYGEN:BOOL=OFF
+
+//Enable the use of exceptions in the benchmark library.
+BENCHMARK_ENABLE_EXCEPTIONS:BOOL=ON
+
+//Enable building the unit tests which depend on gtest
+BENCHMARK_ENABLE_GTEST_TESTS:BOOL=ON
+
+//Enable installation of benchmark. (Projects embedding benchmark
+// may want to turn this OFF.)
+BENCHMARK_ENABLE_INSTALL:BOOL=ON
+
+//Enable performance counters provided by libpfm
+BENCHMARK_ENABLE_LIBPFM:BOOL=OFF
+
+//Enable link time optimisation of the benchmark library.
+BENCHMARK_ENABLE_LTO:BOOL=OFF
+
+//Enable testing of the benchmark library.
+BENCHMARK_ENABLE_TESTING:BOOL=ON
+
+//Build Release candidates with -Werror.
+BENCHMARK_ENABLE_WERROR:BOOL=ON
+
+//Flags used for linking binaries during coverage builds.
+BENCHMARK_EXE_LINKER_FLAGS_COVERAGE:STRING=
+
+//Build Release candidates with -Werror regardless of compiler
+// issues.
+BENCHMARK_FORCE_WERROR:BOOL=OFF
+
+//Enable installation of documentation.
+BENCHMARK_INSTALL_DOCS:BOOL=ON
+
+//Flags used by the shared libraries linker during coverage builds.
+BENCHMARK_SHARED_LINKER_FLAGS_COVERAGE:STRING=
+
+//Use bundled GoogleTest. If disabled, the find_package(GTest)
+// will be used.
+BENCHMARK_USE_BUNDLED_GTEST:BOOL=ON
+
+//Build and test using libc++ as the standard library.
+BENCHMARK_USE_LIBCXX:BOOL=OFF
+
 //path to the bison executable
 BISON_EXECUTABLE:FILEPATH=/usr/bin/bison
 
@@ -35,7 +92,8 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build.
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
@@ -305,6 +363,9 @@ CVSCOMMAND:FILEPATH=CVSCOMMAND-NOTFOUND
 //Options passed to the cvs update command.
 CVS_UPDATE_OPTIONS:STRING=-d -A -P
 
+//OFF
+CXXFEATURECHECK_DEBUG:BOOL=OFF
+
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
@@ -320,6 +381,9 @@ FL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libfl.so
 //Path to a program.
 GITCOMMAND:FILEPATH=/usr/bin/git
 
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+
 //Path to a program.
 HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 
@@ -332,6 +396,9 @@ KERNELHEADERS_DIR:PATH=/usr/src/linux-headers-5.8.0-38-generic
 
 //Build shared lib
 LIBUV_BUILD_SHARED:BOOL=ON
+
+//Path to a program.
+LLVM_FILECHECK_EXE:FILEPATH=LLVM_FILECHECK_EXE-NOTFOUND
 
 //Command to build the project
 MAKECOMMAND:STRING=/usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
@@ -369,11 +436,20 @@ TSAN:BOOL=OFF
 //Enable UndefinedBehaviorSanitizer (UBSan)
 UBSAN:BOOL=OFF
 
+//Value Computed by CMake
+benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/benchmark
+
+//Value Computed by CMake
+benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/pref/benchmark
+
 //Dependencies for the target
 client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;general;boost_system;general;boost_filesystem;general;boost_thread;general;pthread;
 
 //Enable the daemon: on/off
 daemon_en:BOOL=ON
+
+//Enable the gbenchmark: on/off
+gbenchmark_en:BOOL=off
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock
@@ -412,7 +488,7 @@ gtest_build_tests:BOOL=OFF
 gtest_disable_pthreads:BOOL=OFF
 
 //Enable the gtest: on/off
-gtest_en:BOOL=off
+gtest_en:BOOL=ON
 
 //Use shared (DLL) run-time lib even when Google Test is built
 // as static lib.
@@ -437,11 +513,11 @@ libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_proje
 libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv
 
 //Enable the log color to use: on/off
-logcolor_en:BOOL=on
+logcolor_en:BOOL=OFF
 
 //set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug,
 // 5-trace, default 3)
-loglevel:BOOL=5
+loglevel:BOOL=OFF
 
 //Enable the mps: on/off
 mps_en:BOOL=ON
@@ -457,6 +533,18 @@ uv_a_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: BENCHMARK_CXX_FLAGS_COVERAGE
+BENCHMARK_CXX_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BENCHMARK_EXE_LINKER_FLAGS_COVERAGE
+BENCHMARK_EXE_LINKER_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
+//Test BENCHMARK_HAS_O3_FLAG
+BENCHMARK_HAS_O3_FLAG:INTERNAL=1
+//Test BENCHMARK_HAS_WNO_LTO_TYPE_MISMATCH
+BENCHMARK_HAS_WNO_LTO_TYPE_MISMATCH:INTERNAL=1
+//Test BENCHMARK_HAS_WNO_ODR
+BENCHMARK_HAS_WNO_ODR:INTERNAL=1
+//ADVANCED property for variable: BENCHMARK_SHARED_LINKER_FLAGS_COVERAGE
+BENCHMARK_SHARED_LINKER_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BISON_EXECUTABLE
 BISON_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BZRCOMMAND
@@ -607,7 +695,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=53
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=57
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -650,6 +738,16 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+COMPILE_HAVE_GNU_POSIX_REGEX:INTERNAL=FALSE
+//Result of TRY_COMPILE
+COMPILE_HAVE_POSIX_REGEX:INTERNAL=TRUE
+//Result of TRY_COMPILE
+COMPILE_HAVE_PTHREAD_AFFINITY:INTERNAL=FALSE
+//Result of TRY_COMPILE
+COMPILE_HAVE_STD_REGEX:INTERNAL=TRUE
+//Result of TRY_COMPILE
+COMPILE_HAVE_STEADY_CLOCK:INTERNAL=TRUE
 //ADVANCED property for variable: COVERAGE_COMMAND
 COVERAGE_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
@@ -668,6 +766,8 @@ DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_BISON:INTERNAL=[/usr/bin/bison][v3.5.1()]
 //Details about finding FLEX
 FIND_PACKAGE_MESSAGE_DETAILS_FLEX:INTERNAL=[/usr/bin/flex][v2.6.4()]
+//Details about finding Git
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.25.1()]
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.10()]
 //Details about finding Threads
@@ -680,6 +780,40 @@ FLEX_INCLUDE_DIR-ADVANCED:INTERNAL=1
 FL_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//Test HAVE_CXX_FLAG_COVERAGE
+HAVE_CXX_FLAG_COVERAGE:INTERNAL=1
+//Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+HAVE_CXX_FLAG_FSTRICT_ALIASING:INTERNAL=1
+//Test HAVE_CXX_FLAG_PEDANTIC
+HAVE_CXX_FLAG_PEDANTIC:INTERNAL=1
+//Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+HAVE_CXX_FLAG_PEDANTIC_ERRORS:INTERNAL=1
+//Test HAVE_CXX_FLAG_WALL
+HAVE_CXX_FLAG_WALL:INTERNAL=1
+//Test HAVE_CXX_FLAG_WD654
+HAVE_CXX_FLAG_WD654:INTERNAL=
+//Test HAVE_CXX_FLAG_WERROR
+HAVE_CXX_FLAG_WERROR:INTERNAL=1
+//Test HAVE_CXX_FLAG_WEXTRA
+HAVE_CXX_FLAG_WEXTRA:INTERNAL=1
+//Test HAVE_CXX_FLAG_WFLOAT_EQUAL
+HAVE_CXX_FLAG_WFLOAT_EQUAL:INTERNAL=1
+//Test HAVE_CXX_FLAG_WNO_DEPRECATED
+HAVE_CXX_FLAG_WNO_DEPRECATED:INTERNAL=1
+//Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS:INTERNAL=1
+//Test HAVE_CXX_FLAG_WSHADOW
+HAVE_CXX_FLAG_WSHADOW:INTERNAL=1
+//Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+HAVE_CXX_FLAG_WSHORTEN_64_TO_32:INTERNAL=
+//Test HAVE_CXX_FLAG_WSTRICT_ALIASING
+HAVE_CXX_FLAG_WSTRICT_ALIASING:INTERNAL=1
+//Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+HAVE_CXX_FLAG_WTHREAD_SAFETY:INTERNAL=
+//Have library rt
+HAVE_LIB_RT:INTERNAL=1
 //ADVANCED property for variable: HGCOMMAND
 HGCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
@@ -690,6 +824,12 @@ MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: P4COMMAND
 P4COMMAND-ADVANCED:INTERNAL=1
+//Result of TRY_RUN
+RUN_HAVE_POSIX_REGEX:INTERNAL=0
+//Result of TRY_RUN
+RUN_HAVE_STD_REGEX:INTERNAL=0
+//Result of TRY_RUN
+RUN_HAVE_STEADY_CLOCK:INTERNAL=0
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SLURM_SBATCH_COMMAND
@@ -698,6 +838,8 @@ SLURM_SBATCH_COMMAND-ADVANCED:INTERNAL=1
 SLURM_SRUN_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SVNCOMMAND
 SVNCOMMAND-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+THREADS_HAVE_PTHREAD_ARG:INTERNAL=TRUE
 //Test UV_F_STRICT_ALIASING
 UV_F_STRICT_ALIASING:INTERNAL=1
 //Test UV_LINT_EXTRA
@@ -739,7 +881,7 @@ _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=/usr/bin/python3.8
 //Python Properties
-_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;5;64;;cpython-38-x86_64-linux-gnu;/usr/lib/python3.8;/usr/lib/python3.8;/usr/lib/python3.8/site-packages;/usr/lib/python3.8/site-packages
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;10;64;;cpython-38-x86_64-linux-gnu;/usr/lib/python3.8;/usr/lib/python3.8;/usr/lib/python3.8/site-packages;/usr/lib/python3.8/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=28c129decd38964df5236e30f1913f21
 generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests

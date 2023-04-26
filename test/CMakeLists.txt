@@ -11,8 +11,8 @@ ADD_SUBDIRECTORY(common_test)
 # enable_testing()
 
 OPTION(gtest_en "Enable the gtest: on/off" on)
-IF(gtest_en STREQUAL "on")
-    MESSAGE(STATUS "Config: gtest_en=on")
+IF(gtest_en STREQUAL "on") # lib: libgtest libgmock
+    MESSAGE(STATUS "Config: gtest_en = on.")
     # 使能cmake外部项目
     include(ExternalProject)
 
@@ -52,8 +52,8 @@ IF(gtest_en STREQUAL "on")
     # 指定暴露gtest头文件
     include_directories("${SOURCE_DIR}/googletest/include"
                         "${SOURCE_DIR}/googlemock/include") 
-ELSE()
-    MESSAGE(STATUS "Config: gtest_en=off, we will get clone googletest to build")
+ELSE()  # lib: pthread gtest gtest_main gmock gmock_main
+    MESSAGE(STATUS "Config: gtest_en = off, we will get clone googletest to build.")
 
     # 设置子目录并构建
     add_subdirectory(googletest)

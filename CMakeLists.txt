@@ -47,19 +47,19 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
 # case 0
 OPTION(mps_en "Enable the mps: on/off" on)
 IF(mps_en STREQUAL "off")
-	MESSAGE(STATUS "Config: mps_en=off")
+	MESSAGE(STATUS "Config: mps_en=off.")
 	ADD_DEFINITIONS("-Dmps_en=0")
 ELSE()
-	MESSAGE(STATUS "Config: mps_en=on")
+	MESSAGE(STATUS "Config: mps_en=on.")
 	ADD_DEFINITIONS("-Dmps_en=1")
 ENDIF()
 # case 1
 OPTION(daemon_en "Enable the daemon: on/off" on)
 IF(daemon_en STREQUAL "off")
-	MESSAGE(STATUS "Config: daemon_en=off")
+	MESSAGE(STATUS "Config: daemon_en=off.")
 	ADD_DEFINITIONS("-Ddaemon_en=0")
 ELSE()
-	MESSAGE(STATUS "Config: daemon_en=on")
+	MESSAGE(STATUS "Config: daemon_en = on.")
 	ADD_DEFINITIONS("-Ddaemon_en=1")
 ENDIF()
 # case 2 log
@@ -67,16 +67,16 @@ OPTION(loglevel "set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug, 5-
 IF(loglevel STREQUAL "OFF")
     MESSAGE(STATUS "Config warning: loglevel isn't set, default loglevel is 3.")
 ELSE()
-	MESSAGE(STATUS "Config: loglevel=${loglevel}")
+	MESSAGE(STATUS "Config: loglevel = ${loglevel}.")
 	ADD_DEFINITIONS("-Dloglevel=${loglevel}")
 ENDIF()
 # case 3 log
 OPTION(logcolor_en "Enable the log color to use: on/off" off)
 IF(logcolor_en STREQUAL "off")
-	MESSAGE(STATUS "Config: logcolor_en=off")
+	MESSAGE(STATUS "Config: logcolor_en = off.")
 	ADD_DEFINITIONS("-Dlogcolor_en=0")
 ELSE()
-	MESSAGE(STATUS "Config: logcolor_en=on")
+	MESSAGE(STATUS "Config: logcolor_en = on.")
 	ADD_DEFINITIONS("-Dlogcolor_en=1")
 ENDIF()
 
@@ -94,6 +94,9 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/3rd/libuv/include)
 # googletest,设置子目录并构建
 # enable_testing()
 ADD_SUBDIRECTORY(test)
+
+# googlebenchmark,设置子目录并构建
+ADD_SUBDIRECTORY(pref)
 
 # 设置可执行二进制文件输出位置
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/funbin/)
