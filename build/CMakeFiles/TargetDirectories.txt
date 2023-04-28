@@ -100,6 +100,13 @@
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/CMakeFiles/list_install_components.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/CMakeFiles/rebuild_cache.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/CMakeFiles/edit_cache.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/common_pref/CMakeFiles/install/strip.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/common_pref/CMakeFiles/install/local.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/common_pref/CMakeFiles/install.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/common_pref/CMakeFiles/list_install_components.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/common_pref/CMakeFiles/rebuild_cache.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/common_pref/CMakeFiles/edit_cache.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/common_pref/CMakeFiles/common_pref.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/benchmark/CMakeFiles/install/strip.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/benchmark/CMakeFiles/install/local.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/benchmark/CMakeFiles/install.dir

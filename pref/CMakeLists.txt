@@ -5,14 +5,14 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 FIND_PACKAGE(Threads REQUIRED)
 
 # 设置子目录并构建
-# ADD_SUBDIRECTORY(common_pref)
+ADD_SUBDIRECTORY(common_pref)
 
 # googlebenchmark编译开关
 OPTION(gbenchmark_en "Enable the gbenchmark: on/off" on)
 IF(gbenchmark_en STREQUAL "on") # lib: benchmark benchmark_main pthread(无编译测试例)
     MESSAGE(STATUS "Config: gbenchmark = on, use ExternalProject(error not configure).")
 
-ELSEIF(gbenchmark_en STREQUAL "other")
+ELSEIF(gbenchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(编译测试例)
     MESSAGE(STATUS "Config: gbenchmark = other, use FetchContent.")
     # 使能cmake外部项目
     include(FetchContent) 

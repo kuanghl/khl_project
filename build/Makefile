@@ -644,6 +644,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named common_pref
+
+# Build rule for target.
+common_pref: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common_pref
+.PHONY : common_pref
+
+# fast build rule for target.
+common_pref/fast:
+	$(MAKE) $(MAKESILENT) -f pref/common_pref/CMakeFiles/common_pref.dir/build.make pref/common_pref/CMakeFiles/common_pref.dir/build
+.PHONY : common_pref/fast
+
+#=============================================================================
 # Target rules for targets named benchmark_main
 
 # Build rule for target.
@@ -2179,6 +2192,7 @@ help:
 	@echo "... client_c"
 	@echo "... codetest"
 	@echo "... commandlineflags_gtest"
+	@echo "... common_pref"
 	@echo "... common_test"
 	@echo "... complexity_test"
 	@echo "... cxx03_test"
