@@ -1450,19 +1450,6 @@ broadcast_cli/fast:
 .PHONY : broadcast_cli/fast
 
 #=============================================================================
-# Target rules for targets named posix_memreader
-
-# Build rule for target.
-posix_memreader: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_memreader
-.PHONY : posix_memreader
-
-# fast build rule for target.
-posix_memreader/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_memreader.dir/build.make fun/primary/shm/CMakeFiles/posix_memreader.dir/build
-.PHONY : posix_memreader/fast
-
-#=============================================================================
 # Target rules for targets named sem-shm_reader
 
 # Build rule for target.
@@ -1502,6 +1489,32 @@ posix_shm_reader/fast:
 .PHONY : posix_shm_reader/fast
 
 #=============================================================================
+# Target rules for targets named posix_memreader
+
+# Build rule for target.
+posix_memreader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_memreader
+.PHONY : posix_memreader
+
+# fast build rule for target.
+posix_memreader/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_memreader.dir/build.make fun/primary/shm/CMakeFiles/posix_memreader.dir/build
+.PHONY : posix_memreader/fast
+
+#=============================================================================
+# Target rules for targets named process_shm_a
+
+# Build rule for target.
+process_shm_a: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 process_shm_a
+.PHONY : process_shm_a
+
+# fast build rule for target.
+process_shm_a/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/process_shm_a.dir/build.make fun/primary/shm/CMakeFiles/process_shm_a.dir/build
+.PHONY : process_shm_a/fast
+
+#=============================================================================
 # Target rules for targets named sem-shm_writer
 
 # Build rule for target.
@@ -1539,6 +1552,19 @@ sysv_shm_reader: cmake_check_build_system
 sysv_shm_reader/fast:
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/build.make fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/build
 .PHONY : sysv_shm_reader/fast
+
+#=============================================================================
+# Target rules for targets named process_shm_b
+
+# Build rule for target.
+process_shm_b: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 process_shm_b
+.PHONY : process_shm_b
+
+# fast build rule for target.
+process_shm_b/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/process_shm_b.dir/build.make fun/primary/shm/CMakeFiles/process_shm_b.dir/build
+.PHONY : process_shm_b/fast
 
 #=============================================================================
 # Target rules for targets named sysv_shm_writer
@@ -2246,6 +2272,8 @@ help:
 	@echo "... posix_sem_c"
 	@echo "... posix_shm_reader"
 	@echo "... posix_shm_writer"
+	@echo "... process_shm_a"
+	@echo "... process_shm_b"
 	@echo "... rand"
 	@echo "... rbtree"
 	@echo "... register_benchmark_test"
