@@ -330,10 +330,15 @@
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/thread/CMakeFiles/edit_cache.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/thread/CMakeFiles/thread_cancel.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/install/strip.dir
-/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/install/local.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/install.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/list_install_components.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/rebuild_cache.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/install/local.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/msg_que_server.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/edit_cache.dir
 /home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/primary/msg_que/CMakeFiles/msg_que_client.dir

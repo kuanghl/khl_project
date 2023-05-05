@@ -1671,6 +1671,71 @@ thread_cancel/fast:
 .PHONY : thread_cancel/fast
 
 #=============================================================================
+# Target rules for targets named posix_msgq_send
+
+# Build rule for target.
+posix_msgq_send: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_send
+.PHONY : posix_msgq_send
+
+# fast build rule for target.
+posix_msgq_send/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build
+.PHONY : posix_msgq_send/fast
+
+#=============================================================================
+# Target rules for targets named posix_msgq_recv
+
+# Build rule for target.
+posix_msgq_recv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_recv
+.PHONY : posix_msgq_recv
+
+# fast build rule for target.
+posix_msgq_recv/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build
+.PHONY : posix_msgq_recv/fast
+
+#=============================================================================
+# Target rules for targets named posix_msgq_notify
+
+# Build rule for target.
+posix_msgq_notify: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_notify
+.PHONY : posix_msgq_notify
+
+# fast build rule for target.
+posix_msgq_notify/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build
+.PHONY : posix_msgq_notify/fast
+
+#=============================================================================
+# Target rules for targets named sysv_msgq_send
+
+# Build rule for target.
+sysv_msgq_send: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_msgq_send
+.PHONY : sysv_msgq_send
+
+# fast build rule for target.
+sysv_msgq_send/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build
+.PHONY : sysv_msgq_send/fast
+
+#=============================================================================
+# Target rules for targets named sysv_msgq_recv
+
+# Build rule for target.
+sysv_msgq_recv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_msgq_recv
+.PHONY : sysv_msgq_recv
+
+# fast build rule for target.
+sysv_msgq_recv/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/build.make fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/build
+.PHONY : sysv_msgq_recv/fast
+
+#=============================================================================
 # Target rules for targets named msg_que_server
 
 # Build rule for target.
@@ -2269,6 +2334,9 @@ help:
 	@echo "... pipe_fifo_send"
 	@echo "... posix_memreader"
 	@echo "... posix_memwriter"
+	@echo "... posix_msgq_notify"
+	@echo "... posix_msgq_recv"
+	@echo "... posix_msgq_send"
 	@echo "... posix_sem_c"
 	@echo "... posix_shm_reader"
 	@echo "... posix_shm_writer"
@@ -2302,6 +2370,8 @@ help:
 	@echo "... strncpy"
 	@echo "... strrchr"
 	@echo "... struct_array"
+	@echo "... sysv_msgq_recv"
+	@echo "... sysv_msgq_send"
 	@echo "... sysv_sem_c"
 	@echo "... sysv_sem_p"
 	@echo "... sysv_shm_reader"
