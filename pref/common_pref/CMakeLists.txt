@@ -11,7 +11,7 @@ ADD_EXECUTABLE(common_pref ${COMMON_PREF_SRCS})
 # 查找当前目录路径下文件及其他路径下的文件,pthread=${CMAKE_THREAD_LIBS_INIT}
 IF(gbenchmark_en STREQUAL "on")
     # TARGET_LINK_LIBRARIES(common_pref libbenchmark ${LINK_LIB})
-    MESSAGE(STATUS "Config: gbenchmark = on, use ExternalProject(error not configure).")
+    MESSAGE(STATUS "Config: gbenchmark_en = on, use ExternalProject(error not configure).")
 ELSE()
     TARGET_LINK_LIBRARIES(common_pref benchmark benchmark_main pthread ${LINK_LIB}) 
 ENDIF()

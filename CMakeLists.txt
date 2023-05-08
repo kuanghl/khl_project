@@ -19,7 +19,7 @@ if (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 		"MinSizeRel" "RelWithDebInfo")
 endif ()
 
-# # 编译选项设置
+# 编译选项设置
 SET(CMAKE_C_FLAGS_RELEASE "-D_REETRANT -DNDEBUG -fPIC -Wall -Wextra -pedantic -O3 -std=gnu99 -v")
 SET(CMAKE_C_FLAGS_DEBUG "-D_REETRANT -g -fPIC -Wall -Wextra -pedantic -O0 -v")
 SET(CMAKE_CXX_FLAGS_RELEASE "-Wall -O2")

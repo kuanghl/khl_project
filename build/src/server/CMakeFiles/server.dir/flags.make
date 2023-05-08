@@ -6,5 +6,5 @@ C_DEFINES = -Ddaemon_en=1 -Dlogcolor_en=0 -Dloglevel=5 -Dmps_en=1
 
 C_INCLUDES = -I/home/kuanghongliang/Documents/vscode_projects/khl_project/include -I/home/kuanghongliang/Documents/vscode_projects/khl_project/log/simple_log -I/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/include -I/home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/hh -I/home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/mm -I/home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/ll -I/home/kuanghongliang/Documents/vscode_projects/khl_project/src/server
 
-C_FLAGS = -D_REETRANT -g -fPIC -Wall -Wextra -pedantic -O0 -v
+C_FLAGS = -D_REETRANT -DNDEBUG -fPIC -Wall -Wextra -pedantic -O3 -std=gnu99 -v
 

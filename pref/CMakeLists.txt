@@ -7,13 +7,15 @@ FIND_PACKAGE(Threads REQUIRED)
 # 设置子目录并构建
 ADD_SUBDIRECTORY(common_pref)
 
+set(BENCHMARK_ENABLE_TESTING OFF)
+
 # googlebenchmark编译开关
-OPTION(gbenchmark_en "Enable the gbenchmark: on/off" on)
+OPTION(gbenchmark_en "Enable the gbenchmark_en: on/off" on)
 IF(gbenchmark_en STREQUAL "on") # lib: benchmark benchmark_main pthread(无编译测试例)
-    MESSAGE(STATUS "Config: gbenchmark = on, use ExternalProject(error not configure).")
+    MESSAGE(STATUS "Config: gbenchmark_en = on, use ExternalProject(error not configure).")
 
 ELSEIF(gbenchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(编译测试例)
-    MESSAGE(STATUS "Config: gbenchmark = other, use FetchContent.")
+    MESSAGE(STATUS "Config: gbenchmark_en = other, use FetchContent.")
     # 使能cmake外部项目
     include(FetchContent) 
 
@@ -30,7 +32,7 @@ ELSEIF(gbenchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(�
     include_directories(${benchmark_SOURCE_DIR}/include)
 
 ELSE()  # lib: benchmark benchmark_main pthread(编译测试例)
-    MESSAGE(STATUS "Config: gbenchmark = off, we will get clone google benchmark to build.")
+    MESSAGE(STATUS "Config: gbenchmark_en = off, we will get clone google benchmark to build.")
 
     # 设置子目录并构建
     ADD_SUBDIRECTORY(benchmark)

@@ -775,3 +775,18 @@ make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_p
 
 Source file was:
 int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE succeeded with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_668ff/fast && /usr/bin/make  -f CMakeFiles/cmTC_668ff.dir/build.make CMakeFiles/cmTC_668ff.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_668ff.dir/src.cxx.o
+/usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Werror -DHAVE_CXX_FLAG_WSUGGEST_OVERRIDE  -Wsuggest-override   -Wsuggest-override -std=c++11 -o CMakeFiles/cmTC_668ff.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_668ff
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_668ff.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Werror -DHAVE_CXX_FLAG_WSUGGEST_OVERRIDE  -Wsuggest-override CMakeFiles/cmTC_668ff.dir/src.cxx.o -o cmTC_668ff 
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }

@@ -92,8 +92,9 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build.
-CMAKE_BUILD_TYPE:STRING=Debug
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -474,7 +475,7 @@ client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;
 //Enable the daemon: on/off
 daemon_en:BOOL=ON
 
-//Enable the gbenchmark: on/off
+//Enable the gbenchmark_en: on/off
 gbenchmark_en:BOOL=off
 
 //Value Computed by CMake
@@ -721,7 +722,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=58
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=57
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -836,6 +837,8 @@ HAVE_CXX_FLAG_WSHADOW:INTERNAL=1
 HAVE_CXX_FLAG_WSHORTEN_64_TO_32:INTERNAL=
 //Test HAVE_CXX_FLAG_WSTRICT_ALIASING
 HAVE_CXX_FLAG_WSTRICT_ALIASING:INTERNAL=1
+//Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE
+HAVE_CXX_FLAG_WSUGGEST_OVERRIDE:INTERNAL=1
 //Test HAVE_CXX_FLAG_WTHREAD_SAFETY
 HAVE_CXX_FLAG_WTHREAD_SAFETY:INTERNAL=
 //Have library rt

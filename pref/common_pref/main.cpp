@@ -177,10 +177,10 @@ public:
   void TearDown(const ::benchmark::State& state) {
     //printf("TearDown function.\n");
   }
+  uint64_t a;
 };
 
 BENCHMARK_F(Factorial_Fixture, factorial_pref_64)(benchmark::State& st) {
-    uint64_t a;
     for (auto _ : st) {
         a = factorial_pref(64);
     }
@@ -188,7 +188,6 @@ BENCHMARK_F(Factorial_Fixture, factorial_pref_64)(benchmark::State& st) {
 }
 
 BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_100)(benchmark::State& st) {
-    uint64_t a;
     double numFoos = 0, numBars = 0, numBazs = 0;
     for (auto _ : st) {
         a = factorial_pref(100);
@@ -196,15 +195,15 @@ BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_100)(benchmark::State& st) 
         numFoos++;
         numBazs++;
     }
-    // //printf("Inter function.\n");
-    // st.counters["Foo"] = numFoos;
-    // st.counters["Bar"] = numBars;
-    // st.counters["Baz"] = numBazs;
-    // st.counters["FooRate"] = benchmark::Counter(numFoos, benchmark::Counter::kIsRate);
-    // st.counters["FooInvRate"] = benchmark::Counter(numFoos, benchmark::Counter::kIsRate | benchmark::Counter::kInvert);
-    // st.counters["FooAvg"] = benchmark::Counter(numFoos, benchmark::Counter::kAvgThreads);
-    // st.counters["FooAvgRate"] = benchmark::Counter(numFoos,benchmark::Counter::kAvgThreadsRate);
-    // //st.counters["BytesProcessed"] = benchmark::Counter(st.range(0), benchmark::Counter::kIsIterationInvariantRate, benchmark::Counter::OneK::kIs1024);
+    //printf("Inter function.\n");
+    st.counters["Foo"] = numFoos;
+    st.counters["Bar"] = numBars;
+    st.counters["Baz"] = numBazs;
+    st.counters["FooRate"] = benchmark::Counter(numFoos, benchmark::Counter::kIsRate);
+    st.counters["FooInvRate"] = benchmark::Counter(numFoos, benchmark::Counter::kIsRate | benchmark::Counter::kInvert);
+    st.counters["FooAvg"] = benchmark::Counter(numFoos, benchmark::Counter::kAvgThreads);
+    st.counters["FooAvgRate"] = benchmark::Counter(numFoos,benchmark::Counter::kAvgThreadsRate);
+    //st.counters["BytesProcessed"] = benchmark::Counter(st.range(0), benchmark::Counter::kIsIterationInvariantRate, benchmark::Counter::OneK::kIs1024);
 }
 /* BarTest is NOT registered */
 BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Threads(100)->Iterations(1)->ThreadRange(1, 8)->UseRealTime();

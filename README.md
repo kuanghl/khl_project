@@ -5,15 +5,31 @@
   - [4. network](#4-network)
   - [5. data struct](#5-data-struct)
   - [6. 编译及使用方法](#6-编译及使用方法)
-  - [7. Request and Push.](#7-request-and-push)
+  - [7.docker部署与使用](#7docker部署与使用)
+  - [8. Request and Push](#8-request-and-push)
 
 ## Demo study environment.
 嵌入式C/C++多平台开发学习平台，可以用于开发前测试及积累。综合多种高效库及架构，适用于个人学习及移植使用。
+- 3rd--三方库引用
+- build--编译目标项目文件夹
+- cfun--linux c及标准c函数测试验证
+- fun--系统/网络开发及一些编程模型
+- include--本项目标准api头
+- kernel--linux kernel学习使用
+- lib--编译库及外部库
+- log--阻塞异步日志
+- notes--学习笔记及demo code
+- pref--google benchmark性能测试基本框架
+- src--项目开发代码
+- test--google test单元测试基本框架
+- tools--单元测试/回归测试及其他python工具
 
 ### 1. 3rd develop
 三方库引用x86/Risv平台，Linux环境下开发。
 - libuv
 - liteos-a
+- gtest
+- gbenchmark
 
 ### 2. gtest/gbenchmark
 - google test单元测试平台搭建及使用。
@@ -42,7 +58,7 @@
 
 
 ### 3. linux c
-linux 相关库函数及POSIX标准函数使用及积累。
+linux 相关库函数system V系统已编译内核标准及POSIX标准函数使用及积累。
 
 ### 4. network
 网络相关的内容学习及运用。
@@ -56,7 +72,8 @@ cmake整项目编译指令流程：
 - `logcolor_en`整个项目的log颜色使能
 - `gtest_en = on`使用gtest release-1.12.1.zip包,`gtest_en = off`使用clone googletest源码编译
 - `mps_en`网络模式及单机模式切换
-- `daemon`网络连接控制多用户/单用户
+- `daemon_en`网络连接控制多用户/单用户
+- `gbenchmark = other`使用release benchmark-1.7.1.zip,`gbenchmark = off`使用clone google benchmark源码编译
 ```
 mkdir build
 cd build
@@ -65,4 +82,7 @@ make -j16
 sudo make install
 ```
 
-### 7. Request and Push.
+### 7.docker部署与使用
+详细看/docker/readme.md
+
+### 8. Request and Push

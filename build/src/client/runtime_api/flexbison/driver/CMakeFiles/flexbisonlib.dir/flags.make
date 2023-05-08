@@ -6,5 +6,5 @@ CXX_DEFINES = -Ddaemon_en=1 -Dflexbisonlib_EXPORTS -Dlogcolor_en=0 -Dloglevel=5 
 
 CXX_INCLUDES = -I/home/kuanghongliang/Documents/vscode_projects/khl_project/include -I/home/kuanghongliang/Documents/vscode_projects/khl_project/log/simple_log -I/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv/include -I/home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/include -I/home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/driver/. -I/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver
 
-CXX_FLAGS = -g -fPIC
+CXX_FLAGS = -Wall -O2 -fPIC
 
