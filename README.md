@@ -1,6 +1,6 @@
 - [Demo study environment.](#demo-study-environment)
   - [1. 3rd develop](#1-3rd-develop)
-  - [2. gtest](#2-gtest)
+  - [2. gtest/gbenchmark](#2-gtestgbenchmark)
   - [3. linux c](#3-linux-c)
   - [4. network](#4-network)
   - [5. data struct](#5-data-struct)
@@ -15,15 +15,31 @@
 - libuv
 - liteos-a
 
-### 2. gtest
-google test单元测试平台搭建及使用。
-```
-cd build
-# 整个测试集
-./test/common_test/common_test --gtest_filter=CommonTest*
-# 单个测试例
-./test/common_test/common_test --gtest_filter=CommonTest.Negative
-```
+### 2. gtest/gbenchmark
+- google test单元测试平台搭建及使用。
+  ```
+  cd build
+  # 整个测试集
+  ./test/common_test/common_test --gtest_filter=CommonTest*
+  # 单个测试例
+  ./test/common_test/common_test --gtest_filter=CommonTest.Negative
+  ```
+- google benchmark单元性能测试平台搭建及使用。
+  ```
+  # 列出所有测试例
+  ./pref/common_pref/common_pref --benchmark_list_tests=ture
+  # 执行所有测试例
+  ./pref/common_pref/common_pref --benchmark_list_tests=false
+  # 执行指定测试项
+  ./pref/common_pref/common_pref --benchmark_filter=factorial_pref_xx
+  # 设置输出格式
+  ./pref/common_pref/common_pref --benchmark_format=<console | json | csv>
+  # 输出到指定文件
+  ./pref/common_pref/common_pref --benchmark_out=<filename>
+  # 显示计数器参数
+  ./pref/common_pref/common_pref --benchmark_counters_tabular=true
+  ```
+
 
 ### 3. linux c
 linux 相关库函数及POSIX标准函数使用及积累。

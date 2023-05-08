@@ -1385,6 +1385,32 @@ multipid_server/fast:
 .PHONY : multipid_server/fast
 
 #=============================================================================
+# Target rules for targets named long_client
+
+# Build rule for target.
+long_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 long_client
+.PHONY : long_client
+
+# fast build rule for target.
+long_client/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_client.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_client.dir/build
+.PHONY : long_client/fast
+
+#=============================================================================
+# Target rules for targets named long_server
+
+# Build rule for target.
+long_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 long_server
+.PHONY : long_server
+
+# fast build rule for target.
+long_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_server.dir/build
+.PHONY : long_server/fast
+
+#=============================================================================
 # Target rules for targets named client
 
 # Build rule for target.
@@ -2315,6 +2341,8 @@ help:
 	@echo "... link_main_test"
 	@echo "... list"
 	@echo "... log"
+	@echo "... long_client"
+	@echo "... long_server"
 	@echo "... map_test"
 	@echo "... memory_manager_test"
 	@echo "... min_time_parse_gtest"

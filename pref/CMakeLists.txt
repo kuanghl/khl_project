@@ -17,7 +17,7 @@ ELSEIF(gbenchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(�
     # 使能cmake外部项目
     include(FetchContent) 
 
-    # 下载安装googletest release版本
+    # 下载安装benchmark release版本
     fetchcontent_declare(
         googlebenchmark
         #     URL https://github.com/google/benchmark/releases/tag/benchmark-1.7.1.zip
@@ -26,7 +26,7 @@ ELSEIF(gbenchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(�
     )
     fetchcontent_makeavailable(googlebenchmark)
 
-    # 指定暴露gtest头文件
+    # 指定暴露benchmark头文件
     include_directories(${benchmark_SOURCE_DIR}/include)
 
 ELSE()  # lib: benchmark benchmark_main pthread(编译测试例)
@@ -35,6 +35,6 @@ ELSE()  # lib: benchmark benchmark_main pthread(编译测试例)
     # 设置子目录并构建
     ADD_SUBDIRECTORY(benchmark)
 
-    # 指定暴露gtest头文件
+    # 指定暴露benchmark头文件
     include_directories(${benchmark_SOURCE_DIR}/include)
 ENDIF()

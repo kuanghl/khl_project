@@ -304,6 +304,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/DependInfo.cmake"
   "fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/DependInfo.cmake"
   "fun/primary/socket/tcp/CMakeFiles/multipid_server.dir/DependInfo.cmake"
+  "fun/primary/socket/tcp/CMakeFiles/long_client.dir/DependInfo.cmake"
+  "fun/primary/socket/tcp/CMakeFiles/long_server.dir/DependInfo.cmake"
   "fun/primary/socket/tcp/CMakeFiles/client.dir/DependInfo.cmake"
   "fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/DependInfo.cmake"
   "fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/DependInfo.cmake"

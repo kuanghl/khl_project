@@ -1,7 +1,7 @@
 ## Exercise 1
 > 简述使用TCP套接字编程的基本步骤。
 
-![](https://upload.wikimedia.org/wikipedia/commons/a/a1/InternetSocketBasicDiagram_zhtw.png)
+![img](https://upload.wikimedia.org/wikipedia/commons/a/a1/InternetSocketBasicDiagram_zhtw.png)
 
 服务端实现的步骤如下：
 

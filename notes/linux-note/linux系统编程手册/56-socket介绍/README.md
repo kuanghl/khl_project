@@ -134,7 +134,7 @@ int connect(int sockfd, const struct sockaddr* addr, socklen_t len);
 ##### shutdown()：连接终止
 
 ```
-nt shutdown(int sockfd, int how);
+int shutdown(int sockfd, int how);
 // 若成功，返回0，若出错，返回-1
 
 close可以关闭一个套接字，但是只有最后一个活动引用关闭时，close才会释放网络端点，而shutdown允许一个套接字处于不活动状态
