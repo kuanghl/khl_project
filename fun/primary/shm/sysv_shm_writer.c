@@ -20,8 +20,14 @@ struct ShmDataStruct {
 #define KEY_OF_SHM 8888
 
 int main() {
+    struct shmid_ds shm_stat;
+
     //获取shm_id，在不同进程中这是唯一的，获取和KEY有关
-    int shm_id = shmget(KEY_OF_SHM, sizeof(struct ShmDataStruct), 0666 | IPC_CREAT);
+    int shm_id = shmget(KEY_OF_SHM, sizeof(struct ShmDataStruct), 0777 | IPC_CREAT);
+
+    shmctl(shm_id, IPC_STAT, &shm_stat);
+    shm_stat.shm_segsz = 8903;
+    shmctl(shm_id, IPC_SET, &shm_stat);
 
     //创建一个指针，用来指向共享内存
     void *addr_to_shm;

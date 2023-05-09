@@ -6,7 +6,7 @@
 #include <pthread.h>
 #include <time.h>
 
-#define BUFFER_SIZE  1 * 1024
+#define BUFFER_SIZE  1 * 902
 
 typedef struct student_info
 {
@@ -47,7 +47,7 @@ void * consumer_proc(void *arg)
     student_info stu_info;
     while(1)
     {
-        sleep(2);
+        sleep(1);
         printf("------------------------------------------\n");
         printf("get a student info from ring buffer.\n");
         ring_buffer_get(ring_buf, (void *)&stu_info, sizeof(student_info));
@@ -73,7 +73,7 @@ void * producer_proc(void *arg)
         ring_buffer_put(ring_buf, (void *)stu_info, sizeof(student_info));
         printf("ring buffer length: %u\n", ring_buffer_len(ring_buf));
         printf("******************************************\n");
-        sleep(1);
+        usleep(100000);
     }
     return (void *)ring_buf;
 }

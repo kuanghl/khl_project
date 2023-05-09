@@ -3,16 +3,16 @@
 
 /*宏定义验证及累计*/
 
-#define NUM_TO_POW2N(num_a)  ({int buf_num_a = num_a,num_b = 1,num_ret;\
-                            while(num_a >>= 1) num_b <<= 1; \
-                            num_ret = num_b < buf_num_a ? num_b << 1 : num_b; \
-                            num_ret;})
+#define roundup_pow_of_two(a)  ({int _a = a,_b = 1,_ret;\
+                                    while(a >>= 1) _b <<= 1; \
+                                    _ret = _b < _a ? _b << 1 : _b; \
+                                    _ret;})
 
 int main(void)
 {
-    int i = 3;
+    int i = 270;
     int tmp;
-    tmp = NUM_TO_POW2N(i);
+    tmp = roundup_pow_of_two(i);
     printf("i = %d, tmp = %d.\n", i, tmp);
     return 0;
 }

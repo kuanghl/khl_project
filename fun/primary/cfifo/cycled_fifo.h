@@ -13,10 +13,15 @@
 #include <assert.h>
 #include <pthread.h>
 
-//判断x是0否1是2的次方
+//判断x是0否1为2的次方
 #define is_power_of_2(x) ((x) != 0 && (((x) & ((x) - 1)) == 0))
 //取a和b中最小值
 #define min(a, b) (((a) < (b)) ? (a) : (b))
+//向2的n次幂圆整
+#define roundup_pow_of_two(a)  ({int _a = a,_b = 1,_ret;\
+                                    while(a >>= 1) _b <<= 1; \
+                                    _ret = _b < _a ? _b << 1 : _b; \
+                                    _ret;})
 
 struct ring_buffer
 {
@@ -39,13 +44,14 @@ struct ring_buffer* ring_buffer_init(void *buffer, uint32_t size, pthread_mutex_
     struct ring_buffer *ring_buf = NULL;
     if (!is_power_of_2(size))  //size是2的n次方
     {
-    	fprintf(stderr,"size must be power of 2.\n");
-        return ring_buf;
+        size = roundup_pow_of_two(size);
+    	printf("warning size must be power of 2.\n");
+        // return ring_buf;
     }
     ring_buf = (struct ring_buffer *)malloc(sizeof(struct ring_buffer));
     if (!ring_buf)
     {
-        fprintf(stderr,"Failed to malloc memory,errno:%u,reason:%s",
+        printf("Failed to malloc memory,errno:%u,reason:%s",
             errno, strerror(errno));
         return ring_buf;
     }
@@ -77,7 +83,7 @@ void ring_buffer_free(struct ring_buffer *ring_buf)
 }
 
 /*
---获取空白缓冲区的大小
+--获取已填充缓冲区的大小
 - ring_buf缓冲队列指针
 */
 uint32_t __ring_buffer_len(const struct ring_buffer *ring_buf)
