@@ -57,7 +57,13 @@
         "threadpool.h": "c",
         "semaphore.h": "c",
         "unistd.h": "c",
-        "signal.h": "c"
+        "signal.h": "c",
+        "socket.h": "c",
+        "in.h": "c",
+        "poll.h": "c",
+        "cerrno": "c",
+        "fstream": "cpp",
+        "inet.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

@@ -813,19 +813,6 @@ libuv_signal_tid/fast:
 .PHONY : libuv_signal_tid/fast
 
 #=============================================================================
-# Target rules for targets named tidsafe_server
-
-# Build rule for target.
-tidsafe_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidsafe_server
-.PHONY : tidsafe_server
-
-# fast build rule for target.
-tidsafe_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build
-.PHONY : tidsafe_server/fast
-
-#=============================================================================
 # Target rules for targets named multitid_server
 
 # Build rule for target.
@@ -839,17 +826,43 @@ multitid_server/fast:
 .PHONY : multitid_server/fast
 
 #=============================================================================
-# Target rules for targets named multipid_server
+# Target rules for targets named tidsafe_server
 
 # Build rule for target.
-multipid_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multipid_server
-.PHONY : multipid_server
+tidsafe_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidsafe_server
+.PHONY : tidsafe_server
 
 # fast build rule for target.
-multipid_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multipid_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multipid_server.dir/build
-.PHONY : multipid_server/fast
+tidsafe_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build
+.PHONY : tidsafe_server/fast
+
+#=============================================================================
+# Target rules for targets named multiclient_server
+
+# Build rule for target.
+multiclient_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multiclient_server
+.PHONY : multiclient_server
+
+# fast build rule for target.
+multiclient_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build
+.PHONY : multiclient_server/fast
+
+#=============================================================================
+# Target rules for targets named long_client_cpp
+
+# Build rule for target.
+long_client_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 long_client_cpp
+.PHONY : long_client_cpp
+
+# fast build rule for target.
+long_client_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_client_cpp.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_client_cpp.dir/build
+.PHONY : long_client_cpp/fast
 
 #=============================================================================
 # Target rules for targets named long_client
@@ -1190,6 +1203,32 @@ thread_cancel/fast:
 .PHONY : thread_cancel/fast
 
 #=============================================================================
+# Target rules for targets named epoll_server
+
+# Build rule for target.
+epoll_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 epoll_server
+.PHONY : epoll_server
+
+# fast build rule for target.
+epoll_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/epoll/CMakeFiles/epoll_server.dir/build.make fun/primary/epoll/CMakeFiles/epoll_server.dir/build
+.PHONY : epoll_server/fast
+
+#=============================================================================
+# Target rules for targets named epoll_client
+
+# Build rule for target.
+epoll_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 epoll_client
+.PHONY : epoll_client
+
+# fast build rule for target.
+epoll_client/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/epoll/CMakeFiles/epoll_client.dir/build.make fun/primary/epoll/CMakeFiles/epoll_client.dir/build
+.PHONY : epoll_client/fast
+
+#=============================================================================
 # Target rules for targets named posix_msgq_send
 
 # Build rule for target.
@@ -1502,6 +1541,45 @@ cdefine/fast:
 .PHONY : cdefine/fast
 
 #=============================================================================
+# Target rules for targets named memcpy
+
+# Build rule for target.
+memcpy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 memcpy
+.PHONY : memcpy
+
+# fast build rule for target.
+memcpy/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/memcpy.dir/build.make cfun/linux_c/CMakeFiles/memcpy.dir/build
+.PHONY : memcpy/fast
+
+#=============================================================================
+# Target rules for targets named extension
+
+# Build rule for target.
+extension: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extension
+.PHONY : extension
+
+# fast build rule for target.
+extension/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/extension.dir/build.make cfun/linux_c/CMakeFiles/extension.dir/build
+.PHONY : extension/fast
+
+#=============================================================================
+# Target rules for targets named strrchr
+
+# Build rule for target.
+strrchr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 strrchr
+.PHONY : strrchr
+
+# fast build rule for target.
+strrchr/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strrchr.dir/build.make cfun/linux_c/CMakeFiles/strrchr.dir/build
+.PHONY : strrchr/fast
+
+#=============================================================================
 # Target rules for targets named rand
 
 # Build rule for target.
@@ -1539,32 +1617,6 @@ struct_array: cmake_check_build_system
 struct_array/fast:
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/struct_array.dir/build.make cfun/linux_c/CMakeFiles/struct_array.dir/build
 .PHONY : struct_array/fast
-
-#=============================================================================
-# Target rules for targets named extension
-
-# Build rule for target.
-extension: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extension
-.PHONY : extension
-
-# fast build rule for target.
-extension/fast:
-	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/extension.dir/build.make cfun/linux_c/CMakeFiles/extension.dir/build
-.PHONY : extension/fast
-
-#=============================================================================
-# Target rules for targets named strrchr
-
-# Build rule for target.
-strrchr: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 strrchr
-.PHONY : strrchr
-
-# fast build rule for target.
-strrchr/fast:
-	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strrchr.dir/build.make cfun/linux_c/CMakeFiles/strrchr.dir/build
-.PHONY : strrchr/fast
 
 #=============================================================================
 # Target rules for targets named kill_process
@@ -1796,6 +1848,8 @@ help:
 	@echo "... common_test"
 	@echo "... cycled_fifo"
 	@echo "... cycled_priority_fifo"
+	@echo "... epoll_client"
+	@echo "... epoll_server"
 	@echo "... extension"
 	@echo "... fifo"
 	@echo "... flexbison_main"
@@ -1816,12 +1870,14 @@ help:
 	@echo "... list"
 	@echo "... log"
 	@echo "... long_client"
+	@echo "... long_client_cpp"
 	@echo "... long_server"
+	@echo "... memcpy"
 	@echo "... msg_que_client"
 	@echo "... msg_que_server"
 	@echo "... multicast_cli"
 	@echo "... multicast_serv"
-	@echo "... multipid_server"
+	@echo "... multiclient_server"
 	@echo "... multitid_server"
 	@echo "... name_to_pid"
 	@echo "... pid_test"
