@@ -13,6 +13,7 @@ typedef struct student_info
     uint64_t stu_id;
     uint32_t age;
     // uint32_t score;
+    // uint64_t i;
     uint8_t score;
 }student_info;
 
@@ -44,14 +45,15 @@ student_info * get_student_info(time_t timer)
 void * consumer_proc(void *arg)
 {
     struct ring_buffer *ring_buf = (struct ring_buffer *)arg;
+    uint32_t len;
     student_info stu_info;
     while(1)
     {
         sleep(1);
         printf("------------------------------------------\n");
         printf("get a student info from ring buffer.\n");
-        ring_buffer_get(ring_buf, (void *)&stu_info, sizeof(student_info));
-        printf("ring buffer length: %u\n", ring_buffer_len(ring_buf));
+        len = ring_buffer_get(ring_buf, (void *)&stu_info, sizeof(student_info));
+        printf("get size: %d, ring buffer length: %u\n", len, ring_buffer_fill_len(ring_buf));
         print_student_info(&stu_info);
         printf("------------------------------------------\n");
     }
@@ -61,6 +63,7 @@ void * consumer_proc(void *arg)
 void * producer_proc(void *arg)
 {
     time_t cur_time;
+    uint32_t len;
     struct ring_buffer *ring_buf = (struct ring_buffer *)arg;
     while(1)
     {
@@ -70,8 +73,8 @@ void * producer_proc(void *arg)
         printf("******************************************\n");
         student_info *stu_info = get_student_info(cur_time + seed);
         printf("put a student info to ring buffer.\n");
-        ring_buffer_put(ring_buf, (void *)stu_info, sizeof(student_info));
-        printf("ring buffer length: %u\n", ring_buffer_len(ring_buf));
+        len = ring_buffer_put(ring_buf, (void *)stu_info, sizeof(student_info));
+        printf("put size: %d, ring buffer length: %u\n", len, ring_buffer_fill_len(ring_buf));
         printf("******************************************\n");
         usleep(100000);
     }

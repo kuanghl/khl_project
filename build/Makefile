@@ -852,19 +852,6 @@ multiclient_server/fast:
 .PHONY : multiclient_server/fast
 
 #=============================================================================
-# Target rules for targets named long_client_cpp
-
-# Build rule for target.
-long_client_cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 long_client_cpp
-.PHONY : long_client_cpp
-
-# fast build rule for target.
-long_client_cpp/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_client_cpp.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_client_cpp.dir/build
-.PHONY : long_client_cpp/fast
-
-#=============================================================================
 # Target rules for targets named long_client
 
 # Build rule for target.
@@ -1372,17 +1359,17 @@ sysv_sem_c/fast:
 .PHONY : sysv_sem_c/fast
 
 #=============================================================================
-# Target rules for targets named sem_p
+# Target rules for targets named sysv_sem
 
 # Build rule for target.
-sem_p: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_p
-.PHONY : sem_p
+sysv_sem: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_sem
+.PHONY : sysv_sem
 
 # fast build rule for target.
-sem_p/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_p.dir/build.make fun/primary/sem/CMakeFiles/sem_p.dir/build
-.PHONY : sem_p/fast
+sysv_sem/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem.dir/build
+.PHONY : sysv_sem/fast
 
 #=============================================================================
 # Target rules for targets named sem_p-c
@@ -1409,6 +1396,19 @@ sysv_sem_p: cmake_check_build_system
 sysv_sem_p/fast:
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem_p.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem_p.dir/build
 .PHONY : sysv_sem_p/fast
+
+#=============================================================================
+# Target rules for targets named posix_sem_p
+
+# Build rule for target.
+posix_sem_p: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_sem_p
+.PHONY : posix_sem_p
+
+# fast build rule for target.
+posix_sem_p/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/posix_sem_p.dir/build.make fun/primary/sem/CMakeFiles/posix_sem_p.dir/build
+.PHONY : posix_sem_p/fast
 
 #=============================================================================
 # Target rules for targets named posix_sem_c
@@ -1870,7 +1870,6 @@ help:
 	@echo "... list"
 	@echo "... log"
 	@echo "... long_client"
-	@echo "... long_client_cpp"
 	@echo "... long_server"
 	@echo "... memcpy"
 	@echo "... msg_que_client"
@@ -1890,6 +1889,7 @@ help:
 	@echo "... posix_msgq_recv"
 	@echo "... posix_msgq_send"
 	@echo "... posix_sem_c"
+	@echo "... posix_sem_p"
 	@echo "... posix_shm_reader"
 	@echo "... posix_shm_writer"
 	@echo "... process_shm_a"
@@ -1898,7 +1898,6 @@ help:
 	@echo "... rbtree"
 	@echo "... sem-shm_reader"
 	@echo "... sem-shm_writer"
-	@echo "... sem_p"
 	@echo "... sem_p-c"
 	@echo "... server"
 	@echo "... server_a"
@@ -1915,6 +1914,7 @@ help:
 	@echo "... struct_array"
 	@echo "... sysv_msgq_recv"
 	@echo "... sysv_msgq_send"
+	@echo "... sysv_sem"
 	@echo "... sysv_sem_c"
 	@echo "... sysv_sem_p"
 	@echo "... sysv_shm_reader"

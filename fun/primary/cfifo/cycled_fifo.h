@@ -86,9 +86,18 @@ void ring_buffer_free(struct ring_buffer *ring_buf)
 --获取已填充缓冲区的大小
 - ring_buf缓冲队列指针
 */
-uint32_t __ring_buffer_len(const struct ring_buffer *ring_buf)
+uint32_t __ring_buffer_fill_len(const struct ring_buffer *ring_buf)
 {
     return (ring_buf->in - ring_buf->out);
+}
+
+/*
+--获取空缓冲区的大小
+- ring_buf缓冲队列指针
+*/
+uint32_t __ring_buffer_empty_len(const struct ring_buffer *ring_buf)
+{
+    return (ring_buf->size - ring_buf->in + ring_buf->out);
 }
 
 /*
@@ -99,7 +108,7 @@ uint32_t __ring_buffer_len(const struct ring_buffer *ring_buf)
 */
 uint32_t __ring_buffer_get(struct ring_buffer *ring_buf, void * buffer, uint32_t size)
 {
-    assert(ring_buf || buffer);
+    assert(ring_buf && buffer);
     uint32_t len = 0;
     size  = min(size, ring_buf->in - ring_buf->out);
     /* first get the data from fifo->out until the end of the buffer */
@@ -119,7 +128,7 @@ uint32_t __ring_buffer_get(struct ring_buffer *ring_buf, void * buffer, uint32_t
 */
 uint32_t __ring_buffer_put(struct ring_buffer *ring_buf, void *buffer, uint32_t size)
 {
-    assert(ring_buf || buffer);
+    assert(ring_buf && buffer);
     uint32_t len = 0;
     size = min(size, ring_buf->size - ring_buf->in + ring_buf->out);
     /* first put the data starting from fifo->in to buffer end */
@@ -132,14 +141,14 @@ uint32_t __ring_buffer_put(struct ring_buffer *ring_buf, void *buffer, uint32_t 
 }
 
 /*
---线程安全的读取空白缓冲区大小
+--线程安全的读取已填充缓冲区大小
 - ring_buf缓冲队列指针
 */
-uint32_t ring_buffer_len(const struct ring_buffer *ring_buf)
+uint32_t ring_buffer_fill_len(const struct ring_buffer *ring_buf)
 {
     uint32_t len = 0;
     pthread_mutex_lock(ring_buf->f_lock);
-    len = __ring_buffer_len(ring_buf);
+    len = __ring_buffer_fill_len(ring_buf);
     pthread_mutex_unlock(ring_buf->f_lock);
     return len;
 }

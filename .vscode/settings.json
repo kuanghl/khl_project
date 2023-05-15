@@ -63,7 +63,12 @@
         "poll.h": "c",
         "cerrno": "c",
         "fstream": "cpp",
-        "inet.h": "c"
+        "inet.h": "c",
+        "*.ipp": "c",
+        "typeindex": "c",
+        "internet": "c",
+        "sem.h": "c",
+        "condition_variable": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
