@@ -1,0 +1,3 @@
+- see also: 
+  - [linux api](./../../notes/linux-note/linux-api/README.md)
+  - [linux api](./../../notes/linux-note/linux-api/newindex.sh)

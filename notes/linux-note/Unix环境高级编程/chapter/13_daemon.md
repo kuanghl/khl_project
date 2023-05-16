@@ -57,23 +57,23 @@
 
 5. 示例
 
-	```
-#include <stdio.h>
-#include<unistd.h>
-#include<sys/stat.h>
-int main(void)
-{
-    umask(0);
-    if(fork()==0)
-    {// child
-        setsid();
-        chdir("/");
-        for(int i=0;i<FOPEN_MAX;i++)
-            close(i);
-        pause();
-    }
-    return 0;
-}
+	```c
+   #include <stdio.h>
+   #include<unistd.h>
+   #include<sys/stat.h>
+   int main(void)
+   {
+       umask(0);
+       if(fork()==0)
+       {// child
+           setsid();
+           chdir("/");
+           for(int i=0;i<FOPEN_MAX;i++)
+               close(i);
+           pause();
+       }
+       return 0;
+   }
 	```
 	![daemon](../imgs/daemon/daemon.JPG)
 
@@ -147,65 +147,65 @@ int main(void)
 
 6. 示例：
 
-	```
-#include <stdio.h>
-#include<syslog.h>
-int i=0;
-int levels[8];
-char* level_to_str(int level)
-{
-    switch (level) {
-    case LOG_EMERG:
-        return "LOG_EMERG";
-    case LOG_ALERT:
-        return "LOG_ALERT";
-    case LOG_CRIT:
-        return "LOG_CRIT";
-    case LOG_ERR:
-        return "LOG_ERR";
-    case LOG_WARNING:
-        return "LOG_WARNING";
-    case LOG_NOTICE:
-        return "LOG_NOTICE";
-    case LOG_INFO:
-        return "LOG_INFO";
-    case LOG_DEBUG:
-        return "LOG_DEBUG";
-    default:
-        return "Unkonwn Level";
-    }
-}
-void log(int facility,int level)
-{
-    openlog("Test syslog",0,facility);
-    syslog(level,"log:the %dth log record,level=%s\n",i++,level_to_str(level));
-    closelog();
-}
-void log_2(int facility,int level)
-{
-    syslog(level|facility,"log2:the %dth log record,level=%s\n",i++,
-		level_to_str(level));
-    closelog();
-}
-int main(void)
-{
-    levels[0]=LOG_EMERG;
-    levels[1]=LOG_ALERT;
-    levels[2]=LOG_CRIT;
-    levels[3]=LOG_ERR;
-    levels[4]=LOG_WARNING;
-    levels[5]=LOG_NOTICE;
-    levels[6]=LOG_INFO;
-    levels[7]=LOG_DEBUG;
+	```c
+   #include <stdio.h>
+   #include<syslog.h>
+   int i=0;
+   int levels[8];
+   char* level_to_str(int level)
+   {
+       switch (level) {
+       case LOG_EMERG:
+           return "LOG_EMERG";
+       case LOG_ALERT:
+           return "LOG_ALERT";
+       case LOG_CRIT:
+           return "LOG_CRIT";
+       case LOG_ERR:
+           return "LOG_ERR";
+       case LOG_WARNING:
+           return "LOG_WARNING";
+       case LOG_NOTICE:
+           return "LOG_NOTICE";
+       case LOG_INFO:
+           return "LOG_INFO";
+       case LOG_DEBUG:
+           return "LOG_DEBUG";
+       default:
+           return "Unkonwn Level";
+       }
+   }
+   void log(int facility,int level)
+   {
+       openlog("Test syslog",0,facility);
+       syslog(level,"log:the %dth log record,level=%s\n",i++,level_to_str(level));
+       closelog();
+   }
+   void log_2(int facility,int level)
+   {
+       syslog(level|facility,"log2:the %dth log record,level=%s\n",i++,
+   		level_to_str(level));
+       closelog();
+   }
+   int main(void)
+   {
+       levels[0]=LOG_EMERG;
+       levels[1]=LOG_ALERT;
+       levels[2]=LOG_CRIT;
+       levels[3]=LOG_ERR;
+       levels[4]=LOG_WARNING;
+       levels[5]=LOG_NOTICE;
+       levels[6]=LOG_INFO;
+       levels[7]=LOG_DEBUG;
 
-    setlogmask(0);
-    for(int j=0;j<8;j++)
-    {
-            log(LOG_USER,levels[j]);
-            log_2(LOG_USER,levels[j]);
-    }
-    return 0;
-}
+       setlogmask(0);
+       for(int j=0;j<8;j++)
+       {
+               log(LOG_USER,levels[j]);
+               log_2(LOG_USER,levels[j]);
+       }
+       return 0;
+   }
 	```
 
 	其在`/var/log/syslog`日志记录中的输出如下图所示。可以看到：

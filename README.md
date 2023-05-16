@@ -12,13 +12,34 @@
 嵌入式C/C++多平台开发学习平台，可以用于开发前测试及积累。综合多种高效库及架构，适用于个人学习及移植使用。
 - 3rd--三方库引用
 - build--编译目标项目文件夹
+- docker--docker镜像构建及验证
 - cfun--linux c及标准c函数测试验证
 - fun--系统/网络开发及一些编程模型
+  - device--kernel到user驱动
+  - libuv--libuv demo coding
+  - modules--编程模型
+  - primary--linux下默认库函数编程
 - include--本项目标准api头
 - kernel--linux kernel学习使用
 - lib--编译库及外部库
-- log--阻塞异步日志
+- log--阻塞/异步日志
+  - simple_log--同步阻塞日志
 - notes--学习笔记及demo code
+  - cuda--cuda api学习笔记及参考
+  - git--git使用流程笔记
+  - linux-note--linux下开发相关笔记
+    - cpp-primer-5th--c++学习基础资料
+    - data-algo--数据结构与算法相关资料(暂未整理)
+    - ldd3--linux device driver设备驱动开发
+    - linux-api--linux环境下基本api
+    - linux操作系统--linux操作系统架构概述及基本知识叙述
+    - linux网络编程--linux下网络编程模型基础讲解
+    - linux系统编程手册--linux系统编程详解
+    - linux性能优化--linux性能优化方向基本讲解
+    - POSIX-threads--posix线程精讲
+    - tcp-ip网络编程--tcp/ip网络编程详解
+    - Unix环境高级编程--UNIX环境编程基础
+  - unix-note--UNIX环境下demo code及讲解
 - pref--google benchmark性能测试基本框架
 - src--项目开发代码
 - test--google test单元测试基本框架
