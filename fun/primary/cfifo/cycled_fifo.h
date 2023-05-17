@@ -23,6 +23,11 @@
                                     _ret = _b < _a ? _b << 1 : _b; \
                                     _ret;})
 
+/*
+filled size: in - out <= size
+empty size : size - in + out
+right size: size - in & (size - 1)
+*/
 struct ring_buffer
 {
     void            *buffer;     //缓冲区
@@ -97,7 +102,7 @@ uint32_t __ring_buffer_fill_len(const struct ring_buffer *ring_buf)
 */
 uint32_t __ring_buffer_empty_len(const struct ring_buffer *ring_buf)
 {
-    return (ring_buf->size - ring_buf->in + ring_buf->out);
+    return (ring_buf->size - (ring_buf->in - ring_buf->out));
 }
 
 /*
@@ -130,7 +135,7 @@ uint32_t __ring_buffer_put(struct ring_buffer *ring_buf, void *buffer, uint32_t 
 {
     assert(ring_buf && buffer);
     uint32_t len = 0;
-    size = min(size, ring_buf->size - ring_buf->in + ring_buf->out);
+    size = min(size, ring_buf->size - (ring_buf->in - ring_buf->out));
     /* first put the data starting from fifo->in to buffer end */
     len  = min(size, ring_buf->size - (ring_buf->in & (ring_buf->size - 1)));
     memcpy(ring_buf->buffer + (ring_buf->in & (ring_buf->size - 1)), buffer, len);

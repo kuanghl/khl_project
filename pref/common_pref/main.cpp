@@ -171,11 +171,11 @@ BENCHMARK(test_func)->Arg(1)->Arg(3)->Threads(16)->Threads(32)->Setup(DoSetup)->
 class Factorial_Fixture : public benchmark::Fixture {
 public:
   void SetUp(const ::benchmark::State& state) {
-    //printf("SetUp function.\n");
+    // printf("SetUp function.\n");
   }
 
   void TearDown(const ::benchmark::State& state) {
-    //printf("TearDown function.\n");
+    // printf("TearDown function.\n");
   }
   uint64_t a;
 };

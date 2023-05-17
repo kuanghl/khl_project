@@ -48,9 +48,6 @@ BENCHMARK_ENABLE_LIBPFM:BOOL=OFF
 //Enable link time optimisation of the benchmark library.
 BENCHMARK_ENABLE_LTO:BOOL=OFF
 
-//Enable testing of the benchmark library.
-BENCHMARK_ENABLE_TESTING:BOOL=ON
-
 //Build Release candidates with -Werror.
 BENCHMARK_ENABLE_WERROR:BOOL=ON
 
@@ -92,9 +89,8 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Release
+//Choose the type of build.
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -383,18 +379,11 @@ FETCHCONTENT_QUIET:BOOL=ON
 // for googlebenchmark
 FETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=
 
-//When not empty, overrides where to find pre-populated content
-// for gtest
-FETCHCONTENT_SOURCE_DIR_GTEST:PATH=
-
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of googlebenchmark
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLEBENCHMARK:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of gtest
-FETCHCONTENT_UPDATES_DISCONNECTED_GTEST:BOOL=OFF
 
 //path to the flex executable
 FLEX_EXECUTABLE:FILEPATH=/usr/bin/flex
@@ -419,7 +408,7 @@ HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 INSTALL_GTEST:BOOL=ON
 
 //Path to a file.
-KERNELHEADERS_DIR:PATH=/usr/src/linux-headers-5.8.0-38-generic
+KERNELHEADERS_DIR:PATH=/usr/src/linux-headers-5.15.0-71-generic
 
 //Build shared lib
 LIBUV_BUILD_SHARED:BOOL=ON
@@ -464,10 +453,10 @@ TSAN:BOOL=OFF
 UBSAN:BOOL=OFF
 
 //Value Computed by CMake
-benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/benchmark
+benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/googlebenchmark-build
 
 //Value Computed by CMake
-benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/pref/benchmark
+benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/googlebenchmark-src
 
 //Dependencies for the target
 client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;general;boost_system;general;boost_filesystem;general;boost_thread;general;pthread;
@@ -476,16 +465,16 @@ client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;
 daemon_en:BOOL=ON
 
 //Enable the gbenchmark_en: on/off
-gbenchmark_en:BOOL=off
+gbenchmark_en:BOOL=other
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googlemock
+gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock
 
 //Dependencies for the target
 gmock_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-src/googlemock
+gmock_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
@@ -494,16 +483,16 @@ gmock_build_tests:BOOL=OFF
 gmock_main_LIB_DEPENDS:STATIC=general;gmock;
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build
+googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-src
+googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googletest
+gtest_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-src/googletest
+gtest_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -515,7 +504,7 @@ gtest_build_tests:BOOL=OFF
 gtest_disable_pthreads:BOOL=OFF
 
 //Enable the gtest: on/off
-gtest_en:BOOL=other
+gtest_en:BOOL=ON
 
 //Use shared (DLL) run-time lib even when Google Test is built
 // as static lib.
@@ -540,11 +529,11 @@ libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_proje
 libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/3rd/libuv
 
 //Enable the log color to use: on/off
-logcolor_en:BOOL=off
+logcolor_en:BOOL=OFF
 
 //set the log level(0-fatal, 1-error, 2-warn, 3-info, 4-debug,
 // 5-trace, default 3)
-loglevel:BOOL=5
+loglevel:BOOL=OFF
 
 //Enable the mps: on/off
 mps_en:BOOL=ON
@@ -564,12 +553,6 @@ uv_a_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
 BENCHMARK_CXX_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BENCHMARK_EXE_LINKER_FLAGS_COVERAGE
 BENCHMARK_EXE_LINKER_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
-//Test BENCHMARK_HAS_O3_FLAG
-BENCHMARK_HAS_O3_FLAG:INTERNAL=1
-//Test BENCHMARK_HAS_WNO_LTO_TYPE_MISMATCH
-BENCHMARK_HAS_WNO_LTO_TYPE_MISMATCH:INTERNAL=1
-//Test BENCHMARK_HAS_WNO_ODR
-BENCHMARK_HAS_WNO_ODR:INTERNAL=1
 //ADVANCED property for variable: BENCHMARK_SHARED_LINKER_FLAGS_COVERAGE
 BENCHMARK_SHARED_LINKER_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BISON_EXECUTABLE
@@ -912,8 +895,7 @@ _Python_EXECUTABLE:INTERNAL=/usr/bin/python3.8
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;10;64;;cpython-38-x86_64-linux-gnu;/usr/lib/python3.8;/usr/lib/python3.8;/usr/lib/python3.8/site-packages;/usr/lib/python3.8/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=28c129decd38964df5236e30f1913f21
-cmake_package_name:INTERNAL=GTest
-generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gtest-build/googletest/generated
+generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples

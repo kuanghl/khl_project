@@ -14,8 +14,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "daemon_en=1"
   "flexbisonlib_EXPORTS"
-  "logcolor_en=0"
-  "loglevel=5"
+  "logcolor_en=1"
   "mps_en=1"
   )
 

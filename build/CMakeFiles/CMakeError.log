@@ -1,14 +1,14 @@
 Performing C SOURCE FILE Test UV_LINT_W4 failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_32f78/fast && /usr/bin/make  -f CMakeFiles/cmTC_32f78.dir/build.make CMakeFiles/cmTC_32f78.dir/build
+Run Build Command(s):/usr/bin/make cmTC_9e8d7/fast && /usr/bin/make  -f CMakeFiles/cmTC_9e8d7.dir/build.make CMakeFiles/cmTC_9e8d7.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_32f78.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_W4   /W4 -o CMakeFiles/cmTC_32f78.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_9e8d7.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_W4   /W4 -o CMakeFiles/cmTC_9e8d7.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /W4: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_32f78.dir/build.make:85: CMakeFiles/cmTC_32f78.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_9e8d7.dir/build.make:85: CMakeFiles/cmTC_9e8d7.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_32f78/fast] Error 2
+make: *** [Makefile:140: cmTC_9e8d7/fast] Error 2
 
 
 Source file was:
@@ -16,14 +16,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_UNUSED_PARAMETER_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_edb7a/fast && /usr/bin/make  -f CMakeFiles/cmTC_edb7a.dir/build.make CMakeFiles/cmTC_edb7a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_fa496/fast && /usr/bin/make  -f CMakeFiles/cmTC_fa496.dir/build.make CMakeFiles/cmTC_fa496.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_edb7a.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_UNUSED_PARAMETER_MSVC   /wd4100 -o CMakeFiles/cmTC_edb7a.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_fa496.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_UNUSED_PARAMETER_MSVC   /wd4100 -o CMakeFiles/cmTC_fa496.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4100: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_edb7a.dir/build.make:85: CMakeFiles/cmTC_edb7a.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_fa496.dir/build.make:85: CMakeFiles/cmTC_fa496.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_edb7a/fast] Error 2
+make: *** [Makefile:140: cmTC_fa496/fast] Error 2
 
 
 Source file was:
@@ -31,14 +31,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_CONDITIONAL_CONSTANT_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_6f532/fast && /usr/bin/make  -f CMakeFiles/cmTC_6f532.dir/build.make CMakeFiles/cmTC_6f532.dir/build
+Run Build Command(s):/usr/bin/make cmTC_afabe/fast && /usr/bin/make  -f CMakeFiles/cmTC_afabe.dir/build.make CMakeFiles/cmTC_afabe.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6f532.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_CONDITIONAL_CONSTANT_MSVC   /wd4127 -o CMakeFiles/cmTC_6f532.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_afabe.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_CONDITIONAL_CONSTANT_MSVC   /wd4127 -o CMakeFiles/cmTC_afabe.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4127: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_6f532.dir/build.make:85: CMakeFiles/cmTC_6f532.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_afabe.dir/build.make:85: CMakeFiles/cmTC_afabe.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_6f532/fast] Error 2
+make: *** [Makefile:140: cmTC_afabe/fast] Error 2
 
 
 Source file was:
@@ -46,14 +46,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_NONSTANDARD_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_6cb27/fast && /usr/bin/make  -f CMakeFiles/cmTC_6cb27.dir/build.make CMakeFiles/cmTC_6cb27.dir/build
+Run Build Command(s):/usr/bin/make cmTC_c7e6c/fast && /usr/bin/make  -f CMakeFiles/cmTC_c7e6c.dir/build.make CMakeFiles/cmTC_c7e6c.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6cb27.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_NONSTANDARD_MSVC   /wd4201 -o CMakeFiles/cmTC_6cb27.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_c7e6c.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_NONSTANDARD_MSVC   /wd4201 -o CMakeFiles/cmTC_c7e6c.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4201: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_6cb27.dir/build.make:85: CMakeFiles/cmTC_6cb27.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_c7e6c.dir/build.make:85: CMakeFiles/cmTC_c7e6c.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_6cb27/fast] Error 2
+make: *** [Makefile:140: cmTC_c7e6c/fast] Error 2
 
 
 Source file was:
@@ -61,14 +61,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_61f13/fast && /usr/bin/make  -f CMakeFiles/cmTC_61f13.dir/build.make CMakeFiles/cmTC_61f13.dir/build
+Run Build Command(s):/usr/bin/make cmTC_1c9fe/fast && /usr/bin/make  -f CMakeFiles/cmTC_1c9fe.dir/build.make CMakeFiles/cmTC_1c9fe.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_61f13.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC   /wd4206 -o CMakeFiles/cmTC_61f13.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_1c9fe.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC   /wd4206 -o CMakeFiles/cmTC_1c9fe.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4206: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_61f13.dir/build.make:85: CMakeFiles/cmTC_61f13.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_1c9fe.dir/build.make:85: CMakeFiles/cmTC_1c9fe.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_61f13/fast] Error 2
+make: *** [Makefile:140: cmTC_1c9fe/fast] Error 2
 
 
 Source file was:
@@ -76,14 +76,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_691e2/fast && /usr/bin/make  -f CMakeFiles/cmTC_691e2.dir/build.make CMakeFiles/cmTC_691e2.dir/build
+Run Build Command(s):/usr/bin/make cmTC_4451c/fast && /usr/bin/make  -f CMakeFiles/cmTC_4451c.dir/build.make CMakeFiles/cmTC_4451c.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_691e2.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC   /wd4210 -o CMakeFiles/cmTC_691e2.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_4451c.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC   /wd4210 -o CMakeFiles/cmTC_4451c.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4210: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_691e2.dir/build.make:85: CMakeFiles/cmTC_691e2.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_4451c.dir/build.make:85: CMakeFiles/cmTC_4451c.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_691e2/fast] Error 2
+make: *** [Makefile:140: cmTC_4451c/fast] Error 2
 
 
 Source file was:
@@ -91,14 +91,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_bd595/fast && /usr/bin/make  -f CMakeFiles/cmTC_bd595.dir/build.make CMakeFiles/cmTC_bd595.dir/build
+Run Build Command(s):/usr/bin/make cmTC_789f3/fast && /usr/bin/make  -f CMakeFiles/cmTC_789f3.dir/build.make CMakeFiles/cmTC_789f3.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bd595.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC   /wd4232 -o CMakeFiles/cmTC_bd595.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_789f3.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC   /wd4232 -o CMakeFiles/cmTC_789f3.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4232: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_bd595.dir/build.make:85: CMakeFiles/cmTC_bd595.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_789f3.dir/build.make:85: CMakeFiles/cmTC_789f3.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_bd595/fast] Error 2
+make: *** [Makefile:140: cmTC_789f3/fast] Error 2
 
 
 Source file was:
@@ -106,14 +106,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_HIDES_LOCAL failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_aeb42/fast && /usr/bin/make  -f CMakeFiles/cmTC_aeb42.dir/build.make CMakeFiles/cmTC_aeb42.dir/build
+Run Build Command(s):/usr/bin/make cmTC_99997/fast && /usr/bin/make  -f CMakeFiles/cmTC_99997.dir/build.make CMakeFiles/cmTC_99997.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_aeb42.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_HIDES_LOCAL   /wd4456 -o CMakeFiles/cmTC_aeb42.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_99997.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_HIDES_LOCAL   /wd4456 -o CMakeFiles/cmTC_99997.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4456: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_aeb42.dir/build.make:85: CMakeFiles/cmTC_aeb42.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_99997.dir/build.make:85: CMakeFiles/cmTC_99997.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_aeb42/fast] Error 2
+make: *** [Makefile:140: cmTC_99997/fast] Error 2
 
 
 Source file was:
@@ -121,14 +121,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_HIDES_PARAM failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_6608a/fast && /usr/bin/make  -f CMakeFiles/cmTC_6608a.dir/build.make CMakeFiles/cmTC_6608a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_126df/fast && /usr/bin/make  -f CMakeFiles/cmTC_126df.dir/build.make CMakeFiles/cmTC_126df.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6608a.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_HIDES_PARAM   /wd4457 -o CMakeFiles/cmTC_6608a.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_126df.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_HIDES_PARAM   /wd4457 -o CMakeFiles/cmTC_126df.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4457: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_6608a.dir/build.make:85: CMakeFiles/cmTC_6608a.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_126df.dir/build.make:85: CMakeFiles/cmTC_126df.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_6608a/fast] Error 2
+make: *** [Makefile:140: cmTC_126df/fast] Error 2
 
 
 Source file was:
@@ -136,14 +136,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_HIDES_GLOBAL failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b43ca/fast && /usr/bin/make  -f CMakeFiles/cmTC_b43ca.dir/build.make CMakeFiles/cmTC_b43ca.dir/build
+Run Build Command(s):/usr/bin/make cmTC_41b4b/fast && /usr/bin/make  -f CMakeFiles/cmTC_41b4b.dir/build.make CMakeFiles/cmTC_41b4b.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b43ca.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_HIDES_GLOBAL   /wd4459 -o CMakeFiles/cmTC_b43ca.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_41b4b.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_HIDES_GLOBAL   /wd4459 -o CMakeFiles/cmTC_41b4b.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4459: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_b43ca.dir/build.make:85: CMakeFiles/cmTC_b43ca.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_41b4b.dir/build.make:85: CMakeFiles/cmTC_41b4b.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_b43ca/fast] Error 2
+make: *** [Makefile:140: cmTC_41b4b/fast] Error 2
 
 
 Source file was:
@@ -151,14 +151,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_c015b/fast && /usr/bin/make  -f CMakeFiles/cmTC_c015b.dir/build.make CMakeFiles/cmTC_c015b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_f3ea0/fast && /usr/bin/make  -f CMakeFiles/cmTC_f3ea0.dir/build.make CMakeFiles/cmTC_f3ea0.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c015b.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC   /wd4706 -o CMakeFiles/cmTC_c015b.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_f3ea0.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC   /wd4706 -o CMakeFiles/cmTC_f3ea0.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4706: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_c015b.dir/build.make:85: CMakeFiles/cmTC_c015b.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_f3ea0.dir/build.make:85: CMakeFiles/cmTC_f3ea0.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_c015b/fast] Error 2
+make: *** [Makefile:140: cmTC_f3ea0/fast] Error 2
 
 
 Source file was:
@@ -166,14 +166,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_NO_UNSAFE_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_53601/fast && /usr/bin/make  -f CMakeFiles/cmTC_53601.dir/build.make CMakeFiles/cmTC_53601.dir/build
+Run Build Command(s):/usr/bin/make cmTC_1defe/fast && /usr/bin/make  -f CMakeFiles/cmTC_1defe.dir/build.make CMakeFiles/cmTC_1defe.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_53601.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_NO_UNSAFE_MSVC   /wd4996 -o CMakeFiles/cmTC_53601.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_1defe.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_NO_UNSAFE_MSVC   /wd4996 -o CMakeFiles/cmTC_1defe.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /wd4996: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_53601.dir/build.make:85: CMakeFiles/cmTC_53601.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_1defe.dir/build.make:85: CMakeFiles/cmTC_1defe.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_53601/fast] Error 2
+make: *** [Makefile:140: cmTC_1defe/fast] Error 2
 
 
 Source file was:
@@ -181,14 +181,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test UV_LINT_UTF8_MSVC failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_1b4c5/fast && /usr/bin/make  -f CMakeFiles/cmTC_1b4c5.dir/build.make CMakeFiles/cmTC_1b4c5.dir/build
+Run Build Command(s):/usr/bin/make cmTC_545ae/fast && /usr/bin/make  -f CMakeFiles/cmTC_545ae.dir/build.make CMakeFiles/cmTC_545ae.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1b4c5.dir/src.c.o
-/usr/bin/cc   -DUV_LINT_UTF8_MSVC   /utf-8 -o CMakeFiles/cmTC_1b4c5.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_545ae.dir/src.c.o
+/usr/bin/cc   -DUV_LINT_UTF8_MSVC   /utf-8 -o CMakeFiles/cmTC_545ae.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
 cc: error: /utf-8: No such file or directory
-make[1]: *** [CMakeFiles/cmTC_1b4c5.dir/build.make:85: CMakeFiles/cmTC_1b4c5.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_545ae.dir/build.make:85: CMakeFiles/cmTC_545ae.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_1b4c5/fast] Error 2
+make: *** [Makefile:140: cmTC_545ae/fast] Error 2
 
 
 Source file was:
@@ -196,22 +196,22 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_2965d/fast && /usr/bin/make  -f CMakeFiles/cmTC_2965d.dir/build.make CMakeFiles/cmTC_2965d.dir/build
+Run Build Command(s):/usr/bin/make cmTC_e082c/fast && /usr/bin/make  -f CMakeFiles/cmTC_e082c.dir/build.make CMakeFiles/cmTC_e082c.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2965d.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_2965d.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_2965d
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2965d.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_2965d.dir/src.c.o -o cmTC_2965d 
-/usr/bin/ld: CMakeFiles/cmTC_2965d.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_e082c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_e082c.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e082c
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e082c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_e082c.dir/src.c.o -o cmTC_e082c 
+/usr/bin/ld: CMakeFiles/cmTC_e082c.dir/src.c.o: in function `main':
 src.c:(.text+0x3e): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_2965d.dir/build.make:106: cmTC_2965d] Error 1
+make[1]: *** [CMakeFiles/cmTC_e082c.dir/build.make:106: cmTC_e082c] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_2965d/fast] Error 2
+make: *** [Makefile:140: cmTC_e082c/fast] Error 2
 
 
 Source file was:
@@ -238,33 +238,33 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e722c/fast && /usr/bin/make  -f CMakeFiles/cmTC_e722c.dir/build.make CMakeFiles/cmTC_e722c.dir/build
+Run Build Command(s):/usr/bin/make cmTC_38d4e/fast && /usr/bin/make  -f CMakeFiles/cmTC_38d4e.dir/build.make CMakeFiles/cmTC_38d4e.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e722c.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_e722c.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.18/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e722c
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e722c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_e722c.dir/CheckFunctionExists.c.o -o cmTC_e722c  -lpthreads 
+Building C object CMakeFiles/cmTC_38d4e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_38d4e.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_38d4e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38d4e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_38d4e.dir/CheckFunctionExists.c.o -o cmTC_38d4e  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_e722c.dir/build.make:106: cmTC_e722c] Error 1
+make[1]: *** [CMakeFiles/cmTC_38d4e.dir/build.make:106: cmTC_38d4e] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_e722c/fast] Error 2
+make: *** [Makefile:140: cmTC_38d4e/fast] Error 2
 
 
 
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b8097/fast && /usr/bin/make  -f CMakeFiles/cmTC_b8097.dir/build.make CMakeFiles/cmTC_b8097.dir/build
+Run Build Command(s):/usr/bin/make cmTC_1c156/fast && /usr/bin/make  -f CMakeFiles/cmTC_1c156.dir/build.make CMakeFiles/cmTC_1c156.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b8097.dir/src.cxx.o
-/usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Werror  -pedantic  -pedantic-errors -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wshorten-64-to-32   -Wshorten-64-to-32 -std=c++11 -o CMakeFiles/cmTC_b8097.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+Building CXX object CMakeFiles/cmTC_1c156.dir/src.cxx.o
+/usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wshorten-64-to-32   -Wshorten-64-to-32 -std=c++11 -o CMakeFiles/cmTC_1c156.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
 c++: error: unrecognized command line option '-Wshorten-64-to-32'
 c++: error: unrecognized command line option '-Wshorten-64-to-32'
-make[1]: *** [CMakeFiles/cmTC_b8097.dir/build.make:85: CMakeFiles/cmTC_b8097.dir/src.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_1c156.dir/build.make:85: CMakeFiles/cmTC_1c156.dir/src.cxx.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_b8097/fast] Error 2
+make: *** [Makefile:140: cmTC_1c156/fast] Error 2
 
 
 Source file was:
@@ -272,15 +272,15 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_c53c1/fast && /usr/bin/make  -f CMakeFiles/cmTC_c53c1.dir/build.make CMakeFiles/cmTC_c53c1.dir/build
+Run Build Command(s):/usr/bin/make cmTC_16d5e/fast && /usr/bin/make  -f CMakeFiles/cmTC_16d5e.dir/build.make CMakeFiles/cmTC_16d5e.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c53c1.dir/src.cxx.o
-/usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Werror  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing -DHAVE_CXX_FLAG_WD654  -wd654   -wd654 -std=c++11 -o CMakeFiles/cmTC_c53c1.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+Building CXX object CMakeFiles/cmTC_16d5e.dir/src.cxx.o
+/usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing -DHAVE_CXX_FLAG_WD654  -wd654   -wd654 -std=c++11 -o CMakeFiles/cmTC_16d5e.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
 c++: error: unrecognized command line option '-wd654'
 c++: error: unrecognized command line option '-wd654'
-make[1]: *** [CMakeFiles/cmTC_c53c1.dir/build.make:85: CMakeFiles/cmTC_c53c1.dir/src.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_16d5e.dir/build.make:85: CMakeFiles/cmTC_16d5e.dir/src.cxx.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_c53c1/fast] Error 2
+make: *** [Makefile:140: cmTC_16d5e/fast] Error 2
 
 
 Source file was:
@@ -288,15 +288,15 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
 Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_18047/fast && /usr/bin/make  -f CMakeFiles/cmTC_18047.dir/build.make CMakeFiles/cmTC_18047.dir/build
+Run Build Command(s):/usr/bin/make cmTC_908e4/fast && /usr/bin/make  -f CMakeFiles/cmTC_908e4.dir/build.make CMakeFiles/cmTC_908e4.dir/build
 make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_18047.dir/src.cxx.o
-/usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Werror  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wthread-safety   -Wthread-safety -std=c++11 -o CMakeFiles/cmTC_18047.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+Building CXX object CMakeFiles/cmTC_908e4.dir/src.cxx.o
+/usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wthread-safety   -Wthread-safety -std=c++11 -o CMakeFiles/cmTC_908e4.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
 c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
 c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
-make[1]: *** [CMakeFiles/cmTC_18047.dir/build.make:85: CMakeFiles/cmTC_18047.dir/src.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_908e4.dir/build.make:85: CMakeFiles/cmTC_908e4.dir/src.cxx.o] Error 1
 make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_18047/fast] Error 2
+make: *** [Makefile:140: cmTC_908e4/fast] Error 2
 
 
 Source file was:

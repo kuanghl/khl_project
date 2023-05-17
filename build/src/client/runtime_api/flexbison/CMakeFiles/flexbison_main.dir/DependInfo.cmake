@@ -11,8 +11,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "daemon_en=1"
-  "logcolor_en=0"
-  "loglevel=5"
+  "logcolor_en=1"
   "mps_en=1"
   )
 

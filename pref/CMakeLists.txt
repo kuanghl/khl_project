@@ -22,8 +22,8 @@ ELSEIF(gbenchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(�
     # 下载安装benchmark release版本
     fetchcontent_declare(
         googlebenchmark
-        #     URL https://github.com/google/benchmark/releases/tag/benchmark-1.7.1.zip
-        URL ${CMAKE_CURRENT_SOURCE_DIR}/gbenchmark/benchmark-1.7.1.zip
+        #     URL https://github.com/google/benchmark/releases/tag/benchmark-1.8.0.zip
+        URL ${CMAKE_CURRENT_SOURCE_DIR}/gbenchmark/benchmark-1.8.0.zip
         PREFIX ${CMAKE_CURRENT_BINARY_DIR}/gbenchmark 
     )
     fetchcontent_makeavailable(googlebenchmark)
