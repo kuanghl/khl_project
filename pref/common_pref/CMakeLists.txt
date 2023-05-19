@@ -2,7 +2,9 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 # 查询当前目录下的/ /test_x 包含的所有.cpp文件
-FILE(GLOB COMMON_PREF_SRCS "pref001_x.cpp" "main.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
+FILE(GLOB COMMON_PREF_SRCS # "pref001_x.cpp"
+                           "main.cpp" 
+                           "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
                            "${CMAKE_CURRENT_SOURCE_DIR}/pref_x/*.cpp")
 
 # 生成可执行文件

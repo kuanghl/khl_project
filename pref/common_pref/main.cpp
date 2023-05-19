@@ -170,15 +170,28 @@ BENCHMARK(test_func)->Arg(1)->Arg(3)->Threads(16)->Threads(32)->Setup(DoSetup)->
 #elif 1
 class Factorial_Fixture : public benchmark::Fixture {
 public:
-  void SetUp(const ::benchmark::State& state) {
-    // printf("SetUp function.\n");
-  }
+//   void SetUp(const ::benchmark::State& state) {
+//     // printf("SetUp function.\n");
+//   }
 
-  void TearDown(const ::benchmark::State& state) {
-    // printf("TearDown function.\n");
-  }
+//   void TearDown(const ::benchmark::State& state) {
+//     // printf("TearDown function.\n");
+//   }
   uint64_t a;
 };
+
+uint64_t b = 80;
+void __test(const benchmark::State& state) {
+    printf("test numbers = %ld.\n", b);
+}
+
+static void __setup(const benchmark::State& state) {
+    printf("in function.\n");
+}
+
+static void __teardown(const benchmark::State& state) {
+    printf("out function.\n");
+}
 
 BENCHMARK_F(Factorial_Fixture, factorial_pref_64)(benchmark::State& st) {
     for (auto _ : st) {
@@ -195,7 +208,7 @@ BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_100)(benchmark::State& st) 
         numFoos++;
         numBazs++;
     }
-    //printf("Inter function.\n");
+    printf("Inter function %ld.\n", b);
     st.counters["Foo"] = numFoos;
     st.counters["Bar"] = numBars;
     st.counters["Baz"] = numBazs;
@@ -207,6 +220,9 @@ BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_100)(benchmark::State& st) 
 }
 /* BarTest is NOT registered */
 BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Threads(100)->Iterations(1)->ThreadRange(1, 8)->UseRealTime();
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__setup)->Teardown(__teardown);
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__test)->Teardown(__teardown);
 /* BarTest is now registered */
 #else
+
 #endif

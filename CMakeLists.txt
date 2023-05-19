@@ -24,6 +24,10 @@ SET(CMAKE_C_FLAGS_RELEASE "-D_REETRANT -DNDEBUG -fPIC -Wall -Wextra -pedantic -O
 SET(CMAKE_C_FLAGS_DEBUG "-D_REETRANT -g -fPIC -Wall -Wextra -pedantic -O0 -v")
 SET(CMAKE_CXX_FLAGS_RELEASE "-Wall -O2")
 SET(CMAKE_CXX_FLAGS_DEBUG "-g")
+# SET(CMAKE_C_FLAGS_RELEASE "-D_REETRANT -DNDEBUG -fPIC -Wall -Wextra -pedantic -O3 -std=gnu99 -v -pg")
+# SET(CMAKE_C_FLAGS_DEBUG "-D_REETRANT -g -fPIC -Wall -Wextra -pedantic -O0 -v -pg")
+# SET(CMAKE_CXX_FLAGS_RELEASE "-Wall -O2 -pg")
+# SET(CMAKE_CXX_FLAGS_DEBUG "-g -pg")
 
 # 给项目命名,解决CMP0048
 IF(CMAKE_VERSION VERSION_LESS 3.0)

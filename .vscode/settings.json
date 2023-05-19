@@ -68,7 +68,9 @@
         "typeindex": "c",
         "internet": "c",
         "sem.h": "c",
-        "condition_variable": "c"
+        "condition_variable": "c",
+        "libunwind.h": "c",
+        "iostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

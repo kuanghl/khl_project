@@ -301,3 +301,313 @@ make: *** [Makefile:140: cmTC_908e4/fast] Error 2
 
 Source file was:
 int main() { return 0; }
+Performing C++ SOURCE FILE Test i386 failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_65a03/fast && /usr/bin/make  -f CMakeFiles/cmTC_65a03.dir/build.make CMakeFiles/cmTC_65a03.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_65a03.dir/src.cxx.o
+/usr/bin/c++   -Di386 -o CMakeFiles/cmTC_65a03.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: error: ‘__i386__’ was not declared in this scope
+ int main() { return __i386__; }
+                     ^~~~~~~~
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: note: suggested alternative: ‘__k8__’
+ int main() { return __i386__; }
+                     ^~~~~~~~
+                     __k8__
+make[1]: *** [CMakeFiles/cmTC_65a03.dir/build.make:85: CMakeFiles/cmTC_65a03.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_65a03/fast] Error 2
+
+
+Source file was:
+int main() { return __i386__; }
+Performing C++ SOURCE FILE Test s390 failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e2079/fast && /usr/bin/make  -f CMakeFiles/cmTC_e2079.dir/build.make CMakeFiles/cmTC_e2079.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e2079.dir/src.cxx.o
+/usr/bin/c++   -Ds390 -o CMakeFiles/cmTC_e2079.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: error: ‘__s390__’ was not declared in this scope
+ int main() { return __s390__; }
+                     ^~~~~~~~
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: note: suggested alternative: ‘__DATE__’
+ int main() { return __s390__; }
+                     ^~~~~~~~
+                     __DATE__
+make[1]: *** [CMakeFiles/cmTC_e2079.dir/build.make:85: CMakeFiles/cmTC_e2079.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_e2079/fast] Error 2
+
+
+Source file was:
+int main() { return __s390__; }
+Performing C++ SOURCE FILE Test PPC64 failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_95634/fast && /usr/bin/make  -f CMakeFiles/cmTC_95634.dir/build.make CMakeFiles/cmTC_95634.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_95634.dir/src.cxx.o
+/usr/bin/c++   -DPPC64 -o CMakeFiles/cmTC_95634.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: error: ‘__PPC64__’ was not declared in this scope
+ int main() { return __PPC64__; }
+                     ^~~~~~~~~
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: note: suggested alternative: ‘__LP64__’
+ int main() { return __PPC64__; }
+                     ^~~~~~~~~
+                     __LP64__
+make[1]: *** [CMakeFiles/cmTC_95634.dir/build.make:85: CMakeFiles/cmTC_95634.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_95634/fast] Error 2
+
+
+Source file was:
+int main() { return __PPC64__; }
+Performing C++ SOURCE FILE Test ARM failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_da5a8/fast && /usr/bin/make  -f CMakeFiles/cmTC_da5a8.dir/build.make CMakeFiles/cmTC_da5a8.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_da5a8.dir/src.cxx.o
+/usr/bin/c++   -DARM -o CMakeFiles/cmTC_da5a8.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: error: ‘__arm__’ was not declared in this scope
+ int main() { return __arm__; }
+                     ^~~~~~~
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: note: suggested alternative: ‘__pie__’
+ int main() { return __arm__; }
+                     ^~~~~~~
+                     __pie__
+make[1]: *** [CMakeFiles/cmTC_da5a8.dir/build.make:85: CMakeFiles/cmTC_da5a8.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_da5a8/fast] Error 2
+
+
+Source file was:
+int main() { return __arm__; }
+Performing C++ SOURCE FILE Test FreeBSD failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_85c75/fast && /usr/bin/make  -f CMakeFiles/cmTC_85c75.dir/build.make CMakeFiles/cmTC_85c75.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_85c75.dir/src.cxx.o
+/usr/bin/c++   -DFreeBSD -o CMakeFiles/cmTC_85c75.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: error: ‘__FreeBSD__’ was not declared in this scope
+ int main() { return __FreeBSD__; }
+                     ^~~~~~~~~~~
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: note: suggested alternative: ‘FreeBSD’
+ int main() { return __FreeBSD__; }
+                     ^~~~~~~~~~~
+                     FreeBSD
+make[1]: *** [CMakeFiles/cmTC_85c75.dir/build.make:85: CMakeFiles/cmTC_85c75.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_85c75/fast] Error 2
+
+
+Source file was:
+int main() { return __FreeBSD__; }
+Performing C++ SOURCE FILE Test MINGW failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cf2b8/fast && /usr/bin/make  -f CMakeFiles/cmTC_cf2b8.dir/build.make CMakeFiles/cmTC_cf2b8.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cf2b8.dir/src.cxx.o
+/usr/bin/c++   -DMINGW -o CMakeFiles/cmTC_cf2b8.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: error: ‘__MINGW__’ was not declared in this scope
+ int main() { return __MINGW__; }
+                     ^~~~~~~~~
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: note: suggested alternative: ‘__LINE__’
+ int main() { return __MINGW__; }
+                     ^~~~~~~~~
+                     __LINE__
+make[1]: *** [CMakeFiles/cmTC_cf2b8.dir/build.make:85: CMakeFiles/cmTC_cf2b8.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_cf2b8/fast] Error 2
+
+
+Source file was:
+int main() { return __MINGW__; }
+Performing C++ SOURCE FILE Test OSX failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_45adf/fast && /usr/bin/make  -f CMakeFiles/cmTC_45adf.dir/build.make CMakeFiles/cmTC_45adf.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_45adf.dir/src.cxx.o
+/usr/bin/c++   -DOSX -o CMakeFiles/cmTC_45adf.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: error: ‘__APPLE__’ was not declared in this scope
+ int main() { return __APPLE__; }
+                     ^~~~~~~~~
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx:1:21: note: suggested alternative: ‘__FILE__’
+ int main() { return __APPLE__; }
+                     ^~~~~~~~~
+                     __FILE__
+make[1]: *** [CMakeFiles/cmTC_45adf.dir/build.make:85: CMakeFiles/cmTC_45adf.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_45adf/fast] Error 2
+
+
+Source file was:
+int main() { return __APPLE__; }
+Determining if the cfree exist failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5cd7c/fast && /usr/bin/make  -f CMakeFiles/cmTC_5cd7c.dir/build.make CMakeFiles/cmTC_5cd7c.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5cd7c.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_XOPEN_SOURCE=600   -o CMakeFiles/cmTC_5cd7c.dir/CheckSymbolExists.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: error: ‘cfree’ undeclared (first use in this function); did you mean ‘free’?
+   return ((int*)(&cfree))[argc];
+                   ^~~~~
+                   free
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_5cd7c.dir/build.make:85: CMakeFiles/cmTC_5cd7c.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_5cd7c/fast] Error 2
+
+
+File /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef cfree
+  return ((int*)(&cfree))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test INT32_EQUALS_INTPTR failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6290b/fast && /usr/bin/make  -f CMakeFiles/cmTC_6290b.dir/build.make CMakeFiles/cmTC_6290b.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6290b.dir/src.c.o
+/usr/bin/cc   -DINT32_EQUALS_INTPTR -o CMakeFiles/cmTC_6290b.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c:7:17: error: invalid operands to binary - (have ‘int32_t * {aka int *}’ and ‘intptr_t * {aka long int *}’)
+     return (&v1 - &v2);
+             ~~~ ^ ~~~
+make[1]: *** [CMakeFiles/cmTC_6290b.dir/build.make:85: CMakeFiles/cmTC_6290b.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_6290b/fast] Error 2
+
+
+Source file was:
+
+  #include <stdint.h>
+  int main()
+  {
+    int32_t v1 = 0;
+    intptr_t v2 = 0;
+    return (&v1 - &v2);
+  }
+Determining if the include file cygwin/signal.h exists failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_112c4/fast && /usr/bin/make  -f CMakeFiles/cmTC_112c4.dir/build.make CMakeFiles/cmTC_112c4.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_112c4.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_112c4.dir/CheckIncludeFile.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: cygwin/signal.h: No such file or directory
+ #include <cygwin/signal.h>
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_112c4.dir/build.make:85: CMakeFiles/cmTC_112c4.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_112c4/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_uc_mcontext_gregs_REG_PC_ failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_31de3/fast && /usr/bin/make  -f CMakeFiles/cmTC_31de3.dir/build.make CMakeFiles/cmTC_31de3.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_31de3.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE=1  -DHAVE_uc_mcontext_gregs_REG_PC_ -o CMakeFiles/cmTC_31de3.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c:2:55: error: ‘REG_PC’ undeclared (first use in this function); did you mean ‘REG_RCX’?
+ int main() { ucontext_t u; return u.uc_mcontext.gregs[REG_PC] == 0; }
+                                                       ^~~~~~
+                                                       REG_RCX
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c:2:55: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_31de3.dir/build.make:85: CMakeFiles/cmTC_31de3.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_31de3/fast] Error 2
+
+
+Source file was:
+#include <sys/ucontext.h>
+int main() { ucontext_t u; return u.uc_mcontext.gregs[REG_PC] == 0; }
+Performing C SOURCE FILE Test HAVE_uc_mcontext_gregs_REG_EIP_ failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5a994/fast && /usr/bin/make  -f CMakeFiles/cmTC_5a994.dir/build.make CMakeFiles/cmTC_5a994.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a994.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE=1  -DHAVE_uc_mcontext_gregs_REG_EIP_ -o CMakeFiles/cmTC_5a994.dir/src.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c:2:55: error: ‘REG_EIP’ undeclared (first use in this function); did you mean ‘REG_RIP’?
+ int main() { ucontext_t u; return u.uc_mcontext.gregs[REG_EIP] == 0; }
+                                                       ^~~~~~~
+                                                       REG_RIP
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.c:2:55: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_5a994.dir/build.make:85: CMakeFiles/cmTC_5a994.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_5a994/fast] Error 2
+
+
+Source file was:
+#include <sys/ucontext.h>
+int main() { ucontext_t u; return u.uc_mcontext.gregs[REG_EIP] == 0; }
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f8db6/fast && /usr/bin/make  -f CMakeFiles/cmTC_f8db6.dir/build.make CMakeFiles/cmTC_f8db6.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f8db6.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_GNU_SOURCE=1   -o CMakeFiles/cmTC_f8db6.dir/CheckIncludeFile.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: libunwind.h: No such file or directory
+ #include <libunwind.h>
+          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_f8db6.dir/build.make:85: CMakeFiles/cmTC_f8db6.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_f8db6/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test have_pthread_despite_asking_for failed with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_29391/fast && /usr/bin/make  -f CMakeFiles/cmTC_29391.dir/build.make CMakeFiles/cmTC_29391.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_29391.dir/src.cxx.o
+/usr/bin/c++ -D_GNU_SOURCE=1  -Dhave_pthread_despite_asking_for -std=gnu++1z -o CMakeFiles/cmTC_29391.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_29391
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29391.dir/link.txt --verbose=1
+/usr/bin/c++  -Dhave_pthread_despite_asking_for CMakeFiles/cmTC_29391.dir/src.cxx.o -o cmTC_29391 
+/usr/bin/ld: CMakeFiles/cmTC_29391.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x15): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_29391.dir/build.make:106: cmTC_29391] Error 1
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_29391/fast] Error 2
+
+
+Source file was:
+#include <string>
+     #include <vector>
+     int main() { pthread_t th; pthread_join(th, 0); return 0; }

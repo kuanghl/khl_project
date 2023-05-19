@@ -99,6 +99,28 @@ install/local/fast: preinstall/fast
 	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -132,16 +154,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/usr/local/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target package
+package/fast: package
 
-.PHONY : edit_cache/fast
+.PHONY : package/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -666,7 +688,7 @@ benchmark_main: cmake_check_build_system
 
 # fast build rule for target.
 benchmark_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googlebenchmark-build/src/CMakeFiles/benchmark_main.dir/build.make _deps/googlebenchmark-build/src/CMakeFiles/benchmark_main.dir/build
+	$(MAKE) $(MAKESILENT) -f pref/benchmark/src/CMakeFiles/benchmark_main.dir/build.make pref/benchmark/src/CMakeFiles/benchmark_main.dir/build
 .PHONY : benchmark_main/fast
 
 #=============================================================================
@@ -679,8 +701,1009 @@ benchmark: cmake_check_build_system
 
 # fast build rule for target.
 benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/build.make _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/build
+	$(MAKE) $(MAKESILENT) -f pref/benchmark/src/CMakeFiles/benchmark.dir/build.make pref/benchmark/src/CMakeFiles/benchmark.dir/build
 .PHONY : benchmark/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_and_profiler_unittest
+
+# Build rule for target.
+tcmalloc_and_profiler_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_and_profiler_unittest
+.PHONY : tcmalloc_and_profiler_unittest
+
+# fast build rule for target.
+tcmalloc_and_profiler_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_and_profiler_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_and_profiler_unittest.dir/build
+.PHONY : tcmalloc_and_profiler_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_and_profiler_static
+
+# Build rule for target.
+tcmalloc_and_profiler_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_and_profiler_static
+.PHONY : tcmalloc_and_profiler_static
+
+# fast build rule for target.
+tcmalloc_and_profiler_static/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/build
+.PHONY : tcmalloc_and_profiler_static/fast
+
+#=============================================================================
+# Target rules for targets named profiler3_unittest
+
+# Build rule for target.
+profiler3_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 profiler3_unittest
+.PHONY : profiler3_unittest
+
+# fast build rule for target.
+profiler3_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler3_unittest.dir/build.make pref/gperftools/CMakeFiles/profiler3_unittest.dir/build
+.PHONY : profiler3_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_and_profiler
+
+# Build rule for target.
+tcmalloc_and_profiler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_and_profiler
+.PHONY : tcmalloc_and_profiler
+
+# fast build rule for target.
+tcmalloc_and_profiler/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build
+.PHONY : tcmalloc_and_profiler/fast
+
+#=============================================================================
+# Target rules for targets named profiler2_unittest
+
+# Build rule for target.
+profiler2_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 profiler2_unittest
+.PHONY : profiler2_unittest
+
+# fast build rule for target.
+profiler2_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler2_unittest.dir/build.make pref/gperftools/CMakeFiles/profiler2_unittest.dir/build
+.PHONY : profiler2_unittest/fast
+
+#=============================================================================
+# Target rules for targets named profile_handler_unittest
+
+# Build rule for target.
+profile_handler_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 profile_handler_unittest
+.PHONY : profile_handler_unittest
+
+# fast build rule for target.
+profile_handler_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profile_handler_unittest.dir/build.make pref/gperftools/CMakeFiles/profile_handler_unittest.dir/build
+.PHONY : profile_handler_unittest/fast
+
+#=============================================================================
+# Target rules for targets named getpc_test
+
+# Build rule for target.
+getpc_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 getpc_test
+.PHONY : getpc_test
+
+# fast build rule for target.
+getpc_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/getpc_test.dir/build.make pref/gperftools/CMakeFiles/getpc_test.dir/build
+.PHONY : getpc_test/fast
+
+#=============================================================================
+# Target rules for targets named profiler
+
+# Build rule for target.
+profiler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 profiler
+.PHONY : profiler
+
+# fast build rule for target.
+profiler/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler.dir/build.make pref/gperftools/CMakeFiles/profiler.dir/build
+.PHONY : profiler/fast
+
+#=============================================================================
+# Target rules for targets named sampler_debug_test
+
+# Build rule for target.
+sampler_debug_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sampler_debug_test
+.PHONY : sampler_debug_test
+
+# fast build rule for target.
+sampler_debug_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sampler_debug_test.dir/build.make pref/gperftools/CMakeFiles/sampler_debug_test.dir/build
+.PHONY : sampler_debug_test/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_debug_unittest
+
+# Build rule for target.
+tcmalloc_debug_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_debug_unittest
+.PHONY : tcmalloc_debug_unittest
+
+# fast build rule for target.
+tcmalloc_debug_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/build
+.PHONY : tcmalloc_debug_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_debug_static
+
+# Build rule for target.
+tcmalloc_debug_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_debug_static
+.PHONY : tcmalloc_debug_static
+
+# fast build rule for target.
+tcmalloc_debug_static/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_debug_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_debug_static.dir/build
+.PHONY : tcmalloc_debug_static/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_debug
+
+# Build rule for target.
+tcmalloc_debug: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_debug
+.PHONY : tcmalloc_debug
+
+# fast build rule for target.
+tcmalloc_debug/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_debug.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_debug.dir/build
+.PHONY : tcmalloc_debug/fast
+
+#=============================================================================
+# Target rules for targets named heap_checker_unittest
+
+# Build rule for target.
+heap_checker_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heap_checker_unittest
+.PHONY : heap_checker_unittest
+
+# fast build rule for target.
+heap_checker_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/heap_checker_unittest.dir/build.make pref/gperftools/CMakeFiles/heap_checker_unittest.dir/build
+.PHONY : heap_checker_unittest/fast
+
+#=============================================================================
+# Target rules for targets named memalign_unittest
+
+# Build rule for target.
+memalign_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 memalign_unittest
+.PHONY : memalign_unittest
+
+# fast build rule for target.
+memalign_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/memalign_unittest.dir/build.make pref/gperftools/CMakeFiles/memalign_unittest.dir/build
+.PHONY : memalign_unittest/fast
+
+#=============================================================================
+# Target rules for targets named malloc_extension_c_test
+
+# Build rule for target.
+malloc_extension_c_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 malloc_extension_c_test
+.PHONY : malloc_extension_c_test
+
+# fast build rule for target.
+malloc_extension_c_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_extension_c_test.dir/build.make pref/gperftools/CMakeFiles/malloc_extension_c_test.dir/build
+.PHONY : malloc_extension_c_test/fast
+
+#=============================================================================
+# Target rules for targets named realloc_debug_unittest
+
+# Build rule for target.
+realloc_debug_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 realloc_debug_unittest
+.PHONY : realloc_debug_unittest
+
+# fast build rule for target.
+realloc_debug_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/realloc_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/realloc_debug_unittest.dir/build
+.PHONY : realloc_debug_unittest/fast
+
+#=============================================================================
+# Target rules for targets named malloc_hook_test
+
+# Build rule for target.
+malloc_hook_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 malloc_hook_test
+.PHONY : malloc_hook_test
+
+# fast build rule for target.
+malloc_hook_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_hook_test.dir/build.make pref/gperftools/CMakeFiles/malloc_hook_test.dir/build
+.PHONY : malloc_hook_test/fast
+
+#=============================================================================
+# Target rules for targets named simple_compat_test
+
+# Build rule for target.
+simple_compat_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_compat_test
+.PHONY : simple_compat_test
+
+# fast build rule for target.
+simple_compat_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/simple_compat_test.dir/build.make pref/gperftools/CMakeFiles/simple_compat_test.dir/build
+.PHONY : simple_compat_test/fast
+
+#=============================================================================
+# Target rules for targets named frag_unittest
+
+# Build rule for target.
+frag_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 frag_unittest
+.PHONY : frag_unittest
+
+# fast build rule for target.
+frag_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/frag_unittest.dir/build.make pref/gperftools/CMakeFiles/frag_unittest.dir/build
+.PHONY : frag_unittest/fast
+
+#=============================================================================
+# Target rules for targets named profiledata_unittest
+
+# Build rule for target.
+profiledata_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 profiledata_unittest
+.PHONY : profiledata_unittest
+
+# fast build rule for target.
+profiledata_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiledata_unittest.dir/build.make pref/gperftools/CMakeFiles/profiledata_unittest.dir/build
+.PHONY : profiledata_unittest/fast
+
+#=============================================================================
+# Target rules for targets named heap_profiler_unittest
+
+# Build rule for target.
+heap_profiler_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heap_profiler_unittest
+.PHONY : heap_profiler_unittest
+
+# fast build rule for target.
+heap_profiler_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/heap_profiler_unittest.dir/build.make pref/gperftools/CMakeFiles/heap_profiler_unittest.dir/build
+.PHONY : heap_profiler_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal_large_unittest
+
+# Build rule for target.
+tcmalloc_minimal_large_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal_large_unittest
+.PHONY : tcmalloc_minimal_large_unittest
+
+# fast build rule for target.
+tcmalloc_minimal_large_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/build
+.PHONY : tcmalloc_minimal_large_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_large_unittest
+
+# Build rule for target.
+tcmalloc_large_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_large_unittest
+.PHONY : tcmalloc_large_unittest
+
+# fast build rule for target.
+tcmalloc_large_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/build
+.PHONY : tcmalloc_large_unittest/fast
+
+#=============================================================================
+# Target rules for targets named sampler_test
+
+# Build rule for target.
+sampler_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sampler_test
+.PHONY : sampler_test
+
+# fast build rule for target.
+sampler_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sampler_test.dir/build.make pref/gperftools/CMakeFiles/sampler_test.dir/build
+.PHONY : sampler_test/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal_unittest
+
+# Build rule for target.
+tcmalloc_minimal_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal_unittest
+.PHONY : tcmalloc_minimal_unittest
+
+# fast build rule for target.
+tcmalloc_minimal_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/build
+.PHONY : tcmalloc_minimal_unittest/fast
+
+#=============================================================================
+# Target rules for targets named maybe_threads
+
+# Build rule for target.
+maybe_threads: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 maybe_threads
+.PHONY : maybe_threads
+
+# fast build rule for target.
+maybe_threads/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/maybe_threads.dir/build.make pref/gperftools/CMakeFiles/maybe_threads.dir/build
+.PHONY : maybe_threads/fast
+
+#=============================================================================
+# Target rules for targets named atomicops_unittest
+
+# Build rule for target.
+atomicops_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 atomicops_unittest
+.PHONY : atomicops_unittest
+
+# fast build rule for target.
+atomicops_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/atomicops_unittest.dir/build.make pref/gperftools/CMakeFiles/atomicops_unittest.dir/build
+.PHONY : atomicops_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_large_heap_fragmentation_unittest
+
+# Build rule for target.
+tcmalloc_large_heap_fragmentation_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_large_heap_fragmentation_unittest
+.PHONY : tcmalloc_large_heap_fragmentation_unittest
+
+# fast build rule for target.
+tcmalloc_large_heap_fragmentation_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/build
+.PHONY : tcmalloc_large_heap_fragmentation_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal_internal_object
+
+# Build rule for target.
+tcmalloc_minimal_internal_object: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal_internal_object
+.PHONY : tcmalloc_minimal_internal_object
+
+# fast build rule for target.
+tcmalloc_minimal_internal_object/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/build
+.PHONY : tcmalloc_minimal_internal_object/fast
+
+#=============================================================================
+# Target rules for targets named logging
+
+# Build rule for target.
+logging: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logging
+.PHONY : logging
+
+# fast build rule for target.
+logging/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/logging.dir/build.make pref/gperftools/CMakeFiles/logging.dir/build
+.PHONY : logging/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal_static
+
+# Build rule for target.
+tcmalloc_minimal_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal_static
+.PHONY : tcmalloc_minimal_static
+
+# fast build rule for target.
+tcmalloc_minimal_static/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/build
+.PHONY : tcmalloc_minimal_static/fast
+
+#=============================================================================
+# Target rules for targets named spinlock
+
+# Build rule for target.
+spinlock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spinlock
+.PHONY : spinlock
+
+# fast build rule for target.
+spinlock/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/spinlock.dir/build.make pref/gperftools/CMakeFiles/spinlock.dir/build
+.PHONY : spinlock/fast
+
+#=============================================================================
+# Target rules for targets named low_level_alloc_unittest
+
+# Build rule for target.
+low_level_alloc_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 low_level_alloc_unittest
+.PHONY : low_level_alloc_unittest
+
+# fast build rule for target.
+low_level_alloc_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build.make pref/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build
+.PHONY : low_level_alloc_unittest/fast
+
+#=============================================================================
+# Target rules for targets named heap_profiler_debug_unittest
+
+# Build rule for target.
+heap_profiler_debug_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heap_profiler_debug_unittest
+.PHONY : heap_profiler_debug_unittest
+
+# fast build rule for target.
+heap_profiler_debug_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/build
+.PHONY : heap_profiler_debug_unittest/fast
+
+#=============================================================================
+# Target rules for targets named addressmap_unittest
+
+# Build rule for target.
+addressmap_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 addressmap_unittest
+.PHONY : addressmap_unittest
+
+# fast build rule for target.
+addressmap_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/addressmap_unittest.dir/build.make pref/gperftools/CMakeFiles/addressmap_unittest.dir/build
+.PHONY : addressmap_unittest/fast
+
+#=============================================================================
+# Target rules for targets named stacktrace_unittest
+
+# Build rule for target.
+stacktrace_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stacktrace_unittest
+.PHONY : stacktrace_unittest
+
+# fast build rule for target.
+stacktrace_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/stacktrace_unittest.dir/build.make pref/gperftools/CMakeFiles/stacktrace_unittest.dir/build
+.PHONY : stacktrace_unittest/fast
+
+#=============================================================================
+# Target rules for targets named packed_cache_test
+
+# Build rule for target.
+packed_cache_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 packed_cache_test
+.PHONY : packed_cache_test
+
+# fast build rule for target.
+packed_cache_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/packed_cache_test.dir/build.make pref/gperftools/CMakeFiles/packed_cache_test.dir/build
+.PHONY : packed_cache_test/fast
+
+#=============================================================================
+# Target rules for targets named thread_dealloc_unittest
+
+# Build rule for target.
+thread_dealloc_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thread_dealloc_unittest
+.PHONY : thread_dealloc_unittest
+
+# fast build rule for target.
+thread_dealloc_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/thread_dealloc_unittest.dir/build.make pref/gperftools/CMakeFiles/thread_dealloc_unittest.dir/build
+.PHONY : thread_dealloc_unittest/fast
+
+#=============================================================================
+# Target rules for targets named sampling_debug_test
+
+# Build rule for target.
+sampling_debug_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sampling_debug_test
+.PHONY : sampling_debug_test
+
+# fast build rule for target.
+sampling_debug_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sampling_debug_test.dir/build.make pref/gperftools/CMakeFiles/sampling_debug_test.dir/build
+.PHONY : sampling_debug_test/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal_debug_unittest
+
+# Build rule for target.
+tcmalloc_minimal_debug_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal_debug_unittest
+.PHONY : tcmalloc_minimal_debug_unittest
+
+# fast build rule for target.
+tcmalloc_minimal_debug_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/build
+.PHONY : tcmalloc_minimal_debug_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal_large_heap_fragmentation_unittest
+
+# Build rule for target.
+tcmalloc_minimal_large_heap_fragmentation_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal_large_heap_fragmentation_unittest
+.PHONY : tcmalloc_minimal_large_heap_fragmentation_unittest
+
+# fast build rule for target.
+tcmalloc_minimal_large_heap_fragmentation_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build
+.PHONY : tcmalloc_minimal_large_heap_fragmentation_unittest/fast
+
+#=============================================================================
+# Target rules for targets named profiler_static
+
+# Build rule for target.
+profiler_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 profiler_static
+.PHONY : profiler_static
+
+# fast build rule for target.
+profiler_static/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler_static.dir/build.make pref/gperftools/CMakeFiles/profiler_static.dir/build
+.PHONY : profiler_static/fast
+
+#=============================================================================
+# Target rules for targets named tcm_min_asserts_unittest
+
+# Build rule for target.
+tcm_min_asserts_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcm_min_asserts_unittest
+.PHONY : tcm_min_asserts_unittest
+
+# fast build rule for target.
+tcm_min_asserts_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/build.make pref/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/build
+.PHONY : tcm_min_asserts_unittest/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_static
+
+# Build rule for target.
+tcmalloc_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_static
+.PHONY : tcmalloc_static
+
+# fast build rule for target.
+tcmalloc_static/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_static.dir/build
+.PHONY : tcmalloc_static/fast
+
+#=============================================================================
+# Target rules for targets named fake_stacktrace_scope
+
+# Build rule for target.
+fake_stacktrace_scope: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fake_stacktrace_scope
+.PHONY : fake_stacktrace_scope
+
+# fast build rule for target.
+fake_stacktrace_scope/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/fake_stacktrace_scope.dir/build.make pref/gperftools/CMakeFiles/fake_stacktrace_scope.dir/build
+.PHONY : fake_stacktrace_scope/fast
+
+#=============================================================================
+# Target rules for targets named page_heap_test
+
+# Build rule for target.
+page_heap_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 page_heap_test
+.PHONY : page_heap_test
+
+# fast build rule for target.
+page_heap_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/page_heap_test.dir/build.make pref/gperftools/CMakeFiles/page_heap_test.dir/build
+.PHONY : page_heap_test/fast
+
+#=============================================================================
+# Target rules for targets named pagemap_unittest
+
+# Build rule for target.
+pagemap_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pagemap_unittest
+.PHONY : pagemap_unittest
+
+# fast build rule for target.
+pagemap_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/pagemap_unittest.dir/build.make pref/gperftools/CMakeFiles/pagemap_unittest.dir/build
+.PHONY : pagemap_unittest/fast
+
+#=============================================================================
+# Target rules for targets named stacktrace_object
+
+# Build rule for target.
+stacktrace_object: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stacktrace_object
+.PHONY : stacktrace_object
+
+# fast build rule for target.
+stacktrace_object/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/stacktrace_object.dir/build.make pref/gperftools/CMakeFiles/stacktrace_object.dir/build
+.PHONY : stacktrace_object/fast
+
+#=============================================================================
+# Target rules for targets named realloc_unittest
+
+# Build rule for target.
+realloc_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 realloc_unittest
+.PHONY : realloc_unittest
+
+# fast build rule for target.
+realloc_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/realloc_unittest.dir/build.make pref/gperftools/CMakeFiles/realloc_unittest.dir/build
+.PHONY : realloc_unittest/fast
+
+#=============================================================================
+# Target rules for targets named stack_trace_table_test
+
+# Build rule for target.
+stack_trace_table_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack_trace_table_test
+.PHONY : stack_trace_table_test
+
+# fast build rule for target.
+stack_trace_table_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/stack_trace_table_test.dir/build.make pref/gperftools/CMakeFiles/stack_trace_table_test.dir/build
+.PHONY : stack_trace_table_test/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal_debug
+
+# Build rule for target.
+tcmalloc_minimal_debug: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal_debug
+.PHONY : tcmalloc_minimal_debug
+
+# fast build rule for target.
+tcmalloc_minimal_debug/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/build
+.PHONY : tcmalloc_minimal_debug/fast
+
+#=============================================================================
+# Target rules for targets named binary_trees_shared
+
+# Build rule for target.
+binary_trees_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 binary_trees_shared
+.PHONY : binary_trees_shared
+
+# fast build rule for target.
+binary_trees_shared/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/binary_trees_shared.dir/build.make pref/gperftools/CMakeFiles/binary_trees_shared.dir/build
+.PHONY : binary_trees_shared/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal_debug_static
+
+# Build rule for target.
+tcmalloc_minimal_debug_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal_debug_static
+.PHONY : tcmalloc_minimal_debug_static
+
+# fast build rule for target.
+tcmalloc_minimal_debug_static/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/build
+.PHONY : tcmalloc_minimal_debug_static/fast
+
+#=============================================================================
+# Target rules for targets named profiler1_unittest
+
+# Build rule for target.
+profiler1_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 profiler1_unittest
+.PHONY : profiler1_unittest
+
+# fast build rule for target.
+profiler1_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler1_unittest.dir/build.make pref/gperftools/CMakeFiles/profiler1_unittest.dir/build
+.PHONY : profiler1_unittest/fast
+
+#=============================================================================
+# Target rules for targets named system_alloc_unittest
+
+# Build rule for target.
+system_alloc_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 system_alloc_unittest
+.PHONY : system_alloc_unittest
+
+# fast build rule for target.
+system_alloc_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/system_alloc_unittest.dir/build.make pref/gperftools/CMakeFiles/system_alloc_unittest.dir/build
+.PHONY : system_alloc_unittest/fast
+
+#=============================================================================
+# Target rules for targets named malloc_extension_debug_test
+
+# Build rule for target.
+malloc_extension_debug_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 malloc_extension_debug_test
+.PHONY : malloc_extension_debug_test
+
+# fast build rule for target.
+malloc_extension_debug_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_extension_debug_test.dir/build.make pref/gperftools/CMakeFiles/malloc_extension_debug_test.dir/build
+.PHONY : malloc_extension_debug_test/fast
+
+#=============================================================================
+# Target rules for targets named debugallocation_test
+
+# Build rule for target.
+debugallocation_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 debugallocation_test
+.PHONY : debugallocation_test
+
+# fast build rule for target.
+debugallocation_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/debugallocation_test.dir/build.make pref/gperftools/CMakeFiles/debugallocation_test.dir/build
+.PHONY : debugallocation_test/fast
+
+#=============================================================================
+# Target rules for targets named binary_trees
+
+# Build rule for target.
+binary_trees: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 binary_trees
+.PHONY : binary_trees
+
+# fast build rule for target.
+binary_trees/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/binary_trees.dir/build.make pref/gperftools/CMakeFiles/binary_trees.dir/build
+.PHONY : binary_trees/fast
+
+#=============================================================================
+# Target rules for targets named heap_checker_debug_unittest
+
+# Build rule for target.
+heap_checker_debug_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heap_checker_debug_unittest
+.PHONY : heap_checker_debug_unittest
+
+# fast build rule for target.
+heap_checker_debug_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/build
+.PHONY : heap_checker_debug_unittest/fast
+
+#=============================================================================
+# Target rules for targets named memalign_debug_unittest
+
+# Build rule for target.
+memalign_debug_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 memalign_debug_unittest
+.PHONY : memalign_debug_unittest
+
+# fast build rule for target.
+memalign_debug_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/memalign_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/memalign_debug_unittest.dir/build
+.PHONY : memalign_debug_unittest/fast
+
+#=============================================================================
+# Target rules for targets named run_benchmark
+
+# Build rule for target.
+run_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_benchmark
+.PHONY : run_benchmark
+
+# fast build rule for target.
+run_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/run_benchmark.dir/build.make pref/gperftools/CMakeFiles/run_benchmark.dir/build
+.PHONY : run_benchmark/fast
+
+#=============================================================================
+# Target rules for targets named current_allocated_bytes_test
+
+# Build rule for target.
+current_allocated_bytes_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 current_allocated_bytes_test
+.PHONY : current_allocated_bytes_test
+
+# fast build rule for target.
+current_allocated_bytes_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/current_allocated_bytes_test.dir/build.make pref/gperftools/CMakeFiles/current_allocated_bytes_test.dir/build
+.PHONY : current_allocated_bytes_test/fast
+
+#=============================================================================
+# Target rules for targets named malloc_bench
+
+# Build rule for target.
+malloc_bench: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 malloc_bench
+.PHONY : malloc_bench
+
+# fast build rule for target.
+malloc_bench/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_bench.dir/build.make pref/gperftools/CMakeFiles/malloc_bench.dir/build
+.PHONY : malloc_bench/fast
+
+#=============================================================================
+# Target rules for targets named profiler4_unittest
+
+# Build rule for target.
+profiler4_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 profiler4_unittest
+.PHONY : profiler4_unittest
+
+# fast build rule for target.
+profiler4_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler4_unittest.dir/build.make pref/gperftools/CMakeFiles/profiler4_unittest.dir/build
+.PHONY : profiler4_unittest/fast
+
+#=============================================================================
+# Target rules for targets named malloc_bench_shared
+
+# Build rule for target.
+malloc_bench_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 malloc_bench_shared
+.PHONY : malloc_bench_shared
+
+# fast build rule for target.
+malloc_bench_shared/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_bench_shared.dir/build.make pref/gperftools/CMakeFiles/malloc_bench_shared.dir/build
+.PHONY : malloc_bench_shared/fast
+
+#=============================================================================
+# Target rules for targets named malloc_bench_shared_full
+
+# Build rule for target.
+malloc_bench_shared_full: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 malloc_bench_shared_full
+.PHONY : malloc_bench_shared_full
+
+# fast build rule for target.
+malloc_bench_shared_full/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_bench_shared_full.dir/build.make pref/gperftools/CMakeFiles/malloc_bench_shared_full.dir/build
+.PHONY : malloc_bench_shared_full/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_minimal
+
+# Build rule for target.
+tcmalloc_minimal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_minimal
+.PHONY : tcmalloc_minimal
+
+# fast build rule for target.
+tcmalloc_minimal/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal.dir/build
+.PHONY : tcmalloc_minimal/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc
+
+# Build rule for target.
+tcmalloc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc
+.PHONY : tcmalloc
+
+# fast build rule for target.
+tcmalloc/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc.dir/build.make pref/gperftools/CMakeFiles/tcmalloc.dir/build
+.PHONY : tcmalloc/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_internal_object
+
+# Build rule for target.
+tcmalloc_internal_object: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_internal_object
+.PHONY : tcmalloc_internal_object
+
+# fast build rule for target.
+tcmalloc_internal_object/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_internal_object.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_internal_object.dir/build
+.PHONY : tcmalloc_internal_object/fast
+
+#=============================================================================
+# Target rules for targets named raw_printer_test
+
+# Build rule for target.
+raw_printer_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 raw_printer_test
+.PHONY : raw_printer_test
+
+# fast build rule for target.
+raw_printer_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/raw_printer_test.dir/build.make pref/gperftools/CMakeFiles/raw_printer_test.dir/build
+.PHONY : raw_printer_test/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_unittest
+
+# Build rule for target.
+tcmalloc_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_unittest
+.PHONY : tcmalloc_unittest
+
+# fast build rule for target.
+tcmalloc_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_unittest.dir/build
+.PHONY : tcmalloc_unittest/fast
+
+#=============================================================================
+# Target rules for targets named markidle_unittest
+
+# Build rule for target.
+markidle_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 markidle_unittest
+.PHONY : markidle_unittest
+
+# fast build rule for target.
+markidle_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/markidle_unittest.dir/build.make pref/gperftools/CMakeFiles/markidle_unittest.dir/build
+.PHONY : markidle_unittest/fast
+
+#=============================================================================
+# Target rules for targets named sysinfo
+
+# Build rule for target.
+sysinfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysinfo
+.PHONY : sysinfo
+
+# fast build rule for target.
+sysinfo/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sysinfo.dir/build.make pref/gperftools/CMakeFiles/sysinfo.dir/build
+.PHONY : sysinfo/fast
+
+#=============================================================================
+# Target rules for targets named tcmalloc_both_unittest
+
+# Build rule for target.
+tcmalloc_both_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcmalloc_both_unittest
+.PHONY : tcmalloc_both_unittest
+
+# fast build rule for target.
+tcmalloc_both_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/build
+.PHONY : tcmalloc_both_unittest/fast
+
+#=============================================================================
+# Target rules for targets named malloc_extension_test
+
+# Build rule for target.
+malloc_extension_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 malloc_extension_test
+.PHONY : malloc_extension_test
+
+# fast build rule for target.
+malloc_extension_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_extension_test.dir/build.make pref/gperftools/CMakeFiles/malloc_extension_test.dir/build
+.PHONY : malloc_extension_test/fast
+
+#=============================================================================
+# Target rules for targets named sampling_test
+
+# Build rule for target.
+sampling_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sampling_test
+.PHONY : sampling_test
+
+# fast build rule for target.
+sampling_test/fast:
+	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sampling_test.dir/build.make pref/gperftools/CMakeFiles/sampling_test.dir/build
+.PHONY : sampling_test/fast
+
+#=============================================================================
+# Target rules for targets named nanobench
+
+# Build rule for target.
+nanobench: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nanobench
+.PHONY : nanobench
+
+# fast build rule for target.
+nanobench/fast:
+	$(MAKE) $(MAKESILENT) -f pref/nanobench/CMakeFiles/nanobench.dir/build.make pref/nanobench/CMakeFiles/nanobench.dir/build
+.PHONY : nanobench/fast
 
 #=============================================================================
 # Target rules for targets named unload
@@ -813,43 +1836,17 @@ libuv_signal_tid/fast:
 .PHONY : libuv_signal_tid/fast
 
 #=============================================================================
-# Target rules for targets named multitid_server
+# Target rules for targets named long_server
 
 # Build rule for target.
-multitid_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multitid_server
-.PHONY : multitid_server
+long_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 long_server
+.PHONY : long_server
 
 # fast build rule for target.
-multitid_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build
-.PHONY : multitid_server/fast
-
-#=============================================================================
-# Target rules for targets named tidsafe_server
-
-# Build rule for target.
-tidsafe_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidsafe_server
-.PHONY : tidsafe_server
-
-# fast build rule for target.
-tidsafe_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build
-.PHONY : tidsafe_server/fast
-
-#=============================================================================
-# Target rules for targets named multiclient_server
-
-# Build rule for target.
-multiclient_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multiclient_server
-.PHONY : multiclient_server
-
-# fast build rule for target.
-multiclient_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build
-.PHONY : multiclient_server/fast
+long_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_server.dir/build
+.PHONY : long_server/fast
 
 #=============================================================================
 # Target rules for targets named long_client
@@ -865,19 +1862,6 @@ long_client/fast:
 .PHONY : long_client/fast
 
 #=============================================================================
-# Target rules for targets named long_server
-
-# Build rule for target.
-long_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 long_server
-.PHONY : long_server
-
-# fast build rule for target.
-long_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_server.dir/build
-.PHONY : long_server/fast
-
-#=============================================================================
 # Target rules for targets named client
 
 # Build rule for target.
@@ -889,6 +1873,45 @@ client: cmake_check_build_system
 client/fast:
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/client.dir/build.make fun/primary/socket/tcp/CMakeFiles/client.dir/build
 .PHONY : client/fast
+
+#=============================================================================
+# Target rules for targets named multiclient_server
+
+# Build rule for target.
+multiclient_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multiclient_server
+.PHONY : multiclient_server
+
+# fast build rule for target.
+multiclient_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build
+.PHONY : multiclient_server/fast
+
+#=============================================================================
+# Target rules for targets named tidsafe_server
+
+# Build rule for target.
+tidsafe_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidsafe_server
+.PHONY : tidsafe_server
+
+# fast build rule for target.
+tidsafe_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build
+.PHONY : tidsafe_server/fast
+
+#=============================================================================
+# Target rules for targets named multitid_server
+
+# Build rule for target.
+multitid_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multitid_server
+.PHONY : multitid_server
+
+# fast build rule for target.
+multitid_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build
+.PHONY : multitid_server/fast
 
 #=============================================================================
 # Target rules for targets named multicast_serv
@@ -1216,56 +2239,17 @@ epoll_client/fast:
 .PHONY : epoll_client/fast
 
 #=============================================================================
-# Target rules for targets named posix_msgq_send
+# Target rules for targets named msg_que_server
 
 # Build rule for target.
-posix_msgq_send: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_send
-.PHONY : posix_msgq_send
+msg_que_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msg_que_server
+.PHONY : msg_que_server
 
 # fast build rule for target.
-posix_msgq_send/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build
-.PHONY : posix_msgq_send/fast
-
-#=============================================================================
-# Target rules for targets named posix_msgq_recv
-
-# Build rule for target.
-posix_msgq_recv: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_recv
-.PHONY : posix_msgq_recv
-
-# fast build rule for target.
-posix_msgq_recv/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build
-.PHONY : posix_msgq_recv/fast
-
-#=============================================================================
-# Target rules for targets named posix_msgq_notify
-
-# Build rule for target.
-posix_msgq_notify: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_notify
-.PHONY : posix_msgq_notify
-
-# fast build rule for target.
-posix_msgq_notify/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build
-.PHONY : posix_msgq_notify/fast
-
-#=============================================================================
-# Target rules for targets named sysv_msgq_send
-
-# Build rule for target.
-sysv_msgq_send: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_msgq_send
-.PHONY : sysv_msgq_send
-
-# fast build rule for target.
-sysv_msgq_send/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build
-.PHONY : sysv_msgq_send/fast
+msg_que_server/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build
+.PHONY : msg_que_server/fast
 
 #=============================================================================
 # Target rules for targets named sysv_msgq_recv
@@ -1281,17 +2265,43 @@ sysv_msgq_recv/fast:
 .PHONY : sysv_msgq_recv/fast
 
 #=============================================================================
-# Target rules for targets named msg_que_server
+# Target rules for targets named posix_msgq_notify
 
 # Build rule for target.
-msg_que_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msg_que_server
-.PHONY : msg_que_server
+posix_msgq_notify: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_notify
+.PHONY : posix_msgq_notify
 
 # fast build rule for target.
-msg_que_server/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build
-.PHONY : msg_que_server/fast
+posix_msgq_notify/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build
+.PHONY : posix_msgq_notify/fast
+
+#=============================================================================
+# Target rules for targets named posix_msgq_recv
+
+# Build rule for target.
+posix_msgq_recv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_recv
+.PHONY : posix_msgq_recv
+
+# fast build rule for target.
+posix_msgq_recv/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build
+.PHONY : posix_msgq_recv/fast
+
+#=============================================================================
+# Target rules for targets named sysv_msgq_send
+
+# Build rule for target.
+sysv_msgq_send: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_msgq_send
+.PHONY : sysv_msgq_send
+
+# fast build rule for target.
+sysv_msgq_send/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build
+.PHONY : sysv_msgq_send/fast
 
 #=============================================================================
 # Target rules for targets named msg_que_client
@@ -1305,6 +2315,19 @@ msg_que_client: cmake_check_build_system
 msg_que_client/fast:
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_client.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_client.dir/build
 .PHONY : msg_que_client/fast
+
+#=============================================================================
+# Target rules for targets named posix_msgq_send
+
+# Build rule for target.
+posix_msgq_send: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_msgq_send
+.PHONY : posix_msgq_send
+
+# fast build rule for target.
+posix_msgq_send/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build
+.PHONY : posix_msgq_send/fast
 
 #=============================================================================
 # Target rules for targets named pipe_fifo_send
@@ -1346,56 +2369,17 @@ pipe/fast:
 .PHONY : pipe/fast
 
 #=============================================================================
-# Target rules for targets named sysv_sem_c
+# Target rules for targets named posix_sem_c
 
 # Build rule for target.
-sysv_sem_c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_sem_c
-.PHONY : sysv_sem_c
+posix_sem_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_sem_c
+.PHONY : posix_sem_c
 
 # fast build rule for target.
-sysv_sem_c/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem_c.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem_c.dir/build
-.PHONY : sysv_sem_c/fast
-
-#=============================================================================
-# Target rules for targets named sysv_sem
-
-# Build rule for target.
-sysv_sem: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_sem
-.PHONY : sysv_sem
-
-# fast build rule for target.
-sysv_sem/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem.dir/build
-.PHONY : sysv_sem/fast
-
-#=============================================================================
-# Target rules for targets named sem_p-c
-
-# Build rule for target.
-sem_p-c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_p-c
-.PHONY : sem_p-c
-
-# fast build rule for target.
-sem_p-c/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_p-c.dir/build.make fun/primary/sem/CMakeFiles/sem_p-c.dir/build
-.PHONY : sem_p-c/fast
-
-#=============================================================================
-# Target rules for targets named sysv_sem_p
-
-# Build rule for target.
-sysv_sem_p: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_sem_p
-.PHONY : sysv_sem_p
-
-# fast build rule for target.
-sysv_sem_p/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem_p.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem_p.dir/build
-.PHONY : sysv_sem_p/fast
+posix_sem_c/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/posix_sem_c.dir/build.make fun/primary/sem/CMakeFiles/posix_sem_c.dir/build
+.PHONY : posix_sem_c/fast
 
 #=============================================================================
 # Target rules for targets named posix_sem_p
@@ -1411,17 +2395,69 @@ posix_sem_p/fast:
 .PHONY : posix_sem_p/fast
 
 #=============================================================================
-# Target rules for targets named posix_sem_c
+# Target rules for targets named sysv_sem_p
 
 # Build rule for target.
-posix_sem_c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posix_sem_c
-.PHONY : posix_sem_c
+sysv_sem_p: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_sem_p
+.PHONY : sysv_sem_p
 
 # fast build rule for target.
-posix_sem_c/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/posix_sem_c.dir/build.make fun/primary/sem/CMakeFiles/posix_sem_c.dir/build
-.PHONY : posix_sem_c/fast
+sysv_sem_p/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem_p.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem_p.dir/build
+.PHONY : sysv_sem_p/fast
+
+#=============================================================================
+# Target rules for targets named sem_p-c
+
+# Build rule for target.
+sem_p-c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sem_p-c
+.PHONY : sem_p-c
+
+# fast build rule for target.
+sem_p-c/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_p-c.dir/build.make fun/primary/sem/CMakeFiles/sem_p-c.dir/build
+.PHONY : sem_p-c/fast
+
+#=============================================================================
+# Target rules for targets named sysv_sem
+
+# Build rule for target.
+sysv_sem: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_sem
+.PHONY : sysv_sem
+
+# fast build rule for target.
+sysv_sem/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem.dir/build
+.PHONY : sysv_sem/fast
+
+#=============================================================================
+# Target rules for targets named sysv_sem_c
+
+# Build rule for target.
+sysv_sem_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sysv_sem_c
+.PHONY : sysv_sem_c
+
+# fast build rule for target.
+sysv_sem_c/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem_c.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem_c.dir/build
+.PHONY : sysv_sem_c/fast
+
+#=============================================================================
+# Target rules for targets named nanobench_test
+
+# Build rule for target.
+nanobench_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nanobench_test
+.PHONY : nanobench_test
+
+# fast build rule for target.
+nanobench_test/fast:
+	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/nanobench_test.dir/build.make fun/primary/sem/CMakeFiles/nanobench_test.dir/build
+.PHONY : nanobench_test/fast
 
 #=============================================================================
 # Target rules for targets named sigset
@@ -1798,6 +2834,8 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... Continuous"
 	@echo "... ContinuousBuild"
@@ -1830,11 +2868,15 @@ help:
 	@echo "... driver"
 	@echo "... load"
 	@echo "... unload"
+	@echo "... addressmap_unittest"
 	@echo "... argc_argv"
 	@echo "... array"
 	@echo "... asyncthread"
+	@echo "... atomicops_unittest"
 	@echo "... benchmark"
 	@echo "... benchmark_main"
+	@echo "... binary_trees"
+	@echo "... binary_trees_shared"
 	@echo "... broadcast_cli"
 	@echo "... broadcast_serv"
 	@echo "... cdefine"
@@ -1846,19 +2888,28 @@ help:
 	@echo "... codetest"
 	@echo "... common_pref"
 	@echo "... common_test"
+	@echo "... current_allocated_bytes_test"
 	@echo "... cycled_fifo"
 	@echo "... cycled_priority_fifo"
+	@echo "... debugallocation_test"
 	@echo "... epoll_client"
 	@echo "... epoll_server"
 	@echo "... extension"
+	@echo "... fake_stacktrace_scope"
 	@echo "... fifo"
 	@echo "... flexbison_main"
 	@echo "... flexbisonlib"
 	@echo "... fork"
+	@echo "... frag_unittest"
+	@echo "... getpc_test"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... heap_checker_debug_unittest"
+	@echo "... heap_checker_unittest"
+	@echo "... heap_profiler_debug_unittest"
+	@echo "... heap_profiler_unittest"
 	@echo "... ioctl"
 	@echo "... kill_process"
 	@echo "... libuv_async"
@@ -1869,8 +2920,21 @@ help:
 	@echo "... libuv_signal_tid"
 	@echo "... list"
 	@echo "... log"
+	@echo "... logging"
 	@echo "... long_client"
 	@echo "... long_server"
+	@echo "... low_level_alloc_unittest"
+	@echo "... malloc_bench"
+	@echo "... malloc_bench_shared"
+	@echo "... malloc_bench_shared_full"
+	@echo "... malloc_extension_c_test"
+	@echo "... malloc_extension_debug_test"
+	@echo "... malloc_extension_test"
+	@echo "... malloc_hook_test"
+	@echo "... markidle_unittest"
+	@echo "... maybe_threads"
+	@echo "... memalign_debug_unittest"
+	@echo "... memalign_unittest"
 	@echo "... memcpy"
 	@echo "... msg_que_client"
 	@echo "... msg_que_server"
@@ -1879,6 +2943,11 @@ help:
 	@echo "... multiclient_server"
 	@echo "... multitid_server"
 	@echo "... name_to_pid"
+	@echo "... nanobench"
+	@echo "... nanobench_test"
+	@echo "... packed_cache_test"
+	@echo "... page_heap_test"
+	@echo "... pagemap_unittest"
 	@echo "... pid_test"
 	@echo "... pipe"
 	@echo "... pipe_fifo_recv"
@@ -1894,8 +2963,24 @@ help:
 	@echo "... posix_shm_writer"
 	@echo "... process_shm_a"
 	@echo "... process_shm_b"
+	@echo "... profile_handler_unittest"
+	@echo "... profiledata_unittest"
+	@echo "... profiler"
+	@echo "... profiler1_unittest"
+	@echo "... profiler2_unittest"
+	@echo "... profiler3_unittest"
+	@echo "... profiler4_unittest"
+	@echo "... profiler_static"
 	@echo "... rand"
+	@echo "... raw_printer_test"
 	@echo "... rbtree"
+	@echo "... realloc_debug_unittest"
+	@echo "... realloc_unittest"
+	@echo "... run_benchmark"
+	@echo "... sampler_debug_test"
+	@echo "... sampler_test"
+	@echo "... sampling_debug_test"
+	@echo "... sampling_test"
 	@echo "... sem-shm_reader"
 	@echo "... sem-shm_writer"
 	@echo "... sem_p-c"
@@ -1908,10 +2993,17 @@ help:
 	@echo "... signal_server"
 	@echo "... signal_tid"
 	@echo "... sigset"
+	@echo "... simple_compat_test"
+	@echo "... spinlock"
+	@echo "... stack_trace_table_test"
+	@echo "... stacktrace_object"
+	@echo "... stacktrace_unittest"
 	@echo "... strcpy"
 	@echo "... strncpy"
 	@echo "... strrchr"
 	@echo "... struct_array"
+	@echo "... sysinfo"
+	@echo "... system_alloc_unittest"
 	@echo "... sysv_msgq_recv"
 	@echo "... sysv_msgq_send"
 	@echo "... sysv_sem"
@@ -1919,7 +3011,31 @@ help:
 	@echo "... sysv_sem_p"
 	@echo "... sysv_shm_reader"
 	@echo "... sysv_shm_writer"
+	@echo "... tcm_min_asserts_unittest"
+	@echo "... tcmalloc"
+	@echo "... tcmalloc_and_profiler"
+	@echo "... tcmalloc_and_profiler_static"
+	@echo "... tcmalloc_and_profiler_unittest"
+	@echo "... tcmalloc_both_unittest"
+	@echo "... tcmalloc_debug"
+	@echo "... tcmalloc_debug_static"
+	@echo "... tcmalloc_debug_unittest"
+	@echo "... tcmalloc_internal_object"
+	@echo "... tcmalloc_large_heap_fragmentation_unittest"
+	@echo "... tcmalloc_large_unittest"
+	@echo "... tcmalloc_minimal"
+	@echo "... tcmalloc_minimal_debug"
+	@echo "... tcmalloc_minimal_debug_static"
+	@echo "... tcmalloc_minimal_debug_unittest"
+	@echo "... tcmalloc_minimal_internal_object"
+	@echo "... tcmalloc_minimal_large_heap_fragmentation_unittest"
+	@echo "... tcmalloc_minimal_large_unittest"
+	@echo "... tcmalloc_minimal_static"
+	@echo "... tcmalloc_minimal_unittest"
+	@echo "... tcmalloc_static"
+	@echo "... tcmalloc_unittest"
 	@echo "... thread_cancel"
+	@echo "... thread_dealloc_unittest"
 	@echo "... tidsafe_server"
 	@echo "... uv"
 	@echo "... uv_a"

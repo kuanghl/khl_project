@@ -347,6 +347,54 @@ COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
 //Extra command line flags to pass to the coverage tool
 COVERAGE_EXTRA_FLAGS:STRING=-l
 
+//Enable to build Debian packages
+CPACK_BINARY_DEB:BOOL=OFF
+
+//Enable to build FreeBSD packages
+CPACK_BINARY_FREEBSD:BOOL=OFF
+
+//Enable to build IFW packages
+CPACK_BINARY_IFW:BOOL=OFF
+
+//Enable to build NSIS packages
+CPACK_BINARY_NSIS:BOOL=OFF
+
+//Enable to build RPM packages
+CPACK_BINARY_RPM:BOOL=OFF
+
+//Enable to build STGZ packages
+CPACK_BINARY_STGZ:BOOL=ON
+
+//Enable to build TBZ2 packages
+CPACK_BINARY_TBZ2:BOOL=OFF
+
+//Enable to build TGZ packages
+CPACK_BINARY_TGZ:BOOL=ON
+
+//Enable to build TXZ packages
+CPACK_BINARY_TXZ:BOOL=OFF
+
+//Enable to build TZ packages
+CPACK_BINARY_TZ:BOOL=ON
+
+//Enable to build RPM source packages
+CPACK_SOURCE_RPM:BOOL=OFF
+
+//Enable to build TBZ2 source packages
+CPACK_SOURCE_TBZ2:BOOL=ON
+
+//Enable to build TGZ source packages
+CPACK_SOURCE_TGZ:BOOL=ON
+
+//Enable to build TXZ source packages
+CPACK_SOURCE_TXZ:BOOL=ON
+
+//Enable to build TZ source packages
+CPACK_SOURCE_TZ:BOOL=ON
+
+//Enable to build ZIP source packages
+CPACK_SOURCE_ZIP:BOOL=OFF
+
 //How many times to retry timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_COUNT:STRING=3
 
@@ -379,11 +427,25 @@ FETCHCONTENT_QUIET:BOOL=ON
 // for googlebenchmark
 FETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=
 
+//When not empty, overrides where to find pre-populated content
+// for gperftools
+FETCHCONTENT_SOURCE_DIR_GPERFTOOLS:PATH=
+
+//When not empty, overrides where to find pre-populated content
+// for nanobench
+FETCHCONTENT_SOURCE_DIR_NANOBENCH:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of googlebenchmark
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLEBENCHMARK:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of gperftools
+FETCHCONTENT_UPDATES_DISCONNECTED_GPERFTOOLS:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of nanobench
+FETCHCONTENT_UPDATES_DISCONNECTED_NANOBENCH:BOOL=OFF
 
 //path to the flex executable
 FLEX_EXECUTABLE:FILEPATH=/usr/bin/flex
@@ -399,6 +461,21 @@ GITCOMMAND:FILEPATH=/usr/bin/git
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+
+//Build cpu-profiler
+GPERFTOOLS_BUILD_CPU_PROFILER:BOOL=ON
+
+//Build debugalloc
+GPERFTOOLS_BUILD_DEBUGALLOC:BOOL=ON
+
+//Build heap-checker
+GPERFTOOLS_BUILD_HEAP_CHECKER:BOOL=ON
+
+//Build heap-profiler
+GPERFTOOLS_BUILD_HEAP_PROFILER:BOOL=ON
+
+//Enable Static
+GPERFTOOLS_BUILD_STATIC:BOOL=ON
 
 //Path to a program.
 HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
@@ -429,6 +506,9 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 MSAN:BOOL=OFF
 
 //Path to a program.
+OBJCOPY_EXECUTABLE:FILEPATH=/usr/bin/objcopy
+
+//Path to a program.
 P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
 
 //build for qemu
@@ -453,10 +533,10 @@ TSAN:BOOL=OFF
 UBSAN:BOOL=OFF
 
 //Value Computed by CMake
-benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/googlebenchmark-build
+benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/benchmark
 
 //Value Computed by CMake
-benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/googlebenchmark-src
+benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/pref/benchmark
 
 //Dependencies for the target
 client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;general;boost_system;general;boost_filesystem;general;boost_thread;general;pthread;
@@ -465,7 +545,7 @@ client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;
 daemon_en:BOOL=ON
 
 //Enable the gbenchmark_en: on/off
-gbenchmark_en:BOOL=other
+gbenchmark_en:BOOL=off
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock
@@ -487,6 +567,45 @@ googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_
 
 //Value Computed by CMake
 googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest
+
+//Value Computed by CMake
+gperftools_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/gperftools
+
+//Value Computed by CMake
+gperftools_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/pref/gperftools
+
+//Build benchmark
+gperftools_build_benchmark:BOOL=ON
+
+//Build only tcmalloc-minimal (and maybe tcmalloc-minimal-debug)
+gperftools_build_minimal:BOOL=OFF
+
+//Try to build run-time switch for sized delete operator
+gperftools_dynamic_sized_delete_support:BOOL=OFF
+
+//Build emergency malloc
+gperftools_emergency_malloc:BOOL=OFF
+
+//Enable the gperftools_en: on/off
+gperftools_en:BOOL=off
+
+//Compile with -fno-omit-frame-pointer (see INSTALL)
+gperftools_enable_frame_pointers:BOOL=OFF
+
+//Enable libunwind linking
+gperftools_enable_libunwind:BOOL=ON
+
+//Enable use of backtrace() for stacktrace capturing (may deadlock)
+gperftools_enable_stacktrace_via_backtrace:BOOL=OFF
+
+//Build sized delete operator
+gperftools_sized_delete:BOOL=OFF
+
+//Set the tcmalloc allocation alignment
+gperftools_tcmalloc_alignment:STRING=16
+
+//Set the tcmalloc internal page size
+gperftools_tcmalloc_pagesize:STRING=8
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest
@@ -522,6 +641,18 @@ khl_project_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl
 //Value Computed by CMake
 khl_project_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project
 
+//Path to a library.
+libunwind:FILEPATH=/usr/lib/x86_64-linux-gnu/libunwind.so
+
+//The directory containing a CMake configuration file for libunwind-dev.
+libunwind-dev_DIR:PATH=libunwind-dev_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libunwind.
+libunwind_DIR:PATH=libunwind_DIR-NOTFOUND
+
+//Path to a library.
+libunwind_location:FILEPATH=/usr/lib/x86_64-linux-gnu/libunwind.so
+
 //Value Computed by CMake
 libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/libuv
 
@@ -538,6 +669,18 @@ loglevel:BOOL=OFF
 //Enable the mps: on/off
 mps_en:BOOL=ON
 
+//Value Computed by CMake
+nanobench_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/nanobench
+
+//Value Computed by CMake
+nanobench_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/pref/nanobench
+
+//Enable the nanobench_en: on/off
+nanobench_en:BOOL=off
+
+//The directory containing a CMake configuration file for unwind.
+unwind_DIR:PATH=unwind_DIR-NOTFOUND
+
 //Dependencies for the target
 uv_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
 
@@ -549,6 +692,8 @@ uv_a_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
 # INTERNAL cache entries
 ########################
 
+//Test ARM
+ARM:INTERNAL=
 //ADVANCED property for variable: BENCHMARK_CXX_FLAGS_COVERAGE
 BENCHMARK_CXX_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BENCHMARK_EXE_LINKER_FLAGS_COVERAGE
@@ -705,7 +850,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=58
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=60
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -762,6 +907,38 @@ COMPILE_HAVE_STEADY_CLOCK:INTERNAL=TRUE
 COVERAGE_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
 COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_DEB
+CPACK_BINARY_DEB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_FREEBSD
+CPACK_BINARY_FREEBSD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_IFW
+CPACK_BINARY_IFW-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NSIS
+CPACK_BINARY_NSIS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_RPM
+CPACK_BINARY_RPM-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_STGZ
+CPACK_BINARY_STGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TBZ2
+CPACK_BINARY_TBZ2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TGZ
+CPACK_BINARY_TGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TXZ
+CPACK_BINARY_TXZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TZ
+CPACK_BINARY_TZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_RPM
+CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TBZ2
+CPACK_SOURCE_TBZ2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TGZ
+CPACK_SOURCE_TGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TXZ
+CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TZ
+CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_ZIP
+CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
 CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
@@ -772,6 +949,8 @@ CVSCOMMAND-ADVANCED:INTERNAL=1
 CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//CHECK_TYPE_SIZE: sizeof(Elf32_Versym)
+ELF32_VERSYM:INTERNAL=2
 //Details about finding BISON
 FIND_PACKAGE_MESSAGE_DETAILS_BISON:INTERNAL=[/usr/bin/bison][v3.5.1()]
 //Details about finding FLEX
@@ -788,10 +967,14 @@ FLEX_EXECUTABLE-ADVANCED:INTERNAL=1
 FLEX_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FL_LIBRARY
 FL_LIBRARY-ADVANCED:INTERNAL=1
+//Test FreeBSD
+FreeBSD:INTERNAL=
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//Test HAVE_BUILTIN_EXPECT
+HAVE_BUILTIN_EXPECT:INTERNAL=1
 //Test HAVE_CXX_FLAG_COVERAGE
 HAVE_CXX_FLAG_COVERAGE:INTERNAL=1
 //Test HAVE_CXX_FLAG_FSTRICT_ALIASING
@@ -824,18 +1007,122 @@ HAVE_CXX_FLAG_WSTRICT_ALIASING:INTERNAL=1
 HAVE_CXX_FLAG_WSUGGEST_OVERRIDE:INTERNAL=1
 //Test HAVE_CXX_FLAG_WTHREAD_SAFETY
 HAVE_CXX_FLAG_WTHREAD_SAFETY:INTERNAL=
+//Have include cygwin/signal.h
+HAVE_CYGWIN_SIGNAL_H:INTERNAL=
+//Have symbol cfree
+HAVE_DECL_CFREE:INTERNAL=
+//Have symbol memalign
+HAVE_DECL_MEMALIGN:INTERNAL=1
+//Have symbol posix_memalign
+HAVE_DECL_POSIX_MEMALIGN:INTERNAL=1
+//Have symbol pvalloc
+HAVE_DECL_PVALLOC:INTERNAL=1
+//Have symbol valloc
+HAVE_DECL_VALLOC:INTERNAL=1
+//Result of TRY_COMPILE
+HAVE_ELF32_VERSYM:INTERNAL=TRUE
+//Have include execinfo.h
+HAVE_EXECINFO_H:INTERNAL=1
+//Have include fcntl.h
+HAVE_FCNTL_H:INTERNAL=1
+//Have include features.h
+HAVE_FEATURES_H:INTERNAL=1
+//Have function fork
+HAVE_FORK:INTERNAL=1
+//Have function geteuid
+HAVE_GETEUID:INTERNAL=1
+//Have include glob.h
+HAVE_GLOB_H:INTERNAL=1
+//Have include grp.h
+HAVE_GRP_H:INTERNAL=1
+//Have include inttypes.h
+HAVE_INTTYPES_H:INTERNAL=1
+//Have include libunwind.h
+HAVE_LIBUNWIND_H:INTERNAL=
 //Have library rt
 HAVE_LIB_RT:INTERNAL=1
+//Have include linux/ptrace.h
+HAVE_LINUX_PTRACE_H:INTERNAL=1
+//Test HAVE_LINUX_SIGEV_THREAD_ID
+HAVE_LINUX_SIGEV_THREAD_ID:INTERNAL=1
+//Have include malloc.h
+HAVE_MALLOC_H:INTERNAL=1
+//Have include poll.h
+HAVE_POLL_H:INTERNAL=1
+//Have variable program_invocation_name
+HAVE_PROGRAM_INVOCATION_NAME:INTERNAL=1
+//Have include pwd.h
+HAVE_PWD_H:INTERNAL=1
+//Have function sbrk
+HAVE_SBRK:INTERNAL=1
+//Have include sched.h
+HAVE_SCHED_H:INTERNAL=1
+//Have include stddef.h
+HAVE_STDDEF_H:INTERNAL=1
+//Have include stdint.h
+HAVE_STDINT_H:INTERNAL=1
+//Test HAVE_STD_ALIGN_VAL_T
+HAVE_STD_ALIGN_VAL_T:INTERNAL=1
+//Result of TRY_COMPILE
+HAVE_STRUCT_MALLINFO:INTERNAL=TRUE
+//Have include sys/cdefs.h
+HAVE_SYS_CDEFS_H:INTERNAL=1
+//Have include sys/prctl.h
+HAVE_SYS_PRCTL_H:INTERNAL=1
+//Have include sys/resource.h
+HAVE_SYS_RESOURCE_H:INTERNAL=1
+//Have include sys/socket.h
+HAVE_SYS_SOCKET_H:INTERNAL=1
+//Have include sys/syscall.h
+HAVE_SYS_SYSCALL_H:INTERNAL=1
+//Have include sys/types.h
+HAVE_SYS_TYPES_H:INTERNAL=1
+//Have include sys/ucontext.h
+HAVE_SYS_UCONTEXT_H:INTERNAL=1
+//Have include sys/wait.h
+HAVE_SYS_WAIT_H:INTERNAL=1
+//Test HAVE_TLS
+HAVE_TLS:INTERNAL=1
+//Have include ucontext.h
+HAVE_UCONTEXT_H:INTERNAL=1
+//Have include unistd.h
+HAVE_UNISTD_H:INTERNAL=1
+//Test HAVE_UNWIND_BACKTRACE
+HAVE_UNWIND_BACKTRACE:INTERNAL=1
+//Have include unwind.h
+HAVE_UNWIND_H:INTERNAL=1
+//Test HAVE___ATTRIBUTE__
+HAVE___ATTRIBUTE__:INTERNAL=1
+//Test HAVE___ENVIRON
+HAVE___ENVIRON:INTERNAL=1
+//Test HAVE_uc_mcontext_gregs_REG_EIP_
+HAVE_uc_mcontext_gregs_REG_EIP_:INTERNAL=
+//Test HAVE_uc_mcontext_gregs_REG_PC_
+HAVE_uc_mcontext_gregs_REG_PC_:INTERNAL=
+//Test HAVE_uc_mcontext_gregs_REG_RIP_
+HAVE_uc_mcontext_gregs_REG_RIP_:INTERNAL=1
 //ADVANCED property for variable: HGCOMMAND
 HGCOMMAND-ADVANCED:INTERNAL=1
+//Test INT32_EQUALS_INTPTR
+INT32_EQUALS_INTPTR:INTERNAL=
+//Test LINUX
+LINUX:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
 MAKECOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_COMMAND
 MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
+//Test MINGW
+MINGW:INTERNAL=
+//Test OSX
+OSX:INTERNAL=
 //ADVANCED property for variable: P4COMMAND
 P4COMMAND-ADVANCED:INTERNAL=1
+//Test PPC64
+PPC64:INTERNAL=
+//Test PTHREAD_CREATE_JOINABLE_ATTR
+PTHREAD_CREATE_JOINABLE_ATTR:INTERNAL=1
 //Result of TRY_RUN
 RUN_HAVE_POSIX_REGEX:INTERNAL=0
 //Result of TRY_RUN
@@ -848,6 +1135,8 @@ SITE-ADVANCED:INTERNAL=1
 SLURM_SBATCH_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SLURM_SRUN_COMMAND
 SLURM_SRUN_COMMAND-ADVANCED:INTERNAL=1
+//CHECK_TYPE_SIZE: sizeof(struct mallinfo)
+STRUCT_MALLINFO:INTERNAL=40
 //ADVANCED property for variable: SVNCOMMAND
 SVNCOMMAND-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
@@ -898,6 +1187,10 @@ _Python_INTERPRETER_SIGNATURE:INTERNAL=28c129decd38964df5236e30f1913f21
 generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
+//STRINGS property for variable: gperftools_tcmalloc_alignment
+gperftools_tcmalloc_alignment-STRINGS:INTERNAL=8;16
+//STRINGS property for variable: gperftools_tcmalloc_pagesize
+gperftools_tcmalloc_pagesize-STRINGS:INTERNAL=8;32;64
 //ADVANCED property for variable: gtest_build_samples
 gtest_build_samples-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_tests
@@ -908,5 +1201,23 @@ gtest_disable_pthreads-ADVANCED:INTERNAL=1
 gtest_force_shared_crt-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_hide_internal_symbols
 gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
+//Have library unwind
+have_libunwind:INTERNAL=1
+//Test have_pthread_despite_asking_for
+have_pthread_despite_asking_for:INTERNAL=
+//Test have_sized_deallocation
+have_sized_deallocation:INTERNAL=1
+//Test have_w_no_unused_result
+have_w_no_unused_result:INTERNAL=1
+//Test i386
+i386:INTERNAL=
+//Test nanosleep_ok
+nanosleep_ok:INTERNAL=1
+//Result of TRY_COMPILE
+objcopy_test_compiled:INTERNAL=TRUE
+//Test s390
+s390:INTERNAL=
 targets_export_name:INTERNAL=GTestTargets
+//Test x86_64
+x86_64:INTERNAL=1
 

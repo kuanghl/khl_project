@@ -30,3 +30,70 @@
         ```
         
         ```
+***
+
+### gperftools.
+- [x] gperftools use demo--gperftools clone from master/ggperftools from release.
+- [x] src/server/server_main.c--测试集
+- [x] 环境测试和测试详情：
+    ```
+    # install gperftools.
+    sudo apt-get install libunwind-dev
+    sudo apt install ghostscript -y
+    sudo apt-get install graphviz -y
+    wget https://github.com/gperftools/gperftools/archive/master.zip
+    unzip master
+    cd gperftools-master
+    ./autogen.sh
+    ./configure
+    make
+    make install
+    
+    # code test.
+    export LD_LIBRARY_PATH=/usr/local/lib
+    export PATH=$PATH:/usr/local/bin
+    ./server
+    pprof --text server server.prof
+    pprof --pdf server server.prof > server.pdf
+    ```
+***
+
+### nanobench.
+- [x] config and democode.
+  - 前置环境：
+  ```
+  perf stat
+  sudo apt-get install linux-tools-5.15.0-71-generic
+  cat /proc/sys/kernel/perf_event_paranoid
+  # ref https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+  ```
+  - democode:
+  ```c
+  // #define ANKERL_NANOBENCH_IMPLEMENT
+  #include <nanobench.h>
+
+  int main() {
+      double d = 1.0;
+      ankerl::nanobench::Bench().run("some double ops", [&] {
+          d += 1.0 / d;
+          if (d > 5.0) {
+              d -= 5.0;
+          }
+          ankerl::nanobench::doNotOptimizeAway(d);
+      });
+  }
+  ```
+- [x] result.
+- [x] error fix.
+  - 显示参数过少：
+  case0: `#define ANKERL_NANOBENCH_IMPLEMENT` 为安装模式使用，cmake外部项目不使用。
+  case1: ![img](https://img2023.cnblogs.com/blog/2516406/202305/2516406-20230519162342118-1592625284.png)
+  case2: 权限不足，应该使用sudo/su root权限执行对应测试程序。
+
+```
+```
+***
+
+### other.
+- `time ./bin/server`--获取real/user/sys程序占用时间ms
+- `/usr/bin/time ./bin/server`--获取real/user/sys程序占用时间s及更多信息
