@@ -89,9 +89,22 @@
   case0: `#define ANKERL_NANOBENCH_IMPLEMENT` 为安装模式使用，cmake外部项目不使用。
   case1: ![img](https://img2023.cnblogs.com/blog/2516406/202305/2516406-20230519162342118-1592625284.png)
   case2: 权限不足，应该使用sudo/su root权限执行对应测试程序。
-
-```
-```
+  - 输出参数说明：
+    - sudo: ![img](https://img2023.cnblogs.com/blog/2516406/202305/2516406-20230519163447834-1058521043.png)
+    - user: ![img](https://img2023.cnblogs.com/blog/2516406/202305/2516406-20230519163603331-1737386385.png)
+    - relative:100% * baseline / tunline.(以第一个测试为基准)
+    - ns/op:程序运行挂壁时间(挂起+运行时间).
+    - op/s:当前处理每秒能执行程序次数.
+    - err%:运行时间波动.
+    - ins/op:每次程序执行需要的指令条数.
+    - cyc/op:每次程序执行需要的CPU clock cycles.
+    - IPC:(ins/op)/(cyc/op), 程序CPU执行时间 = (ins/op)/(主频 * IPC).
+    - bra/op:程序每次调用触发CPU branches.
+    - miss%:程序运行时CPU misses.
+    - tatal:测试例总运行时间s.
+    - benchmark:性能测试例名称.
+    - coefficient:复杂度系数.
+    - complexity:程序复杂度.
 ***
 
 ### other.

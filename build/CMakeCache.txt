@@ -533,10 +533,10 @@ TSAN:BOOL=OFF
 UBSAN:BOOL=OFF
 
 //Value Computed by CMake
-benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/benchmark
+benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/googlebenchmark-build
 
 //Value Computed by CMake
-benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/pref/benchmark
+benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/googlebenchmark-src
 
 //Dependencies for the target
 client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;general;boost_system;general;boost_filesystem;general;boost_thread;general;pthread;
@@ -545,7 +545,7 @@ client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;
 daemon_en:BOOL=ON
 
 //Enable the gbenchmark_en: on/off
-gbenchmark_en:BOOL=off
+gbenchmark_en:BOOL=other
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock
@@ -569,10 +569,10 @@ googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_
 googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest
 
 //Value Computed by CMake
-gperftools_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/gperftools
+gperftools_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gperftools-build
 
 //Value Computed by CMake
-gperftools_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/pref/gperftools
+gperftools_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/gperftools-src
 
 //Build benchmark
 gperftools_build_benchmark:BOOL=ON
@@ -587,7 +587,7 @@ gperftools_dynamic_sized_delete_support:BOOL=OFF
 gperftools_emergency_malloc:BOOL=OFF
 
 //Enable the gperftools_en: on/off
-gperftools_en:BOOL=off
+gperftools_en:BOOL=other
 
 //Compile with -fno-omit-frame-pointer (see INSTALL)
 gperftools_enable_frame_pointers:BOOL=OFF
@@ -670,13 +670,13 @@ loglevel:BOOL=OFF
 mps_en:BOOL=ON
 
 //Value Computed by CMake
-nanobench_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/pref/nanobench
+nanobench_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/nanobench-build
 
 //Value Computed by CMake
-nanobench_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/pref/nanobench
+nanobench_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/_deps/nanobench-src
 
 //Enable the nanobench_en: on/off
-nanobench_en:BOOL=off
+nanobench_en:BOOL=other
 
 //The directory containing a CMake configuration file for unwind.
 unwind_DIR:PATH=unwind_DIR-NOTFOUND

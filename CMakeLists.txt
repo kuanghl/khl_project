@@ -100,7 +100,7 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/3rd/libuv/include)
 ADD_SUBDIRECTORY(test)
 
 # googlebenchmark,设置子目录并构建
-ADD_SUBDIRECTORY(pref)
+ADD_SUBDIRECTORY(perf)
 
 # 设置可执行二进制文件输出位置
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/funbin/)

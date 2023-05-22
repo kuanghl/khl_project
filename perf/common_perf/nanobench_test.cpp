@@ -24,7 +24,7 @@ int main() {
     double d = 1.0;
     ankerl::nanobench::Bench().run("some double ops", [&] {
         d += 1.0 / d;
-        sleep(2);
+        // sleep(2);
         if (d > 5.0) {
             d -= 5.0;
         }

@@ -182,15 +182,15 @@ public:
 
 uint64_t b = 80;
 void __test(const benchmark::State& state) {
-    printf("test numbers = %ld.\n", b);
+   // printf("test numbers = %ld.\n", b);
 }
 
 static void __setup(const benchmark::State& state) {
-    printf("in function.\n");
+   // printf("in function.\n");
 }
 
 static void __teardown(const benchmark::State& state) {
-    printf("out function.\n");
+    // printf("out function.\n");
 }
 
 BENCHMARK_F(Factorial_Fixture, factorial_pref_64)(benchmark::State& st) {
@@ -208,7 +208,7 @@ BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_100)(benchmark::State& st) 
         numFoos++;
         numBazs++;
     }
-    printf("Inter function %ld.\n", b);
+    // printf("Inter function %ld.\n", b);
     st.counters["Foo"] = numFoos;
     st.counters["Bar"] = numBars;
     st.counters["Baz"] = numBazs;

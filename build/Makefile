@@ -666,17 +666,43 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named common_pref
+# Target rules for targets named nanobench_test
 
 # Build rule for target.
-common_pref: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common_pref
-.PHONY : common_pref
+nanobench_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nanobench_test
+.PHONY : nanobench_test
 
 # fast build rule for target.
-common_pref/fast:
-	$(MAKE) $(MAKESILENT) -f pref/common_pref/CMakeFiles/common_pref.dir/build.make pref/common_pref/CMakeFiles/common_pref.dir/build
-.PHONY : common_pref/fast
+nanobench_test/fast:
+	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/nanobench_test.dir/build.make perf/common_perf/CMakeFiles/nanobench_test.dir/build
+.PHONY : nanobench_test/fast
+
+#=============================================================================
+# Target rules for targets named gperftools_test
+
+# Build rule for target.
+gperftools_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gperftools_test
+.PHONY : gperftools_test
+
+# fast build rule for target.
+gperftools_test/fast:
+	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/gperftools_test.dir/build.make perf/common_perf/CMakeFiles/gperftools_test.dir/build
+.PHONY : gperftools_test/fast
+
+#=============================================================================
+# Target rules for targets named benchmark_test
+
+# Build rule for target.
+benchmark_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmark_test
+.PHONY : benchmark_test
+
+# fast build rule for target.
+benchmark_test/fast:
+	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/benchmark_test.dir/build.make perf/common_perf/CMakeFiles/benchmark_test.dir/build
+.PHONY : benchmark_test/fast
 
 #=============================================================================
 # Target rules for targets named benchmark_main
@@ -688,7 +714,7 @@ benchmark_main: cmake_check_build_system
 
 # fast build rule for target.
 benchmark_main/fast:
-	$(MAKE) $(MAKESILENT) -f pref/benchmark/src/CMakeFiles/benchmark_main.dir/build.make pref/benchmark/src/CMakeFiles/benchmark_main.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/googlebenchmark-build/src/CMakeFiles/benchmark_main.dir/build.make _deps/googlebenchmark-build/src/CMakeFiles/benchmark_main.dir/build
 .PHONY : benchmark_main/fast
 
 #=============================================================================
@@ -701,7 +727,7 @@ benchmark: cmake_check_build_system
 
 # fast build rule for target.
 benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f pref/benchmark/src/CMakeFiles/benchmark.dir/build.make pref/benchmark/src/CMakeFiles/benchmark.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/build.make _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/build
 .PHONY : benchmark/fast
 
 #=============================================================================
@@ -714,7 +740,7 @@ tcmalloc_and_profiler_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_and_profiler_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_and_profiler_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_and_profiler_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_and_profiler_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_and_profiler_unittest.dir/build
 .PHONY : tcmalloc_and_profiler_unittest/fast
 
 #=============================================================================
@@ -727,7 +753,7 @@ tcmalloc_and_profiler_static: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_and_profiler_static/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_and_profiler_static.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_and_profiler_static.dir/build
 .PHONY : tcmalloc_and_profiler_static/fast
 
 #=============================================================================
@@ -740,7 +766,7 @@ profiler3_unittest: cmake_check_build_system
 
 # fast build rule for target.
 profiler3_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler3_unittest.dir/build.make pref/gperftools/CMakeFiles/profiler3_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/profiler3_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/profiler3_unittest.dir/build
 .PHONY : profiler3_unittest/fast
 
 #=============================================================================
@@ -753,7 +779,7 @@ tcmalloc_and_profiler: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_and_profiler/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_and_profiler.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_and_profiler.dir/build
 .PHONY : tcmalloc_and_profiler/fast
 
 #=============================================================================
@@ -766,7 +792,7 @@ profiler2_unittest: cmake_check_build_system
 
 # fast build rule for target.
 profiler2_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler2_unittest.dir/build.make pref/gperftools/CMakeFiles/profiler2_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/profiler2_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/profiler2_unittest.dir/build
 .PHONY : profiler2_unittest/fast
 
 #=============================================================================
@@ -779,7 +805,7 @@ profile_handler_unittest: cmake_check_build_system
 
 # fast build rule for target.
 profile_handler_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profile_handler_unittest.dir/build.make pref/gperftools/CMakeFiles/profile_handler_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/profile_handler_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/profile_handler_unittest.dir/build
 .PHONY : profile_handler_unittest/fast
 
 #=============================================================================
@@ -792,7 +818,7 @@ getpc_test: cmake_check_build_system
 
 # fast build rule for target.
 getpc_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/getpc_test.dir/build.make pref/gperftools/CMakeFiles/getpc_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/getpc_test.dir/build.make _deps/gperftools-build/CMakeFiles/getpc_test.dir/build
 .PHONY : getpc_test/fast
 
 #=============================================================================
@@ -805,7 +831,7 @@ profiler: cmake_check_build_system
 
 # fast build rule for target.
 profiler/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler.dir/build.make pref/gperftools/CMakeFiles/profiler.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/profiler.dir/build.make _deps/gperftools-build/CMakeFiles/profiler.dir/build
 .PHONY : profiler/fast
 
 #=============================================================================
@@ -818,7 +844,7 @@ sampler_debug_test: cmake_check_build_system
 
 # fast build rule for target.
 sampler_debug_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sampler_debug_test.dir/build.make pref/gperftools/CMakeFiles/sampler_debug_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/sampler_debug_test.dir/build.make _deps/gperftools-build/CMakeFiles/sampler_debug_test.dir/build
 .PHONY : sampler_debug_test/fast
 
 #=============================================================================
@@ -831,7 +857,7 @@ tcmalloc_debug_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_debug_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_debug_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_debug_unittest.dir/build
 .PHONY : tcmalloc_debug_unittest/fast
 
 #=============================================================================
@@ -844,7 +870,7 @@ tcmalloc_debug_static: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_debug_static/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_debug_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_debug_static.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_debug_static.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_debug_static.dir/build
 .PHONY : tcmalloc_debug_static/fast
 
 #=============================================================================
@@ -857,7 +883,7 @@ tcmalloc_debug: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_debug/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_debug.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_debug.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_debug.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_debug.dir/build
 .PHONY : tcmalloc_debug/fast
 
 #=============================================================================
@@ -870,7 +896,7 @@ heap_checker_unittest: cmake_check_build_system
 
 # fast build rule for target.
 heap_checker_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/heap_checker_unittest.dir/build.make pref/gperftools/CMakeFiles/heap_checker_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/heap_checker_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/heap_checker_unittest.dir/build
 .PHONY : heap_checker_unittest/fast
 
 #=============================================================================
@@ -883,7 +909,7 @@ memalign_unittest: cmake_check_build_system
 
 # fast build rule for target.
 memalign_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/memalign_unittest.dir/build.make pref/gperftools/CMakeFiles/memalign_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/memalign_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/memalign_unittest.dir/build
 .PHONY : memalign_unittest/fast
 
 #=============================================================================
@@ -896,7 +922,7 @@ malloc_extension_c_test: cmake_check_build_system
 
 # fast build rule for target.
 malloc_extension_c_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_extension_c_test.dir/build.make pref/gperftools/CMakeFiles/malloc_extension_c_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/malloc_extension_c_test.dir/build.make _deps/gperftools-build/CMakeFiles/malloc_extension_c_test.dir/build
 .PHONY : malloc_extension_c_test/fast
 
 #=============================================================================
@@ -909,7 +935,7 @@ realloc_debug_unittest: cmake_check_build_system
 
 # fast build rule for target.
 realloc_debug_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/realloc_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/realloc_debug_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/realloc_debug_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/realloc_debug_unittest.dir/build
 .PHONY : realloc_debug_unittest/fast
 
 #=============================================================================
@@ -922,7 +948,7 @@ malloc_hook_test: cmake_check_build_system
 
 # fast build rule for target.
 malloc_hook_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_hook_test.dir/build.make pref/gperftools/CMakeFiles/malloc_hook_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/malloc_hook_test.dir/build.make _deps/gperftools-build/CMakeFiles/malloc_hook_test.dir/build
 .PHONY : malloc_hook_test/fast
 
 #=============================================================================
@@ -935,7 +961,7 @@ simple_compat_test: cmake_check_build_system
 
 # fast build rule for target.
 simple_compat_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/simple_compat_test.dir/build.make pref/gperftools/CMakeFiles/simple_compat_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/simple_compat_test.dir/build.make _deps/gperftools-build/CMakeFiles/simple_compat_test.dir/build
 .PHONY : simple_compat_test/fast
 
 #=============================================================================
@@ -948,7 +974,7 @@ frag_unittest: cmake_check_build_system
 
 # fast build rule for target.
 frag_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/frag_unittest.dir/build.make pref/gperftools/CMakeFiles/frag_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/frag_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/frag_unittest.dir/build
 .PHONY : frag_unittest/fast
 
 #=============================================================================
@@ -961,7 +987,7 @@ profiledata_unittest: cmake_check_build_system
 
 # fast build rule for target.
 profiledata_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiledata_unittest.dir/build.make pref/gperftools/CMakeFiles/profiledata_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/profiledata_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/profiledata_unittest.dir/build
 .PHONY : profiledata_unittest/fast
 
 #=============================================================================
@@ -974,7 +1000,7 @@ heap_profiler_unittest: cmake_check_build_system
 
 # fast build rule for target.
 heap_profiler_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/heap_profiler_unittest.dir/build.make pref/gperftools/CMakeFiles/heap_profiler_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/heap_profiler_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/heap_profiler_unittest.dir/build
 .PHONY : heap_profiler_unittest/fast
 
 #=============================================================================
@@ -987,7 +1013,7 @@ tcmalloc_minimal_large_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal_large_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_large_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_large_unittest.dir/build
 .PHONY : tcmalloc_minimal_large_unittest/fast
 
 #=============================================================================
@@ -1000,7 +1026,7 @@ tcmalloc_large_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_large_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_large_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_large_unittest.dir/build
 .PHONY : tcmalloc_large_unittest/fast
 
 #=============================================================================
@@ -1013,7 +1039,7 @@ sampler_test: cmake_check_build_system
 
 # fast build rule for target.
 sampler_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sampler_test.dir/build.make pref/gperftools/CMakeFiles/sampler_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/sampler_test.dir/build.make _deps/gperftools-build/CMakeFiles/sampler_test.dir/build
 .PHONY : sampler_test/fast
 
 #=============================================================================
@@ -1026,7 +1052,7 @@ tcmalloc_minimal_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_unittest.dir/build
 .PHONY : tcmalloc_minimal_unittest/fast
 
 #=============================================================================
@@ -1039,7 +1065,7 @@ maybe_threads: cmake_check_build_system
 
 # fast build rule for target.
 maybe_threads/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/maybe_threads.dir/build.make pref/gperftools/CMakeFiles/maybe_threads.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/maybe_threads.dir/build.make _deps/gperftools-build/CMakeFiles/maybe_threads.dir/build
 .PHONY : maybe_threads/fast
 
 #=============================================================================
@@ -1052,7 +1078,7 @@ atomicops_unittest: cmake_check_build_system
 
 # fast build rule for target.
 atomicops_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/atomicops_unittest.dir/build.make pref/gperftools/CMakeFiles/atomicops_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/atomicops_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/atomicops_unittest.dir/build
 .PHONY : atomicops_unittest/fast
 
 #=============================================================================
@@ -1065,7 +1091,7 @@ tcmalloc_large_heap_fragmentation_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_large_heap_fragmentation_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/build
 .PHONY : tcmalloc_large_heap_fragmentation_unittest/fast
 
 #=============================================================================
@@ -1078,7 +1104,7 @@ tcmalloc_minimal_internal_object: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal_internal_object/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_internal_object.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_internal_object.dir/build
 .PHONY : tcmalloc_minimal_internal_object/fast
 
 #=============================================================================
@@ -1091,7 +1117,7 @@ logging: cmake_check_build_system
 
 # fast build rule for target.
 logging/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/logging.dir/build.make pref/gperftools/CMakeFiles/logging.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/logging.dir/build.make _deps/gperftools-build/CMakeFiles/logging.dir/build
 .PHONY : logging/fast
 
 #=============================================================================
@@ -1104,7 +1130,7 @@ tcmalloc_minimal_static: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal_static/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_static.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_static.dir/build
 .PHONY : tcmalloc_minimal_static/fast
 
 #=============================================================================
@@ -1117,7 +1143,7 @@ spinlock: cmake_check_build_system
 
 # fast build rule for target.
 spinlock/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/spinlock.dir/build.make pref/gperftools/CMakeFiles/spinlock.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/spinlock.dir/build.make _deps/gperftools-build/CMakeFiles/spinlock.dir/build
 .PHONY : spinlock/fast
 
 #=============================================================================
@@ -1130,7 +1156,7 @@ low_level_alloc_unittest: cmake_check_build_system
 
 # fast build rule for target.
 low_level_alloc_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build.make pref/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/low_level_alloc_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/low_level_alloc_unittest.dir/build
 .PHONY : low_level_alloc_unittest/fast
 
 #=============================================================================
@@ -1143,7 +1169,7 @@ heap_profiler_debug_unittest: cmake_check_build_system
 
 # fast build rule for target.
 heap_profiler_debug_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/heap_profiler_debug_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/heap_profiler_debug_unittest.dir/build
 .PHONY : heap_profiler_debug_unittest/fast
 
 #=============================================================================
@@ -1156,7 +1182,7 @@ addressmap_unittest: cmake_check_build_system
 
 # fast build rule for target.
 addressmap_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/addressmap_unittest.dir/build.make pref/gperftools/CMakeFiles/addressmap_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/addressmap_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/addressmap_unittest.dir/build
 .PHONY : addressmap_unittest/fast
 
 #=============================================================================
@@ -1169,7 +1195,7 @@ stacktrace_unittest: cmake_check_build_system
 
 # fast build rule for target.
 stacktrace_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/stacktrace_unittest.dir/build.make pref/gperftools/CMakeFiles/stacktrace_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/stacktrace_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/stacktrace_unittest.dir/build
 .PHONY : stacktrace_unittest/fast
 
 #=============================================================================
@@ -1182,7 +1208,7 @@ packed_cache_test: cmake_check_build_system
 
 # fast build rule for target.
 packed_cache_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/packed_cache_test.dir/build.make pref/gperftools/CMakeFiles/packed_cache_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/packed_cache_test.dir/build.make _deps/gperftools-build/CMakeFiles/packed_cache_test.dir/build
 .PHONY : packed_cache_test/fast
 
 #=============================================================================
@@ -1195,7 +1221,7 @@ thread_dealloc_unittest: cmake_check_build_system
 
 # fast build rule for target.
 thread_dealloc_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/thread_dealloc_unittest.dir/build.make pref/gperftools/CMakeFiles/thread_dealloc_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/thread_dealloc_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/thread_dealloc_unittest.dir/build
 .PHONY : thread_dealloc_unittest/fast
 
 #=============================================================================
@@ -1208,7 +1234,7 @@ sampling_debug_test: cmake_check_build_system
 
 # fast build rule for target.
 sampling_debug_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sampling_debug_test.dir/build.make pref/gperftools/CMakeFiles/sampling_debug_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/sampling_debug_test.dir/build.make _deps/gperftools-build/CMakeFiles/sampling_debug_test.dir/build
 .PHONY : sampling_debug_test/fast
 
 #=============================================================================
@@ -1221,7 +1247,7 @@ tcmalloc_minimal_debug_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal_debug_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/build
 .PHONY : tcmalloc_minimal_debug_unittest/fast
 
 #=============================================================================
@@ -1234,7 +1260,7 @@ tcmalloc_minimal_large_heap_fragmentation_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal_large_heap_fragmentation_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build
 .PHONY : tcmalloc_minimal_large_heap_fragmentation_unittest/fast
 
 #=============================================================================
@@ -1247,7 +1273,7 @@ profiler_static: cmake_check_build_system
 
 # fast build rule for target.
 profiler_static/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler_static.dir/build.make pref/gperftools/CMakeFiles/profiler_static.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/profiler_static.dir/build.make _deps/gperftools-build/CMakeFiles/profiler_static.dir/build
 .PHONY : profiler_static/fast
 
 #=============================================================================
@@ -1260,7 +1286,7 @@ tcm_min_asserts_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcm_min_asserts_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/build.make pref/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcm_min_asserts_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcm_min_asserts_unittest.dir/build
 .PHONY : tcm_min_asserts_unittest/fast
 
 #=============================================================================
@@ -1273,7 +1299,7 @@ tcmalloc_static: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_static/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_static.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_static.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_static.dir/build
 .PHONY : tcmalloc_static/fast
 
 #=============================================================================
@@ -1286,7 +1312,7 @@ fake_stacktrace_scope: cmake_check_build_system
 
 # fast build rule for target.
 fake_stacktrace_scope/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/fake_stacktrace_scope.dir/build.make pref/gperftools/CMakeFiles/fake_stacktrace_scope.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/fake_stacktrace_scope.dir/build.make _deps/gperftools-build/CMakeFiles/fake_stacktrace_scope.dir/build
 .PHONY : fake_stacktrace_scope/fast
 
 #=============================================================================
@@ -1299,7 +1325,7 @@ page_heap_test: cmake_check_build_system
 
 # fast build rule for target.
 page_heap_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/page_heap_test.dir/build.make pref/gperftools/CMakeFiles/page_heap_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/page_heap_test.dir/build.make _deps/gperftools-build/CMakeFiles/page_heap_test.dir/build
 .PHONY : page_heap_test/fast
 
 #=============================================================================
@@ -1312,7 +1338,7 @@ pagemap_unittest: cmake_check_build_system
 
 # fast build rule for target.
 pagemap_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/pagemap_unittest.dir/build.make pref/gperftools/CMakeFiles/pagemap_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/pagemap_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/pagemap_unittest.dir/build
 .PHONY : pagemap_unittest/fast
 
 #=============================================================================
@@ -1325,7 +1351,7 @@ stacktrace_object: cmake_check_build_system
 
 # fast build rule for target.
 stacktrace_object/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/stacktrace_object.dir/build.make pref/gperftools/CMakeFiles/stacktrace_object.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/stacktrace_object.dir/build.make _deps/gperftools-build/CMakeFiles/stacktrace_object.dir/build
 .PHONY : stacktrace_object/fast
 
 #=============================================================================
@@ -1338,7 +1364,7 @@ realloc_unittest: cmake_check_build_system
 
 # fast build rule for target.
 realloc_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/realloc_unittest.dir/build.make pref/gperftools/CMakeFiles/realloc_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/realloc_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/realloc_unittest.dir/build
 .PHONY : realloc_unittest/fast
 
 #=============================================================================
@@ -1351,7 +1377,7 @@ stack_trace_table_test: cmake_check_build_system
 
 # fast build rule for target.
 stack_trace_table_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/stack_trace_table_test.dir/build.make pref/gperftools/CMakeFiles/stack_trace_table_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/stack_trace_table_test.dir/build.make _deps/gperftools-build/CMakeFiles/stack_trace_table_test.dir/build
 .PHONY : stack_trace_table_test/fast
 
 #=============================================================================
@@ -1364,7 +1390,7 @@ tcmalloc_minimal_debug: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal_debug/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_debug.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_debug.dir/build
 .PHONY : tcmalloc_minimal_debug/fast
 
 #=============================================================================
@@ -1377,7 +1403,7 @@ binary_trees_shared: cmake_check_build_system
 
 # fast build rule for target.
 binary_trees_shared/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/binary_trees_shared.dir/build.make pref/gperftools/CMakeFiles/binary_trees_shared.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/binary_trees_shared.dir/build.make _deps/gperftools-build/CMakeFiles/binary_trees_shared.dir/build
 .PHONY : binary_trees_shared/fast
 
 #=============================================================================
@@ -1390,7 +1416,7 @@ tcmalloc_minimal_debug_static: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal_debug_static/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_debug_static.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal_debug_static.dir/build
 .PHONY : tcmalloc_minimal_debug_static/fast
 
 #=============================================================================
@@ -1403,7 +1429,7 @@ profiler1_unittest: cmake_check_build_system
 
 # fast build rule for target.
 profiler1_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler1_unittest.dir/build.make pref/gperftools/CMakeFiles/profiler1_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/profiler1_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/profiler1_unittest.dir/build
 .PHONY : profiler1_unittest/fast
 
 #=============================================================================
@@ -1416,7 +1442,7 @@ system_alloc_unittest: cmake_check_build_system
 
 # fast build rule for target.
 system_alloc_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/system_alloc_unittest.dir/build.make pref/gperftools/CMakeFiles/system_alloc_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/system_alloc_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/system_alloc_unittest.dir/build
 .PHONY : system_alloc_unittest/fast
 
 #=============================================================================
@@ -1429,7 +1455,7 @@ malloc_extension_debug_test: cmake_check_build_system
 
 # fast build rule for target.
 malloc_extension_debug_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_extension_debug_test.dir/build.make pref/gperftools/CMakeFiles/malloc_extension_debug_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/malloc_extension_debug_test.dir/build.make _deps/gperftools-build/CMakeFiles/malloc_extension_debug_test.dir/build
 .PHONY : malloc_extension_debug_test/fast
 
 #=============================================================================
@@ -1442,7 +1468,7 @@ debugallocation_test: cmake_check_build_system
 
 # fast build rule for target.
 debugallocation_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/debugallocation_test.dir/build.make pref/gperftools/CMakeFiles/debugallocation_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/debugallocation_test.dir/build.make _deps/gperftools-build/CMakeFiles/debugallocation_test.dir/build
 .PHONY : debugallocation_test/fast
 
 #=============================================================================
@@ -1455,7 +1481,7 @@ binary_trees: cmake_check_build_system
 
 # fast build rule for target.
 binary_trees/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/binary_trees.dir/build.make pref/gperftools/CMakeFiles/binary_trees.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/binary_trees.dir/build.make _deps/gperftools-build/CMakeFiles/binary_trees.dir/build
 .PHONY : binary_trees/fast
 
 #=============================================================================
@@ -1468,7 +1494,7 @@ heap_checker_debug_unittest: cmake_check_build_system
 
 # fast build rule for target.
 heap_checker_debug_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/heap_checker_debug_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/heap_checker_debug_unittest.dir/build
 .PHONY : heap_checker_debug_unittest/fast
 
 #=============================================================================
@@ -1481,7 +1507,7 @@ memalign_debug_unittest: cmake_check_build_system
 
 # fast build rule for target.
 memalign_debug_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/memalign_debug_unittest.dir/build.make pref/gperftools/CMakeFiles/memalign_debug_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/memalign_debug_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/memalign_debug_unittest.dir/build
 .PHONY : memalign_debug_unittest/fast
 
 #=============================================================================
@@ -1494,7 +1520,7 @@ run_benchmark: cmake_check_build_system
 
 # fast build rule for target.
 run_benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/run_benchmark.dir/build.make pref/gperftools/CMakeFiles/run_benchmark.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/run_benchmark.dir/build.make _deps/gperftools-build/CMakeFiles/run_benchmark.dir/build
 .PHONY : run_benchmark/fast
 
 #=============================================================================
@@ -1507,7 +1533,7 @@ current_allocated_bytes_test: cmake_check_build_system
 
 # fast build rule for target.
 current_allocated_bytes_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/current_allocated_bytes_test.dir/build.make pref/gperftools/CMakeFiles/current_allocated_bytes_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/current_allocated_bytes_test.dir/build.make _deps/gperftools-build/CMakeFiles/current_allocated_bytes_test.dir/build
 .PHONY : current_allocated_bytes_test/fast
 
 #=============================================================================
@@ -1520,7 +1546,7 @@ malloc_bench: cmake_check_build_system
 
 # fast build rule for target.
 malloc_bench/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_bench.dir/build.make pref/gperftools/CMakeFiles/malloc_bench.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/malloc_bench.dir/build.make _deps/gperftools-build/CMakeFiles/malloc_bench.dir/build
 .PHONY : malloc_bench/fast
 
 #=============================================================================
@@ -1533,7 +1559,7 @@ profiler4_unittest: cmake_check_build_system
 
 # fast build rule for target.
 profiler4_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/profiler4_unittest.dir/build.make pref/gperftools/CMakeFiles/profiler4_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/profiler4_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/profiler4_unittest.dir/build
 .PHONY : profiler4_unittest/fast
 
 #=============================================================================
@@ -1546,7 +1572,7 @@ malloc_bench_shared: cmake_check_build_system
 
 # fast build rule for target.
 malloc_bench_shared/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_bench_shared.dir/build.make pref/gperftools/CMakeFiles/malloc_bench_shared.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/malloc_bench_shared.dir/build.make _deps/gperftools-build/CMakeFiles/malloc_bench_shared.dir/build
 .PHONY : malloc_bench_shared/fast
 
 #=============================================================================
@@ -1559,7 +1585,7 @@ malloc_bench_shared_full: cmake_check_build_system
 
 # fast build rule for target.
 malloc_bench_shared_full/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_bench_shared_full.dir/build.make pref/gperftools/CMakeFiles/malloc_bench_shared_full.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/malloc_bench_shared_full.dir/build.make _deps/gperftools-build/CMakeFiles/malloc_bench_shared_full.dir/build
 .PHONY : malloc_bench_shared_full/fast
 
 #=============================================================================
@@ -1572,7 +1598,7 @@ tcmalloc_minimal: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_minimal/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_minimal.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_minimal.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_minimal.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_minimal.dir/build
 .PHONY : tcmalloc_minimal/fast
 
 #=============================================================================
@@ -1585,7 +1611,7 @@ tcmalloc: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc.dir/build.make pref/gperftools/CMakeFiles/tcmalloc.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc.dir/build
 .PHONY : tcmalloc/fast
 
 #=============================================================================
@@ -1598,7 +1624,7 @@ tcmalloc_internal_object: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_internal_object/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_internal_object.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_internal_object.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_internal_object.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_internal_object.dir/build
 .PHONY : tcmalloc_internal_object/fast
 
 #=============================================================================
@@ -1611,7 +1637,7 @@ raw_printer_test: cmake_check_build_system
 
 # fast build rule for target.
 raw_printer_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/raw_printer_test.dir/build.make pref/gperftools/CMakeFiles/raw_printer_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/raw_printer_test.dir/build.make _deps/gperftools-build/CMakeFiles/raw_printer_test.dir/build
 .PHONY : raw_printer_test/fast
 
 #=============================================================================
@@ -1624,7 +1650,7 @@ tcmalloc_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_unittest.dir/build
 .PHONY : tcmalloc_unittest/fast
 
 #=============================================================================
@@ -1637,7 +1663,7 @@ markidle_unittest: cmake_check_build_system
 
 # fast build rule for target.
 markidle_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/markidle_unittest.dir/build.make pref/gperftools/CMakeFiles/markidle_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/markidle_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/markidle_unittest.dir/build
 .PHONY : markidle_unittest/fast
 
 #=============================================================================
@@ -1650,7 +1676,7 @@ sysinfo: cmake_check_build_system
 
 # fast build rule for target.
 sysinfo/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sysinfo.dir/build.make pref/gperftools/CMakeFiles/sysinfo.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/sysinfo.dir/build.make _deps/gperftools-build/CMakeFiles/sysinfo.dir/build
 .PHONY : sysinfo/fast
 
 #=============================================================================
@@ -1663,7 +1689,7 @@ tcmalloc_both_unittest: cmake_check_build_system
 
 # fast build rule for target.
 tcmalloc_both_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/build.make pref/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/tcmalloc_both_unittest.dir/build.make _deps/gperftools-build/CMakeFiles/tcmalloc_both_unittest.dir/build
 .PHONY : tcmalloc_both_unittest/fast
 
 #=============================================================================
@@ -1676,7 +1702,7 @@ malloc_extension_test: cmake_check_build_system
 
 # fast build rule for target.
 malloc_extension_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/malloc_extension_test.dir/build.make pref/gperftools/CMakeFiles/malloc_extension_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/malloc_extension_test.dir/build.make _deps/gperftools-build/CMakeFiles/malloc_extension_test.dir/build
 .PHONY : malloc_extension_test/fast
 
 #=============================================================================
@@ -1689,7 +1715,7 @@ sampling_test: cmake_check_build_system
 
 # fast build rule for target.
 sampling_test/fast:
-	$(MAKE) $(MAKESILENT) -f pref/gperftools/CMakeFiles/sampling_test.dir/build.make pref/gperftools/CMakeFiles/sampling_test.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gperftools-build/CMakeFiles/sampling_test.dir/build.make _deps/gperftools-build/CMakeFiles/sampling_test.dir/build
 .PHONY : sampling_test/fast
 
 #=============================================================================
@@ -1702,7 +1728,7 @@ nanobench: cmake_check_build_system
 
 # fast build rule for target.
 nanobench/fast:
-	$(MAKE) $(MAKESILENT) -f pref/nanobench/CMakeFiles/nanobench.dir/build.make pref/nanobench/CMakeFiles/nanobench.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/nanobench-build/CMakeFiles/nanobench.dir/build.make _deps/nanobench-build/CMakeFiles/nanobench.dir/build
 .PHONY : nanobench/fast
 
 #=============================================================================
@@ -2447,19 +2473,6 @@ sysv_sem_c/fast:
 .PHONY : sysv_sem_c/fast
 
 #=============================================================================
-# Target rules for targets named nanobench_test
-
-# Build rule for target.
-nanobench_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nanobench_test
-.PHONY : nanobench_test
-
-# fast build rule for target.
-nanobench_test/fast:
-	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/nanobench_test.dir/build.make fun/primary/sem/CMakeFiles/nanobench_test.dir/build
-.PHONY : nanobench_test/fast
-
-#=============================================================================
 # Target rules for targets named sigset
 
 # Build rule for target.
@@ -2875,6 +2888,7 @@ help:
 	@echo "... atomicops_unittest"
 	@echo "... benchmark"
 	@echo "... benchmark_main"
+	@echo "... benchmark_test"
 	@echo "... binary_trees"
 	@echo "... binary_trees_shared"
 	@echo "... broadcast_cli"
@@ -2886,7 +2900,6 @@ help:
 	@echo "... client_b"
 	@echo "... client_c"
 	@echo "... codetest"
-	@echo "... common_pref"
 	@echo "... common_test"
 	@echo "... current_allocated_bytes_test"
 	@echo "... cycled_fifo"
@@ -2904,6 +2917,7 @@ help:
 	@echo "... getpc_test"
 	@echo "... gmock"
 	@echo "... gmock_main"
+	@echo "... gperftools_test"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... heap_checker_debug_unittest"

@@ -5,3 +5,4 @@
 - [x] test 指令： 
       - 整个测试集：`./test/common_test/common_test --gtest_filter=CommonTest*`
       - 单个测试例：`./test/common_test/common_test --gtest_filter=CommonTest.Negative`
+- [ ] gtest代替项目：doctest + fakeilt--完整项目尚未整合.

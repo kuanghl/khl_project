@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <log.h>
 #include <stdint.h>
+#include <gperftools/profiler.h>
+// #include <google/profiler.h>
 
 uint64_t cacul_add(uint32_t max_num){
     uint64_t ret = 0;  
@@ -47,11 +49,14 @@ void t3()
 		{
 			t1();
 			t2();
+      uint64_t sum = cacul_add(1000);
+      int ret = factorial(4000);
 		}
 }
 
 int main(int argc, char *argv[])
 {
+    ProfilerStart("gperftools_test.prof");
     #if mps_en
     printf("hello,the mps is on.\n");
     #else 
@@ -84,6 +89,7 @@ int main(int argc, char *argv[])
     printf("sum = %ld.\n", sum);
     int ret = factorial(4000000);
     printf("ret = %d.\n", ret);
+    t3();
 
     log_trace("%s, this is server log, %s\n", __func__, "hello!");
     log_debug("%s, this is server log, %s\n", __func__, "hello!");
@@ -92,5 +98,6 @@ int main(int argc, char *argv[])
     log_error("%s, this is server log, %s\n", __func__, "hello!");
     log_fatal("%s, this is server log, %s\n", __func__, "hello!");
     
+    ProfilerStop();
     return 0;
 }   
