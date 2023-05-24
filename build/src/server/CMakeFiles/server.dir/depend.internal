@@ -3,4 +3,4 @@
 
 src/server/CMakeFiles/server.dir/server_main.c.o
  ../log/simple_log/log.h
- /home/kuanghongliang/Documents/vscode_projects/khl_project/src/server/server_main.c
+ /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server/server_main.c

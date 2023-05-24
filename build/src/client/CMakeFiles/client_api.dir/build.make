@@ -62,10 +62,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 # Include any dependencies generated for this target.
 include src/client/CMakeFiles/client_api.dir/depend.make
@@ -78,42 +78,42 @@ include src/client/CMakeFiles/client_api.dir/flags.make
 
 src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.o: src/client/CMakeFiles/client_api.dir/flags.make
 src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.o: ../src/client/drv_api/pipeclient.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client_api.dir/drv_api/pipeclient.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/drv_api/pipeclient.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client_api.dir/drv_api/pipeclient.c.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/drv_api/pipeclient.c
 
 src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/client_api.dir/drv_api/pipeclient.c.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/drv_api/pipeclient.c > CMakeFiles/client_api.dir/drv_api/pipeclient.c.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/drv_api/pipeclient.c > CMakeFiles/client_api.dir/drv_api/pipeclient.c.i
 
 src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/client_api.dir/drv_api/pipeclient.c.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/drv_api/pipeclient.c -o CMakeFiles/client_api.dir/drv_api/pipeclient.c.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/drv_api/pipeclient.c -o CMakeFiles/client_api.dir/drv_api/pipeclient.c.s
 
 src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.o: src/client/CMakeFiles/client_api.dir/flags.make
 src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.o: ../src/client/drv_api/sockclient.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client_api.dir/drv_api/sockclient.c.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/drv_api/sockclient.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client_api.dir/drv_api/sockclient.c.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/drv_api/sockclient.c
 
 src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/client_api.dir/drv_api/sockclient.c.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/drv_api/sockclient.c > CMakeFiles/client_api.dir/drv_api/sockclient.c.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/drv_api/sockclient.c > CMakeFiles/client_api.dir/drv_api/sockclient.c.i
 
 src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/client_api.dir/drv_api/sockclient.c.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/drv_api/sockclient.c -o CMakeFiles/client_api.dir/drv_api/sockclient.c.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/drv_api/sockclient.c -o CMakeFiles/client_api.dir/drv_api/sockclient.c.s
 
 src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o: src/client/CMakeFiles/client_api.dir/flags.make
 src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o: ../src/client/runtime_api/flexbison/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/main.cpp
 
 src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/main.cpp > CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/main.cpp > CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.i
 
 src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/main.cpp -o CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/main.cpp -o CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.s
 
 # Object files for target client_api
 client_api_OBJECTS = \
@@ -129,10 +129,10 @@ src/client/libclient_api.so: src/client/CMakeFiles/client_api.dir/drv_api/sockcl
 src/client/libclient_api.so: src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o
 src/client/libclient_api.so: src/client/CMakeFiles/client_api.dir/build.make
 src/client/libclient_api.so: log/simple_log/liblog.so.SOVERSION
-src/client/libclient_api.so: 3rd/libuv/libuv.a
+src/client/libclient_api.so: _deps/libuv-build/libuv.a
 src/client/libclient_api.so: src/client/CMakeFiles/client_api.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libclient_api.so"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client_api.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libclient_api.so"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client_api.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/client/CMakeFiles/client_api.dir/build: src/client/libclient_api.so
@@ -140,10 +140,10 @@ src/client/CMakeFiles/client_api.dir/build: src/client/libclient_api.so
 .PHONY : src/client/CMakeFiles/client_api.dir/build
 
 src/client/CMakeFiles/client_api.dir/clean:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client && $(CMAKE_COMMAND) -P CMakeFiles/client_api.dir/cmake_clean.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client && $(CMAKE_COMMAND) -P CMakeFiles/client_api.dir/cmake_clean.cmake
 .PHONY : src/client/CMakeFiles/client_api.dir/clean
 
 src/client/CMakeFiles/client_api.dir/depend:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/khl_project /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client /home/kuanghongliang/Documents/vscode_projects/khl_project/build /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/CMakeFiles/client_api.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/kusr_code /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client /home/kuanghongliang/Documents/vscode_projects/kusr_code/build /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/CMakeFiles/client_api.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/client/CMakeFiles/client_api.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/lib/mpu0
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/lib/mpu0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

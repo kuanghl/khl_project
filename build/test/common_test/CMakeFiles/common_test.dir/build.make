@@ -62,10 +62,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 # Include any dependencies generated for this target.
 include test/common_test/CMakeFiles/common_test.dir/depend.make
@@ -78,29 +78,29 @@ include test/common_test/CMakeFiles/common_test.dir/flags.make
 
 test/common_test/CMakeFiles/common_test.dir/main.cpp.o: test/common_test/CMakeFiles/common_test.dir/flags.make
 test/common_test/CMakeFiles/common_test.dir/main.cpp.o: ../test/common_test/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/common_test/CMakeFiles/common_test.dir/main.cpp.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common_test.dir/main.cpp.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/test/common_test/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/common_test/CMakeFiles/common_test.dir/main.cpp.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common_test.dir/main.cpp.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/common_test/main.cpp
 
 test/common_test/CMakeFiles/common_test.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/common_test.dir/main.cpp.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/test/common_test/main.cpp > CMakeFiles/common_test.dir/main.cpp.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/common_test/main.cpp > CMakeFiles/common_test.dir/main.cpp.i
 
 test/common_test/CMakeFiles/common_test.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/common_test.dir/main.cpp.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/test/common_test/main.cpp -o CMakeFiles/common_test.dir/main.cpp.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/common_test/main.cpp -o CMakeFiles/common_test.dir/main.cpp.s
 
 test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.o: test/common_test/CMakeFiles/common_test.dir/flags.make
 test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.o: ../test/common_test/test001_x.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common_test.dir/test001_x.cpp.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/test/common_test/test001_x.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common_test.dir/test001_x.cpp.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/common_test/test001_x.cpp
 
 test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/common_test.dir/test001_x.cpp.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/test/common_test/test001_x.cpp > CMakeFiles/common_test.dir/test001_x.cpp.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/common_test/test001_x.cpp > CMakeFiles/common_test.dir/test001_x.cpp.i
 
 test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/common_test.dir/test001_x.cpp.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/test/common_test/test001_x.cpp -o CMakeFiles/common_test.dir/test001_x.cpp.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/common_test/test001_x.cpp -o CMakeFiles/common_test.dir/test001_x.cpp.s
 
 # Object files for target common_test
 common_test_OBJECTS = \
@@ -113,17 +113,17 @@ common_test_EXTERNAL_OBJECTS =
 test/common_test/common_test: test/common_test/CMakeFiles/common_test.dir/main.cpp.o
 test/common_test/common_test: test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.o
 test/common_test/common_test: test/common_test/CMakeFiles/common_test.dir/build.make
-test/common_test/common_test: lib/libgtestd.a
-test/common_test/common_test: lib/libgtest_maind.a
-test/common_test/common_test: lib/libgmockd.a
-test/common_test/common_test: lib/libgmock_maind.a
+test/common_test/common_test: lib/libgtest.a
+test/common_test/common_test: lib/libgtest_main.a
+test/common_test/common_test: lib/libgmock.a
+test/common_test/common_test: lib/libgmock_main.a
 test/common_test/common_test: log/simple_log/liblog.so.SOVERSION
-test/common_test/common_test: 3rd/libuv/libuv.a
-test/common_test/common_test: lib/libgmockd.a
-test/common_test/common_test: lib/libgtestd.a
+test/common_test/common_test: _deps/libuv-build/libuv.a
+test/common_test/common_test: lib/libgmock.a
+test/common_test/common_test: lib/libgtest.a
 test/common_test/common_test: test/common_test/CMakeFiles/common_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable common_test"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/common_test.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable common_test"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/common_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/common_test/CMakeFiles/common_test.dir/build: test/common_test/common_test
@@ -131,10 +131,10 @@ test/common_test/CMakeFiles/common_test.dir/build: test/common_test/common_test
 .PHONY : test/common_test/CMakeFiles/common_test.dir/build
 
 test/common_test/CMakeFiles/common_test.dir/clean:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test && $(CMAKE_COMMAND) -P CMakeFiles/common_test.dir/cmake_clean.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && $(CMAKE_COMMAND) -P CMakeFiles/common_test.dir/cmake_clean.cmake
 .PHONY : test/common_test/CMakeFiles/common_test.dir/clean
 
 test/common_test/CMakeFiles/common_test.dir/depend:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/khl_project /home/kuanghongliang/Documents/vscode_projects/khl_project/test/common_test /home/kuanghongliang/Documents/vscode_projects/khl_project/build /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test/CMakeFiles/common_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/kusr_code /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/common_test /home/kuanghongliang/Documents/vscode_projects/kusr_code/build /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test/CMakeFiles/common_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/common_test/CMakeFiles/common_test.dir/depend
 

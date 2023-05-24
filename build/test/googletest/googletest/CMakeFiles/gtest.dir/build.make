@@ -62,10 +62,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 # Include any dependencies generated for this target.
 include test/googletest/googletest/CMakeFiles/gtest.dir/depend.make
@@ -78,16 +78,16 @@ include test/googletest/googletest/CMakeFiles/gtest.dir/flags.make
 
 test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: test/googletest/googletest/CMakeFiles/gtest.dir/flags.make
 test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: ../test/googletest/googletest/src/gtest-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googletest/src/gtest-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googletest/src/gtest-all.cc
 
 test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googletest/src/gtest-all.cc > CMakeFiles/gtest.dir/src/gtest-all.cc.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googletest/src/gtest-all.cc > CMakeFiles/gtest.dir/src/gtest-all.cc.i
 
 test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.cc.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
 
 # Object files for target gtest
 gtest_OBJECTS = \
@@ -96,23 +96,23 @@ gtest_OBJECTS = \
 # External object files for target gtest
 gtest_EXTERNAL_OBJECTS =
 
-lib/libgtestd.a: test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-lib/libgtestd.a: test/googletest/googletest/CMakeFiles/gtest.dir/build.make
-lib/libgtestd.a: test/googletest/googletest/CMakeFiles/gtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgtestd.a"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean_target.cmake
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
+lib/libgtest.a: test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+lib/libgtest.a: test/googletest/googletest/CMakeFiles/gtest.dir/build.make
+lib/libgtest.a: test/googletest/googletest/CMakeFiles/gtest.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgtest.a"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean_target.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-test/googletest/googletest/CMakeFiles/gtest.dir/build: lib/libgtestd.a
+test/googletest/googletest/CMakeFiles/gtest.dir/build: lib/libgtest.a
 
 .PHONY : test/googletest/googletest/CMakeFiles/gtest.dir/build
 
 test/googletest/googletest/CMakeFiles/gtest.dir/clean:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean.cmake
 .PHONY : test/googletest/googletest/CMakeFiles/gtest.dir/clean
 
 test/googletest/googletest/CMakeFiles/gtest.dir/depend:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/khl_project /home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googletest /home/kuanghongliang/Documents/vscode_projects/khl_project/build /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/kusr_code /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googletest /home/kuanghongliang/Documents/vscode_projects/kusr_code/build /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/googletest/googletest/CMakeFiles/gtest.dir/depend
 

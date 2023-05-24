@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/driver
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -67,10 +67,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -101,7 +101,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CPackSourceConfig.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -145,7 +145,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -167,14 +167,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server//CMakeFiles/progress.marks
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles 0
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/server//CMakeFiles/progress.marks
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/clean
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/clean
 .PHONY : clean
 
 # The main clean target
@@ -184,22 +184,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/preinstall
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/preinstall
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/server/CMakeFiles/server.dir/rule:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/CMakeFiles/server.dir/rule
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/CMakeFiles/server.dir/rule
 .PHONY : src/server/CMakeFiles/server.dir/rule
 
 # Convenience name for target.
@@ -209,7 +209,7 @@ server: src/server/CMakeFiles/server.dir/rule
 
 # fast build rule for target.
 server/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/build
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/build
 .PHONY : server/fast
 
 server_main.o: server_main.c.o
@@ -218,7 +218,7 @@ server_main.o: server_main.c.o
 
 # target to build an object file
 server_main.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.o
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.o
 .PHONY : server_main.c.o
 
 server_main.i: server_main.c.i
@@ -227,7 +227,7 @@ server_main.i: server_main.c.i
 
 # target to preprocess a source file
 server_main.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.i
 .PHONY : server_main.c.i
 
 server_main.s: server_main.c.s
@@ -236,7 +236,7 @@ server_main.s: server_main.c.s
 
 # target to generate assembly for a file
 server_main.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/server_main.c.s
 .PHONY : server_main.c.s
 
 # Help Target
@@ -268,6 +268,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

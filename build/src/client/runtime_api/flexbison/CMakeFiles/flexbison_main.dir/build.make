@@ -62,10 +62,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 # Include any dependencies generated for this target.
 include src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/depend.make
@@ -78,16 +78,16 @@ include src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/flags.mak
 
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/main.cpp.o: src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/flags.make
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/main.cpp.o: ../src/client/runtime_api/flexbison/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/main.cpp.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flexbison_main.dir/main.cpp.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/main.cpp.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flexbison_main.dir/main.cpp.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/main.cpp
 
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flexbison_main.dir/main.cpp.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/main.cpp > CMakeFiles/flexbison_main.dir/main.cpp.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/main.cpp > CMakeFiles/flexbison_main.dir/main.cpp.i
 
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flexbison_main.dir/main.cpp.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison/main.cpp -o CMakeFiles/flexbison_main.dir/main.cpp.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/main.cpp -o CMakeFiles/flexbison_main.dir/main.cpp.s
 
 # Object files for target flexbison_main
 flexbison_main_OBJECTS = \
@@ -100,8 +100,8 @@ src/client/runtime_api/flexbison/flexbison_main: src/client/runtime_api/flexbiso
 src/client/runtime_api/flexbison/flexbison_main: src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build.make
 src/client/runtime_api/flexbison/flexbison_main: src/client/runtime_api/flexbison/driver/libflexbisonlib.so
 src/client/runtime_api/flexbison/flexbison_main: src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable flexbison_main"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/flexbison_main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable flexbison_main"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/flexbison_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build: src/client/runtime_api/flexbison/flexbison_main
@@ -109,10 +109,10 @@ src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build: src/client
 .PHONY : src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build
 
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/clean:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison && $(CMAKE_COMMAND) -P CMakeFiles/flexbison_main.dir/cmake_clean.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison && $(CMAKE_COMMAND) -P CMakeFiles/flexbison_main.dir/cmake_clean.cmake
 .PHONY : src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/clean
 
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/depend:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/khl_project /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison /home/kuanghongliang/Documents/vscode_projects/khl_project/build /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/kusr_code /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison /home/kuanghongliang/Documents/vscode_projects/kusr_code/build /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/depend
 

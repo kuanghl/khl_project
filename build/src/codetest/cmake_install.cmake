@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/src/codetest
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/codetest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/codetest"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/bin/codetest")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/bin/codetest")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/codetest" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/codetest")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/codetest"
-         OLD_RPATH "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/log/simple_log:"
+         OLD_RPATH "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/simple_log:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/codetest")

@@ -67,10 +67,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,7 +113,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CPackSourceConfig.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -157,7 +157,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -167,14 +167,14 @@ package/fast: package
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client//CMakeFiles/progress.marks
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles 0
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client//CMakeFiles/progress.marks
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/clean
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/clean
 .PHONY : clean
 
 # The main clean target
@@ -184,22 +184,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/preinstall
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/preinstall
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/client/CMakeFiles/client_api.dir/rule:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client_api.dir/rule
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client_api.dir/rule
 .PHONY : src/client/CMakeFiles/client_api.dir/rule
 
 # Convenience name for target.
@@ -209,7 +209,7 @@ client_api: src/client/CMakeFiles/client_api.dir/rule
 
 # fast build rule for target.
 client_api/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/build
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/build
 .PHONY : client_api/fast
 
 drv_api/pipeclient.o: drv_api/pipeclient.c.o
@@ -218,7 +218,7 @@ drv_api/pipeclient.o: drv_api/pipeclient.c.o
 
 # target to build an object file
 drv_api/pipeclient.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.o
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.o
 .PHONY : drv_api/pipeclient.c.o
 
 drv_api/pipeclient.i: drv_api/pipeclient.c.i
@@ -227,7 +227,7 @@ drv_api/pipeclient.i: drv_api/pipeclient.c.i
 
 # target to preprocess a source file
 drv_api/pipeclient.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.i
 .PHONY : drv_api/pipeclient.c.i
 
 drv_api/pipeclient.s: drv_api/pipeclient.c.s
@@ -236,7 +236,7 @@ drv_api/pipeclient.s: drv_api/pipeclient.c.s
 
 # target to generate assembly for a file
 drv_api/pipeclient.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/pipeclient.c.s
 .PHONY : drv_api/pipeclient.c.s
 
 drv_api/sockclient.o: drv_api/sockclient.c.o
@@ -245,7 +245,7 @@ drv_api/sockclient.o: drv_api/sockclient.c.o
 
 # target to build an object file
 drv_api/sockclient.c.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.o
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.o
 .PHONY : drv_api/sockclient.c.o
 
 drv_api/sockclient.i: drv_api/sockclient.c.i
@@ -254,7 +254,7 @@ drv_api/sockclient.i: drv_api/sockclient.c.i
 
 # target to preprocess a source file
 drv_api/sockclient.c.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.i
 .PHONY : drv_api/sockclient.c.i
 
 drv_api/sockclient.s: drv_api/sockclient.c.s
@@ -263,7 +263,7 @@ drv_api/sockclient.s: drv_api/sockclient.c.s
 
 # target to generate assembly for a file
 drv_api/sockclient.c.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/drv_api/sockclient.c.s
 .PHONY : drv_api/sockclient.c.s
 
 runtime_api/flexbison/main.o: runtime_api/flexbison/main.cpp.o
@@ -272,7 +272,7 @@ runtime_api/flexbison/main.o: runtime_api/flexbison/main.cpp.o
 
 # target to build an object file
 runtime_api/flexbison/main.cpp.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o
 .PHONY : runtime_api/flexbison/main.cpp.o
 
 runtime_api/flexbison/main.i: runtime_api/flexbison/main.cpp.i
@@ -281,7 +281,7 @@ runtime_api/flexbison/main.i: runtime_api/flexbison/main.cpp.i
 
 # target to preprocess a source file
 runtime_api/flexbison/main.cpp.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.i
 .PHONY : runtime_api/flexbison/main.cpp.i
 
 runtime_api/flexbison/main.s: runtime_api/flexbison/main.cpp.s
@@ -290,7 +290,7 @@ runtime_api/flexbison/main.s: runtime_api/flexbison/main.cpp.s
 
 # target to generate assembly for a file
 runtime_api/flexbison/main.cpp.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.s
 .PHONY : runtime_api/flexbison/main.cpp.s
 
 # Help Target
@@ -328,6 +328,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

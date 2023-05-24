@@ -62,10 +62,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 # Include any dependencies generated for this target.
 include test/googletest/googlemock/CMakeFiles/gmock.dir/depend.make
@@ -78,16 +78,16 @@ include test/googletest/googlemock/CMakeFiles/gmock.dir/flags.make
 
 test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: test/googletest/googlemock/CMakeFiles/gmock.dir/flags.make
 test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: ../test/googletest/googlemock/src/gmock-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googlemock/src/gmock-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googlemock/src/gmock-all.cc
 
 test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock.dir/src/gmock-all.cc.i"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googlemock/src/gmock-all.cc > CMakeFiles/gmock.dir/src/gmock-all.cc.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googlemock/src/gmock-all.cc > CMakeFiles/gmock.dir/src/gmock-all.cc.i
 
 test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/src/gmock-all.cc.s"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googlemock/src/gmock-all.cc -o CMakeFiles/gmock.dir/src/gmock-all.cc.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googlemock/src/gmock-all.cc -o CMakeFiles/gmock.dir/src/gmock-all.cc.s
 
 # Object files for target gmock
 gmock_OBJECTS = \
@@ -96,23 +96,23 @@ gmock_OBJECTS = \
 # External object files for target gmock
 gmock_EXTERNAL_OBJECTS =
 
-lib/libgmockd.a: test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
-lib/libgmockd.a: test/googletest/googlemock/CMakeFiles/gmock.dir/build.make
-lib/libgmockd.a: test/googletest/googlemock/CMakeFiles/gmock.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmockd.a"
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean_target.cmake
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
+lib/libgmock.a: test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+lib/libgmock.a: test/googletest/googlemock/CMakeFiles/gmock.dir/build.make
+lib/libgmock.a: test/googletest/googlemock/CMakeFiles/gmock.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock.a"
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean_target.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-test/googletest/googlemock/CMakeFiles/gmock.dir/build: lib/libgmockd.a
+test/googletest/googlemock/CMakeFiles/gmock.dir/build: lib/libgmock.a
 
 .PHONY : test/googletest/googlemock/CMakeFiles/gmock.dir/build
 
 test/googletest/googlemock/CMakeFiles/gmock.dir/clean:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean.cmake
 .PHONY : test/googletest/googlemock/CMakeFiles/gmock.dir/clean
 
 test/googletest/googlemock/CMakeFiles/gmock.dir/depend:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/khl_project /home/kuanghongliang/Documents/vscode_projects/khl_project/test/googletest/googlemock /home/kuanghongliang/Documents/vscode_projects/khl_project/build /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock /home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kuanghongliang/Documents/vscode_projects/kusr_code /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googlemock /home/kuanghongliang/Documents/vscode_projects/kusr_code/build /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/googletest/googlemock/CMakeFiles/gmock.dir/depend
 

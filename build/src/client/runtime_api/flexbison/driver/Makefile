@@ -67,10 +67,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,7 +113,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CPackSourceConfig.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -157,7 +157,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -167,14 +167,14 @@ package/fast: package
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver//CMakeFiles/progress.marks
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles 0
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver//CMakeFiles/progress.marks
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/clean
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/clean
 .PHONY : clean
 
 # The main clean target
@@ -184,22 +184,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/preinstall
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/preinstall
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/rule:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/rule
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/rule
 .PHONY : src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/rule
 
 # Convenience name for target.
@@ -209,7 +209,7 @@ flexbisonlib: src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.di
 
 # fast build rule for target.
 flexbisonlib/fast:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build
 .PHONY : flexbisonlib/fast
 
 driver.o: driver.cpp.o
@@ -218,7 +218,7 @@ driver.o: driver.cpp.o
 
 # target to build an object file
 driver.cpp.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/driver.cpp.o
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/driver.cpp.o
 .PHONY : driver.cpp.o
 
 driver.i: driver.cpp.i
@@ -227,7 +227,7 @@ driver.i: driver.cpp.i
 
 # target to preprocess a source file
 driver.cpp.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/driver.cpp.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/driver.cpp.i
 .PHONY : driver.cpp.i
 
 driver.s: driver.cpp.s
@@ -236,7 +236,7 @@ driver.s: driver.cpp.s
 
 # target to generate assembly for a file
 driver.cpp.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/driver.cpp.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/driver.cpp.s
 .PHONY : driver.cpp.s
 
 lexer.o: lexer.cpp.o
@@ -245,7 +245,7 @@ lexer.o: lexer.cpp.o
 
 # target to build an object file
 lexer.cpp.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/lexer.cpp.o
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/lexer.cpp.o
 .PHONY : lexer.cpp.o
 
 lexer.i: lexer.cpp.i
@@ -254,7 +254,7 @@ lexer.i: lexer.cpp.i
 
 # target to preprocess a source file
 lexer.cpp.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/lexer.cpp.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/lexer.cpp.i
 .PHONY : lexer.cpp.i
 
 lexer.s: lexer.cpp.s
@@ -263,7 +263,7 @@ lexer.s: lexer.cpp.s
 
 # target to generate assembly for a file
 lexer.cpp.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/lexer.cpp.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/lexer.cpp.s
 .PHONY : lexer.cpp.s
 
 parser.o: parser.cpp.o
@@ -272,7 +272,7 @@ parser.o: parser.cpp.o
 
 # target to build an object file
 parser.cpp.o:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/parser.cpp.o
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/parser.cpp.o
 .PHONY : parser.cpp.o
 
 parser.i: parser.cpp.i
@@ -281,7 +281,7 @@ parser.i: parser.cpp.i
 
 # target to preprocess a source file
 parser.cpp.i:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/parser.cpp.i
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/parser.cpp.i
 .PHONY : parser.cpp.i
 
 parser.s: parser.cpp.s
@@ -290,7 +290,7 @@ parser.s: parser.cpp.s
 
 # target to generate assembly for a file
 parser.cpp.s:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/parser.cpp.s
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/parser.cpp.s
 .PHONY : parser.cpp.s
 
 # Help Target
@@ -328,6 +328,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kuanghongliang/Documents/vscode_projects/khl_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/src/client/runtime_api/flexbison
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver/cmake_install.cmake")
 
 endif()
 

@@ -31,12 +31,12 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver/location.hh
+ ** \file /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver/location.hh
  ** Define the CP::location class.
  */
 
-#ifndef YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KHL_PROJECT_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_LOCATION_HH_INCLUDED
-# define YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KHL_PROJECT_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_LOCATION_HH_INCLUDED
+#ifndef YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KUSR_CODE_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_LOCATION_HH_INCLUDED
+# define YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KUSR_CODE_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_LOCATION_HH_INCLUDED
 
 # include <iostream>
 # include <string>
@@ -55,7 +55,7 @@
 
 #line 5 "parser.yy"
 namespace CP {
-#line 59 "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver/location.hh"
+#line 59 "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver/location.hh"
 
   /// A point in a source file.
   class position
@@ -329,6 +329,6 @@ namespace CP {
 
 #line 5 "parser.yy"
 } // CP
-#line 333 "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver/location.hh"
+#line 333 "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver/location.hh"
 
-#endif // !YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KHL_PROJECT_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_LOCATION_HH_INCLUDED
+#endif // !YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KUSR_CODE_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_LOCATION_HH_INCLUDED

@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/test
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/common_test/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/googletest/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/cmake_install.cmake")
 
 endif()
 

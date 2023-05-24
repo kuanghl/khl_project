@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/src/pti
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/src/pti
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

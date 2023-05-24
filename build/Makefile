@@ -67,10 +67,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project
+CMAKE_SOURCE_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/khl_project/build
+CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,7 +113,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CPackSourceConfig.cmake
+	/usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -167,9 +167,9 @@ package/fast: package
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/khl_project/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles /home/kuanghongliang/Documents/vscode_projects/kusr_code/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/khl_project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -220,7 +220,7 @@ NightlyMemCheck: cmake_check_build_system
 
 # fast build rule for target.
 NightlyMemCheck/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlyMemCheck.dir/build.make 3rd/libuv/CMakeFiles/NightlyMemCheck.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlyMemCheck.dir/build.make _deps/libuv-build/CMakeFiles/NightlyMemCheck.dir/build
 .PHONY : NightlyMemCheck/fast
 
 #=============================================================================
@@ -233,7 +233,7 @@ NightlyTest: cmake_check_build_system
 
 # fast build rule for target.
 NightlyTest/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlyTest.dir/build.make 3rd/libuv/CMakeFiles/NightlyTest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlyTest.dir/build.make _deps/libuv-build/CMakeFiles/NightlyTest.dir/build
 .PHONY : NightlyTest/fast
 
 #=============================================================================
@@ -246,7 +246,7 @@ ContinuousConfigure: cmake_check_build_system
 
 # fast build rule for target.
 ContinuousConfigure/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ContinuousConfigure.dir/build.make 3rd/libuv/CMakeFiles/ContinuousConfigure.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ContinuousConfigure.dir/build.make _deps/libuv-build/CMakeFiles/ContinuousConfigure.dir/build
 .PHONY : ContinuousConfigure/fast
 
 #=============================================================================
@@ -259,7 +259,7 @@ ContinuousBuild: cmake_check_build_system
 
 # fast build rule for target.
 ContinuousBuild/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ContinuousBuild.dir/build.make 3rd/libuv/CMakeFiles/ContinuousBuild.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ContinuousBuild.dir/build.make _deps/libuv-build/CMakeFiles/ContinuousBuild.dir/build
 .PHONY : ContinuousBuild/fast
 
 #=============================================================================
@@ -272,7 +272,7 @@ NightlyConfigure: cmake_check_build_system
 
 # fast build rule for target.
 NightlyConfigure/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlyConfigure.dir/build.make 3rd/libuv/CMakeFiles/NightlyConfigure.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlyConfigure.dir/build.make _deps/libuv-build/CMakeFiles/NightlyConfigure.dir/build
 .PHONY : NightlyConfigure/fast
 
 #=============================================================================
@@ -285,7 +285,7 @@ NightlyMemoryCheck: cmake_check_build_system
 
 # fast build rule for target.
 NightlyMemoryCheck/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlyMemoryCheck.dir/build.make 3rd/libuv/CMakeFiles/NightlyMemoryCheck.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlyMemoryCheck.dir/build.make _deps/libuv-build/CMakeFiles/NightlyMemoryCheck.dir/build
 .PHONY : NightlyMemoryCheck/fast
 
 #=============================================================================
@@ -298,7 +298,7 @@ ExperimentalTest: cmake_check_build_system
 
 # fast build rule for target.
 ExperimentalTest/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ExperimentalTest.dir/build.make 3rd/libuv/CMakeFiles/ExperimentalTest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ExperimentalTest.dir/build.make _deps/libuv-build/CMakeFiles/ExperimentalTest.dir/build
 .PHONY : ExperimentalTest/fast
 
 #=============================================================================
@@ -311,7 +311,7 @@ ContinuousUpdate: cmake_check_build_system
 
 # fast build rule for target.
 ContinuousUpdate/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ContinuousUpdate.dir/build.make 3rd/libuv/CMakeFiles/ContinuousUpdate.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ContinuousUpdate.dir/build.make _deps/libuv-build/CMakeFiles/ContinuousUpdate.dir/build
 .PHONY : ContinuousUpdate/fast
 
 #=============================================================================
@@ -324,7 +324,7 @@ NightlyUpdate: cmake_check_build_system
 
 # fast build rule for target.
 NightlyUpdate/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlyUpdate.dir/build.make 3rd/libuv/CMakeFiles/NightlyUpdate.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlyUpdate.dir/build.make _deps/libuv-build/CMakeFiles/NightlyUpdate.dir/build
 .PHONY : NightlyUpdate/fast
 
 #=============================================================================
@@ -337,7 +337,7 @@ ExperimentalMemCheck: cmake_check_build_system
 
 # fast build rule for target.
 ExperimentalMemCheck/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ExperimentalMemCheck.dir/build.make 3rd/libuv/CMakeFiles/ExperimentalMemCheck.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ExperimentalMemCheck.dir/build.make _deps/libuv-build/CMakeFiles/ExperimentalMemCheck.dir/build
 .PHONY : ExperimentalMemCheck/fast
 
 #=============================================================================
@@ -350,7 +350,7 @@ ExperimentalSubmit: cmake_check_build_system
 
 # fast build rule for target.
 ExperimentalSubmit/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ExperimentalSubmit.dir/build.make 3rd/libuv/CMakeFiles/ExperimentalSubmit.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ExperimentalSubmit.dir/build.make _deps/libuv-build/CMakeFiles/ExperimentalSubmit.dir/build
 .PHONY : ExperimentalSubmit/fast
 
 #=============================================================================
@@ -363,7 +363,7 @@ Experimental: cmake_check_build_system
 
 # fast build rule for target.
 Experimental/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/Experimental.dir/build.make 3rd/libuv/CMakeFiles/Experimental.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/Experimental.dir/build.make _deps/libuv-build/CMakeFiles/Experimental.dir/build
 .PHONY : Experimental/fast
 
 #=============================================================================
@@ -376,7 +376,7 @@ ContinuousCoverage: cmake_check_build_system
 
 # fast build rule for target.
 ContinuousCoverage/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ContinuousCoverage.dir/build.make 3rd/libuv/CMakeFiles/ContinuousCoverage.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ContinuousCoverage.dir/build.make _deps/libuv-build/CMakeFiles/ContinuousCoverage.dir/build
 .PHONY : ContinuousCoverage/fast
 
 #=============================================================================
@@ -389,7 +389,7 @@ ExperimentalConfigure: cmake_check_build_system
 
 # fast build rule for target.
 ExperimentalConfigure/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ExperimentalConfigure.dir/build.make 3rd/libuv/CMakeFiles/ExperimentalConfigure.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ExperimentalConfigure.dir/build.make _deps/libuv-build/CMakeFiles/ExperimentalConfigure.dir/build
 .PHONY : ExperimentalConfigure/fast
 
 #=============================================================================
@@ -402,7 +402,7 @@ Continuous: cmake_check_build_system
 
 # fast build rule for target.
 Continuous/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/Continuous.dir/build.make 3rd/libuv/CMakeFiles/Continuous.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/Continuous.dir/build.make _deps/libuv-build/CMakeFiles/Continuous.dir/build
 .PHONY : Continuous/fast
 
 #=============================================================================
@@ -415,7 +415,7 @@ Nightly: cmake_check_build_system
 
 # fast build rule for target.
 Nightly/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/Nightly.dir/build.make 3rd/libuv/CMakeFiles/Nightly.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/Nightly.dir/build.make _deps/libuv-build/CMakeFiles/Nightly.dir/build
 .PHONY : Nightly/fast
 
 #=============================================================================
@@ -428,7 +428,7 @@ NightlySubmit: cmake_check_build_system
 
 # fast build rule for target.
 NightlySubmit/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlySubmit.dir/build.make 3rd/libuv/CMakeFiles/NightlySubmit.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlySubmit.dir/build.make _deps/libuv-build/CMakeFiles/NightlySubmit.dir/build
 .PHONY : NightlySubmit/fast
 
 #=============================================================================
@@ -441,7 +441,7 @@ NightlyStart: cmake_check_build_system
 
 # fast build rule for target.
 NightlyStart/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlyStart.dir/build.make 3rd/libuv/CMakeFiles/NightlyStart.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlyStart.dir/build.make _deps/libuv-build/CMakeFiles/NightlyStart.dir/build
 .PHONY : NightlyStart/fast
 
 #=============================================================================
@@ -454,7 +454,7 @@ ExperimentalCoverage: cmake_check_build_system
 
 # fast build rule for target.
 ExperimentalCoverage/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ExperimentalCoverage.dir/build.make 3rd/libuv/CMakeFiles/ExperimentalCoverage.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ExperimentalCoverage.dir/build.make _deps/libuv-build/CMakeFiles/ExperimentalCoverage.dir/build
 .PHONY : ExperimentalCoverage/fast
 
 #=============================================================================
@@ -467,7 +467,7 @@ NightlyCoverage: cmake_check_build_system
 
 # fast build rule for target.
 NightlyCoverage/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlyCoverage.dir/build.make 3rd/libuv/CMakeFiles/NightlyCoverage.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlyCoverage.dir/build.make _deps/libuv-build/CMakeFiles/NightlyCoverage.dir/build
 .PHONY : NightlyCoverage/fast
 
 #=============================================================================
@@ -480,7 +480,7 @@ ExperimentalStart: cmake_check_build_system
 
 # fast build rule for target.
 ExperimentalStart/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ExperimentalStart.dir/build.make 3rd/libuv/CMakeFiles/ExperimentalStart.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ExperimentalStart.dir/build.make _deps/libuv-build/CMakeFiles/ExperimentalStart.dir/build
 .PHONY : ExperimentalStart/fast
 
 #=============================================================================
@@ -493,7 +493,7 @@ NightlyBuild: cmake_check_build_system
 
 # fast build rule for target.
 NightlyBuild/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/NightlyBuild.dir/build.make 3rd/libuv/CMakeFiles/NightlyBuild.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/NightlyBuild.dir/build.make _deps/libuv-build/CMakeFiles/NightlyBuild.dir/build
 .PHONY : NightlyBuild/fast
 
 #=============================================================================
@@ -506,7 +506,7 @@ ExperimentalBuild: cmake_check_build_system
 
 # fast build rule for target.
 ExperimentalBuild/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ExperimentalBuild.dir/build.make 3rd/libuv/CMakeFiles/ExperimentalBuild.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ExperimentalBuild.dir/build.make _deps/libuv-build/CMakeFiles/ExperimentalBuild.dir/build
 .PHONY : ExperimentalBuild/fast
 
 #=============================================================================
@@ -519,7 +519,7 @@ ExperimentalUpdate: cmake_check_build_system
 
 # fast build rule for target.
 ExperimentalUpdate/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ExperimentalUpdate.dir/build.make 3rd/libuv/CMakeFiles/ExperimentalUpdate.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ExperimentalUpdate.dir/build.make _deps/libuv-build/CMakeFiles/ExperimentalUpdate.dir/build
 .PHONY : ExperimentalUpdate/fast
 
 #=============================================================================
@@ -532,7 +532,7 @@ ContinuousStart: cmake_check_build_system
 
 # fast build rule for target.
 ContinuousStart/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ContinuousStart.dir/build.make 3rd/libuv/CMakeFiles/ContinuousStart.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ContinuousStart.dir/build.make _deps/libuv-build/CMakeFiles/ContinuousStart.dir/build
 .PHONY : ContinuousStart/fast
 
 #=============================================================================
@@ -545,7 +545,7 @@ ContinuousMemCheck: cmake_check_build_system
 
 # fast build rule for target.
 ContinuousMemCheck/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ContinuousMemCheck.dir/build.make 3rd/libuv/CMakeFiles/ContinuousMemCheck.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ContinuousMemCheck.dir/build.make _deps/libuv-build/CMakeFiles/ContinuousMemCheck.dir/build
 .PHONY : ContinuousMemCheck/fast
 
 #=============================================================================
@@ -558,7 +558,7 @@ uv_a: cmake_check_build_system
 
 # fast build rule for target.
 uv_a/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv_a.dir/build.make 3rd/libuv/CMakeFiles/uv_a.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/uv_a.dir/build.make _deps/libuv-build/CMakeFiles/uv_a.dir/build
 .PHONY : uv_a/fast
 
 #=============================================================================
@@ -571,7 +571,7 @@ ContinuousTest: cmake_check_build_system
 
 # fast build rule for target.
 ContinuousTest/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ContinuousTest.dir/build.make 3rd/libuv/CMakeFiles/ContinuousTest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ContinuousTest.dir/build.make _deps/libuv-build/CMakeFiles/ContinuousTest.dir/build
 .PHONY : ContinuousTest/fast
 
 #=============================================================================
@@ -584,7 +584,7 @@ ContinuousSubmit: cmake_check_build_system
 
 # fast build rule for target.
 ContinuousSubmit/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/ContinuousSubmit.dir/build.make 3rd/libuv/CMakeFiles/ContinuousSubmit.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/ContinuousSubmit.dir/build.make _deps/libuv-build/CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
@@ -597,7 +597,7 @@ uv: cmake_check_build_system
 
 # fast build rule for target.
 uv/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/libuv/CMakeFiles/uv.dir/build.make 3rd/libuv/CMakeFiles/uv.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/libuv-build/CMakeFiles/uv.dir/build.make _deps/libuv-build/CMakeFiles/uv.dir/build
 .PHONY : uv/fast
 
 #=============================================================================
@@ -623,7 +623,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f test/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make test/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -636,7 +636,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) $(MAKESILENT) -f test/googletest/googlemock/CMakeFiles/gmock.dir/build.make test/googletest/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -649,7 +649,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f test/googletest/googletest/CMakeFiles/gtest_main.dir/build.make test/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -662,7 +662,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) $(MAKESILENT) -f test/googletest/googletest/CMakeFiles/gtest.dir/build.make test/googletest/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/gtest-build/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 #=============================================================================

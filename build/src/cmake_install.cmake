@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/src
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/codetest/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/kernel/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/server/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/pti/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/daemon/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/codetest/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/kernel/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/server/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/pti/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/daemon/cmake_install.cmake")
 
 endif()
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/log
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/log
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/log/simple_log/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/simple_log/cmake_install.cmake")
 
 endif()
 

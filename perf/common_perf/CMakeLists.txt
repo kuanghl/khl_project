@@ -9,9 +9,9 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 ADD_EXECUTABLE(benchmark_test "${CMAKE_CURRENT_SOURCE_DIR}/benchmark_test.cpp")
 
 # 查找当前目录路径下文件及其他路径下的文件,pthread=${CMAKE_THREAD_LIBS_INIT}
-IF(gbenchmark_en STREQUAL "on")
+IF(benchmark_en STREQUAL "on")
     # TARGET_LINK_LIBRARIES(benchmark_test libbenchmark ${LINK_LIB})
-    MESSAGE(STATUS "Config: gbenchmark_en = on, use ExternalProject(error not configure).")
+    MESSAGE(STATUS "Config: benchmark_en = on, use ExternalProject(error not configure).")
 ELSE()
     TARGET_LINK_LIBRARIES(benchmark_test benchmark benchmark_main pthread ${LINK_LIB}) 
 ENDIF()

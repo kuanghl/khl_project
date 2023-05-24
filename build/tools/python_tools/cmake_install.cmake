@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/tools/python_tools
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/tools/python_tools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

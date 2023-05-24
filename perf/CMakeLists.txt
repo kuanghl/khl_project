@@ -10,12 +10,12 @@ ADD_SUBDIRECTORY(common_perf)
 set(BENCHMARK_ENABLE_TESTING OFF)
 
 # googlebenchmark编译开关
-OPTION(gbenchmark_en "Enable the gbenchmark_en: on/off" on)
-IF(gbenchmark_en STREQUAL "on") # lib: benchmark benchmark_main pthread(无编译测试例)
-    MESSAGE(STATUS "Config: gbenchmark_en = on, use ExternalProject(error not configure).")
+OPTION(benchmark_en "Enable the benchmark_en: on/off/other" on)
+IF(benchmark_en STREQUAL "on") # lib: benchmark benchmark_main pthread(无编译测试例)
+    MESSAGE(STATUS "Config: benchmark_en = on, use ExternalProject(error not configure).")
 
-ELSEIF(gbenchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(编译测试例)
-    MESSAGE(STATUS "Config: gbenchmark_en = other, use FetchContent.")
+ELSEIF(benchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(编译测试例)
+    MESSAGE(STATUS "Config: benchmark_en = other, use FetchContent.")
     # 使能cmake外部项目
     include(FetchContent) 
 
@@ -32,7 +32,7 @@ ELSEIF(gbenchmark_en STREQUAL "other") # lib: benchmark benchmark_main pthread(�
     include_directories(${googlebenchmark_SOURCE_DIR}/include)
 
 ELSE()  # lib: benchmark benchmark_main pthread(编译测试例)
-    MESSAGE(STATUS "Config: gbenchmark_en = off, we will get clone google benchmark to build.")
+    MESSAGE(STATUS "Config: benchmark_en = off, we will get clone google benchmark to build.")
 
     # 设置子目录并构建
     ADD_SUBDIRECTORY(benchmark)
@@ -46,7 +46,7 @@ ENDIF()
 
 
 # google gperftools编译开关
-OPTION(gperftools_en "Enable the gperftools_en: on/off" on)
+OPTION(gperftools_en "Enable the gperftools_en: on/off/other" on)
 IF(gperftools_en STREQUAL "on") # lib: profiler tcmalloc unwind pthread(无编译测试例)
     MESSAGE(STATUS "Config: gperftools_en = on, use ExternalProject(error not configure).")
 
@@ -89,7 +89,7 @@ ENDIF()
 
 
 # nanobench编译开关
-OPTION(nanobench_en "Enable the nanobench_en: on/off" on)
+OPTION(nanobench_en "Enable the nanobench_en: on/off/other" on)
 IF(nanobench_en STREQUAL "on") # lib: nanobench pthread(无编译测试例)
     MESSAGE(STATUS "Config: nanobench_en = on, use ExternalProject(error not configure).")
 
@@ -116,11 +116,11 @@ ELSE()  # lib: nanobench pthread(编译测试例)
     # 设置子目录并构建
     ADD_SUBDIRECTORY(nanobench)
 
-    # 设置benchmark项目源路径
+    # 设置nanobench项目源路径
     set(nanobench_SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/nanobench")
 
 
-    # 指定暴露benchmark头文件
+    # 指定暴露nanobench头文件
     include_directories(${nanobench_SOURCE_DIR}/include)
 
 ENDIF()

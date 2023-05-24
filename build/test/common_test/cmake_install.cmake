@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project/test/common_test
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code/test/common_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/khl_project
+# Install script for directory: /home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,15 +44,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/log/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/3rd/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/test/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/perf/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/fun/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/cfun/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/lib/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/khl_project/build/tools/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/fun/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/cfun/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/lib/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/cmake_install.cmake")
 
 endif()
 
@@ -64,5 +64,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -32,7 +32,7 @@
 
 
 /**
- ** \file /home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver/parser.hpp
+ ** \file /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver/parser.hpp
  ** Define the CP::parser class.
  */
 
@@ -41,8 +41,8 @@
 // Undocumented macros, especially those whose name start with YY_,
 // are private implementation details.  Do not rely on them.
 
-#ifndef YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KHL_PROJECT_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_PARSER_HPP_INCLUDED
-# define YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KHL_PROJECT_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_PARSER_HPP_INCLUDED
+#ifndef YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KUSR_CODE_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KUSR_CODE_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_PARSER_HPP_INCLUDED
 // "%code requires" blocks.
 #line 8 "parser.yy"
 
@@ -61,7 +61,7 @@
 # endif
 
 
-#line 65 "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver/parser.hpp"
+#line 65 "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver/parser.hpp"
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -196,7 +196,7 @@
 
 #line 5 "parser.yy"
 namespace CP {
-#line 200 "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver/parser.hpp"
+#line 200 "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver/parser.hpp"
 
 
 
@@ -1091,10 +1091,10 @@ switch (yytype)
 
 #line 5 "parser.yy"
 } // CP
-#line 1095 "/home/kuanghongliang/Documents/vscode_projects/khl_project/build/src/client/runtime_api/flexbison/driver/parser.hpp"
+#line 1095 "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver/parser.hpp"
 
 
 
 
 
-#endif // !YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KHL_PROJECT_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_PARSER_HPP_INCLUDED
+#endif // !YY_YY_HOME_KUANGHONGLIANG_DOCUMENTS_VSCODE_PROJECTS_KUSR_CODE_BUILD_SRC_CLIENT_RUNTIME_API_FLEXBISON_DRIVER_PARSER_HPP_INCLUDED
