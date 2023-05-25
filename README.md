@@ -50,7 +50,10 @@
 - libuv
 - liteos-a
 - gtest
+- doctest-fakeilt
 - gbenchmark
+- gperftools
+- nanobench
 
 ### 2. gtest/gbenchmark
 - google test单元测试平台搭建及使用。
