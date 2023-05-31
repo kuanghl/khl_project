@@ -200,6 +200,13 @@ BENCHMARK_F(Factorial_Fixture, factorial_pref_64)(benchmark::State& st) {
     // printf("Inter function.\n");
 }
 
+BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_65)(benchmark::State& st) {
+    for (auto _ : st) {
+        a = factorial_pref(65);
+    }
+    // printf("Inter function.\n");
+}
+
 BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_100)(benchmark::State& st) {
     double numFoos = 0, numBars = 0, numBazs = 0;
     for (auto _ : st) {
@@ -221,8 +228,13 @@ BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_100)(benchmark::State& st) 
 /* BarTest is NOT registered */
 BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Threads(100)->Iterations(1)->ThreadRange(1, 8)->UseRealTime();
 BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__setup)->Teardown(__teardown);
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__test)->Teardown(__teardown);
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__test)->Teardown(__teardown)->Arg(4<<10)->Range(4, 8<<10);
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__test)->Teardown(__teardown)->Args({1<<10, 128, 64});
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__test)->Teardown(__teardown)->Ranges({{1<<10, 8<<10}, {128, 512}});
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
 /* BarTest is now registered */
+
 #else
 
 #endif
