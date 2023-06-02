@@ -21,23 +21,20 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "../log/simple_log"
   "../3rd/libuv/include"
-  "_deps/libuv-src/include"
-  "_deps/gtest-src/googletest/include"
-  "_deps/gtest-src/googletest"
-  "_deps/gtest-src/googlemock/include"
-  "_deps/gtest-src/googlemock"
-  "_deps/gtest-src/include"
-  "_deps/gtest-src"
+  "../test/googletest/googletest/include"
+  "../test/googletest/googletest"
+  "../test/googletest/googlemock/include"
+  "../test/googletest/googlemock"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/libuv-build/CMakeFiles/uv_a.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/libuv/CMakeFiles/uv_a.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -413,54 +413,6 @@ CXXFEATURECHECK_DEBUG:BOOL=OFF
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
-//Directory under which to collect all populated content
-FETCHCONTENT_BASE_DIR:PATH=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps
-
-//Disables all attempts to download or update content and assumes
-// source dirs already exist
-FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
-
-//Enables QUIET option for all content population
-FETCHCONTENT_QUIET:BOOL=ON
-
-//When not empty, overrides where to find pre-populated content
-// for googlebenchmark
-FETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=
-
-//When not empty, overrides where to find pre-populated content
-// for gperftools
-FETCHCONTENT_SOURCE_DIR_GPERFTOOLS:PATH=
-
-//When not empty, overrides where to find pre-populated content
-// for gtest
-FETCHCONTENT_SOURCE_DIR_GTEST:PATH=
-
-//When not empty, overrides where to find pre-populated content
-// for libuv
-FETCHCONTENT_SOURCE_DIR_LIBUV:PATH=
-
-//When not empty, overrides where to find pre-populated content
-// for nanobench
-FETCHCONTENT_SOURCE_DIR_NANOBENCH:PATH=
-
-//Enables UPDATE_DISCONNECTED behavior for all content population
-FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of googlebenchmark
-FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLEBENCHMARK:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of gperftools
-FETCHCONTENT_UPDATES_DISCONNECTED_GPERFTOOLS:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of gtest
-FETCHCONTENT_UPDATES_DISCONNECTED_GTEST:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of libuv
-FETCHCONTENT_UPDATES_DISCONNECTED_LIBUV:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of nanobench
-FETCHCONTENT_UPDATES_DISCONNECTED_NANOBENCH:BOOL=OFF
-
 //path to the flex executable
 FLEX_EXECUTABLE:FILEPATH=/usr/bin/flex
 
@@ -551,13 +503,13 @@ TSAN:BOOL=OFF
 UBSAN:BOOL=OFF
 
 //Value Computed by CMake
-benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/googlebenchmark-build
+benchmark_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/benchmark
 
 //Value Computed by CMake
-benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/googlebenchmark-src
+benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/perf/benchmark
 
 //Enable the benchmark_en: on/off/other
-benchmark_en:BOOL=other
+benchmark_en:BOOL=ON
 
 //Dependencies for the target
 client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;general;boost_system;general;boost_filesystem;general;boost_thread;general;pthread;
@@ -566,13 +518,13 @@ client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;
 daemon_en:BOOL=ON
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/googlemock
+gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock
 
 //Dependencies for the target
 gmock_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-src/googlemock
+gmock_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
@@ -581,16 +533,16 @@ gmock_build_tests:BOOL=OFF
 gmock_main_LIB_DEPENDS:STATIC=general;gmock;
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build
+googletest-distribution_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-src
+googletest-distribution_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest
 
 //Value Computed by CMake
-gperftools_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gperftools-build
+gperftools_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/gperftools
 
 //Value Computed by CMake
-gperftools_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gperftools-src
+gperftools_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/perf/gperftools
 
 //Build benchmark
 gperftools_build_benchmark:BOOL=ON
@@ -605,7 +557,7 @@ gperftools_dynamic_sized_delete_support:BOOL=OFF
 gperftools_emergency_malloc:BOOL=OFF
 
 //Enable the gperftools_en: on/off/other
-gperftools_en:BOOL=other
+gperftools_en:BOOL=ON
 
 //Compile with -fno-omit-frame-pointer (see INSTALL)
 gperftools_enable_frame_pointers:BOOL=OFF
@@ -626,10 +578,10 @@ gperftools_tcmalloc_alignment:STRING=16
 gperftools_tcmalloc_pagesize:STRING=8
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/googletest
+gtest_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-src/googletest
+gtest_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -641,7 +593,7 @@ gtest_build_tests:BOOL=OFF
 gtest_disable_pthreads:BOOL=OFF
 
 //Enable the gtest: on/off
-gtest_en:BOOL=other
+gtest_en:BOOL=ON
 
 //Use shared (DLL) run-time lib even when Google Test is built
 // as static lib.
@@ -663,13 +615,13 @@ khl_project_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kus
 libunwind_location:FILEPATH=/usr/lib/x86_64-linux-gnu/libunwind.so
 
 //Value Computed by CMake
-libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/libuv-build
+libuv_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/libuv
 
 //Value Computed by CMake
-libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/libuv-src
+libuv_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/libuv
 
 //Enable the libuv_en: on/off/other
-libuv_en:BOOL=other
+libuv_en:BOOL=ON
 
 //Enable the log color to use: on/off
 logcolor_en:BOOL=OFF
@@ -682,13 +634,13 @@ loglevel:BOOL=OFF
 mps_en:BOOL=ON
 
 //Value Computed by CMake
-nanobench_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/nanobench-build
+nanobench_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/nanobench
 
 //Value Computed by CMake
-nanobench_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/nanobench-src
+nanobench_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/perf/nanobench
 
 //Enable the nanobench_en: on/off/other
-nanobench_en:BOOL=other
+nanobench_en:BOOL=ON
 
 //Dependencies for the target
 uv_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
@@ -859,7 +811,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=60
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=62
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1192,9 +1144,9 @@ _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 _Python_EXECUTABLE:INTERNAL=/usr/bin/python3.8
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;10;64;;cpython-38-x86_64-linux-gnu;/usr/lib/python3.8;/usr/lib/python3.8;/usr/lib/python3.8/site-packages;/usr/lib/python3.8/site-packages
-_Python_INTERPRETER_SIGNATURE:INTERNAL=28c129decd38964df5236e30f1913f21
+_Python_INTERPRETER_SIGNATURE:INTERNAL=a6cf5714273262f48d4fc096e7190602
 cmake_package_name:INTERNAL=GTest
-generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/googletest/generated
+generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //STRINGS property for variable: gperftools_tcmalloc_alignment

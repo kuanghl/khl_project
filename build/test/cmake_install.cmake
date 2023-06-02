@@ -45,7 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gtest-build/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/cmake_install.cmake")
 
 endif()
 

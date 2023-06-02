@@ -99,8 +99,8 @@ server_EXTERNAL_OBJECTS =
 bin/server: src/server/CMakeFiles/server.dir/server_main.c.o
 bin/server: src/server/CMakeFiles/server.dir/build.make
 bin/server: log/simple_log/liblog.so.SOVERSION
-bin/server: _deps/libuv-build/libuv.a
-bin/server: _deps/gperftools-build/libprofiler.so.5.5.5
+bin/server: 3rd/libuv/libuv.a
+bin/server: perf/gperftools/libprofiler.so.5.5.5
 bin/server: src/server/CMakeFiles/server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ../../bin/server"
 	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)

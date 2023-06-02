@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -Ddaemon_en=1 -Dlogcolor_en=1 -Dmps_en=1
 
-C_INCLUDES = -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/log/simple_log -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/libuv/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server/hh -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server/mm -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server/ll -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/libuv-src/include
+C_INCLUDES = -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/log/simple_log -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/libuv/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server/hh -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server/mm -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server/ll -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/server
 
 C_FLAGS = -D_REETRANT -g -fPIC -Wall -Wextra -pedantic -O0 -v
 

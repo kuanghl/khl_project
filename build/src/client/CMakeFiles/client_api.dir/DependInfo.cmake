@@ -25,7 +25,6 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../3rd/libuv/include"
   "../src/client/runtime_api_include"
   "src/client"
-  "_deps/libuv-src/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/main.cpp" "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o"
@@ -47,13 +46,12 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../3rd/libuv/include"
   "../src/client/runtime_api_include"
   "src/client"
-  "_deps/libuv-src/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/libuv-build/CMakeFiles/uv_a.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/libuv/CMakeFiles/uv_a.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

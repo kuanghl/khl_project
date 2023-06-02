@@ -24,14 +24,13 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../src/server/mm"
   "../src/server/ll"
   "../src/server"
-  "_deps/libuv-src/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/libuv-build/CMakeFiles/uv_a.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps/gperftools-build/CMakeFiles/profiler.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/libuv/CMakeFiles/uv_a.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/gperftools/CMakeFiles/profiler.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
