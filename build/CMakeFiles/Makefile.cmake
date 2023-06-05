@@ -90,7 +90,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../test/googletest/googletest/cmake/gtest_main.pc.in"
   "../test/googletest/googletest/cmake/internal_utils.cmake"
   "../tools/CMakeLists.txt"
-  "../tools/python_tools/CMakeLists.txt"
   "/usr/local/share/cmake-3.18/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/local/share/cmake-3.18/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/usr/local/share/cmake-3.18/Modules/CMakeCInformation.cmake"
@@ -235,7 +234,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/pti/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/daemon/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tools/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "tools/python_tools/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

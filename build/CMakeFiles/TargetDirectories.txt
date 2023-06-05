@@ -691,11 +691,3 @@
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/CMakeFiles/list_install_components.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/CMakeFiles/rebuild_cache.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/CMakeFiles/package.dir
-/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/python_tools/CMakeFiles/install/strip.dir
-/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/python_tools/CMakeFiles/install/local.dir
-/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/python_tools/CMakeFiles/edit_cache.dir
-/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/python_tools/CMakeFiles/package_source.dir
-/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/python_tools/CMakeFiles/install.dir
-/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/python_tools/CMakeFiles/list_install_components.dir
-/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/python_tools/CMakeFiles/rebuild_cache.dir
-/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/tools/python_tools/CMakeFiles/package.dir

@@ -1582,37 +1582,19 @@ test/googletest/googletest/clean: test/googletest/googletest/CMakeFiles/gtest.di
 # Directory level rules for directory tools
 
 # Recursive "all" directory target.
-tools/all: tools/python_tools/all
+tools/all:
 
 .PHONY : tools/all
 
 # Recursive "preinstall" directory target.
-tools/preinstall: tools/python_tools/preinstall
+tools/preinstall:
 
 .PHONY : tools/preinstall
 
 # Recursive "clean" directory target.
-tools/clean: tools/python_tools/clean
+tools/clean:
 
 .PHONY : tools/clean
-
-#=============================================================================
-# Directory level rules for directory tools/python_tools
-
-# Recursive "all" directory target.
-tools/python_tools/all:
-
-.PHONY : tools/python_tools/all
-
-# Recursive "preinstall" directory target.
-tools/python_tools/preinstall:
-
-.PHONY : tools/python_tools/preinstall
-
-# Recursive "clean" directory target.
-tools/python_tools/clean:
-
-.PHONY : tools/python_tools/clean
 
 #=============================================================================
 # Target rules for target log/simple_log/CMakeFiles/log.dir

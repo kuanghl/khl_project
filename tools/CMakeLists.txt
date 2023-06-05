@@ -2,4 +2,4 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 # 设置子目录并构建
-ADD_SUBDIRECTORY(python_tools)
+# ADD_SUBDIRECTORY(python_tools)
