@@ -13,16 +13,43 @@ def read_json(filename: str) -> dict:
         raise Exception(f"Reading {filename} file encountered an error")
     return data
 
-def main():
-    # # link c lib .so
-    # perfinfo = ctypes.cdll.LoadLibrary(os.getcwd() + "/../libperfinfo.so")
-    # perfinfo = ctypes.cdll.LoadLibrary(os.path.dirname(__file__) + "/../libperfinfo.so")
 
-    # # c string format transfer to python string
-    # perfinfo.getPlatform.restype = ctypes.c_char_p
-    # perfinfo.getMpulib.restype = ctypes.c_char_p
-    # perfinfo.getMps.restype = ctypes.c_char_p
-    # perfinfo.getDaemon.restype = ctypes.c_char_p
+def auto_width(filename):
+    # 打开xlsx文件
+    wb = openpyxl.load_workbook(filename)
+    # 遍历sheet
+    for sheet in wb.sheetnames:
+        ws = wb[sheet]
+        df = pandas.read_excel(filename,sheet_name=sheet, engine='openpyxl')
+        # 把表头改到最后一行
+        df.loc[len(df)]=list(df.columns)
+        for i in df.index:
+            # 设置单元格对齐方式 Alignment(horizontal=水平对齐模式,vertical=垂直对齐模式,text_rotation=旋转角度,wrap_text=是否自动换行)
+            alignment = openpyxl.styles.Alignment(horizontal='center', vertical='center', text_rotation=0, wrap_text=True)
+            ws['A'+str(i+1)].alignment = alignment
+            ws['B'+str(i+1)].alignment = alignment
+            ws.row_dimensions[i].height = 20
+        for col in df.columns:
+            # 获取列序号
+            index = list(df.columns).index(col)
+            # 获取行字母表头
+            letter = openpyxl.utils.get_column_letter(index+1)
+            # 获取当前列最大宽度
+            collen = df[col].apply(lambda x :len(str(x).encode())).max()
+            # 设置列宽为最大长度比例
+            ws.column_dimensions[letter].width = collen * 1.5
+    wb.save(filename)
+
+def main():
+    # link c lib .so
+    # perfinfo = ctypes.cdll.LoadLibrary(os.getcwd() + "/../libperfinfo.so")
+    perfinfo = ctypes.cdll.LoadLibrary(os.path.dirname(__file__) + "/libperfinfo.so")
+
+    # c string format transfer to python string
+    perfinfo.getPlatform.restype = ctypes.c_char_p
+    perfinfo.getMpulib.restype = ctypes.c_char_p
+    perfinfo.getMps.restype = ctypes.c_char_p
+    perfinfo.getDaemon.restype = ctypes.c_char_p
 
 
     # Read the JSON file as python dictionary 
@@ -42,11 +69,11 @@ def main():
 
     # read data from outside. eg.env .so
     config = {
-        "loglevel":[1],
-        "platform":["RPP"],
-        "mpulib":[string],
-        "mps":["off"],
-        "daemon":["on"],
+        "loglevel":[perfinfo.getLoglevel()],
+        "platform":[perfinfo.getPlatform().decode("utf-8")],
+        "mpulib":[perfinfo.getMpulib().decode("utf-8")],
+        "mps":[perfinfo.getMps().decode("utf-8")],
+        "daemon":[perfinfo.getDaemon().decode("utf-8")],
         "other":["other"],
         "path":[os.environ['HOME']],
         "name":['apple','egg','watermelon'],
@@ -80,11 +107,13 @@ def main():
         context_data.to_excel(excelfd, sheet_name = 'context', index = False)
         avg_data.to_excel(excelfd, sheet_name = 'avg', index = False)
         benchmarks_data.to_excel(excelfd, sheet_name = 'benchmarks')
-        # merge data and add data into a sheet
+        # add data into a sheet
         context_avg_data = pandas.concat([context_data, avg_data], axis = 1, keys = ['context', 'avg'], names = ['from', 'index_header'])
         context_avg_data.to_excel(excelfd, sheet_name = 'context_avg')
         # config data
         config_data.to_excel(excelfd, sheet_name = 'config')
+    
+    auto_width('src_acc_multi.xlsx')
         
 if __name__ == '__main__':
     main()

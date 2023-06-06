@@ -124,10 +124,12 @@
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/CMakeFiles/package.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/install/strip.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/package_source.dir
+/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/perfinfo.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/install.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/list_install_components.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/rebuild_cache.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/package.dir
+/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/perf_get_info.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/nanobench_test.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/install/local.dir
 /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/common_perf/CMakeFiles/gperftools_test.dir

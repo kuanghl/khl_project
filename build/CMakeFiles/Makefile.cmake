@@ -274,6 +274,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "test/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "test/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "perf/common_perf/CMakeFiles/perfinfo.dir/DependInfo.cmake"
+  "perf/common_perf/CMakeFiles/perf_get_info.dir/DependInfo.cmake"
   "perf/common_perf/CMakeFiles/nanobench_test.dir/DependInfo.cmake"
   "perf/common_perf/CMakeFiles/gperftools_test.dir/DependInfo.cmake"
   "perf/common_perf/CMakeFiles/benchmark_test.dir/DependInfo.cmake"

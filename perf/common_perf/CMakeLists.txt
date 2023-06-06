@@ -40,3 +40,8 @@ IF(nanobench_en STREQUAL "on")
 ELSE()
     TARGET_LINK_LIBRARIES(nanobench_test nanobench pthread ${LINK_LIB}) 
 ENDIF()
+
+ADD_EXECUTABLE(perf_get_info "${CMAKE_CURRENT_SOURCE_DIR}/perf_get_info.cpp")
+add_library(perfinfo SHARED "${CMAKE_CURRENT_SOURCE_DIR}/perf_get_info.cpp")
+
+file(COPY ${PROJECT_SOURCE_DIR}/perf/bbenchmark/json_analysis.py DESTINATION ${PROJECT_BINARY_DIR}/perf/common_perf)

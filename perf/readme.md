@@ -36,6 +36,15 @@
         ```
         
         ```
+  - [ ] json to excel:
+        ```
+        pip install -r perf/bbenchmark/requirements.txt
+        cd build
+        cmake .. && make -j16 && sudo make install
+        ./perf/common_perf/benchmark_test --benchmark_out=src_acc_multi.json
+        python3 perf/common_perf/json_analysis.py
+        # get excel
+        ```
 ***
 
 ### gperftools.

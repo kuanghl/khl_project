@@ -666,6 +666,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named perfinfo
+
+# Build rule for target.
+perfinfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perfinfo
+.PHONY : perfinfo
+
+# fast build rule for target.
+perfinfo/fast:
+	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/perfinfo.dir/build.make perf/common_perf/CMakeFiles/perfinfo.dir/build
+.PHONY : perfinfo/fast
+
+#=============================================================================
+# Target rules for targets named perf_get_info
+
+# Build rule for target.
+perf_get_info: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf_get_info
+.PHONY : perf_get_info
+
+# fast build rule for target.
+perf_get_info/fast:
+	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/perf_get_info.dir/build.make perf/common_perf/CMakeFiles/perf_get_info.dir/build
+.PHONY : perf_get_info/fast
+
+#=============================================================================
 # Target rules for targets named nanobench_test
 
 # Build rule for target.
@@ -2990,6 +3016,8 @@ help:
 	@echo "... packed_cache_test"
 	@echo "... page_heap_test"
 	@echo "... pagemap_unittest"
+	@echo "... perf_get_info"
+	@echo "... perfinfo"
 	@echo "... pid_test"
 	@echo "... pipe"
 	@echo "... pipe_fifo_recv"
