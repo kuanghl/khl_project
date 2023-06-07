@@ -44,7 +44,7 @@ def main():
     config = {
         "loglevel":[1],
         "platform":["RPP"],
-        "mpulib":[string],
+        "mpulib":["on"],
         "mps":["off"],
         "daemon":["on"],
         "other":["other"],
