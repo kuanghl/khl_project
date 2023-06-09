@@ -12,6 +12,7 @@ import matplotlib.pyplot
 import scipy
 import scipy.stats
 import textwrap
+import platform
 
 
 # 判断是否为路径
@@ -27,11 +28,11 @@ def cmd_inter():
     # 添加参数命令
     parser.add_argument('-i', '--input', help="Input .json files directory.")
     parser.add_argument('-o', '--output', help="Output .csv/.xlsx/.png files directory.")
-    parser.add_argument('-l', '--link', help="Link c/c++ libraries directory.")
-    parser.add_argument('-m', '--mode', help="Output all/simple content to .csv/.xlsx/.png.", default=["simple"])
+    parser.add_argument('-l', '--link', help="Link c/c++ libraries directory.(not support)")
+    parser.add_argument('-m', '--mode', help="Output all/simple/user-defined metrics content to .csv/.xlsx/.png.", default=["simple"], nargs="*")
     parser.add_argument('-s', '--select', help="Select the output files from csv/xlsx/png.", default=["csv", "xlsx", "png"], nargs="*")
-    parser.add_argument('-f', '--format', help="The benchmark metric(s) format to track.", default=["name", "cpu_time", "real_time", "iterations"], nargs="*")
-    parser.add_argument('-n', '--name', help=".json files name.", default=["all"])
+    parser.add_argument('-n', '--name', help="Need analysis .json files name to excel.", default=["all"], nargs="*")
+    parser.add_argument('-p', '--plot', help="From all .json files, plot term only suport cpu_time/real_time now.", default=["cpu_time", "real_time"], nargs="*")
 
     # 初步解析参数命令
     args = parser.parse_args()
@@ -57,7 +58,7 @@ def scan_filetype(directory, filetype):
         print('Error no such file type! ')
     return files, entry
 
-
+# 读取json文件所有数据
 def read_json(filename: str) -> dict:
     try:
         with open(filename, "r") as f:
@@ -66,31 +67,176 @@ def read_json(filename: str) -> dict:
         raise Exception(f"Reading {filename} file encountered an error")
     return data
 
-def analysis_file(file, benchmarks, metric):
+# 解析单个json文件数据
+def analysis_file(file, arga):
     print('analysis ' + file)
     data = read_json(file)
-    print('\t' + data['context']['date'])
-    print('\t' + data['context']['host_name'])
-    print('\t' + data['context']['executable'])
-    print('\t' + '%d' %data['context']['num_cpus'])
-    print('\t' + '%d' %data['context']['mhz_per_cpu'])
-    print('\t' + '%s' %data['context']['cpu_scaling_enabled'])
-    for a in data['context']['caches']:
-        print('\t' + a['type'])
-        print('\t' + '%d' %a['level'])
-        print('\t' + '%d' %a['size'])
-        print('\t' + '%d' %a['num_sharing'])
-    print('\t' + '%s' %data['context']['load_avg'][0])
-    print('\t' + '%s' %data['context']['load_avg'][1])
-    print('\t' + '%s' %data['context']['load_avg'][2])
-    print('\t' + data['context']['library_build_type'])
+
+    # dict to list.
+    context = []
+    if type(data).__name__=='dict':
+        if 'context' in data.keys():
+            for a in data['context']:
+                context_dict = {}
+                if a != "caches":
+                    context_dict['name'] = a
+                    context_dict['parameter'] =  data['context'][a]
+                    context.append(context_dict)
+
+    context_data = pandas.json_normalize(context)
+    print(context_data)
+
+    # cpu caches per cpu.
+    if type(data).__name__=='dict':
+        if 'context' in data.keys() and 'caches' in data['context'].keys(): 
+            type_data = []; level_data = []; size_data = []; num_sharing_data = []
+            for b in data['context']['caches']:
+                type_data.append(b['type'])
+                level_data.append(b['level'])
+                size_data.append(b['size'])
+                num_sharing_data.append(b['num_sharing'])
+            caches = [
+                {
+                    "name": 'type',
+                    "parameter": type_data
+                },
+                {
+                    "name": 'level',
+                    "parameter": level_data
+                },
+                {
+                    "name": 'size',
+                    "parameter": size_data
+                },
+                {
+                    "name": 'num_sharing',
+                    "parameter": num_sharing_data
+                }
+            ]
+            caches_data = pandas.json_normalize(caches)
+            print(caches_data)
+
+    # system_software_hardware info
+    system_sh = [
+        # {
+        #     "name": 'host_name',
+        #     " parameter": platform.node()
+        # },
+        {
+            "name": 'cpu',
+            "parameter": platform.processor()
+        },
+        {
+            "name": 'kernel',
+            "parameter": platform.release()
+        },
+        {
+            "name": "compiler",
+            "parameter": platform.python_compiler()
+        },
+        {
+            "name": 'arch',
+            "parameter": platform.architecture()
+        }
+    ]
+    system_sh_data = pandas.json_normalize(system_sh)
+    print(system_sh_data)
+
+    # hardware info
+    hardware = [
+        {
+            "name": 'device_id', 
+            "parameter": 0
+        },
+        {
+            "name": 'baord_name', 
+            "parameter": 'M3'
+        },
+        {
+            "name": 'SN',
+            "parameter": 12345678
+        }
+    ]
+    hardware_data = pandas.json_normalize(hardware)
+    print(hardware_data)
+
+    # config info
+    config = [
+        {
+            "name": 'platform',
+            "parameter": 'RPP_ASIC'
+        },
+        {
+            "name": 'mpulib',
+            "parameter": 'on'
+        },
+        {
+            "name": 'mps',
+            "parameter": 'on'
+        },
+        {
+            "name": 'daemon',
+            "parameter": 'off'
+        },
+        {
+            "name": 'loglevel',
+            "parameter": 3
+        }
+    ]
+    config_data = pandas.json_normalize(config)
+    print(config_data)
+    
+    # filt key for dict.
+    if type(data).__name__=='dict':
+        if 'benchmarks' in data.keys():
+            benchmark = data['benchmarks']
+            benchmark_data = pandas.json_normalize(benchmark)
+            host_data = pandas.concat([context_data, system_sh_data, caches_data], axis = 0)
+            host_data.reset_index(drop=True, inplace=True)
+            print(host_data)
+            perf_env_data = pandas.concat([hardware_data, host_data, config_data], keys = ['hardware_info', 'host_info', 'config_info'], names=['Class','Index'], axis = 0)
+            print(perf_env_data)
+            if 'simple' in arga:
+                benchmark_filt = ['name', 'family_index', 'real_time', 'cpu_time', 'iterations']
+                print(benchmark_data[benchmark_filt])
+                return benchmark_data[benchmark_filt], perf_env_data
+            elif 'all' in arga:
+                print(benchmark_data)
+                return benchmark_data, perf_env_data
+            else:
+                print(benchmark_data[benchmark_filt])
+                return benchmark_data[arga], perf_env_data
+    return None, None
+
+# 解析json文件数据
+def analysis_files(file, plots_data, arga):
+    print('analysis ' + file)
+    data = read_json(file)
+
+    # # dict to list.
+    # context = []
+    # for a in data['context']:
+    #     context_dict = {}
+    #     if a != "caches":
+    #         context_dict['name'] = a
+    #         context_dict['parameter'] =  data['context'][a]
+    #         context.append(context_dict)
+
+    # context_data = pandas.json_normalize(context)
+    # print(context_data)
+
+    # # cpu caches per cpu.
+    # caches = data['context']['caches']
+    # caches_data = pandas.json_normalize(caches)
+    # print(caches_data)
 
     for b in data['benchmarks']:
-        print('\t' + b['name'] + "." + metric + ' = ' + str(b[metric]))
-        if benchmarks.get(b['name']) is None:
-            benchmarks[b['name']] = [b[metric]]
+        # print('\t \033[0;34m%-16s\033[0m ----> \033[0;32m%-64s\033[0m = \033[0;33m%-32s\033[0m'%(arga, b['name'], str(b[arga])))
+        if plots_data.get(b['name']) is None:
+            plots_data[b['name']] = [b[arga]]
         else:
-            benchmarks[b['name']].append(b[metric])
+            plots_data[b['name']].append(b[arga])
+
 
 def smooth(x,window_len=11,window='hanning'):
     # references: https://scipy-cookbook.readthedocs.io/items/SignalSmooth.html
@@ -110,7 +256,7 @@ def smooth(x,window_len=11,window='hanning'):
     if window == 'flat': #moving average
         w=numpy.ones(window_len,'d')
     else:
-        w=eval('np.'+window+'(window_len)')
+        w=eval('numpy.'+window+'(window_len)')
 
     y=numpy.convolve(w/w.sum(),s,mode='valid')
     return y[0:len(x)]  
@@ -193,157 +339,83 @@ def auto_width(filename):
 def main():
     # cmd
     args = cmd_inter()
-    print(len(args.format))
 
     # get list of files to parse
     files, entry = scan_filetype(args.input, ".json")
-    print(entry.path)
-    print(files)
 
-    # 文件按时间排序
-    files.sort(key=os.path.getmtime)
-
-    # 选择所有文件中的几个
-    print(len(files))
-    print(files[0:1])
-    print(files[:len(files)-(3)])
-
-    metrics = args.format
-    for metric in metrics:
-        benchmarks = {}
+    # get data from all json to plot.
+    plots = args.plot
+    benchmarks_plots = {}
+    for plot in  plots:
+        plots_data = {}
         for entry in files:
-            if entry.path.endswith('.json') and entry.is_file():
+           if entry.path.endswith('.json') and entry.is_file(): 
                 try:
-                    analysis_file(entry.path, benchmarks, metric)
+                    analysis_files(entry.path, plots_data, plot)
                 except:
-                    print('Corrupt benchmark file encountered, skipping...')
-        for benchmark in benchmarks:
-            raw_values = benchmarks[benchmark]
-            sample_count = len(raw_values)
-            print(str(sample_count))
-            print(benchmark)
+                    print(entry.path + ':Error can not analysis data, please check the .json format...')
+        benchmarks_plots[plot] = plots_data
+        if (plot == 'cpu_time' or plot == 'real_time') and ('png' in args.select):
+            # date to plot
+            for a in benchmarks_plots[plot]:
+                #Avoiding individual data errors
+                if len(benchmarks_plots[plot][a]) > 1: 
+                    # get the same test items data 
+                    y_raw_val = benchmarks_plots[plot][a]
+                    x_raw_val  = range(0, len(numpy.arange(0, len(y_raw_val), 1)))
+                    matplotlib.pyplot.plot(x_raw_val, y_raw_val, color='darkgray', label="raw_linear")
+                    matplotlib.pyplot.scatter(x_raw_val, y_raw_val, color='black', label="raw_values")
+                    
+                    if len(benchmarks_plots[plot][a]) > 8:
+                        # 1D data smooth
+                        smoothed_val = smooth(numpy.array(y_raw_val), 8)
+                        matplotlib.pyplot.plot(x_raw_val, smoothed_val, '-b', label="smoothed_values")
 
-            # apply a median filter to the data to smooth out temporary spikes
-            smoothedValues = smooth(numpy.array(raw_values), 1)
-            print(str(smoothedValues))
-            print(str(numpy.array(raw_values)))
+                    # generate x data step = 1, min = 0, max = strlen(raw_val)
+                    x_vals  = numpy.arange(0, len(y_raw_val), 1)
+                    y_vals  = y_raw_val
+                    # Least Squares Fitting
+                    model   = numpy.polyfit(x_vals, y_vals, 1)
+                    predict = numpy.poly1d(model)
+                    lrx     = range(0, len(x_vals))
+                    lry     = predict(lrx)
+                    matplotlib.pyplot.plot(lrx, lry, 'tab:orange', label="fit_linear")
 
-            # plot raw and smoothed values
-            matplotlib.pyplot.plot(raw_values, '-g', label="raw")
-            matplotlib.pyplot.plot(smoothedValues, '-b', label="smoothed")
-            matplotlib.pyplot.ylabel(metric)
-            matplotlib.pyplot.xlabel('sample #')
+                    # figure files name
+                    matplotlib.pyplot.ylabel(plot)
+                    matplotlib.pyplot.xlabel('sample#')
+                    matplotlib.pyplot.title(a.replace('Factorial_Fixture/', ''), color='blue', fontstyle='italic', loc ='right')
+                    figurename = '{}-{}.png'.format(plot, a.replace('/', '-').replace('Factorial_Fixture', ''))
+                    matplotlib.pyplot.legend()
+                    matplotlib.pyplot.tight_layout()
+                    figurepath = os.path.join(args.output, 'figure/' + figurename)
+                    is_dir(figurepath)
+                    matplotlib.pyplot.savefig(figurepath)
+                    matplotlib.pyplot.clf()
+                    matplotlib.pyplot.close()
+    # # get list data
+    # print(pandas.json_normalize(benchmarks_plots))
 
-            # plot line fit
-            x_vals  = numpy.arange(0, len(raw_values), 1)
-            y_vals  = raw_values
-            model   = numpy.polyfit(x_vals, y_vals, 1)
-            predict = numpy.poly1d(model)
-            lrx     = range(0, len(x_vals))
-            lry     = predict(lrx)
-            matplotlib.pyplot.plot(lrx, lry, 'tab:orange', label="linear regression")
-
-            # has it slowed down?
-            if 1 and hasSlowedDown(benchmark, raw_values, smoothedValues, 6, 0.05, metric):
-           
-                # estimate step location
-                step_max_idx  = estimateStepLocation(smoothedValues)
-                if step_max_idx > 0 and step_max_idx < sample_count:
-                    print('step_max_idx = ' + str(step_max_idx))
-                    if (smoothedValues[step_max_idx+1] > smoothedValues[step_max_idx-1]):
-                        print('\tBENCHMARK ' + benchmark + ' STEP CHANGE IN PERFORMANCE ENCOUNTERED (SLOWDOWN) - likely occurred somewhere between this build and this build minus ' + str(sample_count - step_max_idx) + ']')
-                        
-                        # plot step location
-                        matplotlib.pyplot.plot((step_max_idx, step_max_idx), (numpy.min(raw_values), numpy.max(raw_values)), 'r', label="slowdown location estimation")
-                    else:
-                        print('\tBENCHMARK ' + benchmark + ' STEP CHANGE IN PERFORMANCE ENCOUNTERED (SPEEDUP) - ignoring')
-                else:
-                    print('\tBENCHMARK ' + benchmark + ' step index is 0 - likely speedup, ignoring')
-
-            matplotlib.pyplot.title('\n'.join(textwrap.wrap(benchmark, 50)))
-            matplotlib.pyplot.legend(loc="upper left")
-            figurePath = os.path.join(args.output, benchmark+"-"+metric+".png")
-            is_dir(figurePath)
-            matplotlib.pyplot.tight_layout()
-            matplotlib.pyplot.savefig(figurePath)
-            matplotlib.pyplot.clf()
-            plotItem = dict(path=os.path.relpath(figurePath, args.output))
-            plots = []
-            plots.append(plotItem)
-
-    # link c lib .so
-    # perfinfo = ctypes.cdll.LoadLibrary(os.getcwd() + "/../libperfinfo.so")
-    perfinfo = ctypes.cdll.LoadLibrary(os.path.dirname(__file__) + "/libperfinfo.so")
-
-    # c string format transfer to python string
-    perfinfo.getPlatform.restype = ctypes.c_char_p
-    perfinfo.getMpulib.restype = ctypes.c_char_p
-    perfinfo.getMps.restype = ctypes.c_char_p
-    perfinfo.getDaemon.restype = ctypes.c_char_p
-
-
-    # Read the JSON file as python dictionary 
-    data = read_json(filename="src_acc_multi.json")
-
-    # ansys data to format csv
-    benchmarks_data = pandas.json_normalize(data, record_path =['benchmarks'])
-    context_data = pandas.json_normalize(data, 
-                                        record_path = [['context','caches']], 
-                                        meta = [['context', 'date'], ['context', 'host_name'], ['context', 'executable'], ['context', 'num_cpus'], ['context', 'mhz_per_cpu'], ['context', 'cpu_scaling_enabled'], ['context', 'library_build_type']],
-                                        errors='ignore')
-    avg_data = pandas.json_normalize(data, record_path =[['context', 'load_avg']], errors='ignore')
-    print(benchmarks_data);
-    print(context_data);
-    print(avg_data);
-
-
-    # read data from outside. eg.env .so
-    config = {
-        "loglevel":[perfinfo.getLoglevel()],
-        "platform":[perfinfo.getPlatform().decode("utf-8")],
-        "mpulib":[perfinfo.getMpulib().decode("utf-8")],
-        "mps":[perfinfo.getMps().decode("utf-8")],
-        "daemon":[perfinfo.getDaemon().decode("utf-8")],
-        "other":["other"],
-        "path":[os.environ['HOME']],
-        "name":['apple','egg','watermelon'],
-        "color":['red','yellow','green'],
-        "num":[30,40,50]
-    }
-    config_name_data = pandas.json_normalize(config, record_path =['name'], errors='ignore')
-    config_color_data = pandas.json_normalize(config, record_path =['color'], errors='ignore')
-    config_num_data = pandas.json_normalize(config, record_path =['num'], errors='ignore')
-    config_list_data = pandas.json_normalize(config, meta = [['loglevel'], ['platform'], ['mpulib'], ['mps'], ['daemon'], ['other']],    
-                                            errors='ignore')
-    config_data = pandas.concat([config_name_data, config_color_data, config_num_data, config_list_data], axis = 1)
-    print(config_data);
-
-
-    # mode='a+': append to existing data
-    context_data.to_csv('src_acc_multi.csv', index = False, encoding ='utf-8')
-    avg_data.to_csv('src_acc_multi.csv', index = False, encoding ='utf-8', mode = 'a+', header = True)
-    benchmarks_data.to_csv('src_acc_multi.csv', index = False, encoding ='utf-8', mode = 'a+', header = True)
-
-    # # data into excel
-    # excelfd = pandas.ExcelWriter('src_acc_multi.xlsx')
-    # context_data.to_excel(excelfd, sheet_name = 'context')
-    # avg_data.to_excel(excelfd, sheet_name = 'avg')
-    # benchmarks_data.to_excel(excelfd, sheet_name = 'benchmarks')
-    # excelfd.save()
-    # excelfd.close()
-
-    # data into excel
-    with pandas.ExcelWriter('src_acc_multi.xlsx', engine='openpyxl') as excelfd:
-        context_data.to_excel(excelfd, sheet_name = 'context', index = False)
-        avg_data.to_excel(excelfd, sheet_name = 'avg', index = False)
-        benchmarks_data.to_excel(excelfd, sheet_name = 'benchmarks')
-        # add data into a sheet
-        context_avg_data = pandas.concat([context_data, avg_data], axis = 1, keys = ['context', 'avg'], names = ['from', 'index_header'])
-        context_avg_data.to_excel(excelfd, sheet_name = 'context_avg')
-        # config data
-        config_data.to_excel(excelfd, sheet_name = 'config')
-    
-    auto_width('src_acc_multi.xlsx')
+    # get data from all json to excel/csv.
+    for entry in files:
+        if entry.path.endswith('.json') and entry.is_file():
+            # all .json files analysis.
+            if "all" in args.name:
+                benchmark_data, context_data = analysis_file(entry.path, args.mode)
+            else:
+                # name jsonfile analysis.
+                if os.path.basename(entry) in args.name:
+                    benchmark_data, context_data = analysis_file(entry.path, args.mode)
+            if (benchmark_data is not None) and (context_data is not None):
+                # data into excel
+                with pandas.ExcelWriter('bench_perf.xlsx') as excelfd:
+                    context_data.to_excel(excelfd, sheet_name = 'context')
+                    benchmark_data.to_excel(excelfd, sheet_name = 'benchmarks')
+                # mode='a+': append to existing data
+                context_data.to_csv('bench_perf.csv', index = False, encoding ='utf-8')
+                benchmark_data.to_csv('bench_perf.csv', index = False, encoding ='utf-8', mode = 'a+', header = True)
+    # fix excel row width
+    auto_width('bench_perf.xlsx')
         
 if __name__ == '__main__':
     main()

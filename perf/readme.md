@@ -45,6 +45,7 @@
         python3 perf/common_perf/json_analysis.py
         # get excel
         ```
+        - `a=0; while(($a<20));do ./perf/common_perf/benchmark_test --benchmark_out=$a-benchmark_monitor.json; ((a = $a+1)); done;`
 ***
 
 ### gperftools.
