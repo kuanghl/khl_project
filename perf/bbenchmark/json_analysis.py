@@ -1,17 +1,14 @@
 import json
 import pandas
-import csv
 import os
 import openpyxl
 import ctypes 
 import argparse
-import sys
 import numpy
 import matplotlib
 import matplotlib.pyplot
 import scipy
 import scipy.stats
-import textwrap
 import platform
 
 
@@ -71,7 +68,7 @@ def read_json(filename: str) -> dict:
 def analysis_file(file, arga):
     print('analysis ' + file)
     data = read_json(file)
-
+    
     # dict to list.
     context = []
     if type(data).__name__=='dict':
@@ -84,7 +81,7 @@ def analysis_file(file, arga):
                     context.append(context_dict)
 
     context_data = pandas.json_normalize(context)
-    print(context_data)
+    # print(context_data)
 
     # cpu caches per cpu.
     if type(data).__name__=='dict':
@@ -114,7 +111,7 @@ def analysis_file(file, arga):
                 }
             ]
             caches_data = pandas.json_normalize(caches)
-            print(caches_data)
+            # print(caches_data)
 
     # system_software_hardware info
     system_sh = [
@@ -140,7 +137,7 @@ def analysis_file(file, arga):
         }
     ]
     system_sh_data = pandas.json_normalize(system_sh)
-    print(system_sh_data)
+    # print(system_sh_data)
 
     # hardware info
     hardware = [
@@ -158,53 +155,71 @@ def analysis_file(file, arga):
         }
     ]
     hardware_data = pandas.json_normalize(hardware)
-    print(hardware_data)
+    # print(hardware_data)
+
+    # link c/c++ lib .so/.a
+    perfinfo = ctypes.cdll.LoadLibrary(os.path.dirname(__file__) + "/libperfinfo.so")
+
+    # c string format transfer to python string
+    perfinfo.getPlatform.restype = ctypes.c_char_p
+    perfinfo.getMpulib.restype = ctypes.c_char_p
+    perfinfo.getMps.restype = ctypes.c_char_p
+    perfinfo.getDaemon.restype = ctypes.c_char_p
 
     # config info
     config = [
         {
             "name": 'platform',
-            "parameter": 'RPP_ASIC'
+            "parameter": perfinfo.getPlatform().decode("utf-8")
         },
         {
             "name": 'mpulib',
-            "parameter": 'on'
+            "parameter": perfinfo.getMpulib().decode("utf-8")
         },
         {
             "name": 'mps',
-            "parameter": 'on'
+            "parameter": perfinfo.getMps().decode("utf-8")
         },
         {
             "name": 'daemon',
-            "parameter": 'off'
+            "parameter": perfinfo.getDaemon().decode("utf-8")
         },
         {
             "name": 'loglevel',
-            "parameter": 3
+            "parameter": perfinfo.getLoglevel()
         }
     ]
     config_data = pandas.json_normalize(config)
-    print(config_data)
+    # print(config_data)
     
     # filt key for dict.
     if type(data).__name__=='dict':
         if 'benchmarks' in data.keys():
             benchmark = data['benchmarks']
+            for c in benchmark:
+                time_unit = c['time_unit']
+                c['cpu_time' + '(' + time_unit + ')'] = c.pop('cpu_time')
+                c['real_time' + '(' + time_unit + ')'] = c.pop('real_time')
             benchmark_data = pandas.json_normalize(benchmark)
+            # print(benchmark_data)
             host_data = pandas.concat([context_data, system_sh_data, caches_data], axis = 0)
             host_data.reset_index(drop=True, inplace=True)
-            print(host_data)
+            # print(host_data)
             perf_env_data = pandas.concat([hardware_data, host_data, config_data], keys = ['hardware_info', 'host_info', 'config_info'], names=['Class','Index'], axis = 0)
             print(perf_env_data)
             if 'simple' in arga:
-                benchmark_filt = ['name', 'family_index', 'real_time', 'cpu_time', 'iterations']
+                benchmark_filt = ['name', 'family_index', 'real_time' + '(' + time_unit + ')', 'cpu_time' + '(' + time_unit + ')', 'iterations']
                 print(benchmark_data[benchmark_filt])
                 return benchmark_data[benchmark_filt], perf_env_data
             elif 'all' in arga:
                 print(benchmark_data)
                 return benchmark_data, perf_env_data
             else:
-                print(benchmark_data[benchmark_filt])
+                if 'cpu_time' in arga:
+                    arga[arga.index('cpu_time')] = 'cpu_time' + '(' + time_unit + ')'
+                if 'real_time' in arga:
+                    arga[arga.index('real_time')] = 'real_time' + '(' + time_unit + ')'
+                print(benchmark_data[arga])
                 return benchmark_data[arga], perf_env_data
     return None, None
 
@@ -333,7 +348,7 @@ def auto_width(filename):
             # 获取当前列最大宽度
             collen = df[col].apply(lambda x :len(str(x).encode())).max()
             # 设置列宽为最大长度比例
-            ws.column_dimensions[letter].width = collen * 1.5
+            ws.column_dimensions[letter].width = collen * 1.2
     wb.save(filename)
 
 def main():
@@ -351,7 +366,11 @@ def main():
         for entry in files:
            if entry.path.endswith('.json') and entry.is_file(): 
                 try:
-                    analysis_files(entry.path, plots_data, plot)
+                    if "all" in args.name:
+                        analysis_files(entry.path, plots_data, plot)
+                    else:
+                        if os.path.basename(entry) in args.name:
+                            analysis_files(entry.path, plots_data, plot)
                 except:
                     print(entry.path + ':Error can not analysis data, please check the .json format...')
         benchmarks_plots[plot] = plots_data
@@ -384,6 +403,7 @@ def main():
                     # figure files name
                     matplotlib.pyplot.ylabel(plot)
                     matplotlib.pyplot.xlabel('sample#')
+                    # print(a.split('/')[0])
                     matplotlib.pyplot.title(a.replace('Factorial_Fixture/', ''), color='blue', fontstyle='italic', loc ='right')
                     figurename = '{}-{}.png'.format(plot, a.replace('/', '-').replace('Factorial_Fixture', ''))
                     matplotlib.pyplot.legend()
@@ -408,14 +428,19 @@ def main():
                     benchmark_data, context_data = analysis_file(entry.path, args.mode)
             if (benchmark_data is not None) and (context_data is not None):
                 # data into excel
-                with pandas.ExcelWriter('bench_perf.xlsx') as excelfd:
+                excelpath = os.path.join(args.output, 'excel/' + os.path.basename(entry).split('.')[0] + '.xlsx')
+                is_dir(excelpath)
+                with pandas.ExcelWriter(excelpath) as excelfd:
                     context_data.to_excel(excelfd, sheet_name = 'context')
-                    benchmark_data.to_excel(excelfd, sheet_name = 'benchmarks')
+                    benchmark_data.to_excel(excelfd, sheet_name = 'benchmarks', index=False)
+                # fix excel row width
+                auto_width(excelpath)
+                csvpath = os.path.join(args.output, 'csv/' + os.path.basename(entry).split('.')[0] + '.csv')
+                is_dir(csvpath)
                 # mode='a+': append to existing data
-                context_data.to_csv('bench_perf.csv', index = False, encoding ='utf-8')
-                benchmark_data.to_csv('bench_perf.csv', index = False, encoding ='utf-8', mode = 'a+', header = True)
-    # fix excel row width
-    auto_width('bench_perf.xlsx')
+                context_data.to_csv(csvpath, index = False, encoding ='utf-8')
+                benchmark_data.to_csv(csvpath, index = False, encoding ='utf-8', mode = 'a+', header = True)
+    
         
 if __name__ == '__main__':
     main()
