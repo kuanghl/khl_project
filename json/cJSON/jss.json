@@ -1,0 +1,20 @@
+{
+	"age":	20,
+	"interest":	{
+		"basketball":	"姚明"
+	},
+	"color":	["red"],
+	"like":	[{
+			"game":	"中国象棋",
+			"price":	99.900000
+		}],
+	"education":	[["小学六年级", "初中初三"]],
+	"languages":	{
+		"serialOne":	{
+			"language":	"粤语",
+			"grade":	9
+		}
+	},
+	"vip":	false,
+	"address":	null
+}

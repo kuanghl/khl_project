@@ -30,6 +30,7 @@ def cmd_inter():
     parser.add_argument('-s', '--select', help="Select the output files from csv/xlsx/png.", default=["csv", "xlsx", "png"], nargs="*")
     parser.add_argument('-n', '--name', help="Need analysis .json files name to excel.", default=["all"], nargs="*")
     parser.add_argument('-p', '--plot', help="From all .json files, plot term only suport cpu_time/real_time now.", default=["cpu_time", "real_time"], nargs="*")
+    parser.add_argument('-f', '--apip', help="Point api with different parameters to get .png files.", default=["yes"])
 
     # 初步解析参数命令
     args = parser.parse_args()
@@ -252,6 +253,22 @@ def analysis_files(file, plots_data, arga):
         else:
             plots_data[b['name']].append(b[arga])
 
+# 针对统一api不同参数的解析
+def  api_analysis_files(file, plots_data, name, arga):
+    print('analysis ' + file)
+    data = read_json(file)
+    for a in data['benchmarks']:
+        if plots_data.get(a['name'].split('/')[1]) is None:
+            if a['name'].split('/')[1] not in name:
+                name.append(a['name'].split('/')[1])
+            plots_data[a['name'].split('/')[1]] = [a[arga]]
+            if len(a['name'].split('/')) > 2:
+                plots_data[a['name'].split('/')[1] + '/p'] = [a['name'].replace(a['name'].split('/')[0]+ '/' + a['name'].split('/')[1] + '/', '')]
+        else:
+            plots_data[a['name'].split('/')[1]].append(a[arga])
+            if len(a['name'].split('/')) > 2:
+                plots_data[a['name'].split('/')[1] + '/p'].append(a['name'].replace(a['name'].split('/')[0]+ '/' + a['name'].split('/')[1] + '/', ''))
+
 
 def smooth(x,window_len=11,window='hanning'):
     # references: https://scipy-cookbook.readthedocs.io/items/SignalSmooth.html
@@ -356,6 +373,52 @@ def name_cut(name):
     return name.replace(name.split('/')[0] + '/', '')
 
 
+def plot_2d(x_data, y_data, arga, output, name):
+    fig = matplotlib.pyplot.figure(figsize=(16, 9))
+    ax = fig.add_subplot()
+    if len(y_data) > 1: 
+        # get the same test items data 
+        y_raw_val = y_data
+        x_raw_val  = x_data
+        if x_raw_val is None:
+            x_raw_val = range(0, len(numpy.arange(0, len(y_raw_val), 1)))
+
+        matplotlib.pyplot.plot(numpy.arange(0, len(y_raw_val), 1), y_raw_val, color='darkgray', label="raw_linear")
+        matplotlib.pyplot.scatter(numpy.arange(0, len(y_raw_val), 1), y_raw_val, color='black', label="raw_values", s=12)
+        
+        if len(y_raw_val) > 8:
+            # 1D data smooth
+            smoothed_val = smooth(numpy.array(y_raw_val), 8)
+            matplotlib.pyplot.plot(smoothed_val, '-b', label="smoothed_values")
+
+        # generate x data step = 1, min = 0, max = strlen(raw_val)
+        x_vals  = numpy.arange(0, len(y_raw_val), 1)
+        y_vals  = y_raw_val
+        # Least Squares Fitting
+        model   = numpy.polyfit(x_vals, y_vals, 1)
+        predict = numpy.poly1d(model)
+        lrx     = range(0, len(x_vals))
+        lry     = predict(lrx)
+        matplotlib.pyplot.plot(lry, 'tab:orange', label="fit_linear")
+
+        #
+        matplotlib.pyplot.xticks(numpy.arange(0, len(y_raw_val)), labels=x_raw_val, color='navy', rotation=45)
+        ax.xaxis.set_major_locator(matplotlib.ticker.MultipleLocator(len(y_raw_val)/40))
+
+        # figure files name
+        matplotlib.pyplot.ylabel(arga)
+        matplotlib.pyplot.xlabel('sample#')
+        # print(a.split('/')[0])
+        matplotlib.pyplot.title(name, color='blue', fontstyle='italic', loc ='right')
+        figurename = '{}-{}.png'.format(arga, name.replace('/', '-').replace(':', ''))
+        matplotlib.pyplot.legend()
+        matplotlib.pyplot.tight_layout()
+        figurepath = os.path.join(output, 'figure/' + figurename)
+        is_dir(figurepath)
+        matplotlib.pyplot.savefig(figurepath)
+        matplotlib.pyplot.clf()
+        matplotlib.pyplot.close() 
+
 def main():
     # cmd
     args = cmd_inter()
@@ -366,58 +429,56 @@ def main():
     # get data from all json to plot.
     plots = args.plot
     benchmarks_plots = {}
+    api_plots = {}
+    api_names = []
     for plot in  plots:
         plots_data = {}
+        api_data = {}
         for entry in files:
            if entry.path.endswith('.json') and entry.is_file(): 
                 try:
                     if "all" in args.name:
+                        if args.apip == 'yes':
+                            api_analysis_files(entry.path, api_data, api_names, plot)
                         analysis_files(entry.path, plots_data, plot)
                     else:
                         if os.path.basename(entry) in args.name:
+                            if args.apip == 'yes':
+                                api_analysis_files(entry.path, api_data, api_names, plot)
                             analysis_files(entry.path, plots_data, plot)
                 except:
                     print(entry.path + ':Error can not analysis data, please check the .json format...')
         benchmarks_plots[plot] = plots_data
+        api_plots[plot] = api_data
         if (plot == 'cpu_time' or plot == 'real_time') and ('png' in args.select):
             # date to plot
             for a in benchmarks_plots[plot]:
-                #Avoiding individual data errors
-                if len(benchmarks_plots[plot][a]) > 1: 
-                    # get the same test items data 
-                    y_raw_val = benchmarks_plots[plot][a]
-                    x_raw_val  = range(0, len(numpy.arange(0, len(y_raw_val), 1)))
-                    matplotlib.pyplot.plot(x_raw_val, y_raw_val, color='darkgray', label="raw_linear")
-                    matplotlib.pyplot.scatter(x_raw_val, y_raw_val, color='black', label="raw_values")
-                    
-                    if len(benchmarks_plots[plot][a]) > 8:
-                        # 1D data smooth
-                        smoothed_val = smooth(numpy.array(y_raw_val), 8)
-                        matplotlib.pyplot.plot(x_raw_val, smoothed_val, '-b', label="smoothed_values")
+                y_raw_val = benchmarks_plots[plot][a]
+                x_raw_val  = range(0, len(numpy.arange(0, len(y_raw_val), 1)))
+                plot_2d(x_raw_val, y_raw_val, plot, args.output, name_cut(a))
+    
+    if args.apip == 'yes':
+        if 'png' in args.select:
+            # date to plot
+            for b in api_names:
+                if 'cpu_time' in args.plot:
+                    y_raw_val = api_plots['cpu_time'][b]
+                    if api_plots['cpu_time'].get(b + '/p') is None:
+                        x_raw_val = None
+                    else:
+                        x_raw_val = api_plots['cpu_time'][b + '/p']
+                        print(x_raw_val)
+                    plot_2d(x_raw_val, y_raw_val, 'cpu_time', args.output, b)
 
-                    # generate x data step = 1, min = 0, max = strlen(raw_val)
-                    x_vals  = numpy.arange(0, len(y_raw_val), 1)
-                    y_vals  = y_raw_val
-                    # Least Squares Fitting
-                    model   = numpy.polyfit(x_vals, y_vals, 1)
-                    predict = numpy.poly1d(model)
-                    lrx     = range(0, len(x_vals))
-                    lry     = predict(lrx)
-                    matplotlib.pyplot.plot(lrx, lry, 'tab:orange', label="fit_linear")
+                if 'real_time' in args.plot:
+                    y_raw_val = api_plots['real_time'][b]
+                    if api_plots['real_time'].get(b + '/p') is None:
+                        x_raw_val = None
+                    else:
+                        x_raw_val = api_plots['real_time'][b + '/p']
+                        print(x_raw_val)
+                    plot_2d(x_raw_val, y_raw_val, 'real_time', args.output, b)
 
-                    # figure files name
-                    matplotlib.pyplot.ylabel(plot)
-                    matplotlib.pyplot.xlabel('sample#')
-                    # print(a.split('/')[0])
-                    matplotlib.pyplot.title(name_cut(a), color='blue', fontstyle='italic', loc ='right')
-                    figurename = '{}-{}.png'.format(plot, name_cut(a).replace('/', '-').replace(':', ''))
-                    matplotlib.pyplot.legend()
-                    matplotlib.pyplot.tight_layout()
-                    figurepath = os.path.join(args.output, 'figure/' + figurename)
-                    is_dir(figurepath)
-                    matplotlib.pyplot.savefig(figurepath)
-                    matplotlib.pyplot.clf()
-                    matplotlib.pyplot.close()
     # # get list data
     # print(pandas.json_normalize(benchmarks_plots))
 

@@ -239,6 +239,8 @@ BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teard
 BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
 BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
 BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}, {11, 18}});
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
 /* BarTest is now registered */
 
 #else
