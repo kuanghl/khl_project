@@ -351,6 +351,11 @@ def auto_width(filename):
             ws.column_dimensions[letter].width = collen * 1.2
     wb.save(filename)
 
+
+def name_cut(name):
+    return name.replace(name.split('/')[0] + '/', '')
+
+
 def main():
     # cmd
     args = cmd_inter()
@@ -404,8 +409,8 @@ def main():
                     matplotlib.pyplot.ylabel(plot)
                     matplotlib.pyplot.xlabel('sample#')
                     # print(a.split('/')[0])
-                    matplotlib.pyplot.title(a.replace('Factorial_Fixture/', ''), color='blue', fontstyle='italic', loc ='right')
-                    figurename = '{}-{}.png'.format(plot, a.replace('/', '-').replace('Factorial_Fixture', ''))
+                    matplotlib.pyplot.title(name_cut(a), color='blue', fontstyle='italic', loc ='right')
+                    figurename = '{}-{}.png'.format(plot, name_cut(a).replace('/', '-').replace(':', ''))
                     matplotlib.pyplot.legend()
                     matplotlib.pyplot.tight_layout()
                     figurepath = os.path.join(args.output, 'figure/' + figurename)

@@ -33,19 +33,24 @@
               help
       ```
   - [ ] Library was built as DEBUG. Timings may be affected.
-        ```
         
-        ```
+      ```
+      not support
+      ```
   - [ ] json to excel:
-        ```
-        pip install -r perf/bbenchmark/requirements.txt
-        cd build
-        cmake .. && make -j16 && sudo make install
-        ./perf/common_perf/benchmark_test --benchmark_out=src_acc_multi.json
-        python3 perf/common_perf/json_analysis.py
-        # get excel
-        ```
-        - `a=0; while(($a<20));do ./perf/common_perf/benchmark_test --benchmark_out=$a-benchmark_monitor.json; ((a = $a+1)); done;`
+        
+      ```
+      sudo apt-get install llvm-11 && export PATH=$PATH:/usr/lib/llvm-11/bin
+      pip install -r perf/bbenchmark/requirements.txt
+      cd build
+      cmake .. && make -j16 && sudo make install
+      ./perf/common_perf/benchmark_test --benchmark_out=src_acc_multi.json
+      python3 perf/common_perf/json_analysis.py
+      # get excel
+      mkdir json
+      a=0; while(($a<20));do ./perf/common_perf/benchmark_test --benchmark_out=json/$a-benchmark_monitor.json; ((a = $a+1)); done;
+      python3 perf/common_perf/json_analysis.py -i json/ -o json_out/
+      ```
 ***
 
 ### gperftools.
