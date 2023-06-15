@@ -31,11 +31,11 @@ SET(CMAKE_CXX_FLAGS_DEBUG "-g")
 
 # 给项目命名,解决CMP0048
 IF(CMAKE_VERSION VERSION_LESS 3.0)
-  PROJECT(khl_project)
+  PROJECT(kusr_code)
   SET(PROJECT_VERSION 0)
 ELSE()
   CMAKE_POLICY(SET CMP0048 NEW)
-  PROJECT(khl_project)
+  PROJECT(kusr_code)
 ENDIF()
 
 # 设置工程版本号
@@ -46,6 +46,14 @@ SET(${PROJECT_NAME}_VERSION_MINOR 0)
 
 # 指定头文件目录
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+
+# doxygen
+FIND_PACKAGE(Doxygen)
+include(UseDoxygen OPTIONAL)
+
+# 设置安装位置
+SET(CMAKE_INSTALL_PREFIX "/usr/local/kusr" CACHE STRING "" FORCE)
+
 
 # 编译条件设置,让程序按照cmake设置编译条件编译
 # case 0
@@ -88,6 +96,11 @@ ENDIF()
 ADD_SUBDIRECTORY(log)
 SET(LINK_LIB ${LINK_LIB} log)
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/log/simple_log)
+
+# 设置子目录并构建，追加变量LINK_LIB变量为cJSON PUBLIC动态库json,指定头文件地址暴露
+ADD_SUBDIRECTORY(json)
+SET(LINK_LIB ${LINK_LIB} json)
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/json/cJSON)
 
 # 追加LINK_LIB变量为gcc_s,设置子目录并构建,追加LINK_LIB变量为libuv PUBLIC静态库uv_a,指定头文件地址进行暴露
 SET(LINK_LIB ${LINK_LIB} gcc_s)

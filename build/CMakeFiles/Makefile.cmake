@@ -47,6 +47,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../fun/primary/socket/tcp/CMakeLists.txt"
   "../fun/primary/socket/udp/CMakeLists.txt"
   "../fun/primary/thread/CMakeLists.txt"
+  "../json/CMakeLists.txt"
+  "../json/cJSON/CMakeLists.txt"
   "../lib/CMakeLists.txt"
   "../lib/mpu0/CMakeLists.txt"
   "../log/CMakeLists.txt"
@@ -125,6 +127,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.18/Modules/Compiler/GNU.cmake"
   "/usr/local/share/cmake-3.18/Modules/DartConfiguration.tcl.in"
   "/usr/local/share/cmake-3.18/Modules/FindBISON.cmake"
+  "/usr/local/share/cmake-3.18/Modules/FindDoxygen.cmake"
   "/usr/local/share/cmake-3.18/Modules/FindFLEX.cmake"
   "/usr/local/share/cmake-3.18/Modules/FindGit.cmake"
   "/usr/local/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake"
@@ -154,6 +157,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "log/CMakeFiles/CMakeDirectoryInformation.cmake"
   "log/simple_log/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "json/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "json/cJSON/CMakeFiles/CMakeDirectoryInformation.cmake"
   "3rd/CMakeFiles/CMakeDirectoryInformation.cmake"
   "3rd/libuv/DartConfiguration.tcl"
   "3rd/libuv/libuv-static.pc"
@@ -239,6 +244,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
+  "json/cJSON/CMakeFiles/json.dir/DependInfo.cmake"
   "3rd/libuv/CMakeFiles/NightlyMemCheck.dir/DependInfo.cmake"
   "3rd/libuv/CMakeFiles/NightlyTest.dir/DependInfo.cmake"
   "3rd/libuv/CMakeFiles/ContinuousConfigure.dir/DependInfo.cmake"

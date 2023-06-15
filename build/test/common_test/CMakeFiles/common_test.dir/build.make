@@ -118,6 +118,7 @@ test/common_test/common_test: lib/libgtest_main.a
 test/common_test/common_test: lib/libgmock.a
 test/common_test/common_test: lib/libgmock_main.a
 test/common_test/common_test: log/simple_log/liblog.so.SOVERSION
+test/common_test/common_test: json/cJSON/libjson.so
 test/common_test/common_test: 3rd/libuv/libuv.a
 test/common_test/common_test: lib/libgmock.a
 test/common_test/common_test: lib/libgtest.a

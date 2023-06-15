@@ -99,6 +99,7 @@ codetest_EXTERNAL_OBJECTS =
 bin/codetest: src/codetest/CMakeFiles/codetest.dir/main.c.o
 bin/codetest: src/codetest/CMakeFiles/codetest.dir/build.make
 bin/codetest: log/simple_log/liblog.so.SOVERSION
+bin/codetest: json/cJSON/libjson.so
 bin/codetest: 3rd/libuv/libuv.a
 bin/codetest: src/codetest/CMakeFiles/codetest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ../../bin/codetest"

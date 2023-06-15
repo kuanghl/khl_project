@@ -211,6 +211,19 @@ log/fast:
 .PHONY : log/fast
 
 #=============================================================================
+# Target rules for targets named json
+
+# Build rule for target.
+json: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 json
+.PHONY : json
+
+# fast build rule for target.
+json/fast:
+	$(MAKE) $(MAKESILENT) -f json/cJSON/CMakeFiles/json.dir/build.make json/cJSON/CMakeFiles/json.dir/build
+.PHONY : json/fast
+
+#=============================================================================
 # Target rules for targets named NightlyMemCheck
 
 # Build rule for target.
@@ -2979,6 +2992,7 @@ help:
 	@echo "... heap_profiler_debug_unittest"
 	@echo "... heap_profiler_unittest"
 	@echo "... ioctl"
+	@echo "... json"
 	@echo "... kill_process"
 	@echo "... libuv_async"
 	@echo "... libuv_client"

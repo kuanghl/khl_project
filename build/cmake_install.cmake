@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local/llvm")
+  set(CMAKE_INSTALL_PREFIX "/usr/local/kusr")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/cmake_install.cmake")
+  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/json/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/perf/cmake_install.cmake")

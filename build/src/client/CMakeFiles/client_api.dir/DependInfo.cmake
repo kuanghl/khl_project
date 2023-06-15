@@ -22,6 +22,7 @@ set(CMAKE_TARGET_DEFINITIONS_C
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   "../log/simple_log"
+  "../json/cJSON"
   "../3rd/libuv/include"
   "../src/client/runtime_api_include"
   "src/client"
@@ -43,6 +44,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "../log/simple_log"
+  "../json/cJSON"
   "../3rd/libuv/include"
   "../src/client/runtime_api_include"
   "src/client"
@@ -51,6 +53,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
+  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/json/cJSON/CMakeFiles/json.dir/DependInfo.cmake"
   "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/libuv/CMakeFiles/uv_a.dir/DependInfo.cmake"
   )
 

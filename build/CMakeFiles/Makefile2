@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = /home/kuanghongliang/Documents/vscode_projects/kusr_code/buil
 
 # The main recursive "all" target.
 all: log/all
+all: json/all
 all: 3rd/all
 all: test/all
 all: perf/all
@@ -86,6 +87,7 @@ all: tools/all
 
 # The main recursive "preinstall" target.
 preinstall: log/preinstall
+preinstall: json/preinstall
 preinstall: 3rd/preinstall
 preinstall: test/preinstall
 preinstall: perf/preinstall
@@ -99,6 +101,7 @@ preinstall: tools/preinstall
 
 # The main recursive "clean" target.
 clean: log/clean
+clean: json/clean
 clean: 3rd/clean
 clean: test/clean
 clean: perf/clean
@@ -936,6 +939,42 @@ fun/primary/thread/clean: fun/primary/thread/CMakeFiles/thread_cancel.dir/clean
 .PHONY : fun/primary/thread/clean
 
 #=============================================================================
+# Directory level rules for directory json
+
+# Recursive "all" directory target.
+json/all: json/cJSON/all
+
+.PHONY : json/all
+
+# Recursive "preinstall" directory target.
+json/preinstall: json/cJSON/preinstall
+
+.PHONY : json/preinstall
+
+# Recursive "clean" directory target.
+json/clean: json/cJSON/clean
+
+.PHONY : json/clean
+
+#=============================================================================
+# Directory level rules for directory json/cJSON
+
+# Recursive "all" directory target.
+json/cJSON/all: json/cJSON/CMakeFiles/json.dir/all
+
+.PHONY : json/cJSON/all
+
+# Recursive "preinstall" directory target.
+json/cJSON/preinstall:
+
+.PHONY : json/cJSON/preinstall
+
+# Recursive "clean" directory target.
+json/cJSON/clean: json/cJSON/CMakeFiles/json.dir/clean
+
+.PHONY : json/cJSON/clean
+
+#=============================================================================
 # Directory level rules for directory lib
 
 # Recursive "all" directory target.
@@ -1607,12 +1646,12 @@ tools/clean:
 log/simple_log/CMakeFiles/log.dir/all:
 	$(MAKE) $(MAKESILENT) -f log/simple_log/CMakeFiles/log.dir/build.make log/simple_log/CMakeFiles/log.dir/depend
 	$(MAKE) $(MAKESILENT) -f log/simple_log/CMakeFiles/log.dir/build.make log/simple_log/CMakeFiles/log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=25 "Built target log"
 .PHONY : log/simple_log/CMakeFiles/log.dir/all
 
 # Build rule for subdir invocation for target.
 log/simple_log/CMakeFiles/log.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 log/simple_log/CMakeFiles/log.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : log/simple_log/CMakeFiles/log.dir/rule
@@ -1626,6 +1665,33 @@ log: log/simple_log/CMakeFiles/log.dir/rule
 log/simple_log/CMakeFiles/log.dir/clean:
 	$(MAKE) $(MAKESILENT) -f log/simple_log/CMakeFiles/log.dir/build.make log/simple_log/CMakeFiles/log.dir/clean
 .PHONY : log/simple_log/CMakeFiles/log.dir/clean
+
+#=============================================================================
+# Target rules for target json/cJSON/CMakeFiles/json.dir
+
+# All Build rule for target.
+json/cJSON/CMakeFiles/json.dir/all:
+	$(MAKE) $(MAKESILENT) -f json/cJSON/CMakeFiles/json.dir/build.make json/cJSON/CMakeFiles/json.dir/depend
+	$(MAKE) $(MAKESILENT) -f json/cJSON/CMakeFiles/json.dir/build.make json/cJSON/CMakeFiles/json.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target json"
+.PHONY : json/cJSON/CMakeFiles/json.dir/all
+
+# Build rule for subdir invocation for target.
+json/cJSON/CMakeFiles/json.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 json/cJSON/CMakeFiles/json.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+.PHONY : json/cJSON/CMakeFiles/json.dir/rule
+
+# Convenience name for target.
+json: json/cJSON/CMakeFiles/json.dir/rule
+
+.PHONY : json
+
+# clean rule for target.
+json/cJSON/CMakeFiles/json.dir/clean:
+	$(MAKE) $(MAKESILENT) -f json/cJSON/CMakeFiles/json.dir/build.make json/cJSON/CMakeFiles/json.dir/clean
+.PHONY : json/cJSON/CMakeFiles/json.dir/clean
 
 #=============================================================================
 # Target rules for target 3rd/libuv/CMakeFiles/NightlyMemCheck.dir
@@ -2442,6 +2508,7 @@ uv: 3rd/libuv/CMakeFiles/uv.dir/rule
 
 # All Build rule for target.
 test/common_test/CMakeFiles/common_test.dir/all: log/simple_log/CMakeFiles/log.dir/all
+test/common_test/CMakeFiles/common_test.dir/all: json/cJSON/CMakeFiles/json.dir/all
 test/common_test/CMakeFiles/common_test.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 test/common_test/CMakeFiles/common_test.dir/all: test/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 test/common_test/CMakeFiles/common_test.dir/all: test/googletest/googlemock/CMakeFiles/gmock.dir/all
@@ -2454,7 +2521,7 @@ test/common_test/CMakeFiles/common_test.dir/all: test/googletest/googletest/CMak
 
 # Build rule for subdir invocation for target.
 test/common_test/CMakeFiles/common_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/common_test/CMakeFiles/common_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : test/common_test/CMakeFiles/common_test.dir/rule
@@ -2482,7 +2549,7 @@ test/googletest/googlemock/CMakeFiles/gmock_main.dir/all: test/googletest/google
 
 # Build rule for subdir invocation for target.
 test/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : test/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
@@ -2509,7 +2576,7 @@ test/googletest/googlemock/CMakeFiles/gmock.dir/all: test/googletest/googletest/
 
 # Build rule for subdir invocation for target.
 test/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/googletest/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : test/googletest/googlemock/CMakeFiles/gmock.dir/rule
@@ -2536,7 +2603,7 @@ test/googletest/googletest/CMakeFiles/gtest_main.dir/all: test/googletest/google
 
 # Build rule for subdir invocation for target.
 test/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/googletest/googletest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : test/googletest/googletest/CMakeFiles/gtest_main.dir/rule
@@ -2558,12 +2625,12 @@ test/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
 test/googletest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f test/googletest/googletest/CMakeFiles/gtest.dir/build.make test/googletest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/googletest/googletest/CMakeFiles/gtest.dir/build.make test/googletest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=19 "Built target gtest"
 .PHONY : test/googletest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 test/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : test/googletest/googletest/CMakeFiles/gtest.dir/rule
@@ -2585,12 +2652,12 @@ test/googletest/googletest/CMakeFiles/gtest.dir/clean:
 perf/common_perf/CMakeFiles/perfinfo.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/perfinfo.dir/build.make perf/common_perf/CMakeFiles/perfinfo.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/perfinfo.dir/build.make perf/common_perf/CMakeFiles/perfinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=37 "Built target perfinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target perfinfo"
 .PHONY : perf/common_perf/CMakeFiles/perfinfo.dir/all
 
 # Build rule for subdir invocation for target.
 perf/common_perf/CMakeFiles/perfinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/common_perf/CMakeFiles/perfinfo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/common_perf/CMakeFiles/perfinfo.dir/rule
@@ -2612,12 +2679,12 @@ perf/common_perf/CMakeFiles/perfinfo.dir/clean:
 perf/common_perf/CMakeFiles/perf_get_info.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/perf_get_info.dir/build.make perf/common_perf/CMakeFiles/perf_get_info.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/perf_get_info.dir/build.make perf/common_perf/CMakeFiles/perf_get_info.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target perf_get_info"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=37 "Built target perf_get_info"
 .PHONY : perf/common_perf/CMakeFiles/perf_get_info.dir/all
 
 # Build rule for subdir invocation for target.
 perf/common_perf/CMakeFiles/perf_get_info.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/common_perf/CMakeFiles/perf_get_info.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/common_perf/CMakeFiles/perf_get_info.dir/rule
@@ -2637,16 +2704,17 @@ perf/common_perf/CMakeFiles/perf_get_info.dir/clean:
 
 # All Build rule for target.
 perf/common_perf/CMakeFiles/nanobench_test.dir/all: log/simple_log/CMakeFiles/log.dir/all
+perf/common_perf/CMakeFiles/nanobench_test.dir/all: json/cJSON/CMakeFiles/json.dir/all
 perf/common_perf/CMakeFiles/nanobench_test.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 perf/common_perf/CMakeFiles/nanobench_test.dir/all: perf/nanobench/CMakeFiles/nanobench.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/nanobench_test.dir/build.make perf/common_perf/CMakeFiles/nanobench_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/nanobench_test.dir/build.make perf/common_perf/CMakeFiles/nanobench_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=35 "Built target nanobench_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target nanobench_test"
 .PHONY : perf/common_perf/CMakeFiles/nanobench_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/common_perf/CMakeFiles/nanobench_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/common_perf/CMakeFiles/nanobench_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/common_perf/CMakeFiles/nanobench_test.dir/rule
@@ -2666,16 +2734,17 @@ perf/common_perf/CMakeFiles/nanobench_test.dir/clean:
 
 # All Build rule for target.
 perf/common_perf/CMakeFiles/gperftools_test.dir/all: log/simple_log/CMakeFiles/log.dir/all
+perf/common_perf/CMakeFiles/gperftools_test.dir/all: json/cJSON/CMakeFiles/json.dir/all
 perf/common_perf/CMakeFiles/gperftools_test.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 perf/common_perf/CMakeFiles/gperftools_test.dir/all: perf/gperftools/CMakeFiles/profiler.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/gperftools_test.dir/build.make perf/common_perf/CMakeFiles/gperftools_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/gperftools_test.dir/build.make perf/common_perf/CMakeFiles/gperftools_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=19 "Built target gperftools_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target gperftools_test"
 .PHONY : perf/common_perf/CMakeFiles/gperftools_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/common_perf/CMakeFiles/gperftools_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/common_perf/CMakeFiles/gperftools_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/common_perf/CMakeFiles/gperftools_test.dir/rule
@@ -2695,6 +2764,7 @@ perf/common_perf/CMakeFiles/gperftools_test.dir/clean:
 
 # All Build rule for target.
 perf/common_perf/CMakeFiles/benchmark_test.dir/all: log/simple_log/CMakeFiles/log.dir/all
+perf/common_perf/CMakeFiles/benchmark_test.dir/all: json/cJSON/CMakeFiles/json.dir/all
 perf/common_perf/CMakeFiles/benchmark_test.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 perf/common_perf/CMakeFiles/benchmark_test.dir/all: perf/benchmark/src/CMakeFiles/benchmark_main.dir/all
 perf/common_perf/CMakeFiles/benchmark_test.dir/all: perf/benchmark/src/CMakeFiles/benchmark.dir/all
@@ -2705,7 +2775,7 @@ perf/common_perf/CMakeFiles/benchmark_test.dir/all: perf/benchmark/src/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/common_perf/CMakeFiles/benchmark_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/common_perf/CMakeFiles/benchmark_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/common_perf/CMakeFiles/benchmark_test.dir/rule
@@ -2786,7 +2856,7 @@ perf/gperftools/CMakeFiles/tcmalloc_and_profiler_unittest.dir/all: perf/gperftoo
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_and_profiler_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_and_profiler_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_and_profiler_unittest.dir/rule
@@ -2818,7 +2888,7 @@ perf/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/all: perf/gperftools
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/rule
@@ -2849,7 +2919,7 @@ perf/gperftools/CMakeFiles/profiler3_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler3_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler3_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler3_unittest.dir/rule
@@ -2876,12 +2946,12 @@ perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/all: perf/gperftools/CMakeF
 perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=64,65 "Built target tcmalloc_and_profiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=65 "Built target tcmalloc_and_profiler"
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/rule
@@ -2912,7 +2982,7 @@ perf/gperftools/CMakeFiles/profiler2_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler2_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler2_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler2_unittest.dir/rule
@@ -2943,7 +3013,7 @@ perf/gperftools/CMakeFiles/profile_handler_unittest.dir/all: perf/gperftools/CMa
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profile_handler_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profile_handler_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profile_handler_unittest.dir/rule
@@ -3002,7 +3072,7 @@ perf/gperftools/CMakeFiles/profiler.dir/all: perf/gperftools/CMakeFiles/sysinfo.
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler.dir/rule
@@ -3030,7 +3100,7 @@ perf/gperftools/CMakeFiles/sampler_debug_test.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/sampler_debug_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/sampler_debug_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/sampler_debug_test.dir/rule
@@ -3058,7 +3128,7 @@ perf/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/rule
@@ -3090,7 +3160,7 @@ perf/gperftools/CMakeFiles/tcmalloc_debug_static.dir/all: perf/gperftools/CMakeF
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_debug_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_debug_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_debug_static.dir/rule
@@ -3122,7 +3192,7 @@ perf/gperftools/CMakeFiles/tcmalloc_debug.dir/all: perf/gperftools/CMakeFiles/sy
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_debug.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_debug.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_debug.dir/rule
@@ -3155,7 +3225,7 @@ perf/gperftools/CMakeFiles/heap_checker_unittest.dir/all: perf/gperftools/CMakeF
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/heap_checker_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/heap_checker_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/heap_checker_unittest.dir/rule
@@ -3182,7 +3252,7 @@ perf/gperftools/CMakeFiles/memalign_unittest.dir/all: perf/gperftools/CMakeFiles
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/memalign_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/memalign_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/memalign_unittest.dir/rule
@@ -3209,7 +3279,7 @@ perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/rule
@@ -3236,7 +3306,7 @@ perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/all: perf/gperftools/CMake
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/rule
@@ -3263,7 +3333,7 @@ perf/gperftools/CMakeFiles/malloc_hook_test.dir/all: perf/gperftools/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_hook_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_hook_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_hook_test.dir/rule
@@ -3296,7 +3366,7 @@ perf/gperftools/CMakeFiles/simple_compat_test.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/simple_compat_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/simple_compat_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/simple_compat_test.dir/rule
@@ -3323,7 +3393,7 @@ perf/gperftools/CMakeFiles/frag_unittest.dir/all: perf/gperftools/CMakeFiles/tcm
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/frag_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/frag_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/frag_unittest.dir/rule
@@ -3354,7 +3424,7 @@ perf/gperftools/CMakeFiles/profiledata_unittest.dir/all: perf/gperftools/CMakeFi
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiledata_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiledata_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiledata_unittest.dir/rule
@@ -3387,7 +3457,7 @@ perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/all: perf/gperftools/CMake
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/rule
@@ -3414,7 +3484,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/all: perf/gperfto
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/rule
@@ -3447,7 +3517,7 @@ perf/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/rule
@@ -3480,7 +3550,7 @@ perf/gperftools/CMakeFiles/sampler_test.dir/all: perf/gperftools/CMakeFiles/sysi
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/sampler_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/sampler_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/sampler_test.dir/rule
@@ -3508,7 +3578,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/all: perf/gperftools/CM
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/rule
@@ -3564,7 +3634,7 @@ perf/gperftools/CMakeFiles/atomicops_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/atomicops_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/atomicops_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/atomicops_unittest.dir/rule
@@ -3597,7 +3667,7 @@ perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/all: p
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/rule
@@ -3646,12 +3716,12 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/clean:
 perf/gperftools/CMakeFiles/logging.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/logging.dir/build.make perf/gperftools/CMakeFiles/logging.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/logging.dir/build.make perf/gperftools/CMakeFiles/logging.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=25 "Built target logging"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target logging"
 .PHONY : perf/gperftools/CMakeFiles/logging.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/logging.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/logging.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/logging.dir/rule
@@ -3682,7 +3752,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/rule
@@ -3734,12 +3804,12 @@ perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/all: perf/gperftools/CMa
 perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build.make perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build.make perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target low_level_alloc_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=27 "Built target low_level_alloc_unittest"
 .PHONY : perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/rule
@@ -3766,7 +3836,7 @@ perf/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/all: perf/gperftools
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/rule
@@ -3793,7 +3863,7 @@ perf/gperftools/CMakeFiles/addressmap_unittest.dir/all: perf/gperftools/CMakeFil
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/addressmap_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/addressmap_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/addressmap_unittest.dir/rule
@@ -3824,7 +3894,7 @@ perf/gperftools/CMakeFiles/stacktrace_unittest.dir/all: perf/gperftools/CMakeFil
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/stacktrace_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/stacktrace_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/stacktrace_unittest.dir/rule
@@ -3851,7 +3921,7 @@ perf/gperftools/CMakeFiles/packed_cache_test.dir/all: perf/gperftools/CMakeFiles
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/packed_cache_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/packed_cache_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/packed_cache_test.dir/rule
@@ -3878,7 +3948,7 @@ perf/gperftools/CMakeFiles/thread_dealloc_unittest.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/thread_dealloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/thread_dealloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/thread_dealloc_unittest.dir/rule
@@ -3905,7 +3975,7 @@ perf/gperftools/CMakeFiles/sampling_debug_test.dir/all: perf/gperftools/CMakeFil
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/sampling_debug_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/sampling_debug_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/sampling_debug_test.dir/rule
@@ -3933,7 +4003,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/all: perf/gperfto
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/rule
@@ -3960,7 +4030,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.di
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/rule
@@ -3992,7 +4062,7 @@ perf/gperftools/CMakeFiles/profiler_static.dir/all: perf/gperftools/CMakeFiles/s
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler_static.dir/rule
@@ -4019,7 +4089,7 @@ perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/all: perf/gperftools/CMa
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/rule
@@ -4046,12 +4116,12 @@ perf/gperftools/CMakeFiles/tcmalloc_static.dir/all: perf/gperftools/CMakeFiles/t
 perf/gperftools/CMakeFiles/tcmalloc_static.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_static.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_static.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_static.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=84 "Built target tcmalloc_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=84,85 "Built target tcmalloc_static"
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_static.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_static.dir/rule
@@ -4105,7 +4175,7 @@ perf/gperftools/CMakeFiles/page_heap_test.dir/all: perf/gperftools/CMakeFiles/tc
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/page_heap_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/page_heap_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/page_heap_test.dir/rule
@@ -4132,7 +4202,7 @@ perf/gperftools/CMakeFiles/pagemap_unittest.dir/all: perf/gperftools/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/pagemap_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/pagemap_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/pagemap_unittest.dir/rule
@@ -4181,12 +4251,12 @@ perf/gperftools/CMakeFiles/stacktrace_object.dir/clean:
 perf/gperftools/CMakeFiles/realloc_unittest.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/realloc_unittest.dir/build.make perf/gperftools/CMakeFiles/realloc_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/realloc_unittest.dir/build.make perf/gperftools/CMakeFiles/realloc_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target realloc_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=49 "Built target realloc_unittest"
 .PHONY : perf/gperftools/CMakeFiles/realloc_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/realloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/realloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/realloc_unittest.dir/rule
@@ -4213,7 +4283,7 @@ perf/gperftools/CMakeFiles/stack_trace_table_test.dir/all: perf/gperftools/CMake
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/stack_trace_table_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/stack_trace_table_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/stack_trace_table_test.dir/rule
@@ -4244,7 +4314,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/all: perf/gperftools/CMake
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/rule
@@ -4271,7 +4341,7 @@ perf/gperftools/CMakeFiles/binary_trees_shared.dir/all: perf/gperftools/CMakeFil
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/binary_trees_shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/binary_trees_shared.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/binary_trees_shared.dir/rule
@@ -4302,7 +4372,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/all: perf/gperftool
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/rule
@@ -4333,7 +4403,7 @@ perf/gperftools/CMakeFiles/profiler1_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler1_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler1_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler1_unittest.dir/rule
@@ -4360,7 +4430,7 @@ perf/gperftools/CMakeFiles/system_alloc_unittest.dir/all: perf/gperftools/CMakeF
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/system_alloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/system_alloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/system_alloc_unittest.dir/rule
@@ -4382,12 +4452,12 @@ perf/gperftools/CMakeFiles/system_alloc_unittest.dir/clean:
 perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/build.make perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/build.make perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target malloc_extension_debug_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=29 "Built target malloc_extension_debug_test"
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/rule
@@ -4414,7 +4484,7 @@ perf/gperftools/CMakeFiles/debugallocation_test.dir/all: perf/gperftools/CMakeFi
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/debugallocation_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/debugallocation_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/debugallocation_test.dir/rule
@@ -4445,7 +4515,7 @@ perf/gperftools/CMakeFiles/binary_trees.dir/all: perf/gperftools/CMakeFiles/sysi
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/binary_trees.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/binary_trees.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/binary_trees.dir/rule
@@ -4473,7 +4543,7 @@ perf/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/all: perf/gperftools/
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/rule
@@ -4500,7 +4570,7 @@ perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/rule
@@ -4522,12 +4592,12 @@ perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/clean:
 perf/gperftools/CMakeFiles/run_benchmark.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/run_benchmark.dir/build.make perf/gperftools/CMakeFiles/run_benchmark.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/run_benchmark.dir/build.make perf/gperftools/CMakeFiles/run_benchmark.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=49 "Built target run_benchmark"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target run_benchmark"
 .PHONY : perf/gperftools/CMakeFiles/run_benchmark.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/run_benchmark.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/run_benchmark.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/run_benchmark.dir/rule
@@ -4554,7 +4624,7 @@ perf/gperftools/CMakeFiles/current_allocated_bytes_test.dir/all: perf/gperftools
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/current_allocated_bytes_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/current_allocated_bytes_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/current_allocated_bytes_test.dir/rule
@@ -4581,12 +4651,12 @@ perf/gperftools/CMakeFiles/malloc_bench.dir/all: perf/gperftools/CMakeFiles/run_
 perf/gperftools/CMakeFiles/malloc_bench.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_bench.dir/build.make perf/gperftools/CMakeFiles/malloc_bench.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_bench.dir/build.make perf/gperftools/CMakeFiles/malloc_bench.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=27 "Built target malloc_bench"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target malloc_bench"
 .PHONY : perf/gperftools/CMakeFiles/malloc_bench.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_bench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_bench.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_bench.dir/rule
@@ -4617,7 +4687,7 @@ perf/gperftools/CMakeFiles/profiler4_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler4_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler4_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler4_unittest.dir/rule
@@ -4645,7 +4715,7 @@ perf/gperftools/CMakeFiles/malloc_bench_shared.dir/all: perf/gperftools/CMakeFil
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_bench_shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_bench_shared.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_bench_shared.dir/rule
@@ -4679,7 +4749,7 @@ perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/all: perf/gperftools/CMa
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/rule
@@ -4710,7 +4780,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all: perf/gperftools/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/rule
@@ -4737,12 +4807,12 @@ perf/gperftools/CMakeFiles/tcmalloc.dir/all: perf/gperftools/CMakeFiles/tcmalloc
 perf/gperftools/CMakeFiles/tcmalloc.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc.dir/build.make perf/gperftools/CMakeFiles/tcmalloc.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc.dir/build.make perf/gperftools/CMakeFiles/tcmalloc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=63 "Built target tcmalloc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=63,64 "Built target tcmalloc"
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc.dir/rule
@@ -4802,7 +4872,7 @@ perf/gperftools/CMakeFiles/raw_printer_test.dir/all: perf/gperftools/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/raw_printer_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/raw_printer_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/raw_printer_test.dir/rule
@@ -4830,12 +4900,12 @@ perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/all: perf/gperftools/CMakeFiles
 perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=85 "Built target tcmalloc_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target tcmalloc_unittest"
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/rule
@@ -4862,7 +4932,7 @@ perf/gperftools/CMakeFiles/markidle_unittest.dir/all: perf/gperftools/CMakeFiles
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/markidle_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/markidle_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/markidle_unittest.dir/rule
@@ -4884,12 +4954,12 @@ perf/gperftools/CMakeFiles/markidle_unittest.dir/clean:
 perf/gperftools/CMakeFiles/sysinfo.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/sysinfo.dir/build.make perf/gperftools/CMakeFiles/sysinfo.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/sysinfo.dir/build.make perf/gperftools/CMakeFiles/sysinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=59 "Built target sysinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target sysinfo"
 .PHONY : perf/gperftools/CMakeFiles/sysinfo.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/sysinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/sysinfo.dir/rule
@@ -4924,7 +4994,7 @@ perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/all: perf/gperftools/CMake
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/rule
@@ -4946,12 +5016,12 @@ perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/clean:
 perf/gperftools/CMakeFiles/malloc_extension_test.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_extension_test.dir/build.make perf/gperftools/CMakeFiles/malloc_extension_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_extension_test.dir/build.make perf/gperftools/CMakeFiles/malloc_extension_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=29 "Built target malloc_extension_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target malloc_extension_test"
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_extension_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_extension_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_test.dir/rule
@@ -4984,7 +5054,7 @@ perf/gperftools/CMakeFiles/sampling_test.dir/all: perf/gperftools/CMakeFiles/sys
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/sampling_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/sampling_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/sampling_test.dir/rule
@@ -5006,12 +5076,12 @@ perf/gperftools/CMakeFiles/sampling_test.dir/clean:
 perf/nanobench/CMakeFiles/nanobench.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/nanobench/CMakeFiles/nanobench.dir/build.make perf/nanobench/CMakeFiles/nanobench.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/nanobench/CMakeFiles/nanobench.dir/build.make perf/nanobench/CMakeFiles/nanobench.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target nanobench"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=35 "Built target nanobench"
 .PHONY : perf/nanobench/CMakeFiles/nanobench.dir/all
 
 # Build rule for subdir invocation for target.
 perf/nanobench/CMakeFiles/nanobench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/nanobench/CMakeFiles/nanobench.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/nanobench/CMakeFiles/nanobench.dir/rule
@@ -5112,6 +5182,7 @@ fun/device/kernel/CMakeFiles/driver.dir/clean:
 
 # All Build rule for target.
 fun/device/user/CMakeFiles/ioctl.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/device/user/CMakeFiles/ioctl.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/device/user/CMakeFiles/ioctl.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/device/user/CMakeFiles/ioctl.dir/build.make fun/device/user/CMakeFiles/ioctl.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/device/user/CMakeFiles/ioctl.dir/build.make fun/device/user/CMakeFiles/ioctl.dir/build
@@ -5120,7 +5191,7 @@ fun/device/user/CMakeFiles/ioctl.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 fun/device/user/CMakeFiles/ioctl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/device/user/CMakeFiles/ioctl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/device/user/CMakeFiles/ioctl.dir/rule
@@ -5140,6 +5211,7 @@ fun/device/user/CMakeFiles/ioctl.dir/clean:
 
 # All Build rule for target.
 fun/libuv/socket/CMakeFiles/libuv_server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/libuv/socket/CMakeFiles/libuv_server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/libuv/socket/CMakeFiles/libuv_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_server.dir/build.make fun/libuv/socket/CMakeFiles/libuv_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_server.dir/build.make fun/libuv/socket/CMakeFiles/libuv_server.dir/build
@@ -5148,7 +5220,7 @@ fun/libuv/socket/CMakeFiles/libuv_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/
 
 # Build rule for subdir invocation for target.
 fun/libuv/socket/CMakeFiles/libuv_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/libuv/socket/CMakeFiles/libuv_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/libuv/socket/CMakeFiles/libuv_server.dir/rule
@@ -5168,6 +5240,7 @@ fun/libuv/socket/CMakeFiles/libuv_server.dir/clean:
 
 # All Build rule for target.
 fun/libuv/socket/CMakeFiles/libuv_client.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/libuv/socket/CMakeFiles/libuv_client.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/libuv/socket/CMakeFiles/libuv_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client.dir/build
@@ -5176,7 +5249,7 @@ fun/libuv/socket/CMakeFiles/libuv_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/
 
 # Build rule for subdir invocation for target.
 fun/libuv/socket/CMakeFiles/libuv_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/libuv/socket/CMakeFiles/libuv_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/libuv/socket/CMakeFiles/libuv_client.dir/rule
@@ -5196,15 +5269,16 @@ fun/libuv/socket/CMakeFiles/libuv_client.dir/clean:
 
 # All Build rule for target.
 fun/libuv/socket/CMakeFiles/libuv_server_a.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/libuv/socket/CMakeFiles/libuv_server_a.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/libuv/socket/CMakeFiles/libuv_server_a.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_server_a.dir/build.make fun/libuv/socket/CMakeFiles/libuv_server_a.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_server_a.dir/build.make fun/libuv/socket/CMakeFiles/libuv_server_a.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target libuv_server_a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=24 "Built target libuv_server_a"
 .PHONY : fun/libuv/socket/CMakeFiles/libuv_server_a.dir/all
 
 # Build rule for subdir invocation for target.
 fun/libuv/socket/CMakeFiles/libuv_server_a.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/libuv/socket/CMakeFiles/libuv_server_a.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/libuv/socket/CMakeFiles/libuv_server_a.dir/rule
@@ -5224,6 +5298,7 @@ fun/libuv/socket/CMakeFiles/libuv_server_a.dir/clean:
 
 # All Build rule for target.
 fun/libuv/socket/CMakeFiles/libuv_client_a.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/libuv/socket/CMakeFiles/libuv_client_a.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/libuv/socket/CMakeFiles/libuv_client_a.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client_a.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client_a.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client_a.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client_a.dir/build
@@ -5232,7 +5307,7 @@ fun/libuv/socket/CMakeFiles/libuv_client_a.dir/all: 3rd/libuv/CMakeFiles/uv_a.di
 
 # Build rule for subdir invocation for target.
 fun/libuv/socket/CMakeFiles/libuv_client_a.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/libuv/socket/CMakeFiles/libuv_client_a.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/libuv/socket/CMakeFiles/libuv_client_a.dir/rule
@@ -5252,10 +5327,11 @@ fun/libuv/socket/CMakeFiles/libuv_client_a.dir/clean:
 
 # All Build rule for target.
 fun/libuv/async/CMakeFiles/libuv_async.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/libuv/async/CMakeFiles/libuv_async.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/libuv/async/CMakeFiles/libuv_async.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/libuv/async/CMakeFiles/libuv_async.dir/build.make fun/libuv/async/CMakeFiles/libuv_async.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/libuv/async/CMakeFiles/libuv_async.dir/build.make fun/libuv/async/CMakeFiles/libuv_async.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=22 "Built target libuv_async"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target libuv_async"
 .PHONY : fun/libuv/async/CMakeFiles/libuv_async.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5280,10 +5356,11 @@ fun/libuv/async/CMakeFiles/libuv_async.dir/clean:
 
 # All Build rule for target.
 fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/build.make fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/build.make fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=24 "Built target libuv_signal_tid"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target libuv_signal_tid"
 .PHONY : fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5308,10 +5385,11 @@ fun/libuv/signal_tid/CMakeFiles/libuv_signal_tid.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/tcp/CMakeFiles/long_server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/tcp/CMakeFiles/long_server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/tcp/CMakeFiles/long_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=26 "Built target long_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target long_server"
 .PHONY : fun/primary/socket/tcp/CMakeFiles/long_server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5336,15 +5414,16 @@ fun/primary/socket/tcp/CMakeFiles/long_server.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/tcp/CMakeFiles/long_client.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/tcp/CMakeFiles/long_client.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/tcp/CMakeFiles/long_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_client.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/long_client.dir/build.make fun/primary/socket/tcp/CMakeFiles/long_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target long_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=26 "Built target long_client"
 .PHONY : fun/primary/socket/tcp/CMakeFiles/long_client.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/socket/tcp/CMakeFiles/long_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/socket/tcp/CMakeFiles/long_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/socket/tcp/CMakeFiles/long_client.dir/rule
@@ -5364,6 +5443,7 @@ fun/primary/socket/tcp/CMakeFiles/long_client.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/tcp/CMakeFiles/client.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/tcp/CMakeFiles/client.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/tcp/CMakeFiles/client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/client.dir/build.make fun/primary/socket/tcp/CMakeFiles/client.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/client.dir/build.make fun/primary/socket/tcp/CMakeFiles/client.dir/build
@@ -5372,7 +5452,7 @@ fun/primary/socket/tcp/CMakeFiles/client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/
 
 # Build rule for subdir invocation for target.
 fun/primary/socket/tcp/CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/socket/tcp/CMakeFiles/client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/socket/tcp/CMakeFiles/client.dir/rule
@@ -5392,15 +5472,16 @@ fun/primary/socket/tcp/CMakeFiles/client.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target multiclient_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=34 "Built target multiclient_server"
 .PHONY : fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/rule
@@ -5420,6 +5501,7 @@ fun/primary/socket/tcp/CMakeFiles/multiclient_server.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/build
@@ -5428,7 +5510,7 @@ fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/all: 3rd/libuv/CMakeFiles/u
 
 # Build rule for subdir invocation for target.
 fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/rule
@@ -5448,10 +5530,11 @@ fun/primary/socket/tcp/CMakeFiles/tidsafe_server.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build.make fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=34 "Built target multitid_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target multitid_server"
 .PHONY : fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5476,6 +5559,7 @@ fun/primary/socket/tcp/CMakeFiles/multitid_server.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/build.make fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/build.make fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/build
@@ -5484,7 +5568,7 @@ fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/all: 3rd/libuv/CMakeFiles/u
 
 # Build rule for subdir invocation for target.
 fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/rule
@@ -5504,10 +5588,11 @@ fun/primary/socket/udp/CMakeFiles/multicast_serv.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/build.make fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/build.make fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=33 "Built target multicast_cli"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target multicast_cli"
 .PHONY : fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5532,6 +5617,7 @@ fun/primary/socket/udp/CMakeFiles/multicast_cli.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/build.make fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/build.make fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/build
@@ -5540,7 +5626,7 @@ fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/all: 3rd/libuv/CMakeFiles/u
 
 # Build rule for subdir invocation for target.
 fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/rule
@@ -5560,6 +5646,7 @@ fun/primary/socket/udp/CMakeFiles/broadcast_serv.dir/clean:
 
 # All Build rule for target.
 fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/build.make fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/build.make fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/build
@@ -5568,7 +5655,7 @@ fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/all: 3rd/libuv/CMakeFiles/uv
 
 # Build rule for subdir invocation for target.
 fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/rule
@@ -5588,6 +5675,7 @@ fun/primary/socket/udp/CMakeFiles/broadcast_cli.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/sem-shm_reader.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/sem-shm_reader.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/sem-shm_reader.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sem-shm_reader.dir/build.make fun/primary/shm/CMakeFiles/sem-shm_reader.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sem-shm_reader.dir/build.make fun/primary/shm/CMakeFiles/sem-shm_reader.dir/build
@@ -5596,7 +5684,7 @@ fun/primary/shm/CMakeFiles/sem-shm_reader.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir
 
 # Build rule for subdir invocation for target.
 fun/primary/shm/CMakeFiles/sem-shm_reader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/shm/CMakeFiles/sem-shm_reader.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/shm/CMakeFiles/sem-shm_reader.dir/rule
@@ -5616,6 +5704,7 @@ fun/primary/shm/CMakeFiles/sem-shm_reader.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/posix_memwriter.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/posix_memwriter.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/posix_memwriter.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_memwriter.dir/build.make fun/primary/shm/CMakeFiles/posix_memwriter.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_memwriter.dir/build.make fun/primary/shm/CMakeFiles/posix_memwriter.dir/build
@@ -5624,7 +5713,7 @@ fun/primary/shm/CMakeFiles/posix_memwriter.dir/all: 3rd/libuv/CMakeFiles/uv_a.di
 
 # Build rule for subdir invocation for target.
 fun/primary/shm/CMakeFiles/posix_memwriter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/shm/CMakeFiles/posix_memwriter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/shm/CMakeFiles/posix_memwriter.dir/rule
@@ -5644,6 +5733,7 @@ fun/primary/shm/CMakeFiles/posix_memwriter.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/posix_shm_reader.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/posix_shm_reader.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/posix_shm_reader.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_shm_reader.dir/build.make fun/primary/shm/CMakeFiles/posix_shm_reader.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_shm_reader.dir/build.make fun/primary/shm/CMakeFiles/posix_shm_reader.dir/build
@@ -5652,7 +5742,7 @@ fun/primary/shm/CMakeFiles/posix_shm_reader.dir/all: 3rd/libuv/CMakeFiles/uv_a.d
 
 # Build rule for subdir invocation for target.
 fun/primary/shm/CMakeFiles/posix_shm_reader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/shm/CMakeFiles/posix_shm_reader.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/shm/CMakeFiles/posix_shm_reader.dir/rule
@@ -5672,6 +5762,7 @@ fun/primary/shm/CMakeFiles/posix_shm_reader.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/posix_memreader.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/posix_memreader.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/posix_memreader.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_memreader.dir/build.make fun/primary/shm/CMakeFiles/posix_memreader.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_memreader.dir/build.make fun/primary/shm/CMakeFiles/posix_memreader.dir/build
@@ -5680,7 +5771,7 @@ fun/primary/shm/CMakeFiles/posix_memreader.dir/all: 3rd/libuv/CMakeFiles/uv_a.di
 
 # Build rule for subdir invocation for target.
 fun/primary/shm/CMakeFiles/posix_memreader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/shm/CMakeFiles/posix_memreader.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/shm/CMakeFiles/posix_memreader.dir/rule
@@ -5700,10 +5791,11 @@ fun/primary/shm/CMakeFiles/posix_memreader.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/process_shm_a.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/process_shm_a.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/process_shm_a.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/process_shm_a.dir/build.make fun/primary/shm/CMakeFiles/process_shm_a.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/process_shm_a.dir/build.make fun/primary/shm/CMakeFiles/process_shm_a.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=42 "Built target process_shm_a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target process_shm_a"
 .PHONY : fun/primary/shm/CMakeFiles/process_shm_a.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5728,6 +5820,7 @@ fun/primary/shm/CMakeFiles/process_shm_a.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/sem-shm_writer.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/sem-shm_writer.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/sem-shm_writer.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sem-shm_writer.dir/build.make fun/primary/shm/CMakeFiles/sem-shm_writer.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sem-shm_writer.dir/build.make fun/primary/shm/CMakeFiles/sem-shm_writer.dir/build
@@ -5736,7 +5829,7 @@ fun/primary/shm/CMakeFiles/sem-shm_writer.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir
 
 # Build rule for subdir invocation for target.
 fun/primary/shm/CMakeFiles/sem-shm_writer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/shm/CMakeFiles/sem-shm_writer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/shm/CMakeFiles/sem-shm_writer.dir/rule
@@ -5756,15 +5849,16 @@ fun/primary/shm/CMakeFiles/sem-shm_writer.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/posix_shm_writer.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/posix_shm_writer.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/posix_shm_writer.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_shm_writer.dir/build.make fun/primary/shm/CMakeFiles/posix_shm_writer.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/posix_shm_writer.dir/build.make fun/primary/shm/CMakeFiles/posix_shm_writer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target posix_shm_writer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=42 "Built target posix_shm_writer"
 .PHONY : fun/primary/shm/CMakeFiles/posix_shm_writer.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/shm/CMakeFiles/posix_shm_writer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/shm/CMakeFiles/posix_shm_writer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/shm/CMakeFiles/posix_shm_writer.dir/rule
@@ -5784,15 +5878,16 @@ fun/primary/shm/CMakeFiles/posix_shm_writer.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/build.make fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/build.make fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target sysv_shm_reader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=62 "Built target sysv_shm_reader"
 .PHONY : fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/rule
@@ -5812,6 +5907,7 @@ fun/primary/shm/CMakeFiles/sysv_shm_reader.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/process_shm_b.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/process_shm_b.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/process_shm_b.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/process_shm_b.dir/build.make fun/primary/shm/CMakeFiles/process_shm_b.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/process_shm_b.dir/build.make fun/primary/shm/CMakeFiles/process_shm_b.dir/build
@@ -5820,7 +5916,7 @@ fun/primary/shm/CMakeFiles/process_shm_b.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/
 
 # Build rule for subdir invocation for target.
 fun/primary/shm/CMakeFiles/process_shm_b.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/shm/CMakeFiles/process_shm_b.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/shm/CMakeFiles/process_shm_b.dir/rule
@@ -5840,10 +5936,11 @@ fun/primary/shm/CMakeFiles/process_shm_b.dir/clean:
 
 # All Build rule for target.
 fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/build.make fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/build.make fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=62 "Built target sysv_shm_writer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target sysv_shm_writer"
 .PHONY : fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5868,6 +5965,7 @@ fun/primary/shm/CMakeFiles/sysv_shm_writer.dir/clean:
 
 # All Build rule for target.
 fun/primary/fifo/CMakeFiles/fifo.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/fifo/CMakeFiles/fifo.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/fifo/CMakeFiles/fifo.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/fifo/CMakeFiles/fifo.dir/build.make fun/primary/fifo/CMakeFiles/fifo.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/fifo/CMakeFiles/fifo.dir/build.make fun/primary/fifo/CMakeFiles/fifo.dir/build
@@ -5876,7 +5974,7 @@ fun/primary/fifo/CMakeFiles/fifo.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/fifo/CMakeFiles/fifo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/fifo/CMakeFiles/fifo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/fifo/CMakeFiles/fifo.dir/rule
@@ -5896,6 +5994,7 @@ fun/primary/fifo/CMakeFiles/fifo.dir/clean:
 
 # All Build rule for target.
 fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/build.make fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/build.make fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/build
@@ -5904,7 +6003,7 @@ fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/
 
 # Build rule for subdir invocation for target.
 fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/rule
@@ -5924,6 +6023,7 @@ fun/primary/cfifo/CMakeFiles/cycled_fifo.dir/clean:
 
 # All Build rule for target.
 fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/build.make fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/build.make fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/build
@@ -5932,7 +6032,7 @@ fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/all: 3rd/libuv/CMakeFiles
 
 # Build rule for subdir invocation for target.
 fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/rule
@@ -5952,6 +6052,7 @@ fun/primary/cpfifo/CMakeFiles/cycled_priority_fifo.dir/clean:
 
 # All Build rule for target.
 fun/primary/list/CMakeFiles/list.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/list/CMakeFiles/list.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/list/CMakeFiles/list.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/list/CMakeFiles/list.dir/build.make fun/primary/list/CMakeFiles/list.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/list/CMakeFiles/list.dir/build.make fun/primary/list/CMakeFiles/list.dir/build
@@ -5960,7 +6061,7 @@ fun/primary/list/CMakeFiles/list.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/list/CMakeFiles/list.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/list/CMakeFiles/list.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/list/CMakeFiles/list.dir/rule
@@ -5980,6 +6081,7 @@ fun/primary/list/CMakeFiles/list.dir/clean:
 
 # All Build rule for target.
 fun/primary/rbtree/CMakeFiles/rbtree.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/rbtree/CMakeFiles/rbtree.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/rbtree/CMakeFiles/rbtree.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/rbtree/CMakeFiles/rbtree.dir/build.make fun/primary/rbtree/CMakeFiles/rbtree.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/rbtree/CMakeFiles/rbtree.dir/build.make fun/primary/rbtree/CMakeFiles/rbtree.dir/build
@@ -5988,7 +6090,7 @@ fun/primary/rbtree/CMakeFiles/rbtree.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/rbtree/CMakeFiles/rbtree.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/rbtree/CMakeFiles/rbtree.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/rbtree/CMakeFiles/rbtree.dir/rule
@@ -6008,6 +6110,7 @@ fun/primary/rbtree/CMakeFiles/rbtree.dir/clean:
 
 # All Build rule for target.
 fun/primary/pid/CMakeFiles/pid_test.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/pid/CMakeFiles/pid_test.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/pid/CMakeFiles/pid_test.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/pid_test.dir/build.make fun/primary/pid/CMakeFiles/pid_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/pid_test.dir/build.make fun/primary/pid/CMakeFiles/pid_test.dir/build
@@ -6016,7 +6119,7 @@ fun/primary/pid/CMakeFiles/pid_test.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/pid/CMakeFiles/pid_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/pid/CMakeFiles/pid_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/pid/CMakeFiles/pid_test.dir/rule
@@ -6036,6 +6139,7 @@ fun/primary/pid/CMakeFiles/pid_test.dir/clean:
 
 # All Build rule for target.
 fun/primary/pid/CMakeFiles/name_to_pid.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/pid/CMakeFiles/name_to_pid.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/pid/CMakeFiles/name_to_pid.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/name_to_pid.dir/build.make fun/primary/pid/CMakeFiles/name_to_pid.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/name_to_pid.dir/build.make fun/primary/pid/CMakeFiles/name_to_pid.dir/build
@@ -6044,7 +6148,7 @@ fun/primary/pid/CMakeFiles/name_to_pid.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/al
 
 # Build rule for subdir invocation for target.
 fun/primary/pid/CMakeFiles/name_to_pid.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/pid/CMakeFiles/name_to_pid.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/pid/CMakeFiles/name_to_pid.dir/rule
@@ -6064,6 +6168,7 @@ fun/primary/pid/CMakeFiles/name_to_pid.dir/clean:
 
 # All Build rule for target.
 fun/primary/pid/CMakeFiles/fork.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/pid/CMakeFiles/fork.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/pid/CMakeFiles/fork.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/fork.dir/build.make fun/primary/pid/CMakeFiles/fork.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/fork.dir/build.make fun/primary/pid/CMakeFiles/fork.dir/build
@@ -6072,7 +6177,7 @@ fun/primary/pid/CMakeFiles/fork.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/pid/CMakeFiles/fork.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/pid/CMakeFiles/fork.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/pid/CMakeFiles/fork.dir/rule
@@ -6092,6 +6197,7 @@ fun/primary/pid/CMakeFiles/fork.dir/clean:
 
 # All Build rule for target.
 fun/primary/thread/CMakeFiles/thread_cancel.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/thread/CMakeFiles/thread_cancel.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/thread/CMakeFiles/thread_cancel.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/thread/CMakeFiles/thread_cancel.dir/build.make fun/primary/thread/CMakeFiles/thread_cancel.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/thread/CMakeFiles/thread_cancel.dir/build.make fun/primary/thread/CMakeFiles/thread_cancel.dir/build
@@ -6100,7 +6206,7 @@ fun/primary/thread/CMakeFiles/thread_cancel.dir/all: 3rd/libuv/CMakeFiles/uv_a.d
 
 # Build rule for subdir invocation for target.
 fun/primary/thread/CMakeFiles/thread_cancel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/thread/CMakeFiles/thread_cancel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/thread/CMakeFiles/thread_cancel.dir/rule
@@ -6120,6 +6226,7 @@ fun/primary/thread/CMakeFiles/thread_cancel.dir/clean:
 
 # All Build rule for target.
 fun/primary/epoll/CMakeFiles/epoll_server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/epoll/CMakeFiles/epoll_server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/epoll/CMakeFiles/epoll_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/epoll/CMakeFiles/epoll_server.dir/build.make fun/primary/epoll/CMakeFiles/epoll_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/epoll/CMakeFiles/epoll_server.dir/build.make fun/primary/epoll/CMakeFiles/epoll_server.dir/build
@@ -6128,7 +6235,7 @@ fun/primary/epoll/CMakeFiles/epoll_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir
 
 # Build rule for subdir invocation for target.
 fun/primary/epoll/CMakeFiles/epoll_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/epoll/CMakeFiles/epoll_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/epoll/CMakeFiles/epoll_server.dir/rule
@@ -6148,6 +6255,7 @@ fun/primary/epoll/CMakeFiles/epoll_server.dir/clean:
 
 # All Build rule for target.
 fun/primary/epoll/CMakeFiles/epoll_client.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/epoll/CMakeFiles/epoll_client.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/epoll/CMakeFiles/epoll_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/epoll/CMakeFiles/epoll_client.dir/build.make fun/primary/epoll/CMakeFiles/epoll_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/epoll/CMakeFiles/epoll_client.dir/build.make fun/primary/epoll/CMakeFiles/epoll_client.dir/build
@@ -6156,7 +6264,7 @@ fun/primary/epoll/CMakeFiles/epoll_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir
 
 # Build rule for subdir invocation for target.
 fun/primary/epoll/CMakeFiles/epoll_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/epoll/CMakeFiles/epoll_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/epoll/CMakeFiles/epoll_client.dir/rule
@@ -6176,15 +6284,16 @@ fun/primary/epoll/CMakeFiles/epoll_client.dir/clean:
 
 # All Build rule for target.
 fun/primary/msg_que/CMakeFiles/msg_que_server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/msg_que/CMakeFiles/msg_que_server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/msg_que/CMakeFiles/msg_que_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target msg_que_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=33 "Built target msg_que_server"
 .PHONY : fun/primary/msg_que/CMakeFiles/msg_que_server.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/msg_que/CMakeFiles/msg_que_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/msg_que/CMakeFiles/msg_que_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/msg_que/CMakeFiles/msg_que_server.dir/rule
@@ -6204,6 +6313,7 @@ fun/primary/msg_que/CMakeFiles/msg_que_server.dir/clean:
 
 # All Build rule for target.
 fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/build.make fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/build.make fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/build
@@ -6212,7 +6322,7 @@ fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/all: 3rd/libuv/CMakeFiles/uv_a
 
 # Build rule for subdir invocation for target.
 fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/rule
@@ -6232,6 +6342,7 @@ fun/primary/msg_que/CMakeFiles/sysv_msgq_recv.dir/clean:
 
 # All Build rule for target.
 fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/build
@@ -6240,7 +6351,7 @@ fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/all: 3rd/libuv/CMakeFiles/u
 
 # Build rule for subdir invocation for target.
 fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/rule
@@ -6260,6 +6371,7 @@ fun/primary/msg_que/CMakeFiles/posix_msgq_notify.dir/clean:
 
 # All Build rule for target.
 fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/build
@@ -6268,7 +6380,7 @@ fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/all: 3rd/libuv/CMakeFiles/uv_
 
 # Build rule for subdir invocation for target.
 fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/rule
@@ -6288,6 +6400,7 @@ fun/primary/msg_que/CMakeFiles/posix_msgq_recv.dir/clean:
 
 # All Build rule for target.
 fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/build
@@ -6296,7 +6409,7 @@ fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/all: 3rd/libuv/CMakeFiles/uv_a
 
 # Build rule for subdir invocation for target.
 fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/rule
@@ -6316,6 +6429,7 @@ fun/primary/msg_que/CMakeFiles/sysv_msgq_send.dir/clean:
 
 # All Build rule for target.
 fun/primary/msg_que/CMakeFiles/msg_que_client.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/msg_que/CMakeFiles/msg_que_client.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/msg_que/CMakeFiles/msg_que_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_client.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/msg_que_client.dir/build.make fun/primary/msg_que/CMakeFiles/msg_que_client.dir/build
@@ -6324,7 +6438,7 @@ fun/primary/msg_que/CMakeFiles/msg_que_client.dir/all: 3rd/libuv/CMakeFiles/uv_a
 
 # Build rule for subdir invocation for target.
 fun/primary/msg_que/CMakeFiles/msg_que_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/msg_que/CMakeFiles/msg_que_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/msg_que/CMakeFiles/msg_que_client.dir/rule
@@ -6344,6 +6458,7 @@ fun/primary/msg_que/CMakeFiles/msg_que_client.dir/clean:
 
 # All Build rule for target.
 fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build.make fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/build
@@ -6352,7 +6467,7 @@ fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/all: 3rd/libuv/CMakeFiles/uv_
 
 # Build rule for subdir invocation for target.
 fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/rule
@@ -6372,6 +6487,7 @@ fun/primary/msg_que/CMakeFiles/posix_msgq_send.dir/clean:
 
 # All Build rule for target.
 fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/build.make fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/build.make fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/build
@@ -6380,7 +6496,7 @@ fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/all: 3rd/libuv/CMakeFiles/uv_a.di
 
 # Build rule for subdir invocation for target.
 fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/rule
@@ -6400,10 +6516,11 @@ fun/primary/pipe/CMakeFiles/pipe_fifo_send.dir/clean:
 
 # All Build rule for target.
 fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/build.make fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/build.make fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=38 "Built target pipe_fifo_recv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target pipe_fifo_recv"
 .PHONY : fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6428,15 +6545,16 @@ fun/primary/pipe/CMakeFiles/pipe_fifo_recv.dir/clean:
 
 # All Build rule for target.
 fun/primary/pipe/CMakeFiles/pipe.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/pipe/CMakeFiles/pipe.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/pipe/CMakeFiles/pipe.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe.dir/build.make fun/primary/pipe/CMakeFiles/pipe.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe.dir/build.make fun/primary/pipe/CMakeFiles/pipe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target pipe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=38 "Built target pipe"
 .PHONY : fun/primary/pipe/CMakeFiles/pipe.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/pipe/CMakeFiles/pipe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/pipe/CMakeFiles/pipe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/pipe/CMakeFiles/pipe.dir/rule
@@ -6456,16 +6574,17 @@ fun/primary/pipe/CMakeFiles/pipe.dir/clean:
 
 # All Build rule for target.
 fun/primary/sem/CMakeFiles/posix_sem_c.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/sem/CMakeFiles/posix_sem_c.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/sem/CMakeFiles/posix_sem_c.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 fun/primary/sem/CMakeFiles/posix_sem_c.dir/all: perf/nanobench/CMakeFiles/nanobench.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/posix_sem_c.dir/build.make fun/primary/sem/CMakeFiles/posix_sem_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/posix_sem_c.dir/build.make fun/primary/sem/CMakeFiles/posix_sem_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target posix_sem_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=41 "Built target posix_sem_c"
 .PHONY : fun/primary/sem/CMakeFiles/posix_sem_c.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/sem/CMakeFiles/posix_sem_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/sem/CMakeFiles/posix_sem_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/sem/CMakeFiles/posix_sem_c.dir/rule
@@ -6485,16 +6604,17 @@ fun/primary/sem/CMakeFiles/posix_sem_c.dir/clean:
 
 # All Build rule for target.
 fun/primary/sem/CMakeFiles/posix_sem_p.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/sem/CMakeFiles/posix_sem_p.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/sem/CMakeFiles/posix_sem_p.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 fun/primary/sem/CMakeFiles/posix_sem_p.dir/all: perf/nanobench/CMakeFiles/nanobench.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/posix_sem_p.dir/build.make fun/primary/sem/CMakeFiles/posix_sem_p.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/posix_sem_p.dir/build.make fun/primary/sem/CMakeFiles/posix_sem_p.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=41 "Built target posix_sem_p"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target posix_sem_p"
 .PHONY : fun/primary/sem/CMakeFiles/posix_sem_p.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/sem/CMakeFiles/posix_sem_p.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/sem/CMakeFiles/posix_sem_p.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/sem/CMakeFiles/posix_sem_p.dir/rule
@@ -6514,6 +6634,7 @@ fun/primary/sem/CMakeFiles/posix_sem_p.dir/clean:
 
 # All Build rule for target.
 fun/primary/sem/CMakeFiles/sysv_sem_p.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/sem/CMakeFiles/sysv_sem_p.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/sem/CMakeFiles/sysv_sem_p.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 fun/primary/sem/CMakeFiles/sysv_sem_p.dir/all: perf/nanobench/CMakeFiles/nanobench.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem_p.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem_p.dir/depend
@@ -6523,7 +6644,7 @@ fun/primary/sem/CMakeFiles/sysv_sem_p.dir/all: perf/nanobench/CMakeFiles/nanoben
 
 # Build rule for subdir invocation for target.
 fun/primary/sem/CMakeFiles/sysv_sem_p.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/sem/CMakeFiles/sysv_sem_p.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/sem/CMakeFiles/sysv_sem_p.dir/rule
@@ -6543,16 +6664,17 @@ fun/primary/sem/CMakeFiles/sysv_sem_p.dir/clean:
 
 # All Build rule for target.
 fun/primary/sem/CMakeFiles/sem_p-c.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/sem/CMakeFiles/sem_p-c.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/sem/CMakeFiles/sem_p-c.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 fun/primary/sem/CMakeFiles/sem_p-c.dir/all: perf/nanobench/CMakeFiles/nanobench.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_p-c.dir/build.make fun/primary/sem/CMakeFiles/sem_p-c.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sem_p-c.dir/build.make fun/primary/sem/CMakeFiles/sem_p-c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target sem_p-c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=52 "Built target sem_p-c"
 .PHONY : fun/primary/sem/CMakeFiles/sem_p-c.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/sem/CMakeFiles/sem_p-c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/sem/CMakeFiles/sem_p-c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/sem/CMakeFiles/sem_p-c.dir/rule
@@ -6572,6 +6694,7 @@ fun/primary/sem/CMakeFiles/sem_p-c.dir/clean:
 
 # All Build rule for target.
 fun/primary/sem/CMakeFiles/sysv_sem.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/sem/CMakeFiles/sysv_sem.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/sem/CMakeFiles/sysv_sem.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 fun/primary/sem/CMakeFiles/sysv_sem.dir/all: perf/nanobench/CMakeFiles/nanobench.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem.dir/depend
@@ -6581,7 +6704,7 @@ fun/primary/sem/CMakeFiles/sysv_sem.dir/all: perf/nanobench/CMakeFiles/nanobench
 
 # Build rule for subdir invocation for target.
 fun/primary/sem/CMakeFiles/sysv_sem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/sem/CMakeFiles/sysv_sem.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/sem/CMakeFiles/sysv_sem.dir/rule
@@ -6601,6 +6724,7 @@ fun/primary/sem/CMakeFiles/sysv_sem.dir/clean:
 
 # All Build rule for target.
 fun/primary/sem/CMakeFiles/sysv_sem_c.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/sem/CMakeFiles/sysv_sem_c.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/sem/CMakeFiles/sysv_sem_c.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 fun/primary/sem/CMakeFiles/sysv_sem_c.dir/all: perf/nanobench/CMakeFiles/nanobench.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/sem/CMakeFiles/sysv_sem_c.dir/build.make fun/primary/sem/CMakeFiles/sysv_sem_c.dir/depend
@@ -6610,7 +6734,7 @@ fun/primary/sem/CMakeFiles/sysv_sem_c.dir/all: perf/nanobench/CMakeFiles/nanoben
 
 # Build rule for subdir invocation for target.
 fun/primary/sem/CMakeFiles/sysv_sem_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/sem/CMakeFiles/sysv_sem_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/sem/CMakeFiles/sysv_sem_c.dir/rule
@@ -6630,6 +6754,7 @@ fun/primary/sem/CMakeFiles/sysv_sem_c.dir/clean:
 
 # All Build rule for target.
 fun/primary/signal/CMakeFiles/sigset.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/signal/CMakeFiles/sigset.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/signal/CMakeFiles/sigset.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/sigset.dir/build.make fun/primary/signal/CMakeFiles/sigset.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/sigset.dir/build.make fun/primary/signal/CMakeFiles/sigset.dir/build
@@ -6638,7 +6763,7 @@ fun/primary/signal/CMakeFiles/sigset.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/signal/CMakeFiles/sigset.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/signal/CMakeFiles/sigset.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/signal/CMakeFiles/sigset.dir/rule
@@ -6658,6 +6783,7 @@ fun/primary/signal/CMakeFiles/sigset.dir/clean:
 
 # All Build rule for target.
 fun/primary/signal/CMakeFiles/signal_tid.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/signal/CMakeFiles/signal_tid.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/signal/CMakeFiles/signal_tid.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_tid.dir/build.make fun/primary/signal/CMakeFiles/signal_tid.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_tid.dir/build.make fun/primary/signal/CMakeFiles/signal_tid.dir/build
@@ -6666,7 +6792,7 @@ fun/primary/signal/CMakeFiles/signal_tid.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/
 
 # Build rule for subdir invocation for target.
 fun/primary/signal/CMakeFiles/signal_tid.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/signal/CMakeFiles/signal_tid.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/signal/CMakeFiles/signal_tid.dir/rule
@@ -6686,6 +6812,7 @@ fun/primary/signal/CMakeFiles/signal_tid.dir/clean:
 
 # All Build rule for target.
 fun/primary/signal/CMakeFiles/signal_server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/signal/CMakeFiles/signal_server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/signal/CMakeFiles/signal_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_server.dir/build.make fun/primary/signal/CMakeFiles/signal_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_server.dir/build.make fun/primary/signal/CMakeFiles/signal_server.dir/build
@@ -6694,7 +6821,7 @@ fun/primary/signal/CMakeFiles/signal_server.dir/all: 3rd/libuv/CMakeFiles/uv_a.d
 
 # Build rule for subdir invocation for target.
 fun/primary/signal/CMakeFiles/signal_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/signal/CMakeFiles/signal_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/signal/CMakeFiles/signal_server.dir/rule
@@ -6714,6 +6841,7 @@ fun/primary/signal/CMakeFiles/signal_server.dir/clean:
 
 # All Build rule for target.
 fun/primary/signal/CMakeFiles/signal_client.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/signal/CMakeFiles/signal_client.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/signal/CMakeFiles/signal_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_client.dir/build.make fun/primary/signal/CMakeFiles/signal_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/signal/CMakeFiles/signal_client.dir/build.make fun/primary/signal/CMakeFiles/signal_client.dir/build
@@ -6722,7 +6850,7 @@ fun/primary/signal/CMakeFiles/signal_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.d
 
 # Build rule for subdir invocation for target.
 fun/primary/signal/CMakeFiles/signal_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/signal/CMakeFiles/signal_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/signal/CMakeFiles/signal_client.dir/rule
@@ -6742,6 +6870,7 @@ fun/primary/signal/CMakeFiles/signal_client.dir/clean:
 
 # All Build rule for target.
 fun/primary/asyncthread/CMakeFiles/asyncthread.dir/all: log/simple_log/CMakeFiles/log.dir/all
+fun/primary/asyncthread/CMakeFiles/asyncthread.dir/all: json/cJSON/CMakeFiles/json.dir/all
 fun/primary/asyncthread/CMakeFiles/asyncthread.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/asyncthread/CMakeFiles/asyncthread.dir/build.make fun/primary/asyncthread/CMakeFiles/asyncthread.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/asyncthread/CMakeFiles/asyncthread.dir/build.make fun/primary/asyncthread/CMakeFiles/asyncthread.dir/build
@@ -6750,7 +6879,7 @@ fun/primary/asyncthread/CMakeFiles/asyncthread.dir/all: 3rd/libuv/CMakeFiles/uv_
 
 # Build rule for subdir invocation for target.
 fun/primary/asyncthread/CMakeFiles/asyncthread.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/asyncthread/CMakeFiles/asyncthread.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/asyncthread/CMakeFiles/asyncthread.dir/rule
@@ -6770,6 +6899,7 @@ fun/primary/asyncthread/CMakeFiles/asyncthread.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/argc_argv.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/argc_argv.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/argc_argv.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/argc_argv.dir/build.make cfun/linux_c/CMakeFiles/argc_argv.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/argc_argv.dir/build.make cfun/linux_c/CMakeFiles/argc_argv.dir/build
@@ -6778,7 +6908,7 @@ cfun/linux_c/CMakeFiles/argc_argv.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/argc_argv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/argc_argv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/argc_argv.dir/rule
@@ -6798,6 +6928,7 @@ cfun/linux_c/CMakeFiles/argc_argv.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/array.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/array.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/array.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/array.dir/build.make cfun/linux_c/CMakeFiles/array.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/array.dir/build.make cfun/linux_c/CMakeFiles/array.dir/build
@@ -6806,7 +6937,7 @@ cfun/linux_c/CMakeFiles/array.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/array.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/array.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/array.dir/rule
@@ -6826,10 +6957,11 @@ cfun/linux_c/CMakeFiles/array.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/strncpy.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/strncpy.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/strncpy.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strncpy.dir/build.make cfun/linux_c/CMakeFiles/strncpy.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strncpy.dir/build.make cfun/linux_c/CMakeFiles/strncpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=58 "Built target strncpy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target strncpy"
 .PHONY : cfun/linux_c/CMakeFiles/strncpy.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6854,6 +6986,7 @@ cfun/linux_c/CMakeFiles/strncpy.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/cdefine.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/cdefine.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/cdefine.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/cdefine.dir/build.make cfun/linux_c/CMakeFiles/cdefine.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/cdefine.dir/build.make cfun/linux_c/CMakeFiles/cdefine.dir/build
@@ -6862,7 +6995,7 @@ cfun/linux_c/CMakeFiles/cdefine.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/cdefine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/cdefine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/cdefine.dir/rule
@@ -6882,6 +7015,7 @@ cfun/linux_c/CMakeFiles/cdefine.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/memcpy.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/memcpy.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/memcpy.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/memcpy.dir/build.make cfun/linux_c/CMakeFiles/memcpy.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/memcpy.dir/build.make cfun/linux_c/CMakeFiles/memcpy.dir/build
@@ -6890,7 +7024,7 @@ cfun/linux_c/CMakeFiles/memcpy.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/memcpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/memcpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/memcpy.dir/rule
@@ -6910,6 +7044,7 @@ cfun/linux_c/CMakeFiles/memcpy.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/extension.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/extension.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/extension.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/extension.dir/build.make cfun/linux_c/CMakeFiles/extension.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/extension.dir/build.make cfun/linux_c/CMakeFiles/extension.dir/build
@@ -6918,7 +7053,7 @@ cfun/linux_c/CMakeFiles/extension.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/extension.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/extension.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/extension.dir/rule
@@ -6938,6 +7073,7 @@ cfun/linux_c/CMakeFiles/extension.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/strrchr.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/strrchr.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/strrchr.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strrchr.dir/build.make cfun/linux_c/CMakeFiles/strrchr.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strrchr.dir/build.make cfun/linux_c/CMakeFiles/strrchr.dir/build
@@ -6946,7 +7082,7 @@ cfun/linux_c/CMakeFiles/strrchr.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/strrchr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/strrchr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/strrchr.dir/rule
@@ -6966,6 +7102,7 @@ cfun/linux_c/CMakeFiles/strrchr.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/rand.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/rand.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/rand.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/rand.dir/build.make cfun/linux_c/CMakeFiles/rand.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/rand.dir/build.make cfun/linux_c/CMakeFiles/rand.dir/build
@@ -6974,7 +7111,7 @@ cfun/linux_c/CMakeFiles/rand.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/rand.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/rand.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/rand.dir/rule
@@ -6994,15 +7131,16 @@ cfun/linux_c/CMakeFiles/rand.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/strcpy.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/strcpy.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/strcpy.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strcpy.dir/build.make cfun/linux_c/CMakeFiles/strcpy.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strcpy.dir/build.make cfun/linux_c/CMakeFiles/strcpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target strcpy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=58 "Built target strcpy"
 .PHONY : cfun/linux_c/CMakeFiles/strcpy.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/strcpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/strcpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/strcpy.dir/rule
@@ -7022,15 +7160,16 @@ cfun/linux_c/CMakeFiles/strcpy.dir/clean:
 
 # All Build rule for target.
 cfun/linux_c/CMakeFiles/struct_array.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/linux_c/CMakeFiles/struct_array.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/linux_c/CMakeFiles/struct_array.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/struct_array.dir/build.make cfun/linux_c/CMakeFiles/struct_array.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/struct_array.dir/build.make cfun/linux_c/CMakeFiles/struct_array.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target struct_array"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=59 "Built target struct_array"
 .PHONY : cfun/linux_c/CMakeFiles/struct_array.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/struct_array.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/struct_array.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/struct_array.dir/rule
@@ -7050,15 +7189,16 @@ cfun/linux_c/CMakeFiles/struct_array.dir/clean:
 
 # All Build rule for target.
 cfun/signal/CMakeFiles/kill_process.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/signal/CMakeFiles/kill_process.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/signal/CMakeFiles/kill_process.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/kill_process.dir/build.make cfun/signal/CMakeFiles/kill_process.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/kill_process.dir/build.make cfun/signal/CMakeFiles/kill_process.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target kill_process"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=22 "Built target kill_process"
 .PHONY : cfun/signal/CMakeFiles/kill_process.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/signal/CMakeFiles/kill_process.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/signal/CMakeFiles/kill_process.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/signal/CMakeFiles/kill_process.dir/rule
@@ -7078,6 +7218,7 @@ cfun/signal/CMakeFiles/kill_process.dir/clean:
 
 # All Build rule for target.
 cfun/signal/CMakeFiles/client_b.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/signal/CMakeFiles/client_b.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/signal/CMakeFiles/client_b.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_b.dir/build.make cfun/signal/CMakeFiles/client_b.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_b.dir/build.make cfun/signal/CMakeFiles/client_b.dir/build
@@ -7086,7 +7227,7 @@ cfun/signal/CMakeFiles/client_b.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/signal/CMakeFiles/client_b.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/signal/CMakeFiles/client_b.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/signal/CMakeFiles/client_b.dir/rule
@@ -7106,15 +7247,16 @@ cfun/signal/CMakeFiles/client_b.dir/clean:
 
 # All Build rule for target.
 cfun/signal/CMakeFiles/server_b.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/signal/CMakeFiles/server_b.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/signal/CMakeFiles/server_b.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_b.dir/build.make cfun/signal/CMakeFiles/server_b.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_b.dir/build.make cfun/signal/CMakeFiles/server_b.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target server_b"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=53 "Built target server_b"
 .PHONY : cfun/signal/CMakeFiles/server_b.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/signal/CMakeFiles/server_b.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/signal/CMakeFiles/server_b.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/signal/CMakeFiles/server_b.dir/rule
@@ -7134,6 +7276,7 @@ cfun/signal/CMakeFiles/server_b.dir/clean:
 
 # All Build rule for target.
 cfun/signal/CMakeFiles/client_c.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/signal/CMakeFiles/client_c.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/signal/CMakeFiles/client_c.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_c.dir/build.make cfun/signal/CMakeFiles/client_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_c.dir/build.make cfun/signal/CMakeFiles/client_c.dir/build
@@ -7142,7 +7285,7 @@ cfun/signal/CMakeFiles/client_c.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/signal/CMakeFiles/client_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/signal/CMakeFiles/client_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/signal/CMakeFiles/client_c.dir/rule
@@ -7162,6 +7305,7 @@ cfun/signal/CMakeFiles/client_c.dir/clean:
 
 # All Build rule for target.
 cfun/signal/CMakeFiles/client_a.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/signal/CMakeFiles/client_a.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/signal/CMakeFiles/client_a.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_a.dir/build.make cfun/signal/CMakeFiles/client_a.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/client_a.dir/build.make cfun/signal/CMakeFiles/client_a.dir/build
@@ -7170,7 +7314,7 @@ cfun/signal/CMakeFiles/client_a.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/signal/CMakeFiles/client_a.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/signal/CMakeFiles/client_a.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/signal/CMakeFiles/client_a.dir/rule
@@ -7190,6 +7334,7 @@ cfun/signal/CMakeFiles/client_a.dir/clean:
 
 # All Build rule for target.
 cfun/signal/CMakeFiles/server_a.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/signal/CMakeFiles/server_a.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/signal/CMakeFiles/server_a.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_a.dir/build.make cfun/signal/CMakeFiles/server_a.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_a.dir/build.make cfun/signal/CMakeFiles/server_a.dir/build
@@ -7198,7 +7343,7 @@ cfun/signal/CMakeFiles/server_a.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/signal/CMakeFiles/server_a.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/signal/CMakeFiles/server_a.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/signal/CMakeFiles/server_a.dir/rule
@@ -7218,10 +7363,11 @@ cfun/signal/CMakeFiles/server_a.dir/clean:
 
 # All Build rule for target.
 cfun/signal/CMakeFiles/server_c.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/signal/CMakeFiles/server_c.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/signal/CMakeFiles/server_c.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_c.dir/build.make cfun/signal/CMakeFiles/server_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/server_c.dir/build.make cfun/signal/CMakeFiles/server_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=53 "Built target server_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target server_c"
 .PHONY : cfun/signal/CMakeFiles/server_c.dir/all
 
 # Build rule for subdir invocation for target.
@@ -7246,6 +7392,7 @@ cfun/signal/CMakeFiles/server_c.dir/clean:
 
 # All Build rule for target.
 cfun/signal/CMakeFiles/signal.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/signal/CMakeFiles/signal.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/signal/CMakeFiles/signal.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/signal.dir/build.make cfun/signal/CMakeFiles/signal.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/signal/CMakeFiles/signal.dir/build.make cfun/signal/CMakeFiles/signal.dir/build
@@ -7254,7 +7401,7 @@ cfun/signal/CMakeFiles/signal.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/signal/CMakeFiles/signal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/signal/CMakeFiles/signal.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/signal/CMakeFiles/signal.dir/rule
@@ -7274,6 +7421,7 @@ cfun/signal/CMakeFiles/signal.dir/clean:
 
 # All Build rule for target.
 cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/build.make cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/build.make cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/build
@@ -7282,7 +7430,7 @@ cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/all: 3rd/libuv/CMakeFiles/u
 
 # Build rule for subdir invocation for target.
 cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/rule
@@ -7302,6 +7450,7 @@ cfun/hw_info/hw_default/CMakeFiles/get_used_info.dir/clean:
 
 # All Build rule for target.
 cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/all: log/simple_log/CMakeFiles/log.dir/all
+cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/all: json/cJSON/CMakeFiles/json.dir/all
 cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/build.make cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/build.make cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/build
@@ -7310,7 +7459,7 @@ cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/all: 3rd/libuv/CMakeFiles/uv_
 
 # Build rule for subdir invocation for target.
 cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/rule
@@ -7330,6 +7479,7 @@ cfun/hw_info/hw_default/CMakeFiles/get_hw_info.dir/clean:
 
 # All Build rule for target.
 src/client/CMakeFiles/client_api.dir/all: log/simple_log/CMakeFiles/log.dir/all
+src/client/CMakeFiles/client_api.dir/all: json/cJSON/CMakeFiles/json.dir/all
 src/client/CMakeFiles/client_api.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/client_api.dir/build.make src/client/CMakeFiles/client_api.dir/build
@@ -7338,7 +7488,7 @@ src/client/CMakeFiles/client_api.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 src/client/CMakeFiles/client_api.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client_api.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : src/client/CMakeFiles/client_api.dir/rule
@@ -7360,7 +7510,7 @@ src/client/CMakeFiles/client_api.dir/clean:
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/all: src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/all
 	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build.make src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build.make src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=15 "Built target flexbison_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target flexbison_main"
 .PHONY : src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -7387,12 +7537,12 @@ src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/clean:
 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=16 "Built target flexbisonlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=15,16 "Built target flexbisonlib"
 .PHONY : src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/all
 
 # Build rule for subdir invocation for target.
 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/rule
@@ -7412,6 +7562,7 @@ src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/clean:
 
 # All Build rule for target.
 src/codetest/CMakeFiles/codetest.dir/all: log/simple_log/CMakeFiles/log.dir/all
+src/codetest/CMakeFiles/codetest.dir/all: json/cJSON/CMakeFiles/json.dir/all
 src/codetest/CMakeFiles/codetest.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/codetest/CMakeFiles/codetest.dir/build.make src/codetest/CMakeFiles/codetest.dir/build
@@ -7420,7 +7571,7 @@ src/codetest/CMakeFiles/codetest.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 
 # Build rule for subdir invocation for target.
 src/codetest/CMakeFiles/codetest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/codetest/CMakeFiles/codetest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : src/codetest/CMakeFiles/codetest.dir/rule
@@ -7440,16 +7591,17 @@ src/codetest/CMakeFiles/codetest.dir/clean:
 
 # All Build rule for target.
 src/server/CMakeFiles/server.dir/all: log/simple_log/CMakeFiles/log.dir/all
+src/server/CMakeFiles/server.dir/all: json/cJSON/CMakeFiles/json.dir/all
 src/server/CMakeFiles/server.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 src/server/CMakeFiles/server.dir/all: perf/gperftools/CMakeFiles/profiler.dir/all
 	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/server.dir/build.make src/server/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=52 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target server"
 .PHONY : src/server/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 src/server/CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : src/server/CMakeFiles/server.dir/rule

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Ddaemon_en=1 -Dflexbisonlib_EXPORTS -Dlogcolor_en=1 -Dmps_en=1
 
-CXX_INCLUDES = -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/log/simple_log -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/libuv/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/driver/. -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver
+CXX_INCLUDES = -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/log/simple_log -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/json/cJSON -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/libuv/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/src/client/runtime_api/flexbison/driver/. -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/src/client/runtime_api/flexbison/driver
 
 CXX_FLAGS = -g -fPIC
 

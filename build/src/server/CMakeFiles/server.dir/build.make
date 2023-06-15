@@ -99,6 +99,7 @@ server_EXTERNAL_OBJECTS =
 bin/server: src/server/CMakeFiles/server.dir/server_main.c.o
 bin/server: src/server/CMakeFiles/server.dir/build.make
 bin/server: log/simple_log/liblog.so.SOVERSION
+bin/server: json/cJSON/libjson.so
 bin/server: 3rd/libuv/libuv.a
 bin/server: perf/gperftools/libprofiler.so.5.5.5
 bin/server: src/server/CMakeFiles/server.dir/link.txt

@@ -1,5 +1,5 @@
-libdir=/usr/local/llvm/lib
-includedir=/usr/local/llvm/include
+libdir=/usr/local/kusr/lib
+includedir=/usr/local/kusr/include
 
 Name: gmock_main
 Description: GoogleMock (with main() function)

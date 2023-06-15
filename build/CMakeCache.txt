@@ -204,8 +204,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 //C header files for non-gcc (/usr/include)
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
-//Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/usr/local/llvm
+CMAKE_INSTALL_PREFIX:STRING=/usr/local/kusr
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -261,7 +260,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=khl_project
+CMAKE_PROJECT_NAME:STATIC=kusr_code
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.13.0
@@ -413,6 +412,12 @@ CXXFEATURECHECK_DEBUG:BOOL=OFF
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//Dot tool for use with Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
+
+//Doxygen documentation generation tool (http://www.doxygen.org)
+DOXYGEN_EXECUTABLE:FILEPATH=/usr/local/bin/doxygen
+
 //path to the flex executable
 FLEX_EXECUTABLE:FILEPATH=/usr/bin/flex
 
@@ -512,7 +517,7 @@ benchmark_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_
 benchmark_en:BOOL=ON
 
 //Dependencies for the target
-client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;general;boost_system;general;boost_filesystem;general;boost_thread;general;pthread;
+client_api_LIB_DEPENDS:STATIC=general;log;general;json;general;gcc_s;general;uv_a;general;dl;general;boost_system;general;boost_filesystem;general;boost_thread;general;pthread;
 
 //Enable the daemon: on/off
 daemon_en:BOOL=ON
@@ -610,6 +615,12 @@ khl_project_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kus
 
 //Value Computed by CMake
 khl_project_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code
+
+//Value Computed by CMake
+kusr_code_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build
+
+//Value Computed by CMake
+kusr_code_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code
 
 //Path to a library.
 libunwind_location:FILEPATH=/usr/lib/x86_64-linux-gnu/libunwind.so
@@ -811,7 +822,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=61
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=63
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -910,10 +921,16 @@ CVSCOMMAND-ADVANCED:INTERNAL=1
 CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
+DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 //CHECK_TYPE_SIZE: sizeof(Elf32_Versym)
 ELF32_VERSYM:INTERNAL=2
 //Details about finding BISON
 FIND_PACKAGE_MESSAGE_DETAILS_BISON:INTERNAL=[/usr/bin/bison][v3.5.1()]
+//Details about finding Doxygen
+FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/local/bin/doxygen][cfound components: doxygen dot ][v1.9.7 (9a5686aeebff882ebda518151bc5df9d757ea5f7)()]
 //Details about finding FLEX
 FIND_PACKAGE_MESSAGE_DETAILS_FLEX:INTERNAL=[/usr/bin/flex][v2.6.4()]
 //Details about finding Git
@@ -1139,7 +1156,7 @@ UV_LINT_W4:INTERNAL=
 //Test UV_LINT_WALL
 UV_LINT_WALL:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local/llvm
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local/kusr
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=/usr/bin/python3.8
 //Python Properties

@@ -19,6 +19,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "../log/simple_log"
+  "../json/cJSON"
   "../3rd/libuv/include"
   "../test/googletest/googletest/include"
   "../test/googletest/googletest"
