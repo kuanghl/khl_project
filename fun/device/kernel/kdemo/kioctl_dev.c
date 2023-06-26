@@ -14,13 +14,13 @@
 #include <linux/cdev.h>	
 #include <linux/uaccess.h>
 
-#include "ioctl_dev.h"
+#include "kioctl_dev.h"
 
 /* store the major number extracted by dev_t */
 int ioctl_d_interface_major = 0;
 int ioctl_d_interface_minor = 0;
 
-#define DEVICE_NAME "ioctl"
+#define DEVICE_NAME "kioctl"
 char* ioctl_d_interface_name = DEVICE_NAME;
 
 ioctl_d_interface_dev ioctl_d_interface;

@@ -1,0 +1,2 @@
+khello-objs := khello_dev.o
+ obj-m := khello.o

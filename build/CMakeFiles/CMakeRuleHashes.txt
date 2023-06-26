@@ -27,9 +27,13 @@ c95afc7475a0645a0ba8b2d9e415ca60 3rd/libuv/CMakeFiles/NightlyStart
 c0e65ababe6719d679b982d35b04f348 3rd/libuv/CMakeFiles/NightlySubmit
 a7b17dc8236d8298096b37523b353dc3 3rd/libuv/CMakeFiles/NightlyTest
 03cd4204cbe88b98319c995447872827 3rd/libuv/CMakeFiles/NightlyUpdate
-e55a338c14830022c8a6d709cda9ee93 fun/device/kernel/CMakeFiles/driver
-f60d17db49d4d49aeff14cf8973eb47d fun/device/kernel/CMakeFiles/load
-e0642a7e14d399812e41a3d029dd8634 fun/device/kernel/CMakeFiles/unload
-d2475ea2c12353bd640395fc0ceb4de0 fun/device/kernel/ioctl.ko
+e3e13dc54d80da88072e2788f3c063d9 fun/device/kernel/khello/CMakeFiles/khello_driver
+e90660e8a36fd549299557db9033b6f1 fun/device/kernel/khello/CMakeFiles/khello_load
+9d889eb4c57156b54d65a146e6903e4b fun/device/kernel/khello/CMakeFiles/khello_unload
+687fbcab7721a5d06bc5790cb783c8c9 fun/device/kernel/khello/khello.ko
+16cb0ce124ad7967f249a4ed03738c64 fun/device/kernel/kioctl/CMakeFiles/kioctl_driver
+54562efc2ef88882ce16eeb5220d68cc fun/device/kernel/kioctl/CMakeFiles/kioctl_load
+02bff2949965740dc905f0879e8f34b9 fun/device/kernel/kioctl/CMakeFiles/kioctl_unload
+dd8820bf01b15e378dc02d6fbbf8913f fun/device/kernel/kioctl/kioctl.ko
 b76533064db22e251c3cd56fb9075146 src/client/runtime_api/flexbison/driver/lexer.cpp
 a5606ca622097b28ee0fb7cf5a044081 src/client/runtime_api/flexbison/driver/parser.cpp

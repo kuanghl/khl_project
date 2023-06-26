@@ -1771,56 +1771,108 @@ nanobench/fast:
 .PHONY : nanobench/fast
 
 #=============================================================================
-# Target rules for targets named unload
+# Target rules for targets named kioctl_unload
 
 # Build rule for target.
-unload: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unload
-.PHONY : unload
+kioctl_unload: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kioctl_unload
+.PHONY : kioctl_unload
 
 # fast build rule for target.
-unload/fast:
-	$(MAKE) $(MAKESILENT) -f fun/device/kernel/CMakeFiles/unload.dir/build.make fun/device/kernel/CMakeFiles/unload.dir/build
-.PHONY : unload/fast
+kioctl_unload/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/kioctl/CMakeFiles/kioctl_unload.dir/build.make fun/device/kernel/kioctl/CMakeFiles/kioctl_unload.dir/build
+.PHONY : kioctl_unload/fast
 
 #=============================================================================
-# Target rules for targets named load
+# Target rules for targets named kioctl_load
 
 # Build rule for target.
-load: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 load
-.PHONY : load
+kioctl_load: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kioctl_load
+.PHONY : kioctl_load
 
 # fast build rule for target.
-load/fast:
-	$(MAKE) $(MAKESILENT) -f fun/device/kernel/CMakeFiles/load.dir/build.make fun/device/kernel/CMakeFiles/load.dir/build
-.PHONY : load/fast
+kioctl_load/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/kioctl/CMakeFiles/kioctl_load.dir/build.make fun/device/kernel/kioctl/CMakeFiles/kioctl_load.dir/build
+.PHONY : kioctl_load/fast
 
 #=============================================================================
-# Target rules for targets named driver
+# Target rules for targets named kioctl_driver
 
 # Build rule for target.
-driver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 driver
-.PHONY : driver
+kioctl_driver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kioctl_driver
+.PHONY : kioctl_driver
 
 # fast build rule for target.
-driver/fast:
-	$(MAKE) $(MAKESILENT) -f fun/device/kernel/CMakeFiles/driver.dir/build.make fun/device/kernel/CMakeFiles/driver.dir/build
-.PHONY : driver/fast
+kioctl_driver/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/kioctl/CMakeFiles/kioctl_driver.dir/build.make fun/device/kernel/kioctl/CMakeFiles/kioctl_driver.dir/build
+.PHONY : kioctl_driver/fast
 
 #=============================================================================
-# Target rules for targets named ioctl
+# Target rules for targets named khello_unload
 
 # Build rule for target.
-ioctl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ioctl
-.PHONY : ioctl
+khello_unload: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 khello_unload
+.PHONY : khello_unload
 
 # fast build rule for target.
-ioctl/fast:
-	$(MAKE) $(MAKESILENT) -f fun/device/user/CMakeFiles/ioctl.dir/build.make fun/device/user/CMakeFiles/ioctl.dir/build
-.PHONY : ioctl/fast
+khello_unload/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/khello/CMakeFiles/khello_unload.dir/build.make fun/device/kernel/khello/CMakeFiles/khello_unload.dir/build
+.PHONY : khello_unload/fast
+
+#=============================================================================
+# Target rules for targets named khello_load
+
+# Build rule for target.
+khello_load: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 khello_load
+.PHONY : khello_load
+
+# fast build rule for target.
+khello_load/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/khello/CMakeFiles/khello_load.dir/build.make fun/device/kernel/khello/CMakeFiles/khello_load.dir/build
+.PHONY : khello_load/fast
+
+#=============================================================================
+# Target rules for targets named khello_driver
+
+# Build rule for target.
+khello_driver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 khello_driver
+.PHONY : khello_driver
+
+# fast build rule for target.
+khello_driver/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/khello/CMakeFiles/khello_driver.dir/build.make fun/device/kernel/khello/CMakeFiles/khello_driver.dir/build
+.PHONY : khello_driver/fast
+
+#=============================================================================
+# Target rules for targets named uioctl
+
+# Build rule for target.
+uioctl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uioctl
+.PHONY : uioctl
+
+# fast build rule for target.
+uioctl/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/user/uioctl/CMakeFiles/uioctl.dir/build.make fun/device/user/uioctl/CMakeFiles/uioctl.dir/build
+.PHONY : uioctl/fast
+
+#=============================================================================
+# Target rules for targets named uhello
+
+# Build rule for target.
+uhello: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uhello
+.PHONY : uhello
+
+# fast build rule for target.
+uhello/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/user/uhello/CMakeFiles/uhello.dir/build.make fun/device/user/uhello/CMakeFiles/uhello.dir/build
+.PHONY : uhello/fast
 
 #=============================================================================
 # Target rules for targets named libuv_server
@@ -2943,9 +2995,12 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
-	@echo "... driver"
-	@echo "... load"
-	@echo "... unload"
+	@echo "... khello_driver"
+	@echo "... khello_load"
+	@echo "... khello_unload"
+	@echo "... kioctl_driver"
+	@echo "... kioctl_load"
+	@echo "... kioctl_unload"
 	@echo "... addressmap_unittest"
 	@echo "... argc_argv"
 	@echo "... array"
@@ -2991,7 +3046,6 @@ help:
 	@echo "... heap_checker_unittest"
 	@echo "... heap_profiler_debug_unittest"
 	@echo "... heap_profiler_unittest"
-	@echo "... ioctl"
 	@echo "... json"
 	@echo "... kill_process"
 	@echo "... libuv_async"
@@ -3121,6 +3175,8 @@ help:
 	@echo "... thread_cancel"
 	@echo "... thread_dealloc_unittest"
 	@echo "... tidsafe_server"
+	@echo "... uhello"
+	@echo "... uioctl"
 	@echo "... uv"
 	@echo "... uv_a"
 .PHONY : help

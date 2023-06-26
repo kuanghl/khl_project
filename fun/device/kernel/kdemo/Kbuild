@@ -1,0 +1,2 @@
+kioctl-objs := kioctl_dev.o
+ obj-m := kioctl.o
