@@ -1,5 +1,6 @@
 #include <benchmark/benchmark.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include <log.h>
 
 /*TEST API*/
@@ -231,17 +232,35 @@ BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_pref_100)(benchmark::State& st) 
 // BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__test)->Teardown(__teardown)->Arg(4<<10)->Range(4, 8<<10);
 // BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__test)->Teardown(__teardown)->Args({1<<10, 128, 64});
 // BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_100)->Setup(__test)->Teardown(__teardown)->Ranges({{1<<10, 8<<10}, {128, 512}});
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}, {11, 18}});
-BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}});
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->ArgsProduct({{1, 3, 8}, {20, 40, 60, 80}, {11, 18}});
+// BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_pref_65)->Setup(__test)->Teardown(__teardown)->Repetitions(10);
 /* BarTest is now registered */
+
+BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_PauseTiming)(benchmark::State& st) {
+    for (auto _ : st) {
+        st.PauseTiming();
+        // a = factorial_pref(65);
+        st.ResumeTiming();
+    }
+    // printf("Inter function.\n");
+}
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_PauseTiming);
+
+BENCHMARK_DEFINE_F(Factorial_Fixture, factorial_KeepRunning)(benchmark::State& st) {
+    for (auto _ : st) {
+        printf("%x\n", _);
+    }
+    // printf("Inter function.\n");
+}
+BENCHMARK_REGISTER_F(Factorial_Fixture, factorial_KeepRunning)->Iterations(100);
 
 #else
 

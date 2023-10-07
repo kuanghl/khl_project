@@ -1,0 +1,2 @@
+kmmap-objs := kmmap_dev.o
+ obj-m := kmmap.o

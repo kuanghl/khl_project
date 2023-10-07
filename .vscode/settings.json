@@ -70,7 +70,16 @@
         "sem.h": "c",
         "condition_variable": "c",
         "libunwind.h": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "netlink.h": "c",
+        "sock.h": "c",
+        "init.h": "c",
+        "time64.h": "c",
+        "hash_map": "c",
+        "hash_set": "c",
+        "bitset": "c",
+        "regex": "c",
+        "valarray": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

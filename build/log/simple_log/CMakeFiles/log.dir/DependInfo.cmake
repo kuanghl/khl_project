@@ -13,6 +13,7 @@ set(CMAKE_TARGET_DEFINITIONS_C
   "daemon_en=1"
   "log_EXPORTS"
   "logcolor_en=1"
+  "loglevel=5"
   "mps_en=1"
   )
 

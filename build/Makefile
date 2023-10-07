@@ -1849,6 +1849,84 @@ khello_driver/fast:
 .PHONY : khello_driver/fast
 
 #=============================================================================
+# Target rules for targets named knetlink_unload
+
+# Build rule for target.
+knetlink_unload: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 knetlink_unload
+.PHONY : knetlink_unload
+
+# fast build rule for target.
+knetlink_unload/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/knetlink/CMakeFiles/knetlink_unload.dir/build.make fun/device/kernel/knetlink/CMakeFiles/knetlink_unload.dir/build
+.PHONY : knetlink_unload/fast
+
+#=============================================================================
+# Target rules for targets named knetlink_load
+
+# Build rule for target.
+knetlink_load: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 knetlink_load
+.PHONY : knetlink_load
+
+# fast build rule for target.
+knetlink_load/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/knetlink/CMakeFiles/knetlink_load.dir/build.make fun/device/kernel/knetlink/CMakeFiles/knetlink_load.dir/build
+.PHONY : knetlink_load/fast
+
+#=============================================================================
+# Target rules for targets named knetlink_driver
+
+# Build rule for target.
+knetlink_driver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 knetlink_driver
+.PHONY : knetlink_driver
+
+# fast build rule for target.
+knetlink_driver/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/knetlink/CMakeFiles/knetlink_driver.dir/build.make fun/device/kernel/knetlink/CMakeFiles/knetlink_driver.dir/build
+.PHONY : knetlink_driver/fast
+
+#=============================================================================
+# Target rules for targets named kmmap_unload
+
+# Build rule for target.
+kmmap_unload: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kmmap_unload
+.PHONY : kmmap_unload
+
+# fast build rule for target.
+kmmap_unload/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/kmmap/CMakeFiles/kmmap_unload.dir/build.make fun/device/kernel/kmmap/CMakeFiles/kmmap_unload.dir/build
+.PHONY : kmmap_unload/fast
+
+#=============================================================================
+# Target rules for targets named kmmap_load
+
+# Build rule for target.
+kmmap_load: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kmmap_load
+.PHONY : kmmap_load
+
+# fast build rule for target.
+kmmap_load/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/kmmap/CMakeFiles/kmmap_load.dir/build.make fun/device/kernel/kmmap/CMakeFiles/kmmap_load.dir/build
+.PHONY : kmmap_load/fast
+
+#=============================================================================
+# Target rules for targets named kmmap_driver
+
+# Build rule for target.
+kmmap_driver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kmmap_driver
+.PHONY : kmmap_driver
+
+# fast build rule for target.
+kmmap_driver/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/kernel/kmmap/CMakeFiles/kmmap_driver.dir/build.make fun/device/kernel/kmmap/CMakeFiles/kmmap_driver.dir/build
+.PHONY : kmmap_driver/fast
+
+#=============================================================================
 # Target rules for targets named uioctl
 
 # Build rule for target.
@@ -1873,6 +1951,32 @@ uhello: cmake_check_build_system
 uhello/fast:
 	$(MAKE) $(MAKESILENT) -f fun/device/user/uhello/CMakeFiles/uhello.dir/build.make fun/device/user/uhello/CMakeFiles/uhello.dir/build
 .PHONY : uhello/fast
+
+#=============================================================================
+# Target rules for targets named unetlink
+
+# Build rule for target.
+unetlink: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unetlink
+.PHONY : unetlink
+
+# fast build rule for target.
+unetlink/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/user/unetlink/CMakeFiles/unetlink.dir/build.make fun/device/user/unetlink/CMakeFiles/unetlink.dir/build
+.PHONY : unetlink/fast
+
+#=============================================================================
+# Target rules for targets named ummap
+
+# Build rule for target.
+ummap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ummap
+.PHONY : ummap
+
+# fast build rule for target.
+ummap/fast:
+	$(MAKE) $(MAKESILENT) -f fun/device/user/ummap/CMakeFiles/ummap.dir/build.make fun/device/user/ummap/CMakeFiles/ummap.dir/build
+.PHONY : ummap/fast
 
 #=============================================================================
 # Target rules for targets named libuv_server
@@ -2759,6 +2863,19 @@ struct_array/fast:
 .PHONY : struct_array/fast
 
 #=============================================================================
+# Target rules for targets named strstr
+
+# Build rule for target.
+strstr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 strstr
+.PHONY : strstr
+
+# fast build rule for target.
+strstr/fast:
+	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strstr.dir/build.make cfun/linux_c/CMakeFiles/strstr.dir/build
+.PHONY : strstr/fast
+
+#=============================================================================
 # Target rules for targets named kill_process
 
 # Build rule for target.
@@ -3001,6 +3118,12 @@ help:
 	@echo "... kioctl_driver"
 	@echo "... kioctl_load"
 	@echo "... kioctl_unload"
+	@echo "... kmmap_driver"
+	@echo "... kmmap_load"
+	@echo "... kmmap_unload"
+	@echo "... knetlink_driver"
+	@echo "... knetlink_load"
+	@echo "... knetlink_unload"
 	@echo "... addressmap_unittest"
 	@echo "... argc_argv"
 	@echo "... array"
@@ -3139,6 +3262,7 @@ help:
 	@echo "... strcpy"
 	@echo "... strncpy"
 	@echo "... strrchr"
+	@echo "... strstr"
 	@echo "... struct_array"
 	@echo "... sysinfo"
 	@echo "... system_alloc_unittest"
@@ -3177,6 +3301,8 @@ help:
 	@echo "... tidsafe_server"
 	@echo "... uhello"
 	@echo "... uioctl"
+	@echo "... ummap"
+	@echo "... unetlink"
 	@echo "... uv"
 	@echo "... uv_a"
 .PHONY : help

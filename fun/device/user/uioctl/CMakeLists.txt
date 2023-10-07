@@ -6,9 +6,9 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/)
 # INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../kernel/)
 
 # 设置变量名
-SET(TARGET_SRCS libuv_user_buf_srcs)
-SET(TARGET_PATH libuv_user_buf_path)
-SET(TARGET_NAME libuv_user_buf_name)
+SET(TARGET_SRCS uioctl_srcs)
+SET(TARGET_PATH uioctl_path)
+SET(TARGET_NAME uioctl_name)
 
 # 找到当前目录下的所有.cpp文件存放到TARGET_SRCS
 # FILE(GLOB TARGET_SRCS 

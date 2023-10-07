@@ -35,5 +35,13 @@ e90660e8a36fd549299557db9033b6f1 fun/device/kernel/khello/CMakeFiles/khello_load
 54562efc2ef88882ce16eeb5220d68cc fun/device/kernel/kioctl/CMakeFiles/kioctl_load
 02bff2949965740dc905f0879e8f34b9 fun/device/kernel/kioctl/CMakeFiles/kioctl_unload
 dd8820bf01b15e378dc02d6fbbf8913f fun/device/kernel/kioctl/kioctl.ko
+c535c6957e02647d0f30bca0436f2c3e fun/device/kernel/kmmap/CMakeFiles/kmmap_driver
+920feadbafa3507bbcfcbc457517b170 fun/device/kernel/kmmap/CMakeFiles/kmmap_load
+040fb19937aa53b3a1fab022360c6470 fun/device/kernel/kmmap/CMakeFiles/kmmap_unload
+9b1b88a2a3d9e4db2f27f3c4a0ad3c74 fun/device/kernel/kmmap/kmmap.ko
+be405844ad62d9dd4b5ba2d5e161fe79 fun/device/kernel/knetlink/CMakeFiles/knetlink_driver
+7f62cb605929a2c1925568478c99d119 fun/device/kernel/knetlink/CMakeFiles/knetlink_load
+c0b5df746805c7d160fd72335cc4ac4d fun/device/kernel/knetlink/CMakeFiles/knetlink_unload
+84d5168a7011eb81140f9b1a3cc3f1e4 fun/device/kernel/knetlink/knetlink.ko
 b76533064db22e251c3cd56fb9075146 src/client/runtime_api/flexbison/driver/lexer.cpp
 a5606ca622097b28ee0fb7cf5a044081 src/client/runtime_api/flexbison/driver/parser.cpp

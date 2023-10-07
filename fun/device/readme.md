@@ -17,7 +17,7 @@
 - `cmake ..`&&`make -j16`&&`sudo make install`编译安装
 - `cd build/fun/device/kernel/kxx`
 - `sh ./load_module.sh load`加载驱动
-- `sh ./load_module.sh load`卸载驱动
+- `sh ./load_module.sh unload`卸载驱动
 #### user
 - `cd build/funbin`
 - `./uxx`

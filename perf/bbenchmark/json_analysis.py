@@ -248,26 +248,28 @@ def analysis_files(file, plots_data, arga):
 
     for b in data['benchmarks']:
         # print('\t \033[0;34m%-16s\033[0m ----> \033[0;32m%-64s\033[0m = \033[0;33m%-32s\033[0m'%(arga, b['name'], str(b[arga])))
-        if plots_data.get(b['name']) is None:
-            plots_data[b['name']] = [b[arga]]
-        else:
-            plots_data[b['name']].append(b[arga])
+        if 'aggregate_name' not in b: # 屏蔽均值/中值/标准差/离散系数
+            if plots_data.get(b['name']) is None:
+                plots_data[b['name']] = [b[arga]]
+            else:
+                plots_data[b['name']].append(b[arga])
 
 # 针对统一api不同参数的解析
 def  api_analysis_files(file, plots_data, name, arga):
     print('analysis ' + file)
     data = read_json(file)
     for a in data['benchmarks']:
-        if plots_data.get(a['name'].split('/')[1]) is None:
-            if a['name'].split('/')[1] not in name:
-                name.append(a['name'].split('/')[1])
-            plots_data[a['name'].split('/')[1]] = [a[arga]]
-            if len(a['name'].split('/')) > 2:
-                plots_data[a['name'].split('/')[1] + '/p'] = [a['name'].replace(a['name'].split('/')[0]+ '/' + a['name'].split('/')[1] + '/', '')]
-        else:
-            plots_data[a['name'].split('/')[1]].append(a[arga])
-            if len(a['name'].split('/')) > 2:
-                plots_data[a['name'].split('/')[1] + '/p'].append(a['name'].replace(a['name'].split('/')[0]+ '/' + a['name'].split('/')[1] + '/', ''))
+        if 'aggregate_name' not in a: # 屏蔽均值/中值/标准差/离散系数
+            if plots_data.get(a['name'].split('/')[1]) is None:
+                if a['name'].split('/')[1] not in name:
+                    name.append(a['name'].split('/')[1])
+                plots_data[a['name'].split('/')[1]] = [a[arga]]
+                if len(a['name'].split('/')) > 2:
+                    plots_data[a['name'].split('/')[1] + '/p'] = [a['name'].replace(a['name'].split('/')[0]+ '/' + a['name'].split('/')[1] + '/', '')]
+            else:
+                plots_data[a['name'].split('/')[1]].append(a[arga])
+                if len(a['name'].split('/')) > 2:
+                    plots_data[a['name'].split('/')[1] + '/p'].append(a['name'].replace(a['name'].split('/')[0]+ '/' + a['name'].split('/')[1] + '/', ''))
 
 
 def smooth(x,window_len=11,window='hanning'):
