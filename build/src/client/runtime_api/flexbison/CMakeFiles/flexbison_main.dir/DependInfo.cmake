@@ -12,7 +12,6 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "daemon_en=1"
   "logcolor_en=1"
-  "loglevel=5"
   "mps_en=1"
   )
 
@@ -20,7 +19,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "../log/simple_log"
-  "../json/cJSON"
   "../3rd/libuv/include"
   "../src/client/runtime_api/flexbison/include"
   )

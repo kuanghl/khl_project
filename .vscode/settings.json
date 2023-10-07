@@ -79,7 +79,8 @@
         "hash_set": "c",
         "bitset": "c",
         "regex": "c",
-        "valarray": "c"
+        "valarray": "c",
+        "cjson.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

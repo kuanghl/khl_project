@@ -75,6 +75,8 @@ ELSE()  # lib: profiler tcmalloc unwind pthread(编译测试例)
 
     # gperftools cmake bug.
     set(HAVE_LIBUNWIND_H "/usr/lib/x86_64-linux-gnu/libunwind.h") 
+    set(CMAKE_EXE_LINKER_FLAGS "-Wl,-copy-dt-needed-entries") 
+
     # 设置子目录并构建
     ADD_SUBDIRECTORY(gperftools)
 

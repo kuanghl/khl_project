@@ -129,7 +129,6 @@ src/client/libclient_api.so: src/client/CMakeFiles/client_api.dir/drv_api/sockcl
 src/client/libclient_api.so: src/client/CMakeFiles/client_api.dir/runtime_api/flexbison/main.cpp.o
 src/client/libclient_api.so: src/client/CMakeFiles/client_api.dir/build.make
 src/client/libclient_api.so: log/simple_log/liblog.so.SOVERSION
-src/client/libclient_api.so: json/cJSON/libjson.so
 src/client/libclient_api.so: 3rd/libuv/libuv.a
 src/client/libclient_api.so: src/client/CMakeFiles/client_api.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libclient_api.so"

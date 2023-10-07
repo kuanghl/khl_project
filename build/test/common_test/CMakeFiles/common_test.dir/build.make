@@ -113,15 +113,12 @@ common_test_EXTERNAL_OBJECTS =
 test/common_test/common_test: test/common_test/CMakeFiles/common_test.dir/main.cpp.o
 test/common_test/common_test: test/common_test/CMakeFiles/common_test.dir/test001_x.cpp.o
 test/common_test/common_test: test/common_test/CMakeFiles/common_test.dir/build.make
-test/common_test/common_test: lib/libgtest.a
-test/common_test/common_test: lib/libgtest_main.a
-test/common_test/common_test: lib/libgmock.a
-test/common_test/common_test: lib/libgmock_main.a
+test/common_test/common_test: lib/libgtest_main.so.1.13.0
+test/common_test/common_test: lib/libgmock_main.so.1.13.0
 test/common_test/common_test: log/simple_log/liblog.so.SOVERSION
-test/common_test/common_test: json/cJSON/libjson.so
 test/common_test/common_test: 3rd/libuv/libuv.a
-test/common_test/common_test: lib/libgmock.a
-test/common_test/common_test: lib/libgtest.a
+test/common_test/common_test: lib/libgmock.so.1.13.0
+test/common_test/common_test: lib/libgtest.so.1.13.0
 test/common_test/common_test: test/common_test/CMakeFiles/common_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable common_test"
 	cd /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/common_test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/common_test.dir/link.txt --verbose=$(VERBOSE)

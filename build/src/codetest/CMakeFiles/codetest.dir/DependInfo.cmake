@@ -12,7 +12,6 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "daemon_en=1"
   "logcolor_en=1"
-  "loglevel=5"
   "mps_en=1"
   )
 
@@ -20,7 +19,6 @@ set(CMAKE_TARGET_DEFINITIONS_C
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   "../log/simple_log"
-  "../json/cJSON"
   "../3rd/libuv/include"
   "../src/codetest/crc"
   "../src/codetest"
@@ -29,7 +27,6 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/log/simple_log/CMakeFiles/log.dir/DependInfo.cmake"
-  "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/json/cJSON/CMakeFiles/json.dir/DependInfo.cmake"
   "/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/libuv/CMakeFiles/uv_a.dir/DependInfo.cmake"
   )
 

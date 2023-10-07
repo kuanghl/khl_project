@@ -10,7 +10,7 @@
 #include "cJSON.h"
 
 
-#define FILE_NAME "jss.json"
+#define FILE_NAME "json_test.json"
 
 
 // 封装Json

@@ -220,7 +220,7 @@ json: cmake_check_build_system
 
 # fast build rule for target.
 json/fast:
-	$(MAKE) $(MAKESILENT) -f json/cJSON/CMakeFiles/json.dir/build.make json/cJSON/CMakeFiles/json.dir/build
+	$(MAKE) $(MAKESILENT) -f log/simple_cjson/CMakeFiles/json.dir/build.make log/simple_cjson/CMakeFiles/json.dir/build
 .PHONY : json/fast
 
 #=============================================================================
@@ -614,6 +614,344 @@ uv/fast:
 .PHONY : uv/fast
 
 #=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/CMakeFiles/uninstall.dir/build.make 3rd/cJSON/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named check
+
+# Build rule for target.
+check: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 check
+.PHONY : check
+
+# fast build rule for target.
+check/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/CMakeFiles/check.dir/build.make 3rd/cJSON/CMakeFiles/check.dir/build
+.PHONY : check/fast
+
+#=============================================================================
+# Target rules for targets named cJSON_test
+
+# Build rule for target.
+cJSON_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cJSON_test
+.PHONY : cJSON_test
+
+# fast build rule for target.
+cJSON_test/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/CMakeFiles/cJSON_test.dir/build.make 3rd/cJSON/CMakeFiles/cJSON_test.dir/build
+.PHONY : cJSON_test/fast
+
+#=============================================================================
+# Target rules for targets named cjson
+
+# Build rule for target.
+cjson: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cjson
+.PHONY : cjson
+
+# fast build rule for target.
+cjson/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/CMakeFiles/cjson.dir/build.make 3rd/cJSON/CMakeFiles/cjson.dir/build
+.PHONY : cjson/fast
+
+#=============================================================================
+# Target rules for targets named readme_examples
+
+# Build rule for target.
+readme_examples: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 readme_examples
+.PHONY : readme_examples
+
+# fast build rule for target.
+readme_examples/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/readme_examples.dir/build.make 3rd/cJSON/tests/CMakeFiles/readme_examples.dir/build
+.PHONY : readme_examples/fast
+
+#=============================================================================
+# Target rules for targets named cjson_add
+
+# Build rule for target.
+cjson_add: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cjson_add
+.PHONY : cjson_add
+
+# fast build rule for target.
+cjson_add/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/cjson_add.dir/build.make 3rd/cJSON/tests/CMakeFiles/cjson_add.dir/build
+.PHONY : cjson_add/fast
+
+#=============================================================================
+# Target rules for targets named parse_with_opts
+
+# Build rule for target.
+parse_with_opts: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parse_with_opts
+.PHONY : parse_with_opts
+
+# fast build rule for target.
+parse_with_opts/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/build
+.PHONY : parse_with_opts/fast
+
+#=============================================================================
+# Target rules for targets named misc_tests
+
+# Build rule for target.
+misc_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 misc_tests
+.PHONY : misc_tests
+
+# fast build rule for target.
+misc_tests/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/misc_tests.dir/build.make 3rd/cJSON/tests/CMakeFiles/misc_tests.dir/build
+.PHONY : misc_tests/fast
+
+#=============================================================================
+# Target rules for targets named minify_tests
+
+# Build rule for target.
+minify_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 minify_tests
+.PHONY : minify_tests
+
+# fast build rule for target.
+minify_tests/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/minify_tests.dir/build.make 3rd/cJSON/tests/CMakeFiles/minify_tests.dir/build
+.PHONY : minify_tests/fast
+
+#=============================================================================
+# Target rules for targets named unity
+
+# Build rule for target.
+unity: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unity
+.PHONY : unity
+
+# fast build rule for target.
+unity/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/unity.dir/build.make 3rd/cJSON/tests/CMakeFiles/unity.dir/build
+.PHONY : unity/fast
+
+#=============================================================================
+# Target rules for targets named parse_hex4
+
+# Build rule for target.
+parse_hex4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parse_hex4
+.PHONY : parse_hex4
+
+# fast build rule for target.
+parse_hex4/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/build
+.PHONY : parse_hex4/fast
+
+#=============================================================================
+# Target rules for targets named parse_number
+
+# Build rule for target.
+parse_number: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parse_number
+.PHONY : parse_number
+
+# fast build rule for target.
+parse_number/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_number.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_number.dir/build
+.PHONY : parse_number/fast
+
+#=============================================================================
+# Target rules for targets named parse_string
+
+# Build rule for target.
+parse_string: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parse_string
+.PHONY : parse_string
+
+# fast build rule for target.
+parse_string/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_string.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_string.dir/build
+.PHONY : parse_string/fast
+
+#=============================================================================
+# Target rules for targets named print_string
+
+# Build rule for target.
+print_string: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print_string
+.PHONY : print_string
+
+# fast build rule for target.
+print_string/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/print_string.dir/build.make 3rd/cJSON/tests/CMakeFiles/print_string.dir/build
+.PHONY : print_string/fast
+
+#=============================================================================
+# Target rules for targets named print_number
+
+# Build rule for target.
+print_number: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print_number
+.PHONY : print_number
+
+# fast build rule for target.
+print_number/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/print_number.dir/build.make 3rd/cJSON/tests/CMakeFiles/print_number.dir/build
+.PHONY : print_number/fast
+
+#=============================================================================
+# Target rules for targets named parse_array
+
+# Build rule for target.
+parse_array: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parse_array
+.PHONY : parse_array
+
+# fast build rule for target.
+parse_array/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_array.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_array.dir/build
+.PHONY : parse_array/fast
+
+#=============================================================================
+# Target rules for targets named parse_examples
+
+# Build rule for target.
+parse_examples: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parse_examples
+.PHONY : parse_examples
+
+# fast build rule for target.
+parse_examples/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/build
+.PHONY : parse_examples/fast
+
+#=============================================================================
+# Target rules for targets named print_array
+
+# Build rule for target.
+print_array: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print_array
+.PHONY : print_array
+
+# fast build rule for target.
+print_array/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/print_array.dir/build.make 3rd/cJSON/tests/CMakeFiles/print_array.dir/build
+.PHONY : print_array/fast
+
+#=============================================================================
+# Target rules for targets named compare_tests
+
+# Build rule for target.
+compare_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compare_tests
+.PHONY : compare_tests
+
+# fast build rule for target.
+compare_tests/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/compare_tests.dir/build.make 3rd/cJSON/tests/CMakeFiles/compare_tests.dir/build
+.PHONY : compare_tests/fast
+
+#=============================================================================
+# Target rules for targets named parse_object
+
+# Build rule for target.
+parse_object: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parse_object
+.PHONY : parse_object
+
+# fast build rule for target.
+parse_object/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_object.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_object.dir/build
+.PHONY : parse_object/fast
+
+#=============================================================================
+# Target rules for targets named parse_value
+
+# Build rule for target.
+parse_value: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parse_value
+.PHONY : parse_value
+
+# fast build rule for target.
+parse_value/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_value.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_value.dir/build
+.PHONY : parse_value/fast
+
+#=============================================================================
+# Target rules for targets named print_object
+
+# Build rule for target.
+print_object: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print_object
+.PHONY : print_object
+
+# fast build rule for target.
+print_object/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/print_object.dir/build.make 3rd/cJSON/tests/CMakeFiles/print_object.dir/build
+.PHONY : print_object/fast
+
+#=============================================================================
+# Target rules for targets named print_value
+
+# Build rule for target.
+print_value: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print_value
+.PHONY : print_value
+
+# fast build rule for target.
+print_value/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/print_value.dir/build.make 3rd/cJSON/tests/CMakeFiles/print_value.dir/build
+.PHONY : print_value/fast
+
+#=============================================================================
+# Target rules for targets named fuzz_main
+
+# Build rule for target.
+fuzz_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fuzz_main
+.PHONY : fuzz_main
+
+# fast build rule for target.
+fuzz_main/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/fuzzing/CMakeFiles/fuzz_main.dir/build.make 3rd/cJSON/fuzzing/CMakeFiles/fuzz_main.dir/build
+.PHONY : fuzz_main/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON_test/CMakeFiles/test.dir/build.make 3rd/cJSON_test/CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
+# Target rules for targets named json_test
+
+# Build rule for target.
+json_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 json_test
+.PHONY : json_test
+
+# fast build rule for target.
+json_test/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cJSON_test/CMakeFiles/json_test.dir/build.make 3rd/cJSON_test/CMakeFiles/json_test.dir/build
+.PHONY : json_test/fast
+
+#=============================================================================
 # Target rules for targets named common_test
 
 # Build rule for target.
@@ -939,17 +1277,17 @@ heap_checker_unittest/fast:
 .PHONY : heap_checker_unittest/fast
 
 #=============================================================================
-# Target rules for targets named memalign_unittest
+# Target rules for targets named simple_compat_test
 
 # Build rule for target.
-memalign_unittest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 memalign_unittest
-.PHONY : memalign_unittest
+simple_compat_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_compat_test
+.PHONY : simple_compat_test
 
 # fast build rule for target.
-memalign_unittest/fast:
-	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/memalign_unittest.dir/build.make perf/gperftools/CMakeFiles/memalign_unittest.dir/build
-.PHONY : memalign_unittest/fast
+simple_compat_test/fast:
+	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/simple_compat_test.dir/build.make perf/gperftools/CMakeFiles/simple_compat_test.dir/build
+.PHONY : simple_compat_test/fast
 
 #=============================================================================
 # Target rules for targets named malloc_extension_c_test
@@ -978,6 +1316,19 @@ realloc_debug_unittest/fast:
 .PHONY : realloc_debug_unittest/fast
 
 #=============================================================================
+# Target rules for targets named memalign_unittest
+
+# Build rule for target.
+memalign_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 memalign_unittest
+.PHONY : memalign_unittest
+
+# fast build rule for target.
+memalign_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/memalign_unittest.dir/build.make perf/gperftools/CMakeFiles/memalign_unittest.dir/build
+.PHONY : memalign_unittest/fast
+
+#=============================================================================
 # Target rules for targets named malloc_hook_test
 
 # Build rule for target.
@@ -991,17 +1342,17 @@ malloc_hook_test/fast:
 .PHONY : malloc_hook_test/fast
 
 #=============================================================================
-# Target rules for targets named simple_compat_test
+# Target rules for targets named maybe_threads_unittest
 
 # Build rule for target.
-simple_compat_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_compat_test
-.PHONY : simple_compat_test
+maybe_threads_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 maybe_threads_unittest
+.PHONY : maybe_threads_unittest
 
 # fast build rule for target.
-simple_compat_test/fast:
-	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/simple_compat_test.dir/build.make perf/gperftools/CMakeFiles/simple_compat_test.dir/build
-.PHONY : simple_compat_test/fast
+maybe_threads_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/maybe_threads_unittest.dir/build.make perf/gperftools/CMakeFiles/maybe_threads_unittest.dir/build
+.PHONY : maybe_threads_unittest/fast
 
 #=============================================================================
 # Target rules for targets named frag_unittest
@@ -3112,6 +3463,7 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... check"
 	@echo "... khello_driver"
 	@echo "... khello_load"
 	@echo "... khello_unload"
@@ -3124,6 +3476,8 @@ help:
 	@echo "... knetlink_driver"
 	@echo "... knetlink_load"
 	@echo "... knetlink_unload"
+	@echo "... maybe_threads_unittest"
+	@echo "... uninstall"
 	@echo "... addressmap_unittest"
 	@echo "... argc_argv"
 	@echo "... array"
@@ -3136,7 +3490,10 @@ help:
 	@echo "... binary_trees_shared"
 	@echo "... broadcast_cli"
 	@echo "... broadcast_serv"
+	@echo "... cJSON_test"
 	@echo "... cdefine"
+	@echo "... cjson"
+	@echo "... cjson_add"
 	@echo "... client"
 	@echo "... client_a"
 	@echo "... client_api"
@@ -3144,6 +3501,7 @@ help:
 	@echo "... client_c"
 	@echo "... codetest"
 	@echo "... common_test"
+	@echo "... compare_tests"
 	@echo "... current_allocated_bytes_test"
 	@echo "... cycled_fifo"
 	@echo "... cycled_priority_fifo"
@@ -3157,6 +3515,7 @@ help:
 	@echo "... flexbisonlib"
 	@echo "... fork"
 	@echo "... frag_unittest"
+	@echo "... fuzz_main"
 	@echo "... get_hw_info"
 	@echo "... get_used_info"
 	@echo "... getpc_test"
@@ -3170,6 +3529,7 @@ help:
 	@echo "... heap_profiler_debug_unittest"
 	@echo "... heap_profiler_unittest"
 	@echo "... json"
+	@echo "... json_test"
 	@echo "... kill_process"
 	@echo "... libuv_async"
 	@echo "... libuv_client"
@@ -3195,6 +3555,8 @@ help:
 	@echo "... memalign_debug_unittest"
 	@echo "... memalign_unittest"
 	@echo "... memcpy"
+	@echo "... minify_tests"
+	@echo "... misc_tests"
 	@echo "... msg_que_client"
 	@echo "... msg_que_server"
 	@echo "... multicast_cli"
@@ -3207,6 +3569,14 @@ help:
 	@echo "... packed_cache_test"
 	@echo "... page_heap_test"
 	@echo "... pagemap_unittest"
+	@echo "... parse_array"
+	@echo "... parse_examples"
+	@echo "... parse_hex4"
+	@echo "... parse_number"
+	@echo "... parse_object"
+	@echo "... parse_string"
+	@echo "... parse_value"
+	@echo "... parse_with_opts"
 	@echo "... perf_get_info"
 	@echo "... perfinfo"
 	@echo "... pid_test"
@@ -3222,6 +3592,11 @@ help:
 	@echo "... posix_sem_p"
 	@echo "... posix_shm_reader"
 	@echo "... posix_shm_writer"
+	@echo "... print_array"
+	@echo "... print_number"
+	@echo "... print_object"
+	@echo "... print_string"
+	@echo "... print_value"
 	@echo "... process_shm_a"
 	@echo "... process_shm_b"
 	@echo "... profile_handler_unittest"
@@ -3235,6 +3610,7 @@ help:
 	@echo "... rand"
 	@echo "... raw_printer_test"
 	@echo "... rbtree"
+	@echo "... readme_examples"
 	@echo "... realloc_debug_unittest"
 	@echo "... realloc_unittest"
 	@echo "... run_benchmark"
@@ -3296,6 +3672,7 @@ help:
 	@echo "... tcmalloc_minimal_unittest"
 	@echo "... tcmalloc_static"
 	@echo "... tcmalloc_unittest"
+	@echo "... test"
 	@echo "... thread_cancel"
 	@echo "... thread_dealloc_unittest"
 	@echo "... tidsafe_server"
@@ -3303,6 +3680,7 @@ help:
 	@echo "... uioctl"
 	@echo "... ummap"
 	@echo "... unetlink"
+	@echo "... unity"
 	@echo "... uv"
 	@echo "... uv_a"
 .PHONY : help

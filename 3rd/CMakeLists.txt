@@ -4,6 +4,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 # 构建类型设置为
 # SET(CMAKE_BUILD_TYPE "Debug")
 
+#############################################################
 # libuv编译项
 OPTION(libuv_en "Enable the libuv_en: on/off/other" on)
 IF(libuv_en STREQUAL "on") # lib: uv_a(无编译测试例)
@@ -40,3 +41,12 @@ ELSE()  # lib: uv_a(编译测试例)
     include_directories(${libuv_SOURCE_DIR}/include)
 
 ENDIF()
+
+# libuv_test
+
+#############################################################
+# cJSON
+# 设置子目录并构建
+add_subdirectory(cJSON)
+# cJSON_test
+add_subdirectory(cJSON_test)

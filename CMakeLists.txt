@@ -97,11 +97,6 @@ ADD_SUBDIRECTORY(log)
 SET(LINK_LIB ${LINK_LIB} log)
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/log/simple_log)
 
-# 设置子目录并构建，追加变量LINK_LIB变量为cJSON PUBLIC动态库json,指定头文件地址暴露
-ADD_SUBDIRECTORY(json)
-SET(LINK_LIB ${LINK_LIB} json)
-INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/json/cJSON)
-
 # 追加LINK_LIB变量为gcc_s,设置子目录并构建,追加LINK_LIB变量为libuv PUBLIC静态库uv_a,指定头文件地址进行暴露
 SET(LINK_LIB ${LINK_LIB} gcc_s)
 ADD_SUBDIRECTORY(3rd)

@@ -6,3 +6,17 @@
 
 #IncludeRegexTransform: 
 
+/home/kuanghongliang/Documents/vscode_projects/kusr_code/log/simple_log/log.c
+log.h
+/home/kuanghongliang/Documents/vscode_projects/kusr_code/log/simple_log/log.h
+
+/home/kuanghongliang/Documents/vscode_projects/kusr_code/log/simple_log/log.h
+stdio.h
+-
+stdarg.h
+-
+stdbool.h
+-
+time.h
+-
+
