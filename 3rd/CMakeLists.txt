@@ -1,17 +1,17 @@
 # 指定CMake编译最低要求版本
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8)
 
 # 构建类型设置为
-# SET(CMAKE_BUILD_TYPE "Debug")
+# set(CMAKE_BUILD_TYPE "Debug")
 
 #############################################################
 # libuv编译项
-OPTION(libuv_en "Enable the libuv_en: on/off/other" on)
-IF(libuv_en STREQUAL "on") # lib: uv_a(无编译测试例)
-    MESSAGE(STATUS "Config: libuv_en = on, use ExternalProject(error not configure).")
+option(libuv_en "Enable the libuv_en: on/off/other" on)
+if(libuv_en STREQUAL "on") # lib: uv_a(无编译测试例)
+    message(STATUS "Config: libuv_en = on, use ExternalProject(error not configure).")
 
-ELSEIF(libuv_en STREQUAL "other") # lib: uv_a(编译测试例)
-    MESSAGE(STATUS "Config: libuv_en = other, use FetchContent.")
+elseif(libuv_en STREQUAL "other") # lib: uv_a(编译测试例)
+    message(STATUS "Config: libuv_en = other, use FetchContent.")
     # 使能cmake外部项目
     include(FetchContent) 
 
@@ -27,11 +27,11 @@ ELSEIF(libuv_en STREQUAL "other") # lib: uv_a(编译测试例)
     # 指定暴露libuv头文件
     include_directories(${libuv_SOURCE_DIR}/include)
 
-ELSE()  # lib: uv_a(编译测试例)
-    MESSAGE(STATUS "Config: libuv_en = off, we will get clone libuv to build.")
+else()  # lib: uv_a(编译测试例)
+    message(STATUS "Config: libuv_en = off, we will get clone libuv to build.")
 
     # 设置子目录并构建
-    ADD_SUBDIRECTORY(libuv)
+    add_subdirectory(libuv)
 
     # 设置libuv项目源路径
     set(libuv_SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/libuv")
@@ -40,7 +40,7 @@ ELSE()  # lib: uv_a(编译测试例)
     # 指定暴露libuv头文件
     include_directories(${libuv_SOURCE_DIR}/include)
 
-ENDIF()
+endif()
 
 # libuv_test
 
@@ -50,3 +50,10 @@ ENDIF()
 add_subdirectory(cJSON)
 # cJSON_test
 add_subdirectory(cJSON_test)
+
+#############################################################
+# pybind11
+# 设置子目录并构建
+add_subdirectory(pybind11)
+# pybind11_test
+add_subdirectory(pybind11_test)

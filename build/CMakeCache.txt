@@ -539,6 +539,35 @@ OBJCOPY_EXECUTABLE:FILEPATH=/usr/bin/objcopy
 //Path to a program.
 P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
 
+//Force new FindPython
+PYBIND11_FINDPYTHON:BOOL=OFF
+
+//Install pybind11 header files?
+PYBIND11_INSTALL:BOOL=OFF
+
+//Override the ABI version, may be used to enable the unstable
+// ABI.
+PYBIND11_INTERNALS_VERSION:STRING=
+
+//Disable search for Python
+PYBIND11_NOPYTHON:BOOL=OFF
+
+//Overwrite cached values read from Python library (classic search).
+// Turn off if cross-compiling and manually setting these values.
+PYBIND11_PYTHONLIBS_OVERWRITE:BOOL=ON
+
+//Python version to use for compiling modules
+PYBIND11_PYTHON_VERSION:STRING=
+
+//Use simpler GIL management logic that does not support disassociation
+PYBIND11_SIMPLE_GIL_MANAGEMENT:BOOL=OFF
+
+//Build pybind11 test suite?
+PYBIND11_TEST:BOOL=OFF
+
+//Path to a library.
+PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.8.so
+
 //build for qemu
 QEMU:BOOL=OFF
 
@@ -709,6 +738,12 @@ nanobench_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_
 //Enable the nanobench_en: on/off/other
 nanobench_en:BOOL=ON
 
+//Value Computed by CMake
+pybind11_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/pybind11
+
+//Value Computed by CMake
+pybind11_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/pybind11
+
 //Dependencies for the target
 uv_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
 
@@ -878,7 +913,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=74
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=76
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -991,8 +1026,12 @@ FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/local/bin/doxygen][cfound co
 FIND_PACKAGE_MESSAGE_DETAILS_FLEX:INTERNAL=[/usr/bin/flex][v2.6.4()]
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.25.1()]
+//Details about finding PYTHON
+FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/usr/bin/python3.83.8.10
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.10()]
+//Details about finding PythonInterp
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3.8][v3.8.10(3.6)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Test FLAG_SUPPORTED_Wall
@@ -1063,6 +1102,8 @@ FreeBSD:INTERNAL=
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//Test HAS_FLTO
+HAS_FLTO:INTERNAL=1
 //Test HAVE_BUILTIN_EXPECT
 HAVE_BUILTIN_EXPECT:INTERNAL=1
 //Test HAVE_CXX_FLAG_COVERAGE
@@ -1211,8 +1252,23 @@ P4COMMAND-ADVANCED:INTERNAL=1
 PPC64:INTERNAL=
 //Test PTHREAD_CREATE_JOINABLE_ATTR
 PTHREAD_CREATE_JOINABLE_ATTR:INTERNAL=1
+PYBIND11_INCLUDE_DIR:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/pybind11/include
 PYTHONINTERP_FOUND:INTERNAL=TRUE
+//ADVANCED property for variable: PYTHON_EXECUTABLE
+PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON_EXECUTABLE:INTERNAL=/usr/bin/python3.8
+PYTHON_INCLUDE_DIRS:INTERNAL=/usr/include/python3.8
+PYTHON_IS_DEBUG:INTERNAL=0
+PYTHON_LIBRARIES:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.8.so
+//ADVANCED property for variable: PYTHON_LIBRARY
+PYTHON_LIBRARY-ADVANCED:INTERNAL=1
+PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
+PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-38-x86_64-linux-gnu.so
+PYTHON_MODULE_PREFIX:INTERNAL=
+PYTHON_VERSION:INTERNAL=3.8.10
+PYTHON_VERSION_MAJOR:INTERNAL=3
+PYTHON_VERSION_MINOR:INTERNAL=8
+Python_ADDITIONAL_VERSIONS:INTERNAL=3.11;3.10;3.9;3.8;3.7;3.6
 //Result of TRY_RUN
 RUN_HAVE_POSIX_REGEX:INTERNAL=0
 //Result of TRY_RUN
@@ -1269,6 +1325,7 @@ UV_LINT_W4:INTERNAL=
 UV_LINT_WALL:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local/kusr
+_Python:INTERNAL=PYTHON
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=/usr/bin/python3.8
 //Python Properties
@@ -1306,6 +1363,12 @@ i386:INTERNAL=
 nanosleep_ok:INTERNAL=1
 //Result of TRY_COMPILE
 objcopy_test_compiled:INTERNAL=TRUE
+//True if pybind11 and all required components found on the system
+pybind11_FOUND:INTERNAL=TRUE
+//Directory where pybind11 headers are located
+pybind11_INCLUDE_DIR:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/pybind11/include
+//Directories where pybind11 and possibly Python headers are located
+pybind11_INCLUDE_DIRS:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/pybind11/include;/usr/include/python3.8
 //Test s390
 s390:INTERNAL=
 targets_export_name:INTERNAL=GTestTargets

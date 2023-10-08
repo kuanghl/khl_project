@@ -1910,3 +1910,18 @@ Source file was:
     #include <signal.h>
     #include <time.h>
     int main() { return SIGEV_THREAD_ID || CLOCK_THREAD_CPUTIME_ID; }
+Performing C++ SOURCE FILE Test HAS_FLTO succeeded with the following output:
+Change Dir: /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d66b9/fast && /usr/bin/make  -f CMakeFiles/cmTC_d66b9.dir/build.make CMakeFiles/cmTC_d66b9.dir/build
+make[1]: Entering directory '/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d66b9.dir/src.cxx.o
+/usr/bin/c++   -DHAS_FLTO   -flto -fno-fat-lto-objects -o CMakeFiles/cmTC_d66b9.dir/src.cxx.o -c /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d66b9
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d66b9.dir/link.txt --verbose=1
+/usr/bin/c++  -DHAS_FLTO CMakeFiles/cmTC_d66b9.dir/src.cxx.o -o cmTC_d66b9  -flto 
+make[1]: Leaving directory '/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }

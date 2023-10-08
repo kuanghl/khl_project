@@ -952,6 +952,19 @@ json_test/fast:
 .PHONY : json_test/fast
 
 #=============================================================================
+# Target rules for targets named pytest
+
+# Build rule for target.
+pytest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pytest
+.PHONY : pytest
+
+# fast build rule for target.
+pytest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/pybind11_test/CMakeFiles/pytest.dir/build.make 3rd/pybind11_test/CMakeFiles/pytest.dir/build
+.PHONY : pytest/fast
+
+#=============================================================================
 # Target rules for targets named common_test
 
 # Build rule for target.
@@ -3607,6 +3620,7 @@ help:
 	@echo "... profiler3_unittest"
 	@echo "... profiler4_unittest"
 	@echo "... profiler_static"
+	@echo "... pytest"
 	@echo "... rand"
 	@echo "... raw_printer_test"
 	@echo "... rbtree"
