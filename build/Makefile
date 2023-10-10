@@ -965,6 +965,19 @@ pytest/fast:
 .PHONY : pytest/fast
 
 #=============================================================================
+# Target rules for targets named c_cpp_api
+
+# Build rule for target.
+c_cpp_api: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 c_cpp_api
+.PHONY : c_cpp_api
+
+# fast build rule for target.
+c_cpp_api/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/pybind11_test/CMakeFiles/c_cpp_api.dir/build.make 3rd/pybind11_test/CMakeFiles/c_cpp_api.dir/build
+.PHONY : c_cpp_api/fast
+
+#=============================================================================
 # Target rules for targets named common_test
 
 # Build rule for target.
@@ -3504,6 +3517,7 @@ help:
 	@echo "... broadcast_cli"
 	@echo "... broadcast_serv"
 	@echo "... cJSON_test"
+	@echo "... c_cpp_api"
 	@echo "... cdefine"
 	@echo "... cjson"
 	@echo "... cjson_add"
