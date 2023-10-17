@@ -57,3 +57,11 @@ add_subdirectory(cJSON_test)
 add_subdirectory(pybind11)
 # pybind11_test
 add_subdirectory(pybind11_test)
+
+#############################################################
+# ncurses
+add_subdirectory(ncurses)
+
+# ncurses_test
+add_subdirectory(ncurses_test)
+

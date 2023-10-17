@@ -978,6 +978,19 @@ c_cpp_api/fast:
 .PHONY : c_cpp_api/fast
 
 #=============================================================================
+# Target rules for targets named ncurses_test
+
+# Build rule for target.
+ncurses_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_test
+.PHONY : ncurses_test
+
+# fast build rule for target.
+ncurses_test/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/build.make 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/build
+.PHONY : ncurses_test/fast
+
+#=============================================================================
 # Target rules for targets named common_test
 
 # Build rule for target.
@@ -3593,6 +3606,7 @@ help:
 	@echo "... name_to_pid"
 	@echo "... nanobench"
 	@echo "... nanobench_test"
+	@echo "... ncurses_test"
 	@echo "... packed_cache_test"
 	@echo "... page_heap_test"
 	@echo "... pagemap_unittest"

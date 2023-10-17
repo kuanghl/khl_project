@@ -119,6 +119,8 @@ clean: tools/clean
 3rd/all: 3rd/cJSON_test/all
 3rd/all: 3rd/pybind11/all
 3rd/all: 3rd/pybind11_test/all
+3rd/all: 3rd/ncurses/all
+3rd/all: 3rd/ncurses_test/all
 
 .PHONY : 3rd/all
 
@@ -128,6 +130,8 @@ clean: tools/clean
 3rd/preinstall: 3rd/cJSON_test/preinstall
 3rd/preinstall: 3rd/pybind11/preinstall
 3rd/preinstall: 3rd/pybind11_test/preinstall
+3rd/preinstall: 3rd/ncurses/preinstall
+3rd/preinstall: 3rd/ncurses_test/preinstall
 
 .PHONY : 3rd/preinstall
 
@@ -137,6 +141,8 @@ clean: tools/clean
 3rd/clean: 3rd/cJSON_test/clean
 3rd/clean: 3rd/pybind11/clean
 3rd/clean: 3rd/pybind11_test/clean
+3rd/clean: 3rd/ncurses/clean
+3rd/clean: 3rd/ncurses_test/clean
 
 .PHONY : 3rd/clean
 
@@ -306,6 +312,42 @@ clean: tools/clean
 3rd/libuv/clean: 3rd/libuv/CMakeFiles/uv.dir/clean
 
 .PHONY : 3rd/libuv/clean
+
+#=============================================================================
+# Directory level rules for directory 3rd/ncurses
+
+# Recursive "all" directory target.
+3rd/ncurses/all:
+
+.PHONY : 3rd/ncurses/all
+
+# Recursive "preinstall" directory target.
+3rd/ncurses/preinstall:
+
+.PHONY : 3rd/ncurses/preinstall
+
+# Recursive "clean" directory target.
+3rd/ncurses/clean:
+
+.PHONY : 3rd/ncurses/clean
+
+#=============================================================================
+# Directory level rules for directory 3rd/ncurses_test
+
+# Recursive "all" directory target.
+3rd/ncurses_test/all: 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/all
+
+.PHONY : 3rd/ncurses_test/all
+
+# Recursive "preinstall" directory target.
+3rd/ncurses_test/preinstall:
+
+.PHONY : 3rd/ncurses_test/preinstall
+
+# Recursive "clean" directory target.
+3rd/ncurses_test/clean: 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/clean
+
+.PHONY : 3rd/ncurses_test/clean
 
 #=============================================================================
 # Directory level rules for directory 3rd/pybind11
@@ -1995,12 +2037,12 @@ log/simple_log/CMakeFiles/log.dir/clean:
 log/simple_cjson/CMakeFiles/json.dir/all:
 	$(MAKE) $(MAKESILENT) -f log/simple_cjson/CMakeFiles/json.dir/build.make log/simple_cjson/CMakeFiles/json.dir/depend
 	$(MAKE) $(MAKESILENT) -f log/simple_cjson/CMakeFiles/json.dir/build.make log/simple_cjson/CMakeFiles/json.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=21 "Built target json"
 .PHONY : log/simple_cjson/CMakeFiles/json.dir/all
 
 # Build rule for subdir invocation for target.
 log/simple_cjson/CMakeFiles/json.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 log/simple_cjson/CMakeFiles/json.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : log/simple_cjson/CMakeFiles/json.dir/rule
@@ -2882,7 +2924,7 @@ uninstall: 3rd/cJSON/CMakeFiles/uninstall.dir/rule
 
 # Build rule for subdir invocation for target.
 3rd/cJSON/CMakeFiles/check.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/cJSON/CMakeFiles/check.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : 3rd/cJSON/CMakeFiles/check.dir/rule
@@ -3015,12 +3057,12 @@ cjson_add: 3rd/cJSON/tests/CMakeFiles/cjson_add.dir/rule
 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/all: 3rd/cJSON/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/depend
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target parse_with_opts"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=39 "Built target parse_with_opts"
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/all
 
 # Build rule for subdir invocation for target.
 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_with_opts.dir/rule
@@ -3126,12 +3168,12 @@ unity: 3rd/cJSON/tests/CMakeFiles/unity.dir/rule
 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/all: 3rd/cJSON/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/depend
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=37 "Built target parse_hex4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target parse_hex4"
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/all
 
 # Build rule for subdir invocation for target.
 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_hex4.dir/rule
@@ -3182,12 +3224,12 @@ parse_number: 3rd/cJSON/tests/CMakeFiles/parse_number.dir/rule
 3rd/cJSON/tests/CMakeFiles/parse_string.dir/all: 3rd/cJSON/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_string.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_string.dir/depend
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_string.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_string.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=38 "Built target parse_string"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target parse_string"
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_string.dir/all
 
 # Build rule for subdir invocation for target.
 3rd/cJSON/tests/CMakeFiles/parse_string.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/cJSON/tests/CMakeFiles/parse_string.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_string.dir/rule
@@ -3294,12 +3336,12 @@ parse_array: 3rd/cJSON/tests/CMakeFiles/parse_array.dir/rule
 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/all: 3rd/cJSON/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/depend
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target parse_examples"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=37 "Built target parse_examples"
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/all
 
 # Build rule for subdir invocation for target.
 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_examples.dir/rule
@@ -3378,12 +3420,12 @@ compare_tests: 3rd/cJSON/tests/CMakeFiles/compare_tests.dir/rule
 3rd/cJSON/tests/CMakeFiles/parse_object.dir/all: 3rd/cJSON/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_object.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_object.dir/depend
 	$(MAKE) $(MAKESILENT) -f 3rd/cJSON/tests/CMakeFiles/parse_object.dir/build.make 3rd/cJSON/tests/CMakeFiles/parse_object.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target parse_object"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=38 "Built target parse_object"
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_object.dir/all
 
 # Build rule for subdir invocation for target.
 3rd/cJSON/tests/CMakeFiles/parse_object.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/cJSON/tests/CMakeFiles/parse_object.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : 3rd/cJSON/tests/CMakeFiles/parse_object.dir/rule
@@ -3570,12 +3612,12 @@ json_test: 3rd/cJSON_test/CMakeFiles/json_test.dir/rule
 3rd/pybind11_test/CMakeFiles/pytest.dir/all: 3rd/pybind11_test/CMakeFiles/c_cpp_api.dir/all
 	$(MAKE) $(MAKESILENT) -f 3rd/pybind11_test/CMakeFiles/pytest.dir/build.make 3rd/pybind11_test/CMakeFiles/pytest.dir/depend
 	$(MAKE) $(MAKESILENT) -f 3rd/pybind11_test/CMakeFiles/pytest.dir/build.make 3rd/pybind11_test/CMakeFiles/pytest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=50 "Built target pytest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target pytest"
 .PHONY : 3rd/pybind11_test/CMakeFiles/pytest.dir/all
 
 # Build rule for subdir invocation for target.
 3rd/pybind11_test/CMakeFiles/pytest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/pybind11_test/CMakeFiles/pytest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : 3rd/pybind11_test/CMakeFiles/pytest.dir/rule
@@ -3616,6 +3658,33 @@ c_cpp_api: 3rd/pybind11_test/CMakeFiles/c_cpp_api.dir/rule
 3rd/pybind11_test/CMakeFiles/c_cpp_api.dir/clean:
 	$(MAKE) $(MAKESILENT) -f 3rd/pybind11_test/CMakeFiles/c_cpp_api.dir/build.make 3rd/pybind11_test/CMakeFiles/c_cpp_api.dir/clean
 .PHONY : 3rd/pybind11_test/CMakeFiles/c_cpp_api.dir/clean
+
+#=============================================================================
+# Target rules for target 3rd/ncurses_test/CMakeFiles/ncurses_test.dir
+
+# All Build rule for target.
+3rd/ncurses_test/CMakeFiles/ncurses_test.dir/all:
+	$(MAKE) $(MAKESILENT) -f 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/build.make 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/build.make 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target ncurses_test"
+.PHONY : 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/all
+
+# Build rule for subdir invocation for target.
+3rd/ncurses_test/CMakeFiles/ncurses_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+.PHONY : 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/rule
+
+# Convenience name for target.
+ncurses_test: 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/rule
+
+.PHONY : ncurses_test
+
+# clean rule for target.
+3rd/ncurses_test/CMakeFiles/ncurses_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/build.make 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/clean
+.PHONY : 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/clean
 
 #=============================================================================
 # Target rules for target test/common_test/CMakeFiles/common_test.dir
@@ -3792,12 +3861,12 @@ perf/common_perf/CMakeFiles/perfinfo.dir/clean:
 perf/common_perf/CMakeFiles/perf_get_info.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/perf_get_info.dir/build.make perf/common_perf/CMakeFiles/perf_get_info.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/common_perf/CMakeFiles/perf_get_info.dir/build.make perf/common_perf/CMakeFiles/perf_get_info.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=39 "Built target perf_get_info"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target perf_get_info"
 .PHONY : perf/common_perf/CMakeFiles/perf_get_info.dir/all
 
 # Build rule for subdir invocation for target.
 perf/common_perf/CMakeFiles/perf_get_info.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/common_perf/CMakeFiles/perf_get_info.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/common_perf/CMakeFiles/perf_get_info.dir/rule
@@ -3855,7 +3924,7 @@ perf/common_perf/CMakeFiles/gperftools_test.dir/all: perf/gperftools/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 perf/common_perf/CMakeFiles/gperftools_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/common_perf/CMakeFiles/gperftools_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/common_perf/CMakeFiles/gperftools_test.dir/rule
@@ -3998,7 +4067,7 @@ perf/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/all: perf/gperftools
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_and_profiler_static.dir/rule
@@ -4029,7 +4098,7 @@ perf/gperftools/CMakeFiles/profiler3_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler3_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler3_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler3_unittest.dir/rule
@@ -4056,7 +4125,7 @@ perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/all: perf/gperftools/CMakeF
 perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=66,67 "Built target tcmalloc_and_profiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=67 "Built target tcmalloc_and_profiler"
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_and_profiler.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4092,7 +4161,7 @@ perf/gperftools/CMakeFiles/profiler2_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler2_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler2_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler2_unittest.dir/rule
@@ -4123,7 +4192,7 @@ perf/gperftools/CMakeFiles/profile_handler_unittest.dir/all: perf/gperftools/CMa
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profile_handler_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profile_handler_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profile_handler_unittest.dir/rule
@@ -4182,7 +4251,7 @@ perf/gperftools/CMakeFiles/profiler.dir/all: perf/gperftools/CMakeFiles/sysinfo.
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler.dir/rule
@@ -4205,12 +4274,12 @@ perf/gperftools/CMakeFiles/sampler_debug_test.dir/all: perf/gperftools/CMakeFile
 perf/gperftools/CMakeFiles/sampler_debug_test.dir/all: perf/gperftools/CMakeFiles/logging.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/sampler_debug_test.dir/build.make perf/gperftools/CMakeFiles/sampler_debug_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/sampler_debug_test.dir/build.make perf/gperftools/CMakeFiles/sampler_debug_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target sampler_debug_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=53 "Built target sampler_debug_test"
 .PHONY : perf/gperftools/CMakeFiles/sampler_debug_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/sampler_debug_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/sampler_debug_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/sampler_debug_test.dir/rule
@@ -4238,7 +4307,7 @@ perf/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_debug_unittest.dir/rule
@@ -4270,7 +4339,7 @@ perf/gperftools/CMakeFiles/tcmalloc_debug_static.dir/all: perf/gperftools/CMakeF
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_debug_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_debug_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_debug_static.dir/rule
@@ -4302,7 +4371,7 @@ perf/gperftools/CMakeFiles/tcmalloc_debug.dir/all: perf/gperftools/CMakeFiles/sy
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_debug.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_debug.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_debug.dir/rule
@@ -4335,7 +4404,7 @@ perf/gperftools/CMakeFiles/heap_checker_unittest.dir/all: perf/gperftools/CMakeF
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/heap_checker_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/heap_checker_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/heap_checker_unittest.dir/rule
@@ -4368,7 +4437,7 @@ perf/gperftools/CMakeFiles/simple_compat_test.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/simple_compat_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/simple_compat_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/simple_compat_test.dir/rule
@@ -4390,12 +4459,12 @@ perf/gperftools/CMakeFiles/simple_compat_test.dir/clean:
 perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/build.make perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/build.make perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target malloc_extension_c_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=28 "Built target malloc_extension_c_test"
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/rule
@@ -4417,12 +4486,12 @@ perf/gperftools/CMakeFiles/malloc_extension_c_test.dir/clean:
 perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/build.make perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/build.make perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target realloc_debug_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=52 "Built target realloc_debug_unittest"
 .PHONY : perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/realloc_debug_unittest.dir/rule
@@ -4449,7 +4518,7 @@ perf/gperftools/CMakeFiles/memalign_unittest.dir/all: perf/gperftools/CMakeFiles
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/memalign_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/memalign_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/memalign_unittest.dir/rule
@@ -4471,12 +4540,12 @@ perf/gperftools/CMakeFiles/memalign_unittest.dir/clean:
 perf/gperftools/CMakeFiles/malloc_hook_test.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_hook_test.dir/build.make perf/gperftools/CMakeFiles/malloc_hook_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_hook_test.dir/build.make perf/gperftools/CMakeFiles/malloc_hook_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target malloc_hook_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=29 "Built target malloc_hook_test"
 .PHONY : perf/gperftools/CMakeFiles/malloc_hook_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_hook_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_hook_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_hook_test.dir/rule
@@ -4530,7 +4599,7 @@ perf/gperftools/CMakeFiles/frag_unittest.dir/all: perf/gperftools/CMakeFiles/tcm
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/frag_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/frag_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/frag_unittest.dir/rule
@@ -4561,7 +4630,7 @@ perf/gperftools/CMakeFiles/profiledata_unittest.dir/all: perf/gperftools/CMakeFi
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiledata_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiledata_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiledata_unittest.dir/rule
@@ -4589,7 +4658,7 @@ perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/all: perf/gperftools/CMake
 perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/build.make perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/build.make perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=21 "Built target heap_profiler_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target heap_profiler_unittest"
 .PHONY : perf/gperftools/CMakeFiles/heap_profiler_unittest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4621,7 +4690,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/all: perf/gperfto
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_large_unittest.dir/rule
@@ -4654,7 +4723,7 @@ perf/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_large_unittest.dir/rule
@@ -4682,7 +4751,7 @@ perf/gperftools/CMakeFiles/sampler_test.dir/all: perf/gperftools/CMakeFiles/tcma
 perf/gperftools/CMakeFiles/sampler_test.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/sampler_test.dir/build.make perf/gperftools/CMakeFiles/sampler_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/sampler_test.dir/build.make perf/gperftools/CMakeFiles/sampler_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=53 "Built target sampler_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target sampler_test"
 .PHONY : perf/gperftools/CMakeFiles/sampler_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4715,7 +4784,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/all: perf/gperftools/CM
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/rule
@@ -4737,12 +4806,12 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_unittest.dir/clean:
 perf/gperftools/CMakeFiles/maybe_threads.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/maybe_threads.dir/build.make perf/gperftools/CMakeFiles/maybe_threads.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/maybe_threads.dir/build.make perf/gperftools/CMakeFiles/maybe_threads.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target maybe_threads"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=30 "Built target maybe_threads"
 .PHONY : perf/gperftools/CMakeFiles/maybe_threads.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/maybe_threads.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/maybe_threads.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/maybe_threads.dir/rule
@@ -4804,7 +4873,7 @@ perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/all: p
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/rule
@@ -4826,12 +4895,12 @@ perf/gperftools/CMakeFiles/tcmalloc_large_heap_fragmentation_unittest.dir/clean:
 perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=78,79 "Built target tcmalloc_minimal_internal_object"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=78,79,80 "Built target tcmalloc_minimal_internal_object"
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_internal_object.dir/rule
@@ -4889,7 +4958,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_static.dir/rule
@@ -4941,7 +5010,7 @@ perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/all: perf/gperftools/CMa
 perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build.make perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build.make perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=27 "Built target low_level_alloc_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target low_level_alloc_unittest"
 .PHONY : perf/gperftools/CMakeFiles/low_level_alloc_unittest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4973,7 +5042,7 @@ perf/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/all: perf/gperftools
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/heap_profiler_debug_unittest.dir/rule
@@ -5026,12 +5095,12 @@ perf/gperftools/CMakeFiles/stacktrace_unittest.dir/all: perf/gperftools/CMakeFil
 perf/gperftools/CMakeFiles/stacktrace_unittest.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/stacktrace_unittest.dir/build.make perf/gperftools/CMakeFiles/stacktrace_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/stacktrace_unittest.dir/build.make perf/gperftools/CMakeFiles/stacktrace_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target stacktrace_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=60 "Built target stacktrace_unittest"
 .PHONY : perf/gperftools/CMakeFiles/stacktrace_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/stacktrace_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/stacktrace_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/stacktrace_unittest.dir/rule
@@ -5058,7 +5127,7 @@ perf/gperftools/CMakeFiles/packed_cache_test.dir/all: perf/gperftools/CMakeFiles
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/packed_cache_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/packed_cache_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/packed_cache_test.dir/rule
@@ -5085,7 +5154,7 @@ perf/gperftools/CMakeFiles/thread_dealloc_unittest.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/thread_dealloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/thread_dealloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/thread_dealloc_unittest.dir/rule
@@ -5112,7 +5181,7 @@ perf/gperftools/CMakeFiles/sampling_debug_test.dir/all: perf/gperftools/CMakeFil
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/sampling_debug_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/sampling_debug_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/sampling_debug_test.dir/rule
@@ -5140,7 +5209,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/all: perf/gperfto
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/rule
@@ -5162,12 +5231,12 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_unittest.dir/clean:
 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build.make perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=80 "Built target tcmalloc_minimal_large_heap_fragmentation_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target tcmalloc_minimal_large_heap_fragmentation_unittest"
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_large_heap_fragmentation_unittest.dir/rule
@@ -5194,12 +5263,12 @@ perf/gperftools/CMakeFiles/profiler_static.dir/all: perf/gperftools/CMakeFiles/s
 perf/gperftools/CMakeFiles/profiler_static.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/profiler_static.dir/build.make perf/gperftools/CMakeFiles/profiler_static.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/profiler_static.dir/build.make perf/gperftools/CMakeFiles/profiler_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target profiler_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=50 "Built target profiler_static"
 .PHONY : perf/gperftools/CMakeFiles/profiler_static.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler_static.dir/rule
@@ -5221,12 +5290,12 @@ perf/gperftools/CMakeFiles/profiler_static.dir/clean:
 perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/build.make perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/build.make perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target tcm_min_asserts_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=65 "Built target tcm_min_asserts_unittest"
 .PHONY : perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcm_min_asserts_unittest.dir/rule
@@ -5258,7 +5327,7 @@ perf/gperftools/CMakeFiles/tcmalloc_static.dir/all: perf/gperftools/CMakeFiles/s
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_static.dir/rule
@@ -5280,12 +5349,12 @@ perf/gperftools/CMakeFiles/tcmalloc_static.dir/clean:
 perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/all:
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/build.make perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/build.make perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target fake_stacktrace_scope"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=14 "Built target fake_stacktrace_scope"
 .PHONY : perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/rule
@@ -5307,12 +5376,12 @@ perf/gperftools/CMakeFiles/fake_stacktrace_scope.dir/clean:
 perf/gperftools/CMakeFiles/page_heap_test.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/page_heap_test.dir/build.make perf/gperftools/CMakeFiles/page_heap_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/page_heap_test.dir/build.make perf/gperftools/CMakeFiles/page_heap_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target page_heap_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=36 "Built target page_heap_test"
 .PHONY : perf/gperftools/CMakeFiles/page_heap_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/page_heap_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/page_heap_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/page_heap_test.dir/rule
@@ -5334,12 +5403,12 @@ perf/gperftools/CMakeFiles/page_heap_test.dir/clean:
 perf/gperftools/CMakeFiles/pagemap_unittest.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/pagemap_unittest.dir/build.make perf/gperftools/CMakeFiles/pagemap_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/pagemap_unittest.dir/build.make perf/gperftools/CMakeFiles/pagemap_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=36 "Built target pagemap_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target pagemap_unittest"
 .PHONY : perf/gperftools/CMakeFiles/pagemap_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/pagemap_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/pagemap_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/pagemap_unittest.dir/rule
@@ -5388,12 +5457,12 @@ perf/gperftools/CMakeFiles/stacktrace_object.dir/clean:
 perf/gperftools/CMakeFiles/realloc_unittest.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/realloc_unittest.dir/build.make perf/gperftools/CMakeFiles/realloc_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/realloc_unittest.dir/build.make perf/gperftools/CMakeFiles/realloc_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=52 "Built target realloc_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target realloc_unittest"
 .PHONY : perf/gperftools/CMakeFiles/realloc_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/realloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/realloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/realloc_unittest.dir/rule
@@ -5420,7 +5489,7 @@ perf/gperftools/CMakeFiles/stack_trace_table_test.dir/all: perf/gperftools/CMake
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/stack_trace_table_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/stack_trace_table_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/stack_trace_table_test.dir/rule
@@ -5451,7 +5520,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/all: perf/gperftools/CMake
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_debug.dir/rule
@@ -5478,7 +5547,7 @@ perf/gperftools/CMakeFiles/binary_trees_shared.dir/all: perf/gperftools/CMakeFil
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/binary_trees_shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/binary_trees_shared.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/binary_trees_shared.dir/rule
@@ -5509,7 +5578,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/all: perf/gperftool
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal_debug_static.dir/rule
@@ -5540,7 +5609,7 @@ perf/gperftools/CMakeFiles/profiler1_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler1_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler1_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler1_unittest.dir/rule
@@ -5567,7 +5636,7 @@ perf/gperftools/CMakeFiles/system_alloc_unittest.dir/all: perf/gperftools/CMakeF
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/system_alloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/system_alloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/system_alloc_unittest.dir/rule
@@ -5594,7 +5663,7 @@ perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/all: perf/gperftools/
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_debug_test.dir/rule
@@ -5621,7 +5690,7 @@ perf/gperftools/CMakeFiles/debugallocation_test.dir/all: perf/gperftools/CMakeFi
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/debugallocation_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/debugallocation_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/debugallocation_test.dir/rule
@@ -5652,7 +5721,7 @@ perf/gperftools/CMakeFiles/binary_trees.dir/all: perf/gperftools/CMakeFiles/sysi
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/binary_trees.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/binary_trees.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/binary_trees.dir/rule
@@ -5680,7 +5749,7 @@ perf/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/all: perf/gperftools/
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/heap_checker_debug_unittest.dir/rule
@@ -5707,7 +5776,7 @@ perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/all: perf/gperftools/CMak
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/memalign_debug_unittest.dir/rule
@@ -5761,7 +5830,7 @@ perf/gperftools/CMakeFiles/current_allocated_bytes_test.dir/all: perf/gperftools
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/current_allocated_bytes_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/current_allocated_bytes_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/current_allocated_bytes_test.dir/rule
@@ -5788,12 +5857,12 @@ perf/gperftools/CMakeFiles/malloc_bench.dir/all: perf/gperftools/CMakeFiles/run_
 perf/gperftools/CMakeFiles/malloc_bench.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_bench.dir/build.make perf/gperftools/CMakeFiles/malloc_bench.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_bench.dir/build.make perf/gperftools/CMakeFiles/malloc_bench.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target malloc_bench"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=27 "Built target malloc_bench"
 .PHONY : perf/gperftools/CMakeFiles/malloc_bench.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_bench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_bench.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_bench.dir/rule
@@ -5824,7 +5893,7 @@ perf/gperftools/CMakeFiles/profiler4_unittest.dir/all: perf/gperftools/CMakeFile
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/profiler4_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/profiler4_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/profiler4_unittest.dir/rule
@@ -5852,7 +5921,7 @@ perf/gperftools/CMakeFiles/malloc_bench_shared.dir/all: perf/gperftools/CMakeFil
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_bench_shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_bench_shared.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_bench_shared.dir/rule
@@ -5881,7 +5950,7 @@ perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/all: perf/gperftools/CMa
 perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/build.make perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/build.make perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=28 "Built target malloc_bench_shared_full"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target malloc_bench_shared_full"
 .PHONY : perf/gperftools/CMakeFiles/malloc_bench_shared_full.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5917,7 +5986,7 @@ perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all: perf/gperftools/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/rule
@@ -5944,12 +6013,12 @@ perf/gperftools/CMakeFiles/tcmalloc.dir/all: perf/gperftools/CMakeFiles/tcmalloc
 perf/gperftools/CMakeFiles/tcmalloc.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc.dir/build.make perf/gperftools/CMakeFiles/tcmalloc.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/tcmalloc.dir/build.make perf/gperftools/CMakeFiles/tcmalloc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=65 "Built target tcmalloc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=66 "Built target tcmalloc"
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc.dir/rule
@@ -6004,12 +6073,12 @@ perf/gperftools/CMakeFiles/raw_printer_test.dir/all: perf/gperftools/CMakeFiles/
 perf/gperftools/CMakeFiles/raw_printer_test.dir/all: perf/gperftools/CMakeFiles/sysinfo.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/raw_printer_test.dir/build.make perf/gperftools/CMakeFiles/raw_printer_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/raw_printer_test.dir/build.make perf/gperftools/CMakeFiles/raw_printer_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target raw_printer_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=51 "Built target raw_printer_test"
 .PHONY : perf/gperftools/CMakeFiles/raw_printer_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/raw_printer_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/raw_printer_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/raw_printer_test.dir/rule
@@ -6042,7 +6111,7 @@ perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/all: perf/gperftools/CMakeFiles
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/rule
@@ -6064,12 +6133,12 @@ perf/gperftools/CMakeFiles/tcmalloc_unittest.dir/clean:
 perf/gperftools/CMakeFiles/markidle_unittest.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/markidle_unittest.dir/build.make perf/gperftools/CMakeFiles/markidle_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/markidle_unittest.dir/build.make perf/gperftools/CMakeFiles/markidle_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=30 "Built target markidle_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target markidle_unittest"
 .PHONY : perf/gperftools/CMakeFiles/markidle_unittest.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/markidle_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/markidle_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/markidle_unittest.dir/rule
@@ -6131,7 +6200,7 @@ perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/all: perf/gperftools/CMake
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/rule
@@ -6153,12 +6222,12 @@ perf/gperftools/CMakeFiles/tcmalloc_both_unittest.dir/clean:
 perf/gperftools/CMakeFiles/malloc_extension_test.dir/all: perf/gperftools/CMakeFiles/tcmalloc_minimal.dir/all
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_extension_test.dir/build.make perf/gperftools/CMakeFiles/malloc_extension_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f perf/gperftools/CMakeFiles/malloc_extension_test.dir/build.make perf/gperftools/CMakeFiles/malloc_extension_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=29 "Built target malloc_extension_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target malloc_extension_test"
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_test.dir/all
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/malloc_extension_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/malloc_extension_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/malloc_extension_test.dir/rule
@@ -6191,7 +6260,7 @@ perf/gperftools/CMakeFiles/sampling_test.dir/all: perf/gperftools/CMakeFiles/sys
 
 # Build rule for subdir invocation for target.
 perf/gperftools/CMakeFiles/sampling_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 perf/gperftools/CMakeFiles/sampling_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : perf/gperftools/CMakeFiles/sampling_test.dir/rule
@@ -6705,12 +6774,12 @@ fun/libuv/socket/CMakeFiles/libuv_client.dir/all: log/simple_log/CMakeFiles/log.
 fun/libuv/socket/CMakeFiles/libuv_client.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/libuv/socket/CMakeFiles/libuv_client.dir/build.make fun/libuv/socket/CMakeFiles/libuv_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target libuv_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=23 "Built target libuv_client"
 .PHONY : fun/libuv/socket/CMakeFiles/libuv_client.dir/all
 
 # Build rule for subdir invocation for target.
 fun/libuv/socket/CMakeFiles/libuv_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/libuv/socket/CMakeFiles/libuv_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/libuv/socket/CMakeFiles/libuv_client.dir/rule
@@ -6789,12 +6858,12 @@ fun/libuv/async/CMakeFiles/libuv_async.dir/all: log/simple_log/CMakeFiles/log.di
 fun/libuv/async/CMakeFiles/libuv_async.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/libuv/async/CMakeFiles/libuv_async.dir/build.make fun/libuv/async/CMakeFiles/libuv_async.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/libuv/async/CMakeFiles/libuv_async.dir/build.make fun/libuv/async/CMakeFiles/libuv_async.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=23 "Built target libuv_async"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target libuv_async"
 .PHONY : fun/libuv/async/CMakeFiles/libuv_async.dir/all
 
 # Build rule for subdir invocation for target.
 fun/libuv/async/CMakeFiles/libuv_async.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/libuv/async/CMakeFiles/libuv_async.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/libuv/async/CMakeFiles/libuv_async.dir/rule
@@ -7517,12 +7586,12 @@ fun/primary/rbtree/CMakeFiles/rbtree.dir/all: log/simple_log/CMakeFiles/log.dir/
 fun/primary/rbtree/CMakeFiles/rbtree.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/rbtree/CMakeFiles/rbtree.dir/build.make fun/primary/rbtree/CMakeFiles/rbtree.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/rbtree/CMakeFiles/rbtree.dir/build.make fun/primary/rbtree/CMakeFiles/rbtree.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=51 "Built target rbtree"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target rbtree"
 .PHONY : fun/primary/rbtree/CMakeFiles/rbtree.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/rbtree/CMakeFiles/rbtree.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/rbtree/CMakeFiles/rbtree.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/rbtree/CMakeFiles/rbtree.dir/rule
@@ -7545,12 +7614,12 @@ fun/primary/pid/CMakeFiles/pid_test.dir/all: log/simple_log/CMakeFiles/log.dir/a
 fun/primary/pid/CMakeFiles/pid_test.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/pid_test.dir/build.make fun/primary/pid/CMakeFiles/pid_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/pid/CMakeFiles/pid_test.dir/build.make fun/primary/pid/CMakeFiles/pid_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target pid_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=40 "Built target pid_test"
 .PHONY : fun/primary/pid/CMakeFiles/pid_test.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/pid/CMakeFiles/pid_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/pid/CMakeFiles/pid_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/pid/CMakeFiles/pid_test.dir/rule
@@ -7965,12 +8034,12 @@ fun/primary/pipe/CMakeFiles/pipe.dir/all: log/simple_log/CMakeFiles/log.dir/all
 fun/primary/pipe/CMakeFiles/pipe.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe.dir/build.make fun/primary/pipe/CMakeFiles/pipe.dir/depend
 	$(MAKE) $(MAKESILENT) -f fun/primary/pipe/CMakeFiles/pipe.dir/build.make fun/primary/pipe/CMakeFiles/pipe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=40 "Built target pipe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target pipe"
 .PHONY : fun/primary/pipe/CMakeFiles/pipe.dir/all
 
 # Build rule for subdir invocation for target.
 fun/primary/pipe/CMakeFiles/pipe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun/primary/pipe/CMakeFiles/pipe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : fun/primary/pipe/CMakeFiles/pipe.dir/rule
@@ -8447,12 +8516,12 @@ cfun/linux_c/CMakeFiles/extension.dir/all: log/simple_log/CMakeFiles/log.dir/all
 cfun/linux_c/CMakeFiles/extension.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/extension.dir/build.make cfun/linux_c/CMakeFiles/extension.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/extension.dir/build.make cfun/linux_c/CMakeFiles/extension.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=14 "Built target extension"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target extension"
 .PHONY : cfun/linux_c/CMakeFiles/extension.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/extension.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/extension.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/extension.dir/rule
@@ -8531,12 +8600,12 @@ cfun/linux_c/CMakeFiles/strcpy.dir/all: log/simple_log/CMakeFiles/log.dir/all
 cfun/linux_c/CMakeFiles/strcpy.dir/all: 3rd/libuv/CMakeFiles/uv_a.dir/all
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strcpy.dir/build.make cfun/linux_c/CMakeFiles/strcpy.dir/depend
 	$(MAKE) $(MAKESILENT) -f cfun/linux_c/CMakeFiles/strcpy.dir/build.make cfun/linux_c/CMakeFiles/strcpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=60 "Built target strcpy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target strcpy"
 .PHONY : cfun/linux_c/CMakeFiles/strcpy.dir/all
 
 # Build rule for subdir invocation for target.
 cfun/linux_c/CMakeFiles/strcpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cfun/linux_c/CMakeFiles/strcpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : cfun/linux_c/CMakeFiles/strcpy.dir/rule
@@ -8922,7 +8991,7 @@ src/client/CMakeFiles/client_api.dir/clean:
 src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/all: src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/all
 	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build.make src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build.make src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=15 "Built target flexbison_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target flexbison_main"
 .PHONY : src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -8949,12 +9018,12 @@ src/client/runtime_api/flexbison/CMakeFiles/flexbison_main.dir/clean:
 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build.make src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num= "Built target flexbisonlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles --progress-num=15 "Built target flexbisonlib"
 .PHONY : src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/all
 
 # Build rule for subdir invocation for target.
 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : src/client/runtime_api/flexbison/driver/CMakeFiles/flexbisonlib.dir/rule
@@ -9011,7 +9080,7 @@ src/server/CMakeFiles/server.dir/all: perf/gperftools/CMakeFiles/profiler.dir/al
 
 # Build rule for subdir invocation for target.
 src/server/CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/server/CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuanghongliang/Documents/vscode_projects/kusr_code/build/CMakeFiles 0
 .PHONY : src/server/CMakeFiles/server.dir/rule
