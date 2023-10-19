@@ -82,7 +82,9 @@
         "valarray": "c",
         "cjson.h": "c",
         "c_cpptest.h": "c",
-        "complex": "cpp"
+        "complex": "cpp",
+        "pdcvt.h": "c",
+        "ncurses.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

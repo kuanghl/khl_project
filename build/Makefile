@@ -135,7 +135,7 @@ install/fast: preinstall/fast
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"applications\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -978,17 +978,602 @@ c_cpp_api/fast:
 .PHONY : c_cpp_api/fast
 
 #=============================================================================
-# Target rules for targets named ncurses_test
+# Target rules for targets named sdl2_ttf_ext
 
 # Build rule for target.
-ncurses_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_test
-.PHONY : ncurses_test
+sdl2_ttf_ext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_ttf_ext
+.PHONY : sdl2_ttf_ext
 
 # fast build rule for target.
-ncurses_test/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/build.make 3rd/ncurses_test/CMakeFiles/ncurses_test.dir/build
-.PHONY : ncurses_test/fast
+sdl2_ttf_ext/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/CMakeFiles/sdl2_ttf_ext.dir/build.make 3rd/mscurses/pdcursesmod/build/CMakeFiles/sdl2_ttf_ext.dir/build
+.PHONY : sdl2_ttf_ext/fast
+
+#=============================================================================
+# Target rules for targets named freetype2_ext
+
+# Build rule for target.
+freetype2_ext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freetype2_ext
+.PHONY : freetype2_ext
+
+# fast build rule for target.
+freetype2_ext/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/CMakeFiles/freetype2_ext.dir/build.make 3rd/mscurses/pdcursesmod/build/CMakeFiles/freetype2_ext.dir/build
+.PHONY : freetype2_ext/fast
+
+#=============================================================================
+# Target rules for targets named zlib_ext
+
+# Build rule for target.
+zlib_ext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zlib_ext
+.PHONY : zlib_ext
+
+# fast build rule for target.
+zlib_ext/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/CMakeFiles/zlib_ext.dir/build.make 3rd/mscurses/pdcursesmod/build/CMakeFiles/zlib_ext.dir/build
+.PHONY : zlib_ext/fast
+
+#=============================================================================
+# Target rules for targets named pdcurses_uninstall
+
+# Build rule for target.
+pdcurses_uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pdcurses_uninstall
+.PHONY : pdcurses_uninstall
+
+# fast build rule for target.
+pdcurses_uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/CMakeFiles/pdcurses_uninstall.dir/build.make 3rd/mscurses/pdcursesmod/build/CMakeFiles/pdcurses_uninstall.dir/build
+.PHONY : pdcurses_uninstall/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_ext
+
+# Build rule for target.
+sdl2_ext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_ext
+.PHONY : sdl2_ext
+
+# fast build rule for target.
+sdl2_ext/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/CMakeFiles/sdl2_ext.dir/build.make 3rd/mscurses/pdcursesmod/build/CMakeFiles/sdl2_ext.dir/build
+.PHONY : sdl2_ext/fast
+
+#=============================================================================
+# Target rules for targets named ncurses_firework
+
+# Build rule for target.
+ncurses_firework: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_firework
+.PHONY : ncurses_firework
+
+# fast build rule for target.
+ncurses_firework/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_firework.dir/build.make 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_firework.dir/build
+.PHONY : ncurses_firework/fast
+
+#=============================================================================
+# Target rules for targets named ncurses_ozdemo
+
+# Build rule for target.
+ncurses_ozdemo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_ozdemo
+.PHONY : ncurses_ozdemo
+
+# fast build rule for target.
+ncurses_ozdemo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_ozdemo.dir/build.make 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_ozdemo.dir/build
+.PHONY : ncurses_ozdemo/fast
+
+#=============================================================================
+# Target rules for targets named ncurses_newtest
+
+# Build rule for target.
+ncurses_newtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_newtest
+.PHONY : ncurses_newtest
+
+# fast build rule for target.
+ncurses_newtest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_newtest.dir/build.make 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_newtest.dir/build
+.PHONY : ncurses_newtest/fast
+
+#=============================================================================
+# Target rules for targets named ncurses_rain
+
+# Build rule for target.
+ncurses_rain: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_rain
+.PHONY : ncurses_rain
+
+# fast build rule for target.
+ncurses_rain/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_rain.dir/build.make 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_rain.dir/build
+.PHONY : ncurses_rain/fast
+
+#=============================================================================
+# Target rules for targets named ncurses_testcurs
+
+# Build rule for target.
+ncurses_testcurs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_testcurs
+.PHONY : ncurses_testcurs
+
+# fast build rule for target.
+ncurses_testcurs/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_testcurs.dir/build.make 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_testcurs.dir/build
+.PHONY : ncurses_testcurs/fast
+
+#=============================================================================
+# Target rules for targets named ncurses_worm
+
+# Build rule for target.
+ncurses_worm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_worm
+.PHONY : ncurses_worm
+
+# fast build rule for target.
+ncurses_worm/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_worm.dir/build.make 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_worm.dir/build
+.PHONY : ncurses_worm/fast
+
+#=============================================================================
+# Target rules for targets named ncurses_xmas
+
+# Build rule for target.
+ncurses_xmas: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncurses_xmas
+.PHONY : ncurses_xmas
+
+# fast build rule for target.
+ncurses_xmas/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_xmas.dir/build.make 3rd/mscurses/pdcursesmod/build/ncurses/CMakeFiles/ncurses_xmas.dir/build
+.PHONY : ncurses_xmas/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_pdcurses
+
+# Build rule for target.
+sdl2_pdcurses: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_pdcurses
+.PHONY : sdl2_pdcurses
+
+# fast build rule for target.
+sdl2_pdcurses/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_pdcurses.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_pdcurses.dir/build
+.PHONY : sdl2_pdcurses/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_version
+
+# Build rule for target.
+sdl2_version: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_version
+.PHONY : sdl2_version
+
+# fast build rule for target.
+sdl2_version/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_version.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_version.dir/build
+.PHONY : sdl2_version/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_ozdemo
+
+# Build rule for target.
+sdl2_ozdemo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_ozdemo
+.PHONY : sdl2_ozdemo
+
+# fast build rule for target.
+sdl2_ozdemo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_ozdemo.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_ozdemo.dir/build
+.PHONY : sdl2_ozdemo/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_testcurs
+
+# Build rule for target.
+sdl2_testcurs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_testcurs
+.PHONY : sdl2_testcurs
+
+# fast build rule for target.
+sdl2_testcurs/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_testcurs.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_testcurs.dir/build
+.PHONY : sdl2_testcurs/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_firework
+
+# Build rule for target.
+sdl2_firework: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_firework
+.PHONY : sdl2_firework
+
+# fast build rule for target.
+sdl2_firework/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_firework.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_firework.dir/build
+.PHONY : sdl2_firework/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_tuidemo
+
+# Build rule for target.
+sdl2_tuidemo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_tuidemo
+.PHONY : sdl2_tuidemo
+
+# fast build rule for target.
+sdl2_tuidemo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_tuidemo.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_tuidemo.dir/build
+.PHONY : sdl2_tuidemo/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_newtest
+
+# Build rule for target.
+sdl2_newtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_newtest
+.PHONY : sdl2_newtest
+
+# fast build rule for target.
+sdl2_newtest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_newtest.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_newtest.dir/build
+.PHONY : sdl2_newtest/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_ptest
+
+# Build rule for target.
+sdl2_ptest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_ptest
+.PHONY : sdl2_ptest
+
+# fast build rule for target.
+sdl2_ptest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_ptest.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_ptest.dir/build
+.PHONY : sdl2_ptest/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_rain
+
+# Build rule for target.
+sdl2_rain: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_rain
+.PHONY : sdl2_rain
+
+# fast build rule for target.
+sdl2_rain/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_rain.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_rain.dir/build
+.PHONY : sdl2_rain/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_worm
+
+# Build rule for target.
+sdl2_worm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_worm
+.PHONY : sdl2_worm
+
+# fast build rule for target.
+sdl2_worm/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_worm.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_worm.dir/build
+.PHONY : sdl2_worm/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_xmas
+
+# Build rule for target.
+sdl2_xmas: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_xmas
+.PHONY : sdl2_xmas
+
+# fast build rule for target.
+sdl2_xmas/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_xmas.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_xmas.dir/build
+.PHONY : sdl2_xmas/fast
+
+#=============================================================================
+# Target rules for targets named sdl2_sdltest
+
+# Build rule for target.
+sdl2_sdltest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2_sdltest
+.PHONY : sdl2_sdltest
+
+# fast build rule for target.
+sdl2_sdltest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_sdltest.dir/build.make 3rd/mscurses/pdcursesmod/build/sdl2/CMakeFiles/sdl2_sdltest.dir/build
+.PHONY : sdl2_sdltest/fast
+
+#=============================================================================
+# Target rules for targets named gl_version
+
+# Build rule for target.
+gl_version: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_version
+.PHONY : gl_version
+
+# fast build rule for target.
+gl_version/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_version.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_version.dir/build
+.PHONY : gl_version/fast
+
+#=============================================================================
+# Target rules for targets named gl_newtest
+
+# Build rule for target.
+gl_newtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_newtest
+.PHONY : gl_newtest
+
+# fast build rule for target.
+gl_newtest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_newtest.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_newtest.dir/build
+.PHONY : gl_newtest/fast
+
+#=============================================================================
+# Target rules for targets named gl_pdcurses
+
+# Build rule for target.
+gl_pdcurses: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_pdcurses
+.PHONY : gl_pdcurses
+
+# fast build rule for target.
+gl_pdcurses/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_pdcurses.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_pdcurses.dir/build
+.PHONY : gl_pdcurses/fast
+
+#=============================================================================
+# Target rules for targets named gl_xmas
+
+# Build rule for target.
+gl_xmas: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_xmas
+.PHONY : gl_xmas
+
+# fast build rule for target.
+gl_xmas/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_xmas.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_xmas.dir/build
+.PHONY : gl_xmas/fast
+
+#=============================================================================
+# Target rules for targets named gl_ptest
+
+# Build rule for target.
+gl_ptest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_ptest
+.PHONY : gl_ptest
+
+# fast build rule for target.
+gl_ptest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_ptest.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_ptest.dir/build
+.PHONY : gl_ptest/fast
+
+#=============================================================================
+# Target rules for targets named gl_rain
+
+# Build rule for target.
+gl_rain: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_rain
+.PHONY : gl_rain
+
+# fast build rule for target.
+gl_rain/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_rain.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_rain.dir/build
+.PHONY : gl_rain/fast
+
+#=============================================================================
+# Target rules for targets named gl_testcurs
+
+# Build rule for target.
+gl_testcurs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_testcurs
+.PHONY : gl_testcurs
+
+# fast build rule for target.
+gl_testcurs/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_testcurs.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_testcurs.dir/build
+.PHONY : gl_testcurs/fast
+
+#=============================================================================
+# Target rules for targets named gl_firework
+
+# Build rule for target.
+gl_firework: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_firework
+.PHONY : gl_firework
+
+# fast build rule for target.
+gl_firework/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_firework.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_firework.dir/build
+.PHONY : gl_firework/fast
+
+#=============================================================================
+# Target rules for targets named gl_tuidemo
+
+# Build rule for target.
+gl_tuidemo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_tuidemo
+.PHONY : gl_tuidemo
+
+# fast build rule for target.
+gl_tuidemo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_tuidemo.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_tuidemo.dir/build
+.PHONY : gl_tuidemo/fast
+
+#=============================================================================
+# Target rules for targets named gl_ozdemo
+
+# Build rule for target.
+gl_ozdemo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_ozdemo
+.PHONY : gl_ozdemo
+
+# fast build rule for target.
+gl_ozdemo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_ozdemo.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_ozdemo.dir/build
+.PHONY : gl_ozdemo/fast
+
+#=============================================================================
+# Target rules for targets named gl_worm
+
+# Build rule for target.
+gl_worm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl_worm
+.PHONY : gl_worm
+
+# fast build rule for target.
+gl_worm/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_worm.dir/build.make 3rd/mscurses/pdcursesmod/build/gl/CMakeFiles/gl_worm.dir/build
+.PHONY : gl_worm/fast
+
+#=============================================================================
+# Target rules for targets named vt_pdcurses
+
+# Build rule for target.
+vt_pdcurses: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_pdcurses
+.PHONY : vt_pdcurses
+
+# fast build rule for target.
+vt_pdcurses/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_pdcurses.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_pdcurses.dir/build
+.PHONY : vt_pdcurses/fast
+
+#=============================================================================
+# Target rules for targets named vt_firework
+
+# Build rule for target.
+vt_firework: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_firework
+.PHONY : vt_firework
+
+# fast build rule for target.
+vt_firework/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_firework.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_firework.dir/build
+.PHONY : vt_firework/fast
+
+#=============================================================================
+# Target rules for targets named vt_newtest
+
+# Build rule for target.
+vt_newtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_newtest
+.PHONY : vt_newtest
+
+# fast build rule for target.
+vt_newtest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_newtest.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_newtest.dir/build
+.PHONY : vt_newtest/fast
+
+#=============================================================================
+# Target rules for targets named vt_ozdemo
+
+# Build rule for target.
+vt_ozdemo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_ozdemo
+.PHONY : vt_ozdemo
+
+# fast build rule for target.
+vt_ozdemo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_ozdemo.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_ozdemo.dir/build
+.PHONY : vt_ozdemo/fast
+
+#=============================================================================
+# Target rules for targets named vt_rain
+
+# Build rule for target.
+vt_rain: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_rain
+.PHONY : vt_rain
+
+# fast build rule for target.
+vt_rain/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_rain.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_rain.dir/build
+.PHONY : vt_rain/fast
+
+#=============================================================================
+# Target rules for targets named vt_ptest
+
+# Build rule for target.
+vt_ptest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_ptest
+.PHONY : vt_ptest
+
+# fast build rule for target.
+vt_ptest/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_ptest.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_ptest.dir/build
+.PHONY : vt_ptest/fast
+
+#=============================================================================
+# Target rules for targets named vt_testcurs
+
+# Build rule for target.
+vt_testcurs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_testcurs
+.PHONY : vt_testcurs
+
+# fast build rule for target.
+vt_testcurs/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_testcurs.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_testcurs.dir/build
+.PHONY : vt_testcurs/fast
+
+#=============================================================================
+# Target rules for targets named vt_tuidemo
+
+# Build rule for target.
+vt_tuidemo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_tuidemo
+.PHONY : vt_tuidemo
+
+# fast build rule for target.
+vt_tuidemo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_tuidemo.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_tuidemo.dir/build
+.PHONY : vt_tuidemo/fast
+
+#=============================================================================
+# Target rules for targets named vt_worm
+
+# Build rule for target.
+vt_worm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_worm
+.PHONY : vt_worm
+
+# fast build rule for target.
+vt_worm/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_worm.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_worm.dir/build
+.PHONY : vt_worm/fast
+
+#=============================================================================
+# Target rules for targets named vt_xmas
+
+# Build rule for target.
+vt_xmas: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_xmas
+.PHONY : vt_xmas
+
+# fast build rule for target.
+vt_xmas/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_xmas.dir/build.make 3rd/mscurses/pdcursesmod/build/vt/CMakeFiles/vt_xmas.dir/build
+.PHONY : vt_xmas/fast
+
+#=============================================================================
+# Target rules for targets named mscurses_test
+
+# Build rule for target.
+mscurses_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mscurses_test
+.PHONY : mscurses_test
+
+# fast build rule for target.
+mscurses_test/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/mscurses/test/CMakeFiles/mscurses_test.dir/build.make 3rd/mscurses/test/CMakeFiles/mscurses_test.dir/build
+.PHONY : mscurses_test/fast
 
 #=============================================================================
 # Target rules for targets named common_test
@@ -3503,6 +4088,7 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... check"
+	@echo "... freetype2_ext"
 	@echo "... khello_driver"
 	@echo "... khello_load"
 	@echo "... khello_unload"
@@ -3516,7 +4102,11 @@ help:
 	@echo "... knetlink_load"
 	@echo "... knetlink_unload"
 	@echo "... maybe_threads_unittest"
+	@echo "... pdcurses_uninstall"
+	@echo "... sdl2_ext"
+	@echo "... sdl2_ttf_ext"
 	@echo "... uninstall"
+	@echo "... zlib_ext"
 	@echo "... addressmap_unittest"
 	@echo "... argc_argv"
 	@echo "... array"
@@ -3559,6 +4149,17 @@ help:
 	@echo "... get_hw_info"
 	@echo "... get_used_info"
 	@echo "... getpc_test"
+	@echo "... gl_firework"
+	@echo "... gl_newtest"
+	@echo "... gl_ozdemo"
+	@echo "... gl_pdcurses"
+	@echo "... gl_ptest"
+	@echo "... gl_rain"
+	@echo "... gl_testcurs"
+	@echo "... gl_tuidemo"
+	@echo "... gl_version"
+	@echo "... gl_worm"
+	@echo "... gl_xmas"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gperftools_test"
@@ -3597,6 +4198,7 @@ help:
 	@echo "... memcpy"
 	@echo "... minify_tests"
 	@echo "... misc_tests"
+	@echo "... mscurses_test"
 	@echo "... msg_que_client"
 	@echo "... msg_que_server"
 	@echo "... multicast_cli"
@@ -3606,7 +4208,13 @@ help:
 	@echo "... name_to_pid"
 	@echo "... nanobench"
 	@echo "... nanobench_test"
-	@echo "... ncurses_test"
+	@echo "... ncurses_firework"
+	@echo "... ncurses_newtest"
+	@echo "... ncurses_ozdemo"
+	@echo "... ncurses_rain"
+	@echo "... ncurses_testcurs"
+	@echo "... ncurses_worm"
+	@echo "... ncurses_xmas"
 	@echo "... packed_cache_test"
 	@echo "... page_heap_test"
 	@echo "... pagemap_unittest"
@@ -3660,6 +4268,18 @@ help:
 	@echo "... sampler_test"
 	@echo "... sampling_debug_test"
 	@echo "... sampling_test"
+	@echo "... sdl2_firework"
+	@echo "... sdl2_newtest"
+	@echo "... sdl2_ozdemo"
+	@echo "... sdl2_pdcurses"
+	@echo "... sdl2_ptest"
+	@echo "... sdl2_rain"
+	@echo "... sdl2_sdltest"
+	@echo "... sdl2_testcurs"
+	@echo "... sdl2_tuidemo"
+	@echo "... sdl2_version"
+	@echo "... sdl2_worm"
+	@echo "... sdl2_xmas"
 	@echo "... sem-shm_reader"
 	@echo "... sem-shm_writer"
 	@echo "... sem_p-c"
@@ -3725,6 +4345,16 @@ help:
 	@echo "... unity"
 	@echo "... uv"
 	@echo "... uv_a"
+	@echo "... vt_firework"
+	@echo "... vt_newtest"
+	@echo "... vt_ozdemo"
+	@echo "... vt_pdcurses"
+	@echo "... vt_ptest"
+	@echo "... vt_rain"
+	@echo "... vt_testcurs"
+	@echo "... vt_tuidemo"
+	@echo "... vt_worm"
+	@echo "... vt_xmas"
 .PHONY : help
 
 

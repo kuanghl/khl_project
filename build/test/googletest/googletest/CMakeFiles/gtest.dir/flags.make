@@ -6,5 +6,5 @@ CXX_DEFINES = -DGTEST_CREATE_SHARED_LIBRARY=1 -Ddaemon_en=1 -Dgtest_EXPORTS -Dlo
 
 CXX_INCLUDES = -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/log/simple_log -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/libuv/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googletest/include -I/home/kuanghongliang/Documents/vscode_projects/kusr_code/test/googletest/googletest
 
-CXX_FLAGS = -g -fPIC -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread
+CXX_FLAGS = -g -fPIC -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
 

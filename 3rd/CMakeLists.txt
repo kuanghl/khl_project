@@ -59,9 +59,6 @@ add_subdirectory(pybind11)
 add_subdirectory(pybind11_test)
 
 #############################################################
-# ncurses
-add_subdirectory(ncurses)
-
-# ncurses_test
-add_subdirectory(ncurses_test)
+# mscurses
+add_subdirectory(mscurses)
 
