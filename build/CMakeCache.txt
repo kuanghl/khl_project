@@ -413,18 +413,6 @@ CTEST_SUBMIT_RETRY_COUNT:STRING=3
 //How long to wait between timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_DELAY:STRING=5
 
-//Path to a library.
-CURSES_CURSES_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcurses.so
-
-//Path to a library.
-CURSES_FORM_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libformw.so
-
-//Path to a file.
-CURSES_INCLUDE_PATH:PATH=/usr/include
-
-//Path to a library.
-CURSES_NCURSES_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libncursesw.so
-
 //Path to a program.
 CVSCOMMAND:FILEPATH=CVSCOMMAND-NOTFOUND
 
@@ -482,26 +470,6 @@ ENABLE_TARGET_EXPORT:BOOL=ON
 
 //OFF
 ENABLE_VALGRIND:BOOL=OFF
-
-//Directory under which to collect all populated content
-FETCHCONTENT_BASE_DIR:PATH=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/_deps
-
-//Disables all attempts to download or update content and assumes
-// source dirs already exist
-FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
-
-//Enables QUIET option for all content population
-FETCHCONTENT_QUIET:BOOL=ON
-
-//When not empty, overrides where to find pre-populated content
-// for PDCursesMod
-FETCHCONTENT_SOURCE_DIR_PDCURSESMOD:PATH=
-
-//Enables UPDATE_DISCONNECTED behavior for all content population
-FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of PDCursesMod
-FETCHCONTENT_UPDATES_DISCONNECTED_PDCURSESMOD:BOOL=OFF
 
 //path to the flex executable
 FLEX_EXECUTABLE:FILEPATH=/usr/bin/flex
@@ -570,45 +538,6 @@ OBJCOPY_EXECUTABLE:FILEPATH=/usr/bin/objcopy
 
 //Path to a program.
 P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
-
-//Debug tracing
-PDCDEBUG:BOOL=OFF
-
-//Build dynamic libs for pdcurses
-PDC_BUILD_SHARED:BOOL=ON
-
-//CHTYPE_32
-PDC_CHTYPE_32:BOOL=OFF
-
-//Build DOSVGA Project
-PDC_DOSVGA_BUILD:BOOL=OFF
-
-//Build VT Project
-PDC_DOSVT_BUILD:BOOL=OFF
-
-//Build DOS Project
-PDC_DOS_BUILD:BOOL=OFF
-
-//Build OpenGL Project
-PDC_GL_BUILD:BOOL=ON
-
-//Build OS/2 Project
-PDC_OS2_BUILD:BOOL=OFF
-
-//Build SDL2 Project
-PDC_SDL2_BUILD:BOOL=ON
-
-//Build SDL2 and dependencies
-PDC_SDL2_DEPS_BUILD:BOOL=ON
-
-//Force to UTF8
-PDC_UTF8:BOOL=OFF
-
-//Wide - pulls in sdl-ttf
-PDC_WIDE:BOOL=OFF
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
 
 //Force new FindPython
 PYBIND11_FINDPYTHON:BOOL=OFF
@@ -683,15 +612,6 @@ client_api_LIB_DEPENDS:STATIC=general;log;general;gcc_s;general;uv_a;general;dl;
 
 //Enable the daemon: on/off
 daemon_en:BOOL=ON
-
-//Value Computed by CMake
-gl_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/build/gl
-
-//Value Computed by CMake
-gl_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/gl
-
-//Dependencies for the target
-gl_pdcurses_LIB_DEPENDS:STATIC=general;SDL2maind;SDL2-2.0d;SDL2_ttf;freetyped;z;dl;
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googlemock
@@ -819,43 +739,16 @@ nanobench_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_
 nanobench_en:BOOL=ON
 
 //Value Computed by CMake
-ncurses_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/build/ncurses
-
-//Value Computed by CMake
-ncurses_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/ncurses
-
-//Value Computed by CMake
-pdcurses_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/build
-
-//Value Computed by CMake
-pdcurses_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod
-
-//Value Computed by CMake
 pybind11_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/pybind11
 
 //Value Computed by CMake
 pybind11_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/3rd/pybind11
-
-//Value Computed by CMake
-sdl2_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/build/sdl2
-
-//Value Computed by CMake
-sdl2_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/sdl2
-
-//Dependencies for the target
-sdl2_pdcurses_LIB_DEPENDS:STATIC=general;SDL2maind;general;SDL2-2.0d;general;dl;
 
 //Dependencies for the target
 uv_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
 
 //Dependencies for the target
 uv_a_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
-
-//Value Computed by CMake
-vt_BINARY_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/build/vt
-
-//Value Computed by CMake
-vt_SOURCE_DIR:STATIC=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/pdcursesmod/vt
 
 
 ########################
@@ -1020,7 +913,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=83
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=76
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1113,18 +1006,6 @@ CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
-//Have library /usr/lib/x86_64-linux-gnu/libcurses.so
-CURSES_CURSES_HAS_WSYNCUP:INTERNAL=1
-//ADVANCED property for variable: CURSES_CURSES_LIBRARY
-CURSES_CURSES_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CURSES_FORM_LIBRARY
-CURSES_FORM_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CURSES_INCLUDE_PATH
-CURSES_INCLUDE_PATH-ADVANCED:INTERNAL=1
-//Have library /usr/lib/x86_64-linux-gnu/libncursesw.so
-CURSES_NCURSES_HAS_CBREAK:INTERNAL=1
-//ADVANCED property for variable: CURSES_NCURSES_LIBRARY
-CURSES_NCURSES_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CVSCOMMAND
 CVSCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CVS_UPDATE_OPTIONS
@@ -1139,8 +1020,6 @@ DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 ELF32_VERSYM:INTERNAL=2
 //Details about finding BISON
 FIND_PACKAGE_MESSAGE_DETAILS_BISON:INTERNAL=[/usr/bin/bison][v3.5.1()]
-//Details about finding Curses
-FIND_PACKAGE_MESSAGE_DETAILS_Curses:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurses.so][/usr/include][v()]
 //Details about finding Doxygen
 FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/local/bin/doxygen][cfound components: doxygen dot ][v1.9.7 (9a5686aeebff882ebda518151bc5df9d757ea5f7)()]
 //Details about finding FLEX
@@ -1365,45 +1244,10 @@ MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //Test MINGW
 MINGW:INTERNAL=
-NCURSES_CFLAGS:INTERNAL=
-NCURSES_CFLAGS_I:INTERNAL=
-NCURSES_CFLAGS_OTHER:INTERNAL=
-NCURSES_FOUND:INTERNAL=
-NCURSES_INCLUDEDIR:INTERNAL=
-NCURSES_LIBDIR:INTERNAL=
-NCURSES_LIBS:INTERNAL=
-NCURSES_LIBS_L:INTERNAL=
-NCURSES_LIBS_OTHER:INTERNAL=
-NCURSES_LIBS_PATHS:INTERNAL=
-NCURSES_MODULE_NAME:INTERNAL=
-NCURSES_PREFIX:INTERNAL=
-NCURSES_STATIC_CFLAGS:INTERNAL=
-NCURSES_STATIC_CFLAGS_I:INTERNAL=
-NCURSES_STATIC_CFLAGS_OTHER:INTERNAL=
-NCURSES_STATIC_LIBDIR:INTERNAL=
-NCURSES_STATIC_LIBS:INTERNAL=
-NCURSES_STATIC_LIBS_L:INTERNAL=
-NCURSES_STATIC_LIBS_OTHER:INTERNAL=
-NCURSES_STATIC_LIBS_PATHS:INTERNAL=
-NCURSES_VERSION:INTERNAL=
-NCURSES_ncurses_INCLUDEDIR:INTERNAL=
-NCURSES_ncurses_LIBDIR:INTERNAL=
-NCURSES_ncurses_PREFIX:INTERNAL=
-NCURSES_ncurses_VERSION:INTERNAL=
-NCURSES_ncursesw_INCLUDEDIR:INTERNAL=
-NCURSES_ncursesw_LIBDIR:INTERNAL=
-NCURSES_ncursesw_PREFIX:INTERNAL=
-NCURSES_ncursesw_VERSION:INTERNAL=
 //Test OSX
 OSX:INTERNAL=
 //ADVANCED property for variable: P4COMMAND
 P4COMMAND-ADVANCED:INTERNAL=1
-//Have function vsnprintf
-PDC_HAVE_VSNPRINTF:INTERNAL=1
-//Have function vsscanf
-PDC_HAVE_VSSCANF:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //Test PPC64
 PPC64:INTERNAL=
 //Test PTHREAD_CREATE_JOINABLE_ATTR
@@ -1487,10 +1331,7 @@ _Python_EXECUTABLE:INTERNAL=/usr/bin/python3.8
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;10;64;;cpython-38-x86_64-linux-gnu;/usr/lib/python3.8;/usr/lib/python3.8;/usr/lib/python3.8/site-packages;/usr/lib/python3.8/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=a6cf5714273262f48d4fc096e7190602
-__pkg_config_checked_NCURSES:INTERNAL=1
 cmake_package_name:INTERNAL=GTest
-//Result of TRY_COMPILE
-compile_result_unused:INTERNAL=FALSE
 generated_dir:INTERNAL=/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/test/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1

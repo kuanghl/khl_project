@@ -49,7 +49,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/cJSON_test/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/pybind11/cmake_install.cmake")
   include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/pybind11_test/cmake_install.cmake")
-  include("/home/kuanghongliang/Documents/vscode_projects/kusr_code/build/3rd/mscurses/cmake_install.cmake")
 
 endif()
 
