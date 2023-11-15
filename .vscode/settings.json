@@ -84,7 +84,11 @@
         "c_cpptest.h": "c",
         "complex": "cpp",
         "pdcvt.h": "c",
-        "ncurses.h": "c"
+        "ncurses.h": "c",
+        "crc.h": "c",
+        "tensor": "c",
+        "stdio.h": "c",
+        "stdint.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
