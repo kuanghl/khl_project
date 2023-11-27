@@ -14,6 +14,12 @@ ifneq ($(KERNELRELEASE),)
 
 	EXTRA_CFLAGS += -D'SRC="$(src)"'
 
+ifneq ($(shell cd $(src) && git rev-parse HEAD),)
+	EXTRA_CFLAGS += -D'GIT_STATUS="None"'
+else
+	EXTRA_CFLAGS += -D'GIT_STATUS="Yes"'
+endif
+
 	topdir := $(shell cd $(src) && pwd)
 	EXTRA_CFLAGS += -I$(topdir)/include
 
