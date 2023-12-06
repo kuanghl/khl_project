@@ -88,7 +88,11 @@
         "crc.h": "c",
         "tensor": "c",
         "stdio.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "kallsyms.h": "c",
+        "module.h": "c",
+        "sched.h": "c",
+        "slab.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

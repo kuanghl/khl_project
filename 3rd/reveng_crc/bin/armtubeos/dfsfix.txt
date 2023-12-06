@@ -1,0 +1,516 @@
+*| dfsfix.txt
+*| Greg Cook, 24 December 2021
+*|
+*| This assembles a small utility for the BBC Micro computer which
+*| intercepts filing system calls to Acorn DFS and certain third-party
+*| DFS ROMs, to provide an enhanced filing system interface.
+*| The new interface is useful to all programs, but when a simple
+*| RISC OS program using the ANSI C Library runs on an attached SPROW
+*| ARM7TDMI Coprocessor, DFSfix emulates just enough of RISC OS's
+*| FileSwitch API for the program to read and write files on Acorn DFS
+*| discs through the coprocessor's ARM Tube OS.
+*| DFSfix enhances Opus DDOS versions 3.15 and higher, and all versions
+*| of Acorn DFS.
+*| This program also assembles Chafix for use with Slogger Challenger
+*| versions 1.03 and 2.00.  Substitute chafix for dfsfix in the
+*| instructions below.
+*|
+*| Functions performed:
+*| OSFILE: translates A=7, 10 or 11 to A=0; translates A=9 to A=2.
+*| OSARGS: sets the extent (length) of an open file when A=3, Y>0.
+*| OSGBPB: clears the EOF warning flag on exit when A=1..4.
+*| OSFIND: passes only b7,b6 of A to the DFS.  Raises "Not found" error
+*|         iff b6,b3 are both set and DFS returns A=0 (no file handle.)
+*|
+*| Usage:
+*|   *EXEC this text, send it over a serial link, or paste it into an
+*|   emulator session, to load the assembler program into BASIC.
+*|   At the end of the file press ESCAPE to regain the BASIC prompt.
+*|   At the BASIC prompt (>) type RUN and then press the RETURN key.
+*|   At the program's prompts enter the recommended assembly options
+*|   to assemble and save the utility file, named dfsfix.
+*|   To install DFSfix, either type Y at the "Install?" prompt
+*|   or enter the following:
+*|
+*|         *dfsfix
+*|
+*| Caveats:
+*|   A is undefined on exit from OSARGS 3,Y.
+*|   The underlying OSARGS and OSGBPB are expected to raise an error
+*|   if the file handle is invalid.
+*|   Installing DFSfix over a filing system other than Acorn DFS or
+*|   Opus DDOS results in undefined behaviour.
+*|   Installing Chafix over a filing system other than Slogger
+*|   Challenger results in undefined behaviour.
+*|
+*| Recommended assembly options:
+*|   15A1,R,N,Y,N,N,N,Y,N,Y (DFS and DDOS, 295 bytes)
+*|    BA1,R,N,Y,N,N,Y,Y,N,Y (Challenger, 302 bytes)
+*|
+*| Assembly options:
+*| Address (&1500): &
+*|   Assemble DFSfix starting at this address.  Press RETURN to use the
+*|   default address of &1500, or type a hexadecimal address (after the
+*|   &) and then press RETURN.
+*|   Where DFSfix resides determines which of the BBC Micro's facilities
+*|   remain available.
+*|   DFSfix can be placed for instance at:-
+*|      &B00, in place of function key expansions
+*|      &C00, in place of user-defined characters (not with option R)
+*|     &1500, in place of sector buffer &14..&15
+*|     &1600, in place of sector buffer &15 (not with option R)
+*|     &1800, in place of *BUILD and *DUMP (not with option R)
+*|     &1900, in place of programs that run at &1900
+*|            (set PAGE=&1B00 to run BASIC programs with minimal
+*|            disruption)
+*|     &7A00, in place of graphics display modes (must set HIMEM=&7A00)
+*|   Thus an assembly address of &1500 leaves file handles &11..&13 free
+*|   DFSfix without options assembles to 190 bytes of routines + 48 byte
+*|   installer erasable after use = 238 bytes (&EE).
+*|   The address need not be page-aligned.
+*|   You must ensure that neither the code nor the generated image file
+*|   will overwrite critical memory areas.
+*|
+*| Installer (F)irst/(L)ast/(R)eloc:
+*|   Typing F or L places the installer before or after the routines,
+*|   respectively.
+*|   Typing R adds 47 bytes and creates a GoSDC-compatible tool which
+*|   can be loaded at any address and installs the DFSfix routines at
+*|   the address entered + &5F.
+*|
+*| OSARGS 3,Y to test MSB? (Y/N):
+*|   Typing Y adds 8 bytes.
+*|   Causes DFSfix to treat the parameter to OSARGS 3,Y as a 24-bit (N)
+*|   or 32-bit (Y) quantity.  In the latter case, a request with any of
+*|   the top 8 bits set raises a "Can't extend" error.
+*|   With N a pointer prepared for a 24-bit implementation of OSARGS 1,Y
+*|   can also be passed to OSARGS 3,Y.  The Y option however enables
+*|   strict compliance with the DFS and RISC OS APIs.
+*|
+*| OSARGS 3,Y to clamp PTR? (Y/N):
+*|   Typing Y adds 10 bytes.
+*|   With N, calls to OSARGS 3,Y leave a file's pointer unchanged after
+*|   setting the length, and so the pointer may sometimes be left far
+*|   beyond the end of the file.
+*|   Type Y and DFSfix upholds the rule that PTR never exceeds EXT.
+*|   Y is the proper choice for use with RISC OS applications, which
+*|   expect this rule, and/or the supported filing systems, which
+*|   enforce it at all times.
+*|   Otherwise, you may choose N and then refrain from performing any
+*|   length adjustment that would leave the pointer 'dangling'.
+*|   Fortunately, RISC OS programs that just write files sequentially
+*|   only zero their length on opening, when the pointer is also zero.
+*|
+*| OSARGS 1,Y to clear EOF flag? (Y/N):
+*|   Typing Y adds 19 bytes.
+*|   With Y, calls to OSARGS with A=1, Y>0 explicitly clear the EOF
+*|   warning flag while setting a file's pointer.  Acorn DFS does not
+*|   require fixing, whereas Opus DDOS and Slogger Challenger mishandle
+*|   short rewinds.
+*|   Though Y ensures conformance to the RISC OS API, ANSIlib-based and
+*|   most other programs will get by on option N.
+*|
+*| Custom error message? (Y/N):
+*|   Typing Y subtracts 9 bytes and adds the number of bytes in the
+*|   user's custom error message.
+*|
+*| Enter message:
+*|   Type the error message to display when OSFILE is asked to report a
+*|   missing file, then press RETURN.  If a custom error message was not
+*|   selected, this option is not given.
+*|
+*| For Challenger? (Y/N):
+*|   Typing Y adds 7 bytes and assembles Chafix for use with the Slogger
+*|   Challenger ROM.
+*|
+*| Save? (Y/N):
+*|   Type Y to save DFSfix to disc as well or N to generate only the
+*|   assembly listing.
+*|   To reassemble and save once installed, first uninstall it using:
+*|
+*|         *DISC
+*|
+*| Page-aligned file? (Y/N):
+*|   Type Y to save DFSfix starting at a page boundary.
+*|   Type N to save DFSfix starting at the code.
+*|   With relocatable or page-aligned code, the option is not given.
+*|
+*| Display file? (Y/N):
+*|   If DFSfix was saved to disc, type Y to display the file's
+*|   information and a dump of its contents; otherwise the option is
+*|   not given.
+*|
+*| Install? (Y/N):
+*|   Type Y to install DFSfix now.  After N or the BREAK key is pressed,
+*|   DFSfix can be installed from disc as described above.
+
+*BASIC
+NEW
+AUTO
+REM >A.DFSFIX
+REM Greg Cook 13/Jul/2021 23:40
+REM Version 6.3
+
+REM Cannot use current filename at &C7
+REM OSARGS 1,Y overwrites it during a file extension
+REM Reportedly unused space in the Econet area = &90..&96
+REM http://mdfs.net/Docs/Comp/BBC/AllMem
+tempptr=&93
+REM OSARGS 3,Y and OSGBPB will not cause themselves or each other to be called
+ptr=&95
+REM Address of JSR install_hook trampoline
+tramp=&94
+REM Address of JMP (ind) trampoline, high byte must be a safe opcode
+safeopcode=&100
+os_filev=&212
+os_vector_base=os_filev
+os_argsv=&214
+os_gbpbv=&21A
+os_findv=&21C
+osbput=&FFD4
+osfile=&FFDD
+osbyte=&FFF4
+oscli=&FFF7
+
+base%=FNgethex("Address (&1500): &",&1500)
+PRINT"Installer (F)irst/(L)ast/(R)eloc:";
+REPEAT input%=INSTR(" FfLlRr",GET$)DIV 2:UNTIL input%>0
+PRINT MID$("FLR",input%,1)
+IF input%=1 THEN installer_first%=1:tool%=0
+IF input%=2 THEN installer_first%=0:tool%=0
+IF input%=3 THEN installer_first%=1:tool%=1
+PRINT"OSARGS 3,Y to test MSB? ";:args32%=FNyesno
+PRINT"OSARGS 3,Y to clamp PTR? ";:clampptr%=FNyesno
+PRINT"OSARGS 1,Y to clear EOF flag? ";:args1y%=FNyesno
+PRINT"Custom error message? ";:custom%=FNyesno
+IF custom% THEN INPUT LINE "Enter message: "msg$
+
+PRINT"For Challenger? ";:chal%=FNyesno
+IF chal% THEN channel_ro_flag=&FCED ELSE channel_ro_flag=&110C
+IF chal% THEN channel_lock_flag=&FCEF ELSE channel_lock_flag=&110E
+IF chal% THEN channel_ext=&FCF5 ELSE channel_ext=&1114
+IF chal% THEN channel_buffer_flag=&FCF8 ELSE channel_buffer_flag=&1117
+channel_eof_warning_mask%=&EF
+channel_ext_changed%=&20
+
+pass1%=0:pass2%=3
+
+DIM osblock% 19, filename% 255
+FOR pass%=pass1% TO pass2% STEP pass2%-pass1%
+P%=base%
+IF installer_first% THEN PROCasm_installer
+PROCasm_routines
+IF installer_first% ELSE PROCasm_installer
+NEXT
+
+PRINT '"Save? ";:IF FNyesno THEN PROCsave
+*| command to initialise GSINIT pointer
+PRINT "Install? ";:IF FNyesno THEN CALL install
+END
+
+DEF FNgethex(prompt$,default%)
+LOCAL input$,good%,iter%
+REPEAT
+REPEAT
+PRINT prompt$;
+INPUT "" input$
+UNTIL LEN(input$) <=8
+good%=TRUE
+FOR iter%=1 TO LEN(input$)
+good%=good% AND INSTR("0123456789ABCDEF",MID$(input$,iter%,1))>0
+NEXT
+UNTIL good%
+IF LEN(input$)=0 =default%
+=EVAL("&"+input$)
+
+DEF FNyesno
+LOCAL input%
+PRINT "(Y/N):";
+REPEAT
+input%=INSTR(" NnYy",GET$)DIV 2
+UNTIL input%>0
+IF input%=2 PRINT "yes" ELSE PRINT "no"
+=input%=2
+
+DEF PROCequs(A$)
+$P%=A$
+P%=P%+LENA$
+ENDPROC
+
+DEF PROCequb(A%)
+?P%=A%
+P%=P%+1
+ENDPROC
+
+DEF PROCasm_installer
+[OPT pass%
+.install
+]
+IF tool% THEN PROCasm_tool
+[OPT pass%
+LDX #disccmd AND &FF
+LDY #disccmd DIV &100
+JSR oscli
+LDX #os_filev-os_vector_base
+LDY #filewrap_jmp+1-routines
+JSR install_hook
+\LDX #os_argsv-os_vector_base
+\LDY #argswrap_jmp+1-routines
+TAY \Y=1
+JSR install_hook
+LDX #os_gbpbv-os_vector_base
+LDY #gbpbwrap_jsr+1-routines
+JSR install_hook
+\LDX #os_findv-os_vector_base
+LDY #findwrap_jsr+1-routines
+]
+IF tool% ELSE [OPT pass%:.install_hook:]
+[OPT pass%
+.install_hook_0
+LDA routines,Y
+PHA
+LDA os_vector_base,X
+STA routines,Y
+PLA
+STA os_vector_base,X
+INX
+INY
+TXA
+LSR A
+BCS install_hook_0
+RTS
+.install_end
+]
+ENDPROC
+
+DEF PROCasm_tool
+[OPT pass%
+.getpc
+LDX #&6C \JMP (ind)
+BIT &3336 \skip *MMCTOOL or *TOOLRUN command line argument pointer poke
+STX safeopcode
+TSX
+DEX
+STX safeopcode+1
+LDX #&01
+STX safeopcode+2
+.datum
+JSR safeopcode \execute high byte as opcode
+]
+PROCequb(&F1):REM ORA (&F1,X), X=1; GSINIT pointer initialised
+[OPT pass%
+PLA
+CLC
+ADC #(install_hook_0-datum-2)AND&FF
+STA tramp+1
+PLA
+ADC #(install_hook_0-datum-2)DIV256
+STA tramp+2
+LDY #(routines_end-install_hook_0)AND&FF
+.drop
+DEY
+LDA (tramp+1),Y
+STA install_hook_0,Y
+CPY #routines-install_hook_0
+BNE drop
+STA tramp \first byte is &4C, JMP abs
+]
+install_hook=tramp
+ENDPROC
+
+DEF PROCasm_routines
+[OPT pass%
+.routines
+.argswrap_jmp
+JMP argswrap
+:
+]
+IF args1y% THEN PROCasm_args1y
+IF clampptr% THEN [OPT pass%:.argswrap_ply_set_ptr:PLA:TAY:]
+[OPT pass%
+.argswrap_set_ptr
+LDA #1
+]
+IF args1y% ELSE [OPT pass%:.argswrap:]
+[OPT pass%
+.argswrap1
+CMP #3
+BNE argswrap_jmp
+CPY #1
+BCC argswrap_jmp
+CLC
+.argswrap_temp_ptr
+TXA
+PHA
+LDX #tempptr
+LDA #0
+ROL A
+JSR argswrap_jmp
+PLA
+TAX
+TYA
+PHA
+JSR routines_clear_eof_warning
+]
+IF args32% THEN [OPT pass%:CMP 3,X:BCC argswrap_extend_max:]
+[OPT pass%
+LDA channel_ext,Y \EXT - request
+CMP 0,X
+LDA channel_ext+1,Y
+SBC 1,X
+LDA channel_ext+2,Y
+SBC 2,X
+BCC argswrap_extend \if EXT < request then extend
+LDA channel_ro_flag,Y
+ORA channel_lock_flag,Y
+BMI argswrap_truncate \if read-only channel don't write new EXT to catalogue
+LDA #channel_ext_changed%
+JSR routines_set_channel_buffer_flag
+.argswrap_truncate
+LDA 0,X
+STA channel_ext,Y
+]
+IF clampptr% THEN [OPT pass%:CMP tempptr:]
+[OPT pass%
+LDA 1,X
+STA channel_ext+1,Y
+]
+IF clampptr% THEN [OPT pass%:SBC tempptr+1:]
+[OPT pass%
+LDA 2,X
+STA channel_ext+2,Y
+]
+IF clampptr% THEN [OPT pass%:SBC tempptr+2:BCC argswrap_ply_set_ptr \if request < PTR set PTR = request:]
+IF args32% THEN [OPT pass%:.argswrap_extend_max:LDA #&FF:STA 2,X:]
+[OPT pass%
+.argswrap_extend \on entry C=0 to extend, C=1 to return EXT; request > EXT >= 0
+PLA
+TAY
+LDA #2
+BCS argswrap_jmp
+JSR argswrap_set_ptr
+SEC
+BCS argswrap_temp_ptr
+:
+.filewrap
+CMP #&07:BEQ filewrap_translate \removable
+CMP #&09
+BCC filewrap_jmp
+CMP #&0C
+BCS filewrap_jmp
+.filewrap_translate
+EOR #&02
+AND #&02
+.filewrap_jmp
+JMP filewrap
+:
+.gbpbwrap
+STA ptr
+STY ptr+1
+.gbpbwrap_jsr
+JSR gbpbwrap
+PHP
+LDY ptr
+DEY
+CPY #4
+BCS gbpbwrap_plp
+LDY #0
+STX ptr
+LDA (ptr),Y
+JSR routines_clear_eof_warning
+.gbpbwrap_plp
+LDY ptr+1
+PLP
+RTS
+:
+.routines_clear_eof_warning
+ASL A
+ASL A
+ASL A
+ASL A
+ASL A
+TAY
+]
+IF chal% THEN [OPT pass%:LDA#1:STA&FCFF:LSRA:STA&FCFE:] ELSE [OPT pass%:LDA#0:]
+[OPT pass%
+.routines_set_channel_buffer_flag
+ORA channel_buffer_flag,Y
+AND #channel_eof_warning_mask%
+STA channel_buffer_flag,Y
+LDA #0
+.findwrap_exit
+RTS
+:
+.findwrap
+PHA
+AND #&48
+CMP #&48
+PLA
+PHP
+AND #&C0
+.findwrap_jsr
+JSR findwrap
+PLP
+EOR #0
+BCC findwrap_exit
+BNE findwrap_exit
+BRK
+]
+PROCequb(&D6)
+IF custom% THEN PROCequs(msg$) ELSE PROCequs("Not found")
+PROCequb(&00)
+[OPT pass%
+.disccmd
+]
+PROCequs("DISC")
+PROCequb(&0D)
+[OPT pass%
+.routines_end
+]
+ENDPROC
+
+DEF PROCasm_args1y
+[OPT pass%
+.argswrap
+CMP #1
+BNE argswrap1
+JSR argswrap_jmp
+PHA
+TYA
+BEQ argswrap_1_quit
+PHA
+JSR routines_clear_eof_warning
+PLA
+TAY
+.argswrap_1_quit
+PLA
+RTS
+]
+ENDPROC
+
+DEF PROCsave
+LOCAL A%,X%,Y%
+X%=osblock%
+Y%=X% DIV 256
+IF chal% THEN $filename%="chafix" ELSE $filename%="dfsfix"
+!osblock%=filename%
+osblock%!2=&FFFF0000 OR base%
+osblock%!6=&FFFF0000 OR install
+osblock%!10=base%
+IF osblock%?2 THEN IF tool%=0 THEN PRINT "Page-aligned file? ";:IF FNyesno THEN osblock%?2=0:osblock%?10=0
+osblock%!14=P%
+A%=0
+CALL osfile
+PRINT "Display file? ";:IF FNyesno ELSE ENDPROC
+IF chal% THEN PROCdisp_chal:ENDPROC
+*INFO dfsfix
+*DUMP dfsfix
+ENDPROC
+
+DEF PROCdisp_chal
+*INFO chafix
+*DUMP chafix
+ENDPROC
+
+REM Press <ESCAPE> RUN <RETURN>
+REM End of A.DFSFIX
