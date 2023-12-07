@@ -92,7 +92,8 @@
         "kallsyms.h": "c",
         "module.h": "c",
         "sched.h": "c",
-        "slab.h": "c"
+        "slab.h": "c",
+        "*.inc": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

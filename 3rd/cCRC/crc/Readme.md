@@ -1,0 +1,2 @@
+- 已知crc模型
+  - width=3 poly=0x3 init=0x0 refin=false refout=false xorout=0x7 check=0x4 residue=0x2 name="CRC-3/GSM"
