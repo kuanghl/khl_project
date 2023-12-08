@@ -12,13 +12,16 @@
 #include <linux/fs.h>
 #include <linux/uaccess.h>
 
-#if defined(CONFIG_HARDLOCKUP_DETECTOR) && LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,32)
+
+// 如果CONFIG_HARDLOCKUP_DETECTOR宏被定义，且版本大于2.6.32
+#if defined(CONFIG_HARDLOCKUP_DETECTOR) && LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,32) 
 #include <linux/kthread.h>
 #include <linux/slab.h>
 #endif
 
 static char *module_path = NULL;
 
+MODULE_IMPORT_NS(VFS_internal_I_am_really_a_filesystem_and_am_NOT_a_driver); // 兼容ARM平台，导入VFS命名空间
 module_param(module_path, charp, S_IRUGO);
 MODULE_PARM_DESC(module_path, "Absolute path of the module");
 
@@ -26,6 +29,49 @@ static int module_para[255] = {1,2,3,4};
 static int module_para_len = 0;
 module_param_array(module_para, int, &module_para_len, S_IRUGO);
 MODULE_PARM_DESC(module_para, "Array of the module");
+
+
+#if LINUX_VERSION_CODE < KERNEL_VERSION(4,14,0) 
+struct file *filp_open(const char* filename, int open_mode, int mode)
+{
+    struct file *filp = NULL;
+    mm_segment_t oldfs;
+
+    oldfs = get_fs();
+    set_fs(get_ds());
+    filp = filp_open(filename, open_mode, mode);
+    set_fs(oldfs);
+
+    return filp;
+}
+
+ssize_t kernel_read(struct file *file, void *buf, size_t count, loff_t *pos)
+{
+    int ret = 0;
+    mm_segment_t oldfs;
+
+    oldfs = get_fs();
+    set_fs(get_ds());
+    ret = vfs_read(file, buf, count, &pos);
+    set_fs(oldfs);
+
+    return ret;
+}   
+
+ssize_t kernel_write(struct file *file, const void *buf, size_t count, loff_t *pos)
+{
+    int ret = 0;
+    mm_segment_t oldfs;
+    
+    oldfs = get_fs();
+    set_fs(get_ds());
+    ret = vfs_write(file, buf, count, &pos);
+    vfs_fsync(file, 0);
+    set_fs(oldfs);
+
+    return ret;
+}
+#endif
 
 void read_write_file(void){
     struct file *fd;

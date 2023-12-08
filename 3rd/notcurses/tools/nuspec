@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <!-- need 4.9.0+ for SPDX license expressions -->
+    <metadata minClientVersion="4.9.0">
+        <id>Notcurses</id>
+        <version>3.0.9</version>
+        <title>Notcurses TUI/CLI library</title>
+        <description>Library for blingful TUIs and character graphics</description>
+        <authors>nick black</authors>
+        <projectUrl>https://notcurses.com</projectUrl>
+        <license type="expression">Apache-2.0</license>
+        <copyright>copyright 2019–2022 nick black</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <repository type="git" url="https://github.com/dankamongmen/notcurses.git" />
+        <tags>tui graphics cli</tags>
+        <icon>icon.png</icon>
+        <readme>README.md</readme>
+        <dependencies>
+          <dependency id="LibDeflate.native" version="1.7.1" />
+        </dependencies>
+    </metadata>
+    <files>
+      <file src="../*.md" target="" />
+      <file src="../doc/icon.png" target="" />
+      <file src="libnotcurses-core.dll" target="" />
+      <file src="libnotcurses.dll" target="" />
+      <file src="libnotcurses++.dll" target="" />
+      <file src="libnotcurses-core.a" target="" />
+      <file src="libnotcurses.a" target="" />
+      <file src="libnotcurses++.a" target="" />
+      <file src="ncneofetch.exe" target="" />
+      <file src="ncplayer.exe" target="" />
+      <file src="nctetris.exe" target="" />
+      <file src="notcurses-demo.exe" target="" />
+      <file src="notcurses-info.exe" target="" />
+      <file src="notcurses-input.exe" target="" />
+    </files>
+</package>

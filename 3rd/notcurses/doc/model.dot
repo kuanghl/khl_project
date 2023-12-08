@@ -1,0 +1,46 @@
+digraph G {
+  subgraph clusterNotcurses {
+    label = "Notcurses context (one per terminal)"
+    style = filled;
+    color = lightgrey;
+    subgraph clusterPile0 {
+      //label="Piles represent distinct collections of planes. The main pile is rendered by old notcurses_render().\nncpile_render() and ncpile_rasterize() (version 2.1) work with different piles."
+      label="The standard pile contains the standard plane."
+      style=filled;
+      color="deepskyblue:darkslategray1";
+      planeS [ label="{{Standard plane}|{Cellmatrix}|{EGCPool}}" shape=record style=filled ]
+      plane1 [ label="{{Plane 1}|{Cellmatrix}|{EGCPool}}" shape=record style=filled ]
+    }
+    subgraph clusterPile1 {
+      label="Pile 1"
+      style=filled;
+      color="cadetblue:purple";
+      plane2 [ label="{{Plane 2}|{Cellmatrix}|{EGCPool}}" shape=record style=filled ]
+      plane3 [ label="{{Plane 3}|{Cellmatrix}|{EGCPool}}" shape=record style=filled ]
+      plane4 [ label="{{Plane 4}|{Cellmatrix}|{EGCPool}}" shape=record style=filled ]
+    }
+    subgraph clusterPile2 {
+      label="Pile 2"
+      style=filled;
+      color="cadetblue:purple";
+      plane5 [ label="{{Plane 5}|{Cellmatrix}|{EGCPool}}" shape=record style=filled ]
+      plane6 [ label="{{Plane 6}|{Cellmatrix}|{EGCPool}}" shape=record style=filled ]
+    }
+    subgraph clusterRaster {
+      label="Rendering solves for the current frame. This\nframe is compared to the current state.\nDifferent cells are written to the terminal,\nand the current state is updated."
+      style="filled"
+      color="darkgreen:forestgreen"
+      cMatrix0 [ label="{{Cellmatrix}|{EGCPool}}" shape=record style=filled ]
+      Rasterization [ shape=oval label="Rasterization" style=filled color=yellow ]
+      RenderArea [ shape=rectangle label="Render area\n(via FILE*)" style=filled color=yellow ]
+      Rasterization -> cMatrix0
+      Rasterization -> RenderArea
+      labelloc="b";
+    }
+    plane1 -> Rasterization [ltail=clusterPile0]
+    plane4 -> Rasterization [ltail=clusterPile1]
+    plane5 -> Rasterization [ltail=clusterPile2]
+      //label="The planes of a pile are related two ways:\n1. Totally ordered along the pile's z-axis.\n2. Via a rooted n-ary tree of binding."
+      //label="A rectangular array of Cells, with one Cell per coordinate of the associated plane, backs each plane.\nThis is the plane's cell matrix. An EGCPool backs each cell matrix; they contain nul-terminated\nUTF8-encoded Extended Grapheme Clusters of arbitrary length."
+  }
+}

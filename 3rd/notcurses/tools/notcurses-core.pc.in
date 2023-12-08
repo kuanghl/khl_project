@@ -1,0 +1,14 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: @PROJECT_NAME@-core
+Description: TUI library for modern terminal emulators (core library)
+Version: @PROJECT_VERSION@
+
+Requires:
+Requires.private: @PKGCONF_REQ_PRIV@
+Libs: -L${libdir} -lnotcurses-core
+Libs.private: -lunistring -lm
+Cflags: -I${includedir}
