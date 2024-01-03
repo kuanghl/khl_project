@@ -1,4 +1,5 @@
-- [notcurse](https://github.com/dankamongmen/notcurses.git) and [build](https://github.com/dankamongmen/notcurses/blob/master/INSTALL.md)
+- [notcurse](https://github.com/dankamongmen/notcurses.git) 
+- [build](https://github.com/dankamongmen/notcurses/blob/master/INSTALL.md)
 
 ```sh
 sudo apt-get install build-essential cmake doctest-dev libavdevice-dev libdeflate-dev libgpm-dev libncurses-dev libqrcodegen-dev libswscale-dev libunistring-dev pandoc pkg-config
